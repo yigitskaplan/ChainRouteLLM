@@ -17,3 +17,4 @@ data/*.pkl
 # Rebuilt by src/data/build_dataset.py; the cleaning reports stay in Git.
 data/processed/*
 !data/processed/*.report.json
+data/df5_filtered.csv
