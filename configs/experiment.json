@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "protocol_version": "0.1",
+  "status": "awaiting_fresh_model_outcomes",
+  "experiment": "router_modern",
+  "seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "data": {
+    "primary_path": "data/modern_model_outcomes.jsonl",
+    "robustness_path": null,
+    "raw_path": "data/routerbench_raw.pkl",
+    "schema_verified": false,
+    "provenance_verified": false,
+    "model_labels_primary": [
+      "GPT-6.1 Sol",
+      "GPT-6 Luna",
+      "Claude Opus 5.5",
+      "Claude Sonnet 5.5",
+      "Claude Haiku 5.5"
+    ],
+    "model_keys_primary": [
+      "gpt-6.1-sol",
+      "gpt-6-luna",
+      "claude-opus-5-5",
+      "claude-sonnet-5-5",
+      "claude-haiku-5-5"
+    ],
+    "coverage_policy": "complete_modern_pool_on_shared_query_cohort",
+    "split_unit": "deduplicated_query_group",
+    "offline_fraction": 0.3,
+    "online_fraction": 0.6,
+    "test_fraction": 0.1,
+    "validation_fraction_of_offline": 0.2,
+    "refit_on_full_offline_after_selection": true,
+    "test_updates_enabled": false,
+    "prompt_source_path": "data/routerbench_0shot.pkl",
+    "historical_config": "configs/experiment_historical.json",
+    "reuse_historical_answers_as_modern": false
+  },
+  "router": {
+    "reference": "https://aclanthology.org/2025.naacl-long.545/",
+    "implementation_type": "mixllm_inspired_adaptation",
+    "encoder_family": "BERT",
+    "encoder_checkpoint": null,
+    "score": "w_A*A_hat - w_C*C_hat - w_L*L_hat + alpha*B",
+    "normalization_fit_scope": "offline_fitting_only",
+    "w_A": 1.0,
+    "candidate_validation_grid": {
+      "w_C": [
+        0.0,
+        0.1,
+        0.3,
+        1.0,
+        3.0,
+        10.0
+      ],
+      "w_L": [
+        0.0,
+        0.1,
+        0.3
+      ],
+      "alpha": [
+        0.0,
+        0.01,
+        0.1
+      ]
+    },
+    "exploration_update": null,
+    "update_interval": null,
+    "replay_buffer_size": null,
+    "tag_enhancement": "later_ablation"
+  },
+  "feedback": {
+    "primary": "simulated_binary",
+    "candidate_satisfaction_rule": {
+      "quality_strictly_greater_than": 0.7,
+      "waiting_seconds_strictly_less_than": 15.0,
+      "requires_verified_quality_scale_and_latency": true
+    },
+    "learner_observes_selected_model_only": true,
+    "hidden_quality_available_to_binary_learner": false,
+    "detailed_feedback": "separate_ablation",
+    "judge_enabled": false,
+    "update_visibility": "accepted_persisted_local_feedback"
+  },
+  "latency": {
+    "mode": "measured_api_latency",
+    "arrival_rate": null,
+    "concurrency": null,
+    "queue_model": null,
+    "measure_routing_overhead_separately": true
+  },
+  "baselines": [
+    "each_fixed_model",
+    "validation_best_fixed_model",
+    "cheapest_model",
+    "random",
+    "routerbench_zero",
+    "routerbench_oracle",
+    "offline_only"
+  ],
+  "evaluation": {
+    "truth_source": "immutable_evaluator_outcomes",
+    "aggregation": "mean_and_sample_standard_deviation",
+    "report_per_seed_and_paired_differences": true,
+    "aiq_definition_verified": false,
+    "aiq_common_cost_interval": null,
+    "metrics": [
+      "quality",
+      "customer_cost_per_query",
+      "measured_service_latency",
+      "measured_routing_overhead",
+      "AIQ"
+    ],
+    "comparison_rules": [
+      "Use identical query cohort, prompt protocol, scoring rules and split manifests for historical and modern comparisons",
+      "Retrain router and recompute fixed-model, Zero and Oracle baselines within each pool",
+      "Report historical and contemporary prices separately; model-pool improvements are not evidence of router improvements",
+      "Compare router methods on the same modern outcomes; published MixLLM figures are contextual unless its protocol is reproduced",
+      "Record reasoning budgets and billed reasoning tokens; do not assume equal effort labels mean equal compute",
+      "Treat measured modern latency and simulated historical latency as distinct conditions",
+      "Acknowledge possible training-data contamination on historical benchmark prompts"
+    ]
+  },
+  "run_prerequisites": [
+    "Verify data provenance, schema, model keys, coverage, score scales and cost units",
+    "Save dataset checksums and query split manifests",
+    "Verify RouterBench baseline and AIQ definitions",
+    "Choose exploration/update rules and controlled API latency measurement conditions",
+    "Pin dependency versions and record hardware",
+    "Verify access and pin returned model versions before collecting modern outcomes",
+    "Set query count, collection budget, generation settings and dated pricing",
+    "Generate and score fresh answers for every modern model; never relabel historical outcomes"
+  ],
+  "model_selection": {
+    "verified_date": "2026-10-19",
+    "rationale": "Five proprietary models spanning cost and capability tiers across OpenAI and Anthropic; actual routing benefit must be measured.",
+    "sources": [
+      "https://developers.openai.com/api/docs/models",
+      "https://platform.claude.com/docs/en/models/overview"
+    ],
+    "account_access_verified": false,
+    "resolved_versions": null
+  },
+  "collection": {
+    "status": "not_started",
+    "query_count": null,
+    "budget_usd": null,
+    "pricing_snapshot": null,
+    "generation_settings": null,
+    "tools_enabled": false,
+    "score_with": "verified_task_specific_benchmark_evaluators",
+    "record": [
+      "query_id",
+      "requested_model_id",
+      "returned_model_version",
+      "answer",
+      "quality",
+      "input_tokens",
+      "output_tokens",
+      "reasoning_tokens_if_available",
+      "billed_cost",
+      "latency_seconds",
+      "timestamp",
+      "generation_settings",
+      "errors"
+    ],
+    "collect_all_models_for_each_query": true
+  }
+}

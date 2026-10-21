@@ -7,3 +7,9 @@ __pycache__/
 .env.*
 !.env.example
 node_modules/
+
+# Local RouterBench downloads; retain provenance and split manifests in Git.
+data/*.pkl
+
+# Local experimental planning document.
+/EXPERIMENT_PROTOCOL.md

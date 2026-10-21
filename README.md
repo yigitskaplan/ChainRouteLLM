@@ -19,4 +19,16 @@ Experimental LLM routing with interchangeable evidence storage backends.
 | `tests/` | Automated tests |
 | `results/` | Experiment reports, tables, and plots |
 
-This is the initial directory scaffold. Dependencies, executable code, and experiment configurations have not been added yet.
+## Experimental specification
+
+Step 1 is recorded in [EXPERIMENT_PROTOCOL.md](EXPERIMENT_PROTOCOL.md) and
+[configs/experiment.json](configs/experiment.json). The configuration describes
+the planned experiments; an executable runner has not been implemented yet.
+Unresolved prerequisites are listed explicitly and must be resolved before full runs.
+
+Implementation proceeds in three phases: **router first, reputation score second,
+blockchain ledger last**. The current phase builds and evaluates the base router
+using local feedback storage. Reputation and blockchain integration are deferred.
+
+Local RouterBench pickle downloads live in `data/` and are excluded from Git.
+Dependencies and executable implementation code have not been added yet.
