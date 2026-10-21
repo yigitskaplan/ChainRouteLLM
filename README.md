@@ -31,4 +31,30 @@ blockchain ledger last**. The current phase builds and evaluates the base router
 using local feedback storage. Reputation and blockchain integration are deferred.
 
 Local RouterBench pickle downloads live in `data/` and are excluded from Git.
-Dependencies and executable implementation code have not been added yet.
+
+## Data preparation
+
+`data/DataAnalysis.ipynb` looks at the data and exports `df0_filtered.csv` and
+`df5_filtered.csv` for reading. The experiments use the scripts' own table in
+`data/processed/`.
+
+Python 3.9 or newer. Run from the repository root:
+
+```bash
+pip install -r requirements.txt
+python -m src.data.download_routerbench   # RouterBench pickles -> data/
+python -m src.data.build_dataset --pickle data/routerbench_0shot.pkl
+python -m src.data.splits --data data/processed/routerbench_0shot.csv.gz \
+    --config configs/experiment_historical.json
+python -m pytest
+```
+
+`build_dataset` keeps each model's score, cost and answer length, cleans the
+rows in code and writes `data/processed/<name>.csv.gz` with a `.report.json`
+that lists every removed row and the file checksums. `splits` writes one
+manifest per seed to `data/splits/`; rows with the same prompt stay in the same
+split. The processed tables are rebuilt by the script and stay out of Git; the
+reports and split manifests are small and are committed.
+
+Do not open and re-save these CSV files in Excel: it changes the delimiter and
+the text encoding, and non-English prompts get garbled.
