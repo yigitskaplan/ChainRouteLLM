@@ -1,0 +1,110 @@
+{
+  "input": {
+    "path": "data/routerbench_0shot.pkl",
+    "sha256": "ba4f77f19517610a707c374e99322d7750c30fc4ae7ff5527888595a1e65d36d"
+  },
+  "output": {
+    "path": "data/processed/routerbench_0shot.csv.gz",
+    "sha256": "fd2c6e6447b8b2ff7e8d52624f60a9fd46c019b0667e7bad489adb75d2b649ca"
+  },
+  "rows_in": 36497,
+  "rows_out": 36497,
+  "models": [
+    "gpt-4-1106-preview",
+    "gpt-3.5-turbo-1106",
+    "claude-v1",
+    "claude-v2",
+    "claude-instant-v1"
+  ],
+  "removed": [
+    {
+      "reason": "missing prompt, score or cost for a selected model",
+      "rows": 0,
+      "example_sample_ids": []
+    },
+    {
+      "reason": "score outside [0, 1] or negative cost",
+      "rows": 0,
+      "example_sample_ids": []
+    },
+    {
+      "reason": "repeated sample_id (first complete copy kept)",
+      "rows": 0,
+      "example_sample_ids": [],
+      "ids_with_different_scores": 0
+    }
+  ],
+  "shared_prompts": {
+    "groups": 16,
+    "rows": 32,
+    "groups_with_different_scores": 5,
+    "example_sample_ids": [
+      "abstract2title.test.243",
+      "abstract2title.test.244",
+      "bias_detection.dev.39",
+      "bias_detection.dev.44",
+      "chinese-remainder-theorem.dev.3",
+      "chinese-remainder-theorem.dev.7",
+      "chinese_ancient_masterpieces_dynasty.dev.10",
+      "chinese_ancient_masterpieces_dynasty.dev.11",
+      "chinese_famous_novel.dev.14",
+      "chinese_famous_novel.dev.19",
+      "consensus_summary.dev.30",
+      "consensus_summary.dev.33",
+      "consensus_summary.dev.341",
+      "consensus_summary.dev.342",
+      "consensus_summary.dev.58",
+      "consensus_summary.dev.64",
+      "consensus_summary.dev.65",
+      "consensus_summary.dev.84",
+      "mbpp.dev.278",
+      "mbpp.dev.29"
+    ]
+  },
+  "rows_per_benchmark": {
+    "arc-challenge": 1470,
+    "gsm8k": 7450,
+    "hellaswag": 10042,
+    "mbpp": 427,
+    "mmlu": 14042,
+    "mt-bench": 80,
+    "other": 1719,
+    "winogrande": 1267
+  },
+  "per_model": {
+    "gpt-4-1106-preview": {
+      "mean_quality": 0.7814,
+      "total_cost_usd": 120.1756,
+      "mean_resp_chars": 177.5,
+      "rows_without_answer": 0
+    },
+    "gpt-3.5-turbo-1106": {
+      "mean_quality": 0.6193,
+      "total_cost_usd": 8.8783,
+      "mean_resp_chars": 100.5,
+      "rows_without_answer": 0
+    },
+    "claude-v1": {
+      "mean_quality": 0.6301,
+      "total_cost_usd": 78.2735,
+      "mean_resp_chars": 87.4,
+      "rows_without_answer": 0
+    },
+    "claude-v2": {
+      "mean_quality": 0.6358,
+      "total_cost_usd": 88.2718,
+      "mean_resp_chars": 131.6,
+      "rows_without_answer": 0
+    },
+    "claude-instant-v1": {
+      "mean_quality": 0.5984,
+      "total_cost_usd": 8.5015,
+      "mean_resp_chars": 120.7,
+      "rows_without_answer": 0
+    }
+  },
+  "oracle_mean_quality": 0.8761,
+  "created_utc": "2026-10-21T18:56:08+00:00",
+  "python": "3.14.3",
+  "pandas": "3.0.2"
+}

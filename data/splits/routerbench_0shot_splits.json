@@ -1,0 +1,96 @@
+{
+  "data": {
+    "path": "data/processed/routerbench_0shot.csv.gz",
+    "sha256": "fd2c6e6447b8b2ff7e8d52624f60a9fd46c019b0667e7bad489adb75d2b649ca",
+    "rows": 36497,
+    "groups": 36481
+  },
+  "config": "configs/experiment_historical.json",
+  "experiment": "routerbench_historical",
+  "offline_fraction": 0.3,
+  "online_fraction": 0.6,
+  "test_fraction": 0.1,
+  "validation_fraction_of_offline": 0.2,
+  "seeds": {
+    "11": {
+      "manifest": "data/splits/routerbench_0shot_seed11.csv.gz",
+      "sha256": "4b089d0f98ef92710e9cb7682028ed7b173b9340fb16baee4f6564fed3951cc4",
+      "rows": {
+        "offline_fit": 8759,
+        "offline_val": 2191,
+        "online": 21896,
+        "test": 3651
+      },
+      "groups": {
+        "offline_fit": 8755,
+        "offline_val": 2189,
+        "online": 21889,
+        "test": 3648
+      }
+    },
+    "23": {
+      "manifest": "data/splits/routerbench_0shot_seed23.csv.gz",
+      "sha256": "bf33050bd551766bf4cf01ab55361430c54d17b11e0cecf54355e2afef2b9733",
+      "rows": {
+        "offline_fit": 8761,
+        "offline_val": 2189,
+        "online": 21898,
+        "test": 3649
+      },
+      "groups": {
+        "offline_fit": 8755,
+        "offline_val": 2189,
+        "online": 21889,
+        "test": 3648
+      }
+    },
+    "37": {
+      "manifest": "data/splits/routerbench_0shot_seed37.csv.gz",
+      "sha256": "3d1608c1b3737b4f20f90c862e1a6b1dfdeeb0e91d15e8707cea91a0be97d79c",
+      "rows": {
+        "offline_fit": 8755,
+        "offline_val": 2191,
+        "online": 21903,
+        "test": 3648
+      },
+      "groups": {
+        "offline_fit": 8755,
+        "offline_val": 2189,
+        "online": 21889,
+        "test": 3648
+      }
+    },
+    "53": {
+      "manifest": "data/splits/routerbench_0shot_seed53.csv.gz",
+      "sha256": "900fec4d3b16bf7e4bfe740f736f32efca07a4cebcafdd5e82996707247fc365",
+      "rows": {
+        "offline_fit": 8762,
+        "offline_val": 2189,
+        "online": 21897,
+        "test": 3649
+      },
+      "groups": {
+        "offline_fit": 8755,
+        "offline_val": 2189,
+        "online": 21889,
+        "test": 3648
+      }
+    },
+    "71": {
+      "manifest": "data/splits/routerbench_0shot_seed71.csv.gz",
+      "sha256": "f1f2ca1655ea1e215eaeb742eccc5f36a8e772e534b8007d9cfb2ceff8d563e9",
+      "rows": {
+        "offline_fit": 8759,
+        "offline_val": 2189,
+        "online": 21900,
+        "test": 3649
+      },
+      "groups": {
+        "offline_fit": 8755,
+        "offline_val": 2189,
+        "online": 21889,
+        "test": 3648
+      }
+    }
+  }
+}
