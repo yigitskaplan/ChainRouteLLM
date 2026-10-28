@@ -58,3 +58,20 @@ reports and split manifests are small and are committed.
 
 Do not open and re-save these CSV files in Excel: it changes the delimiter and
 the text encoding, and non-English prompts get garbled.
+
+## Stage 1: router
+
+Run after the data preparation above:
+
+```bash
+python -m src.routing.embeddings --data data/processed/routerbench_0shot.csv.gz \
+    --config configs/experiment_historical.json      # BERT, about 17 min on an M3
+python -m src.routing.run_stage1 --data data/processed/routerbench_0shot.csv.gz \
+    --config configs/experiment_historical.json      # about 1 min
+```
+
+`embeddings` turns every question into BERT's numbers and saves them to
+`data/embeddings/` (large, stays out of Git). `run_stage1` learns to guess each
+model's accuracy and cost from those numbers on the offline questions, picks a
+model for every test question with score = accuracy - w_C * cost / c, and prints
+how often each model is picked for each w_C. Add `--seed 23` for another split.

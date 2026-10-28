@@ -23,7 +23,13 @@
       "Claude v2",
       "Claude Instant"
     ],
-    "model_keys_primary": null,
+    "model_keys_primary": [
+      "gpt-4-1106-preview",
+      "gpt-3.5-turbo-1106",
+      "claude-v1",
+      "claude-v2",
+      "claude-instant-v1"
+    ],
     "model_keys_extended": null,
     "extended_expected_model_count": 11,
     "coverage_policy": "complete_per_pool_and_common_cohort_for_pool_comparisons",
@@ -39,29 +45,28 @@
     "reference": "https://aclanthology.org/2025.naacl-long.545/",
     "implementation_type": "mixllm_inspired_adaptation",
     "encoder_family": "BERT",
-    "encoder_checkpoint": null,
-    "score": "w_A*A_hat - w_C*C_hat - w_L*L_hat + alpha*B",
+    "encoder_checkpoint": "bert-base-multilingual-cased",
+    "encoder_pooling": "mean_of_last_hidden_layer",
+    "encoder_max_tokens": 512,
+    "score": "A_hat - w_C*C_hat/c",
     "normalization_fit_scope": "offline_fitting_only",
-    "w_A": 1.0,
-    "candidate_validation_grid": {
-      "w_C": [
-        0.0,
-        0.1,
-        0.3,
-        1.0,
-        3.0,
-        10.0
-      ],
-      "w_L": [
-        0.0,
-        0.1,
-        0.3
-      ],
-      "alpha": [
-        0.0,
-        0.01,
-        0.1
-      ]
+    "cost_scale": "c = mean offline cost over all models",
+    "w_C_grid": [
+      0.0,
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0
+    ],
+    "predictors": {
+      "quality": "random_forest",
+      "cost": "random_forest",
+      "random_forest": {
+        "n_estimators": 100,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt"
+      }
     },
     "exploration_update": null,
     "update_interval": null,
