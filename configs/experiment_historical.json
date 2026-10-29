@@ -69,7 +69,7 @@
       }
     },
     "exploration_update": null,
-    "update_interval": null,
+    "update_interval": 1000,
     "replay_buffer_size": null,
     "tag_enhancement": "later_ablation"
   },

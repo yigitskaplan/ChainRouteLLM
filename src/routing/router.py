@@ -6,7 +6,7 @@ Score of model m for a query:
 
 A and C are the guessed quality and cost (predictors.py); c is the mean offline
 cost over all models, so w_C is in quality points per "one average answer's
-cost". The router picks argmax_m s_m. It does not learn online yet.
+cost". The router picks argmax_m s_m. Online learning is in online.py.
 """
 from __future__ import annotations
 

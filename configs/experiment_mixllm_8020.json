@@ -34,6 +34,7 @@
     "encoder_max_tokens": 512,
     "score": "A_hat - w_C*C_hat/c",
     "cost_scale": "c = mean offline cost over all models",
+    "update_interval": 1000,
     "w_C_grid": [
       0.0,
       0.01,

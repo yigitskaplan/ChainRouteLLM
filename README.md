@@ -76,6 +76,11 @@ model's accuracy and cost from those numbers on the offline questions, picks a
 model for every test question with score = accuracy - w_C * cost / c, and prints
 how often each model is picked for each w_C. Add `--seed 23` for another split.
 
+Add `--online` to let the router keep learning from the online questions
+first (`src/routing/online.py`). It sees only the picked model's real accuracy
+and cost, and every `update_interval` (1,000) questions it retrains the forests
+of the models that got new answers.
+
 ## Stage 2: comparison with MixLLM
 
 For a fair comparison only, this test uses MixLLM's setup: 11 models and an
