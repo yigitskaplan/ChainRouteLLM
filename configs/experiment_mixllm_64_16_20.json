@@ -1,0 +1,61 @@
+{
+  "experiment": "mixllm_comparison_64_16_20",
+  "description": "Stage 2 test B only: MixLLM's online-learning test with 11 models. Their 80% training part is split 80:20 into offline (64%) and online (16%); the 20% test part is the same as in experiment_mixllm_8020.json. The project design stays 30/60/10 with 5 models (experiment_historical.json).",
+  "seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "data": {
+    "model_keys_primary": [
+      "gpt-4-1106-preview",
+      "gpt-3.5-turbo-1106",
+      "claude-v1",
+      "claude-v2",
+      "claude-instant-v1",
+      "meta/llama-2-70b-chat",
+      "mistralai/mixtral-8x7b-chat",
+      "zero-one-ai/Yi-34B-Chat",
+      "WizardLM/WizardLM-13B-V1.2",
+      "meta/code-llama-instruct-34b-chat",
+      "mistralai/mistral-7b-chat"
+    ],
+    "reference_model": "gpt-4-1106-preview",
+    "offline_fraction": 0.64,
+    "online_fraction": 0.16,
+    "test_fraction": 0.2,
+    "validation_fraction_of_offline": 0.0
+  },
+  "router": {
+    "encoder_checkpoint": "bert-base-multilingual-cased",
+    "encoder_pooling": "mean_of_last_hidden_layer",
+    "encoder_max_tokens": 512,
+    "score": "A_hat - w_C*C_hat/c",
+    "cost_scale": "c = mean offline cost over all models",
+    "update_interval": 1000,
+    "w_C_grid": [
+      0.0,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0
+    ],
+    "predictors": {
+      "quality": "random_forest",
+      "cost": "random_forest",
+      "random_forest": {
+        "n_estimators": 100,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt"
+      }
+    }
+  }
+}
