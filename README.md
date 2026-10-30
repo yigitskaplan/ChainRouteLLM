@@ -66,7 +66,7 @@ Run after the data preparation above:
 ```bash
 python -m src.routing.embeddings --data data/processed/routerbench_0shot.csv.gz \
     --config configs/experiment_historical.json      # BERT, about 17 min on an M3
-python -m src.routing.run_stage1 --data data/processed/routerbench_0shot.csv.gz \
+python -m src.routing.archive.run_stage1 --data data/processed/routerbench_0shot.csv.gz \
     --config configs/experiment_historical.json      # about 1 min
 ```
 

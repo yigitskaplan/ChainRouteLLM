@@ -6,7 +6,7 @@ import pytest
 
 from src.data.splits import make_split
 from src.data.tables import write_table
-from src.routing import run_stage1
+from src.routing.archive import run_stage1
 from src.routing.embeddings import cache_path, load_embeddings, save_embeddings
 from src.routing.predictors import Predictors
 from src.routing.router import Router
