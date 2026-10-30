@@ -2,8 +2,8 @@
 
 For each model, one random forest guesses the quality score and one guesses the
 cost (USD). They are fitted on offline rows, where every model's outcome is
-known; online, online.py retrains them with the answers the router sees.
-MixLLM (Wang et al., NAACL 2025) also guesses quality with a random forest.
+known, and stay fixed online. MixLLM (Wang et al., NAACL 2025) also guesses
+quality with a random forest.
 """
 from __future__ import annotations
 
@@ -33,17 +33,6 @@ class Predictors:
         # The router divides cost by this: the average cost over all models.
         self.cost_scale_ = float(outcomes["cost"].mean())
         return self
-
-    def refit_model(self, j: int, X: np.ndarray, quality: np.ndarray, cost: np.ndarray) -> None:
-        """Retrain model j's two forests, e.g. on the offline answers plus its new online ones."""
-        self.quality_[j] = self._fit_forest(X, quality)
-        self.cost_[j] = self._fit_forest(X, cost)
-
-    def copy(self) -> "Predictors":
-        """A copy whose forests can be retrained without changing this one's."""
-        other = Predictors(self.models, self.forest, self.seed)
-        other.quality_, other.cost_, other.cost_scale_ = list(self.quality_), list(self.cost_), self.cost_scale_
-        return other
 
     def predict(self, X: np.ndarray) -> Dict[str, np.ndarray]:
         """Guessed quality and cost (USD), each [rows, models]."""

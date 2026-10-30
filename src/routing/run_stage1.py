@@ -6,8 +6,7 @@
 Needs the split files (src.data.splits) and BERT's numbers (src.routing.embeddings).
 The guessers learn from the offline questions of one seed; the router then picks
 a model for every test question, once for each w_C in the config, and prints
-how often each model is picked. With ``--online`` the router first keeps
-learning from the online questions (online.py).
+how often each model is picked.
 """
 from __future__ import annotations
 
@@ -22,7 +21,6 @@ import pandas as pd
 from src.data.splits import load_split
 from src.data.tables import PathLike, table_stem
 from src.routing.embeddings import cache_path, load_embeddings
-from src.routing.online import learn_online
 from src.routing.predictors import Predictors
 from src.routing.router import Router
 
@@ -32,14 +30,8 @@ def real_outcomes(frame: pd.DataFrame, models: Sequence[str]) -> Dict[str, np.nd
     return {key: frame[[f"{model}|{key}" for model in models]].to_numpy(dtype=float) for key in ("quality", "cost")}
 
 
-def route_test(
-    data_path: PathLike, split_path: PathLike, config: Mapping[str, Any], seed: int, online: bool = False
-) -> pd.DataFrame:
-    """The model picked for every test question: one column per w_C.
-
-    With ``online`` the router first learns from the online questions, separately
-    for each w_C because the picks, and so the answers it sees, differ.
-    """
+def route_test(data_path: PathLike, split_path: PathLike, config: Mapping[str, Any], seed: int) -> pd.DataFrame:
+    """The model picked for every test question: one column per w_C."""
     models = config["data"]["model_keys_primary"]
     settings = config["router"]
     bert_file = cache_path(data_path, settings["encoder_checkpoint"])
@@ -48,27 +40,14 @@ def route_test(
     test = parts["test"]
 
     # Step 2: learn to guess each model's accuracy and cost from BERT's numbers.
-    X_offline, offline_outcomes = load_embeddings(bert_file, offline["sample_id"]), real_outcomes(offline, models)
-    predictors = Predictors(models, settings["predictors"]["random_forest"], seed).fit(X_offline, offline_outcomes)
-    X_test = load_embeddings(bert_file, test["sample_id"])
-    offline_guess = predictors.predict(X_test)
-    if online:
-        X_online = load_embeddings(bert_file, parts["online"]["sample_id"])
-        online_outcomes = real_outcomes(parts["online"], models)
+    predictors = Predictors(models, settings["predictors"]["random_forest"], seed)
+    predictors.fit(load_embeddings(bert_file, offline["sample_id"]), real_outcomes(offline, models))
+    guess = predictors.predict(load_embeddings(bert_file, test["sample_id"]))
 
     # Step 3: score every model and pick the best, for each w_C.
     picks = pd.DataFrame({"sample_id": test["sample_id"]})
     for w_C in settings["w_C_grid"]:
-        router = Router(w_C, predictors.cost_scale_)
-        guess = offline_guess
-        if online:
-            # Step 4: keep learning from the online questions; the test questions are only routed.
-            learned = learn_online(
-                predictors, router, X_offline, offline_outcomes, X_online, online_outcomes,
-                int(settings["update_interval"]),
-            )
-            guess = learned.predict(X_test)
-        picks[f"w_C={w_C:g}"] = np.asarray(models)[router.route(guess)]
+        picks[f"w_C={w_C:g}"] = np.asarray(models)[Router(w_C, predictors.cost_scale_).route(guess)]
     return picks
 
 
@@ -78,13 +57,12 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     parser.add_argument("--config", required=True, type=Path, help="experiment config")
     parser.add_argument("--splits-dir", type=Path, default=Path("data/splits"))
     parser.add_argument("--seed", type=int, default=None, help="default: the config's first seed")
-    parser.add_argument("--online", action="store_true", help="learn from the online questions first")
     args = parser.parse_args(argv)
 
     config = json.loads(args.config.read_text(encoding="utf-8"))
     seed = args.seed if args.seed is not None else int(config["seeds"][0])
     split_path = args.splits_dir / f"{table_stem(args.data)}_seed{seed}.csv.gz"
-    picks = route_test(args.data, split_path, config, seed, online=args.online)
+    picks = route_test(args.data, split_path, config, seed)
 
     models = config["data"]["model_keys_primary"]
     shares = picks.drop(columns="sample_id").apply(lambda column: column.value_counts(normalize=True))
