@@ -1,0 +1,1352 @@
+[
+ {
+  "seed": 11,
+  "w_C": 0.1,
+  "rho": 0.1,
+  "clean": {
+   "quality": 0.7539715146535196,
+   "cost": 0.001136337332237734
+  },
+  "none": {
+   "cost": 0.0007212672144617831,
+   "quality": 0.7085045193097781,
+   "instant_share": 0.4176937825253355,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.0007587371131196853,
+   "quality": 0.7119282388386743,
+   "instant_share": 0.4004382360996987,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3893805309734513,
+   "fail_rate_honest": 0.04317958783120707
+  },
+  "ledger_agreement": {
+   "cost": 0.0008767710764174113,
+   "quality": 0.7250753218296357,
+   "instant_share": 0.34401533826348946,
+   "malicious_excluded": 1,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.4336283185840708,
+   "fail_rate_honest": 0.04317958783120707
+  },
+  "ledger_failures": {
+   "cost": 0.0011498469460421705,
+   "quality": 0.7493289509723364,
+   "instant_share": 0.228430566967954,
+   "malicious_excluded": 2,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.5752212389380531,
+   "fail_rate_honest": 0.04317958783120707
+  }
+ },
+ {
+  "seed": 11,
+  "w_C": 0.1,
+  "rho": 0.2,
+  "clean": {
+   "quality": 0.7539715146535196,
+   "cost": 0.001136337332237734
+  },
+  "none": {
+   "cost": 0.00038101572172007033,
+   "quality": 0.6479868529170091,
+   "instant_share": 0.6496850178033415,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00040206343467542524,
+   "quality": 0.6518898931799507,
+   "instant_share": 0.641194193371679,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3288888888888889,
+   "fail_rate_honest": 0.040793825799338476
+  },
+  "ledger_agreement": {
+   "cost": 0.0003598256915913392,
+   "quality": 0.6427827992330869,
+   "instant_share": 0.6820049301561216,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3333333333333333,
+   "fail_rate_honest": 0.040793825799338476
+  },
+  "ledger_failures": {
+   "cost": 0.0011500251985757232,
+   "quality": 0.7486305121884416,
+   "instant_share": 0.1922760887428102,
+   "malicious_excluded": 4,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.5822222222222222,
+   "fail_rate_honest": 0.03969128996692393
+  }
+ },
+ {
+  "seed": 11,
+  "w_C": 0.1,
+  "rho": 0.3,
+  "clean": {
+   "quality": 0.7539715146535196,
+   "cost": 0.001136337332237734
+  },
+  "none": {
+   "cost": 0.000266891646124345,
+   "quality": 0.6271706381813202,
+   "instant_share": 0.8315529991783073,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.0002687860860038301,
+   "quality": 0.6288140235551904,
+   "instant_share": 0.8178581210627225,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.30538922155688625,
+   "fail_rate_honest": 0.03634085213032581
+  },
+  "ledger_agreement": {
+   "cost": 0.00026719337167898754,
+   "quality": 0.6258011503697618,
+   "instant_share": 0.8285401259928786,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3143712574850299,
+   "fail_rate_honest": 0.03634085213032581
+  },
+  "ledger_failures": {
+   "cost": 0.0010987562859490457,
+   "quality": 0.7472747192549987,
+   "instant_share": 0.21692686935086278,
+   "malicious_excluded": 6,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.5838323353293413,
+   "fail_rate_honest": 0.03634085213032581
+  }
+ },
+ {
+  "seed": 11,
+  "w_C": 0.3,
+  "rho": 0.1,
+  "clean": {
+   "quality": 0.6603670227334977,
+   "cost": 0.00035310298548341904
+  },
+  "none": {
+   "cost": 0.00027855957271979596,
+   "quality": 0.6384141331142152,
+   "instant_share": 0.6211996713229252,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00028225905231442784,
+   "quality": 0.6389619282388387,
+   "instant_share": 0.6327033689400164,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.25663716814159293,
+   "fail_rate_honest": 0.04317958783120707
+  },
+  "ledger_agreement": {
+   "cost": 0.00027855957271979596,
+   "quality": 0.6384141331142152,
+   "instant_share": 0.6211996713229252,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.26548672566371684,
+   "fail_rate_honest": 0.04317958783120707
+  },
+  "ledger_failures": {
+   "cost": 0.0003467221583127822,
+   "quality": 0.6533141605039715,
+   "instant_share": 0.4560394412489729,
+   "malicious_excluded": 2,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.26548672566371684,
+   "fail_rate_honest": 0.04317958783120707
+  }
+ },
+ {
+  "seed": 11,
+  "w_C": 0.3,
+  "rho": 0.2,
+  "clean": {
+   "quality": 0.6603670227334977,
+   "cost": 0.00035310298548341904
+  },
+  "none": {
+   "cost": 0.00024525149274170983,
+   "quality": 0.628266228430567,
+   "instant_share": 0.7584223500410846,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00024420262941659334,
+   "quality": 0.6277184333059437,
+   "instant_share": 0.7592440427280197,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.26666666666666666,
+   "fail_rate_honest": 0.040793825799338476
+  },
+  "ledger_agreement": {
+   "cost": 0.00024637989591892143,
+   "quality": 0.6280608052588332,
+   "instant_share": 0.7545877841687209,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.27555555555555555,
+   "fail_rate_honest": 0.040793825799338476
+  },
+  "ledger_failures": {
+   "cost": 0.0003508460695699728,
+   "quality": 0.6515338263489455,
+   "instant_share": 0.4842508901670775,
+   "malicious_excluded": 4,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.27555555555555555,
+   "fail_rate_honest": 0.040793825799338476
+  }
+ },
+ {
+  "seed": 11,
+  "w_C": 0.3,
+  "rho": 0.3,
+  "clean": {
+   "quality": 0.6603670227334977,
+   "cost": 0.00035310298548341904
+  },
+  "none": {
+   "cost": 0.0002408611339359039,
+   "quality": 0.6252533552451384,
+   "instant_share": 0.8545603944124898,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.0002404492467816995,
+   "quality": 0.6271706381813202,
+   "instant_share": 0.8356614626129828,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.32335329341317365,
+   "fail_rate_honest": 0.03634085213032581
+  },
+  "ledger_agreement": {
+   "cost": 0.0002391319090660052,
+   "quality": 0.62552725280745,
+   "instant_share": 0.8485346480416325,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.31736526946107785,
+   "fail_rate_honest": 0.03634085213032581
+  },
+  "ledger_failures": {
+   "cost": 0.00033916066831004345,
+   "quality": 0.6503012873185429,
+   "instant_share": 0.44645302656806357,
+   "malicious_excluded": 6,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.2844311377245509,
+   "fail_rate_honest": 0.03634085213032581
+  }
+ },
+ {
+  "seed": 23,
+  "w_C": 0.1,
+  "rho": 0.1,
+  "clean": {
+   "quality": 0.7664291586736092,
+   "cost": 0.0011555111537407407
+  },
+  "none": {
+   "cost": 0.000729269553302266,
+   "quality": 0.7096190737188272,
+   "instant_share": 0.3891477117018361,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.0007427923266648312,
+   "quality": 0.7118114551932037,
+   "instant_share": 0.39901342833653053,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.36936936936936937,
+   "fail_rate_honest": 0.04845360824742268
+  },
+  "ledger_agreement": {
+   "cost": 0.0007822432447245729,
+   "quality": 0.7120992052617154,
+   "instant_share": 0.3387229377911757,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.36936936936936937,
+   "fail_rate_honest": 0.04845360824742268
+  },
+  "ledger_failures": {
+   "cost": 0.0011396570019183237,
+   "quality": 0.7612770622088244,
+   "instant_share": 0.24664291586736092,
+   "malicious_excluded": 2,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.5225225225225225,
+   "fail_rate_honest": 0.04845360824742268
+  }
+ },
+ {
+  "seed": 23,
+  "w_C": 0.1,
+  "rho": 0.2,
+  "clean": {
+   "quality": 0.7664291586736092,
+   "cost": 0.0011555111537407407
+  },
+  "none": {
+   "cost": 0.0003975622362290967,
+   "quality": 0.6535900246642915,
+   "instant_share": 0.6607289668402302,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00043665267196491464,
+   "quality": 0.6596738832556865,
+   "instant_share": 0.6363387229377911,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.2631578947368421,
+   "fail_rate_honest": 0.0481651376146789
+  },
+  "ledger_agreement": {
+   "cost": 0.00041664242258152213,
+   "quality": 0.6555768703754453,
+   "instant_share": 0.6385311044121678,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.28708133971291866,
+   "fail_rate_honest": 0.0481651376146789
+  },
+  "ledger_failures": {
+   "cost": 0.001151339928747592,
+   "quality": 0.7633324198410524,
+   "instant_share": 0.23650315154836943,
+   "malicious_excluded": 4,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.5023923444976076,
+   "fail_rate_honest": 0.0481651376146789
+  }
+ },
+ {
+  "seed": 23,
+  "w_C": 0.1,
+  "rho": 0.3,
+  "clean": {
+   "quality": 0.7664291586736092,
+   "cost": 0.0011555111537407407
+  },
+  "none": {
+   "cost": 0.0002844899424499813,
+   "quality": 0.6264730063030968,
+   "instant_share": 0.8303644834201152,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.0003050459303918823,
+   "quality": 0.6292134831460674,
+   "instant_share": 0.7859687585639902,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.32727272727272727,
+   "fail_rate_honest": 0.04660452729693742
+  },
+  "ledger_agreement": {
+   "cost": 0.0002891896958070646,
+   "quality": 0.6268840778295424,
+   "instant_share": 0.7996711427788435,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.31212121212121213,
+   "fail_rate_honest": 0.04660452729693742
+  },
+  "ledger_failures": {
+   "cost": 0.0011281585639901245,
+   "quality": 0.757577418470814,
+   "instant_share": 0.2433543436557961,
+   "malicious_excluded": 6,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.4909090909090909,
+   "fail_rate_honest": 0.04660452729693742
+  }
+ },
+ {
+  "seed": 23,
+  "w_C": 0.3,
+  "rho": 0.1,
+  "clean": {
+   "quality": 0.6748835297341736,
+   "cost": 0.0004112020827623896
+  },
+  "none": {
+   "cost": 0.00028823710605644607,
+   "quality": 0.6420937243080296,
+   "instant_share": 0.6303096738832557,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.0002985370786516773,
+   "quality": 0.6469443683200876,
+   "instant_share": 0.611674431351055,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.2972972972972973,
+   "fail_rate_honest": 0.04845360824742268
+  },
+  "ledger_agreement": {
+   "cost": 0.000286149027130713,
+   "quality": 0.6401753905179501,
+   "instant_share": 0.647848725678268,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.2972972972972973,
+   "fail_rate_honest": 0.04845360824742268
+  },
+  "ledger_failures": {
+   "cost": 0.0003608001096190639,
+   "quality": 0.6650315154836941,
+   "instant_share": 0.48204987667854204,
+   "malicious_excluded": 2,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3063063063063063,
+   "fail_rate_honest": 0.04845360824742268
+  }
+ },
+ {
+  "seed": 23,
+  "w_C": 0.3,
+  "rho": 0.2,
+  "clean": {
+   "quality": 0.6748835297341736,
+   "cost": 0.0004112020827623896
+  },
+  "none": {
+   "cost": 0.00025586122225266546,
+   "quality": 0.6283913400931762,
+   "instant_share": 0.7577418470813921,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.0002638566182515691,
+   "quality": 0.6322280076733352,
+   "instant_share": 0.7454097012880241,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.2727272727272727,
+   "fail_rate_honest": 0.0481651376146789
+  },
+  "ledger_agreement": {
+   "cost": 0.0002540032885722051,
+   "quality": 0.6283913400931762,
+   "instant_share": 0.765141134557413,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.27751196172248804,
+   "fail_rate_honest": 0.0481651376146789
+  },
+  "ledger_failures": {
+   "cost": 0.0003840767881611303,
+   "quality": 0.6686626473006303,
+   "instant_share": 0.5004110715264456,
+   "malicious_excluded": 4,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3062200956937799,
+   "fail_rate_honest": 0.0481651376146789
+  }
+ },
+ {
+  "seed": 23,
+  "w_C": 0.3,
+  "rho": 0.3,
+  "clean": {
+   "quality": 0.6748835297341736,
+   "cost": 0.0004112020827623896
+  },
+  "none": {
+   "cost": 0.00024505815291860214,
+   "quality": 0.626541518224171,
+   "instant_share": 0.8007673335160318,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00024572595231569746,
+   "quality": 0.6238010413812003,
+   "instant_share": 0.8298163880515209,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3212121212121212,
+   "fail_rate_honest": 0.04660452729693742
+  },
+  "ledger_agreement": {
+   "cost": 0.00024359950671416327,
+   "quality": 0.6216086599068238,
+   "instant_share": 0.8509180597423952,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3303030303030303,
+   "fail_rate_honest": 0.04660452729693742
+  },
+  "ledger_failures": {
+   "cost": 0.0003721261167443039,
+   "quality": 0.6648259797204713,
+   "instant_share": 0.49849273773636615,
+   "malicious_excluded": 6,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.29393939393939394,
+   "fail_rate_honest": 0.04660452729693742
+  }
+ },
+ {
+  "seed": 37,
+  "w_C": 0.1,
+  "rho": 0.1,
+  "clean": {
+   "quality": 0.7498218201754385,
+   "cost": 0.0011296670504385873
+  },
+  "none": {
+   "cost": 0.0006846281249999925,
+   "quality": 0.687047697368421,
+   "instant_share": 0.44956140350877194,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.000728145449561396,
+   "quality": 0.6915296052631579,
+   "instant_share": 0.4194078947368421,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3838383838383838,
+   "fail_rate_honest": 0.04420432220039293
+  },
+  "ledger_agreement": {
+   "cost": 0.0008771708881578864,
+   "quality": 0.7131167763157894,
+   "instant_share": 0.31798245614035087,
+   "malicious_excluded": 1,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.494949494949495,
+   "fail_rate_honest": 0.04420432220039293
+  },
+  "ledger_failures": {
+   "cost": 0.0010539698464912194,
+   "quality": 0.7424890350877192,
+   "instant_share": 0.26260964912280704,
+   "malicious_excluded": 2,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.5151515151515151,
+   "fail_rate_honest": 0.04420432220039293
+  }
+ },
+ {
+  "seed": 37,
+  "w_C": 0.1,
+  "rho": 0.2,
+  "clean": {
+   "quality": 0.7498218201754385,
+   "cost": 0.0011296670504385873
+  },
+  "none": {
+   "cost": 0.0003501013706140294,
+   "quality": 0.6369517543859649,
+   "instant_share": 0.7028508771929824,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.0003770446271929767,
+   "quality": 0.6377741228070175,
+   "instant_share": 0.6877741228070176,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3051643192488263,
+   "fail_rate_honest": 0.04535398230088496
+  },
+  "ledger_agreement": {
+   "cost": 0.0003948145833333282,
+   "quality": 0.6432017543859648,
+   "instant_share": 0.7025767543859649,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.323943661971831,
+   "fail_rate_honest": 0.04535398230088496
+  },
+  "ledger_failures": {
+   "cost": 0.0010024053728070097,
+   "quality": 0.7336896929824561,
+   "instant_share": 0.28125,
+   "malicious_excluded": 4,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.4694835680751174,
+   "fail_rate_honest": 0.04535398230088496
+  }
+ },
+ {
+  "seed": 37,
+  "w_C": 0.1,
+  "rho": 0.3,
+  "clean": {
+   "quality": 0.7498218201754385,
+   "cost": 0.0011296670504385873
+  },
+  "none": {
+   "cost": 0.00027028081140350425,
+   "quality": 0.6160910087719298,
+   "instant_share": 0.8300438596491229,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00027548848684210076,
+   "quality": 0.6188322368421053,
+   "instant_share": 0.8193530701754386,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.2903225806451613,
+   "fail_rate_honest": 0.04460966542750929
+  },
+  "ledger_agreement": {
+   "cost": 0.00026224950657894306,
+   "quality": 0.6169407894736841,
+   "instant_share": 0.8385416666666666,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3,
+   "fail_rate_honest": 0.04460966542750929
+  },
+  "ledger_failures": {
+   "cost": 0.0011066599780701672,
+   "quality": 0.7451754385964912,
+   "instant_share": 0.2875548245614035,
+   "malicious_excluded": 6,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.47419354838709676,
+   "fail_rate_honest": 0.04460966542750929
+  }
+ },
+ {
+  "seed": 37,
+  "w_C": 0.3,
+  "rho": 0.1,
+  "clean": {
+   "quality": 0.6529879385964912,
+   "cost": 0.0003745855811403426
+  },
+  "none": {
+   "cost": 0.0002948040021929758,
+   "quality": 0.6288103070175438,
+   "instant_share": 0.6318530701754386,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00029888020833332684,
+   "quality": 0.6314830043859648,
+   "instant_share": 0.6389802631578947,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.31313131313131315,
+   "fail_rate_honest": 0.04420432220039293
+  },
+  "ledger_agreement": {
+   "cost": 0.000297489638157888,
+   "quality": 0.6324287280701754,
+   "instant_share": 0.6151315789473685,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.31313131313131315,
+   "fail_rate_honest": 0.04420432220039293
+  },
+  "ledger_failures": {
+   "cost": 0.00036353081140350025,
+   "quality": 0.6523026315789473,
+   "instant_share": 0.4342105263157895,
+   "malicious_excluded": 2,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.29292929292929293,
+   "fail_rate_honest": 0.043222003929273084
+  }
+ },
+ {
+  "seed": 37,
+  "w_C": 0.3,
+  "rho": 0.2,
+  "clean": {
+   "quality": 0.6529879385964912,
+   "cost": 0.0003745855811403426
+  },
+  "none": {
+   "cost": 0.0002444151864035041,
+   "quality": 0.6161321271929824,
+   "instant_share": 0.8007127192982456,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00024300038377192515,
+   "quality": 0.6142132675438595,
+   "instant_share": 0.7957785087719298,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.2863849765258216,
+   "fail_rate_honest": 0.04535398230088496
+  },
+  "ledger_agreement": {
+   "cost": 0.0002458934758771882,
+   "quality": 0.6176398026315788,
+   "instant_share": 0.7883771929824561,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.28169014084507044,
+   "fail_rate_honest": 0.04535398230088496
+  },
+  "ledger_failures": {
+   "cost": 0.0003497091008771847,
+   "quality": 0.6474643640350877,
+   "instant_share": 0.4772478070175439,
+   "malicious_excluded": 4,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.2535211267605634,
+   "fail_rate_honest": 0.04424778761061947
+  }
+ },
+ {
+  "seed": 37,
+  "w_C": 0.3,
+  "rho": 0.3,
+  "clean": {
+   "quality": 0.6529879385964912,
+   "cost": 0.0003745855811403426
+  },
+  "none": {
+   "cost": 0.00023776332236841716,
+   "quality": 0.6116502192982457,
+   "instant_share": 0.8637609649122807,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00023831211622806614,
+   "quality": 0.6102796052631579,
+   "instant_share": 0.8700657894736842,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3096774193548387,
+   "fail_rate_honest": 0.04460966542750929
+  },
+  "ledger_agreement": {
+   "cost": 0.00023702609649122413,
+   "quality": 0.6121984649122808,
+   "instant_share": 0.8810307017543859,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.2967741935483871,
+   "fail_rate_honest": 0.04460966542750929
+  },
+  "ledger_failures": {
+   "cost": 0.0003657419956140265,
+   "quality": 0.6518229166666667,
+   "instant_share": 0.4692982456140351,
+   "malicious_excluded": 6,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.27741935483870966,
+   "fail_rate_honest": 0.04460966542750929
+  }
+ },
+ {
+  "seed": 53,
+  "w_C": 0.1,
+  "rho": 0.1,
+  "clean": {
+   "quality": 0.7699095642641819,
+   "cost": 0.0012045638805152012
+  },
+  "none": {
+   "cost": 0.0007577828446149547,
+   "quality": 0.7095642641819676,
+   "instant_share": 0.39408057001918334,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.0007716269662921269,
+   "quality": 0.7083310496026308,
+   "instant_share": 0.41408605097286927,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3229166666666667,
+   "fail_rate_honest": 0.030959752321981424
+  },
+  "ledger_agreement": {
+   "cost": 0.0008204453274869752,
+   "quality": 0.7202521238695533,
+   "instant_share": 0.4239517676075637,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3645833333333333,
+   "fail_rate_honest": 0.030959752321981424
+  },
+  "ledger_failures": {
+   "cost": 0.0011019976431899062,
+   "quality": 0.7598383118662646,
+   "instant_share": 0.2340367223896958,
+   "malicious_excluded": 2,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.4895833333333333,
+   "fail_rate_honest": 0.029927760577915376
+  }
+ },
+ {
+  "seed": 53,
+  "w_C": 0.1,
+  "rho": 0.2,
+  "clean": {
+   "quality": 0.7699095642641819,
+   "cost": 0.0012045638805152012
+  },
+  "none": {
+   "cost": 0.0003930743765415116,
+   "quality": 0.6510550835845437,
+   "instant_share": 0.6007125239791724,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.0003946338722937723,
+   "quality": 0.647560975609756,
+   "instant_share": 0.5916689503973691,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.33796296296296297,
+   "fail_rate_honest": 0.02944640753828033
+  },
+  "ledger_agreement": {
+   "cost": 0.000497210468621534,
+   "quality": 0.6625650863250205,
+   "instant_share": 0.5774184708139216,
+   "malicious_excluded": 1,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.375,
+   "fail_rate_honest": 0.02944640753828033
+  },
+  "ledger_failures": {
+   "cost": 0.0011187856399013335,
+   "quality": 0.7561386681282543,
+   "instant_share": 0.21320909838311866,
+   "malicious_excluded": 4,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.5185185185185185,
+   "fail_rate_honest": 0.02944640753828033
+  }
+ },
+ {
+  "seed": 53,
+  "w_C": 0.1,
+  "rho": 0.3,
+  "clean": {
+   "quality": 0.7699095642641819,
+   "cost": 0.0012045638805152012
+  },
+  "none": {
+   "cost": 0.0002563482597972005,
+   "quality": 0.6140449438202248,
+   "instant_share": 0.8481775828994245,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00025833614688955446,
+   "quality": 0.6187037544532749,
+   "instant_share": 0.8163880515209646,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3047337278106509,
+   "fail_rate_honest": 0.033012379642365884
+  },
+  "ledger_agreement": {
+   "cost": 0.00027581945738558065,
+   "quality": 0.6210331597698,
+   "instant_share": 0.7862428062482872,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.35798816568047337,
+   "fail_rate_honest": 0.033012379642365884
+  },
+  "ledger_failures": {
+   "cost": 0.0010177039188818764,
+   "quality": 0.7481775828994245,
+   "instant_share": 0.2444505343929844,
+   "malicious_excluded": 6,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.4378698224852071,
+   "fail_rate_honest": 0.033012379642365884
+  }
+ },
+ {
+  "seed": 53,
+  "w_C": 0.3,
+  "rho": 0.1,
+  "clean": {
+   "quality": 0.6575226089339545,
+   "cost": 0.0003528252123869451
+  },
+  "none": {
+   "cost": 0.0002822246094820438,
+   "quality": 0.6377363661277063,
+   "instant_share": 0.6319539599890381,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00028622877500684513,
+   "quality": 0.6391751164702659,
+   "instant_share": 0.627295149355988,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.19791666666666666,
+   "fail_rate_honest": 0.030959752321981424
+  },
+  "ledger_agreement": {
+   "cost": 0.00027825020553575716,
+   "quality": 0.6366401753905181,
+   "instant_share": 0.6420937243080296,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.20833333333333334,
+   "fail_rate_honest": 0.030959752321981424
+  },
+  "ledger_failures": {
+   "cost": 0.0003128884625924835,
+   "quality": 0.6443546177034805,
+   "instant_share": 0.5406960811181145,
+   "malicious_excluded": 1,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.16666666666666666,
+   "fail_rate_honest": 0.030959752321981424
+  }
+ },
+ {
+  "seed": 53,
+  "w_C": 0.3,
+  "rho": 0.2,
+  "clean": {
+   "quality": 0.6575226089339545,
+   "cost": 0.0003528252123869451
+  },
+  "none": {
+   "cost": 0.0002431118114551883,
+   "quality": 0.6193888736640175,
+   "instant_share": 0.7667854206631954,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.000246391778569466,
+   "quality": 0.6214442312962456,
+   "instant_share": 0.7481501781309948,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.30092592592592593,
+   "fail_rate_honest": 0.02944640753828033
+  },
+  "ledger_agreement": {
+   "cost": 0.0002493608111811406,
+   "quality": 0.6211838859961633,
+   "instant_share": 0.7582899424499863,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3194444444444444,
+   "fail_rate_honest": 0.02944640753828033
+  },
+  "ledger_failures": {
+   "cost": 0.0002952651137297816,
+   "quality": 0.6412304741024939,
+   "instant_share": 0.5623458481775829,
+   "malicious_excluded": 3,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.2777777777777778,
+   "fail_rate_honest": 0.02944640753828033
+  }
+ },
+ {
+  "seed": 53,
+  "w_C": 0.3,
+  "rho": 0.3,
+  "clean": {
+   "quality": 0.6575226089339545,
+   "cost": 0.0003528252123869451
+  },
+  "none": {
+   "cost": 0.00023687569197039895,
+   "quality": 0.6115785146615511,
+   "instant_share": 0.8635242532200603,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00023721589476568522,
+   "quality": 0.6126747053987394,
+   "instant_share": 0.8484516305837215,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3136094674556213,
+   "fail_rate_honest": 0.033012379642365884
+  },
+  "ledger_agreement": {
+   "cost": 0.00023704576596327386,
+   "quality": 0.6132228007673335,
+   "instant_share": 0.8632502055357633,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.2988165680473373,
+   "fail_rate_honest": 0.033012379642365884
+  },
+  "ledger_failures": {
+   "cost": 0.0003280190189092823,
+   "quality": 0.6520279528637983,
+   "instant_share": 0.4620443957248561,
+   "malicious_excluded": 6,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.26331360946745563,
+   "fail_rate_honest": 0.033012379642365884
+  }
+ },
+ {
+  "seed": 71,
+  "w_C": 0.1,
+  "rho": 0.1,
+  "clean": {
+   "quality": 0.7580021923814744,
+   "cost": 0.0011874135927651326
+  },
+  "none": {
+   "cost": 0.000671614360098649,
+   "quality": 0.6874349136749794,
+   "instant_share": 0.4768429706768978,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.0007172178679090079,
+   "quality": 0.6942175938613319,
+   "instant_share": 0.45327486982734994,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3728813559322034,
+   "fail_rate_honest": 0.04094165813715456
+  },
+  "ledger_agreement": {
+   "cost": 0.0007093312688407705,
+   "quality": 0.6951767607563716,
+   "instant_share": 0.4642367771992327,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3644067796610169,
+   "fail_rate_honest": 0.04094165813715456
+  },
+  "ledger_failures": {
+   "cost": 0.001073385475472723,
+   "quality": 0.7448479035352151,
+   "instant_share": 0.2891203069334064,
+   "malicious_excluded": 2,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.5084745762711864,
+   "fail_rate_honest": 0.04094165813715456
+  }
+ },
+ {
+  "seed": 71,
+  "w_C": 0.1,
+  "rho": 0.2,
+  "clean": {
+   "quality": 0.7580021923814744,
+   "cost": 0.0011874135927651326
+  },
+  "none": {
+   "cost": 0.0003594986023568039,
+   "quality": 0.6365305563167991,
+   "instant_share": 0.6626473006303096,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00036586675801588835,
+   "quality": 0.6376952589750616,
+   "instant_share": 0.6538777747328035,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.28444444444444444,
+   "fail_rate_honest": 0.04597701149425287
+  },
+  "ledger_agreement": {
+   "cost": 0.0004114298711975828,
+   "quality": 0.6390654973965469,
+   "instant_share": 0.6864894491641546,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.28444444444444444,
+   "fail_rate_honest": 0.04597701149425287
+  },
+  "ledger_failures": {
+   "cost": 0.0011514943820224626,
+   "quality": 0.748684571115374,
+   "instant_share": 0.24116196218141955,
+   "malicious_excluded": 4,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.5333333333333333,
+   "fail_rate_honest": 0.04597701149425287
+  }
+ },
+ {
+  "seed": 71,
+  "w_C": 0.1,
+  "rho": 0.3,
+  "clean": {
+   "quality": 0.7580021923814744,
+   "cost": 0.0011874135927651326
+  },
+  "none": {
+   "cost": 0.0002828433543436512,
+   "quality": 0.6097423951767607,
+   "instant_share": 0.8204987667854207,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00028161194847903123,
+   "quality": 0.6124143600986571,
+   "instant_share": 0.837763770896136,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.31722054380664655,
+   "fail_rate_honest": 0.04712041884816754
+  },
+  "ledger_agreement": {
+   "cost": 0.0002726242806248246,
+   "quality": 0.6080981090709783,
+   "instant_share": 0.8432447245820773,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.32628398791540786,
+   "fail_rate_honest": 0.04712041884816754
+  },
+  "ledger_failures": {
+   "cost": 0.001133852288298155,
+   "quality": 0.7473143326938887,
+   "instant_share": 0.2825431625102768,
+   "malicious_excluded": 6,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.5498489425981873,
+   "fail_rate_honest": 0.04712041884816754
+  }
+ },
+ {
+  "seed": 71,
+  "w_C": 0.3,
+  "rho": 0.1,
+  "clean": {
+   "quality": 0.6639079199780762,
+   "cost": 0.00042647613044668797
+  },
+  "none": {
+   "cost": 0.0002793050150726161,
+   "quality": 0.6186489449164154,
+   "instant_share": 0.6760756371608659,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00028339429980815976,
+   "quality": 0.6219375171279802,
+   "instant_share": 0.6582625376815566,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.23728813559322035,
+   "fail_rate_honest": 0.04094165813715456
+  },
+  "ledger_agreement": {
+   "cost": 0.0002791350506988147,
+   "quality": 0.6202932310221978,
+   "instant_share": 0.6459303918881886,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.2542372881355932,
+   "fail_rate_honest": 0.04094165813715456
+  },
+  "ledger_failures": {
+   "cost": 0.00036976618251574844,
+   "quality": 0.6479446423677719,
+   "instant_share": 0.48122773362565086,
+   "malicious_excluded": 2,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.2711864406779661,
+   "fail_rate_honest": 0.04094165813715456
+  }
+ },
+ {
+  "seed": 71,
+  "w_C": 0.3,
+  "rho": 0.2,
+  "clean": {
+   "quality": 0.6639079199780762,
+   "cost": 0.00042647613044668797
+  },
+  "none": {
+   "cost": 0.0002409472732255366,
+   "quality": 0.6099479309399836,
+   "instant_share": 0.793642093724308,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00024232480131542401,
+   "quality": 0.6088517402027952,
+   "instant_share": 0.777473280350781,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.27555555555555555,
+   "fail_rate_honest": 0.04597701149425287
+  },
+  "ledger_agreement": {
+   "cost": 0.0002424226911482552,
+   "quality": 0.6088517402027952,
+   "instant_share": 0.7969306659358728,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.28,
+   "fail_rate_honest": 0.04597701149425287
+  },
+  "ledger_failures": {
+   "cost": 0.0003691232666483873,
+   "quality": 0.6515346670320635,
+   "instant_share": 0.4661551109893121,
+   "malicious_excluded": 4,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.24444444444444444,
+   "fail_rate_honest": 0.04597701149425287
+  }
+ },
+ {
+  "seed": 71,
+  "w_C": 0.3,
+  "rho": 0.3,
+  "clean": {
+   "quality": 0.6639079199780762,
+   "cost": 0.00042647613044668797
+  },
+  "none": {
+   "cost": 0.00023738339271032777,
+   "quality": 0.6006303096738832,
+   "instant_share": 0.8936694984927377,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.0,
+   "fail_rate_honest": 0.0
+  },
+  "audit_local": {
+   "cost": 0.00024260394628664971,
+   "quality": 0.6033707865168538,
+   "instant_share": 0.8648944916415456,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.3202416918429003,
+   "fail_rate_honest": 0.04712041884816754
+  },
+  "ledger_agreement": {
+   "cost": 0.0002397164702658223,
+   "quality": 0.6028226911482597,
+   "instant_share": 0.8764044943820225,
+   "malicious_excluded": 0,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.32326283987915405,
+   "fail_rate_honest": 0.04712041884816754
+  },
+  "ledger_failures": {
+   "cost": 0.00037383496848450665,
+   "quality": 0.6510824883529734,
+   "instant_share": 0.47848725678268017,
+   "malicious_excluded": 6,
+   "honest_excluded": 0,
+   "fail_rate_malicious": 0.27492447129909364,
+   "fail_rate_honest": 0.04712041884816754
+  }
+ }
+]

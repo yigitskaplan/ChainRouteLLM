@@ -21,3 +21,11 @@ data/df5_filtered.csv
 
 # BERT numbers of every question, rebuilt by src/routing/embeddings.py.
 data/embeddings/*.npz
+
+# Phase 5: regenerable caches and the local Besu node (data, keys, throw-away dev wallet)
+results/phase5/cache/
+results/phase5/logs/
+results/phase5/logs_all.txt
+infrastructure/besu/data/node/
+infrastructure/besu/data/networkFiles/keys/
+infrastructure/besu/dev_wallet.json

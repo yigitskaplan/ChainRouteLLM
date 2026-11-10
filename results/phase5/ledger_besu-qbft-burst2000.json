@@ -1,0 +1,61 @@
+{
+ "label": "besu-qbft-burst2000",
+ "client": "besu/v26.11.0/linux-aarch_64/openjdk-java-25",
+ "chain_id": 1337,
+ "contract": "0x3A93D906d6a8c2d1581d0A3E8a41d79e816C5333",
+ "deploy_gas": 665990,
+ "store_record": {
+  "gas_mean": 122780.6,
+  "gas_first": 136451,
+  "gas_rest_mean": 119363,
+  "latency_s_mean": 1.9901535987854004,
+  "latency_s_p95": 1.9911870956420898
+ },
+ "log_record": {
+  "gas_mean": 28345.6,
+  "gas_first": 28336,
+  "gas_rest_mean": 28348,
+  "latency_s_mean": 1.9834603309631347,
+  "latency_s_p95": 1.9912877082824707
+ },
+ "commit_batch": {
+  "gas_mean": 73605,
+  "gas_first": 114605,
+  "gas_rest_mean": 63355,
+  "latency_s_mean": 1.989597988128662
+ },
+ "verify_inclusion": {
+  "16": {
+   "depth": 4,
+   "verify_gas_estimate": 32365,
+   "valid_proof_accepted": true,
+   "edited_record_rejected": true
+  },
+  "64": {
+   "depth": 6,
+   "verify_gas_estimate": 34833,
+   "valid_proof_accepted": true,
+   "edited_record_rejected": true
+  },
+  "256": {
+   "depth": 8,
+   "verify_gas_estimate": 37313,
+   "valid_proof_accepted": true,
+   "edited_record_rejected": true
+  },
+  "1024": {
+   "depth": 10,
+   "verify_gas_estimate": 39794,
+   "valid_proof_accepted": true,
+   "edited_record_rejected": true
+  }
+ },
+ "burst_log_record": {
+  "records": 2000,
+  "seconds": 25.220242977142334,
+  "records_per_s": 79.30137714425052,
+  "blocks_used": 11,
+  "first_block_after_start": 1,
+  "all_ok": true
+ }
+}

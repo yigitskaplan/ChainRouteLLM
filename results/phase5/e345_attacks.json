@@ -1,0 +1,1678 @@
+{
+ "substitution": [
+  {
+   "seed": 11,
+   "w_C": 0.1,
+   "offline_honest": {
+    "cost": 0.0011358073404546603,
+    "quality": 0.7466584497397973,
+    "gpt4_share": 0.6247603396329773
+   },
+   "offline_sub": {
+    "cost": 0.0011358073404546603,
+    "quality": 0.6190221857025473,
+    "gpt4_share": 0.6247603396329773
+   },
+   "ecr_honest": {
+    "cost": 0.0011317586962475944,
+    "quality": 0.7534237195288962,
+    "gpt4_share": 0.6354423445631334
+   },
+   "ecr_sub": {
+    "cost": 0.0005880942207614251,
+    "quality": 0.6343467543138867,
+    "gpt4_share": 0.2393864694604218
+   },
+   "oracle_sub": {
+    "cost": 0.00041443927691042976,
+    "quality": 0.8125034237195289
+   },
+   "ecr_sub_gpt4_share_by_1000": [
+    0.597,
+    0.564,
+    0.571,
+    0.555,
+    0.579,
+    0.562,
+    0.518,
+    0.49,
+    0.421,
+    0.406,
+    0.347,
+    0.361,
+    0.363,
+    0.326,
+    0.315,
+    0.295,
+    0.29,
+    0.288,
+    0.262,
+    0.248,
+    0.273,
+    0.29129464285714285
+   ]
+  },
+  {
+   "seed": 11,
+   "w_C": 0.3,
+   "offline_honest": {
+    "cost": 0.0003423724459052208,
+    "quality": 0.6516844700082169,
+    "gpt4_share": 0.11503697617091208
+   },
+   "offline_sub": {
+    "cost": 0.0003423724459052208,
+    "quality": 0.6284031772117229,
+    "gpt4_share": 0.11503697617091208
+   },
+   "ecr_honest": {
+    "cost": 0.00035716844700081147,
+    "quality": 0.6609285127362367,
+    "gpt4_share": 0.1265406737880033
+   },
+   "ecr_sub": {
+    "cost": 0.0002754316625581936,
+    "quality": 0.6277869076965216,
+    "gpt4_share": 0.03533278553820871
+   },
+   "oracle_sub": {
+    "cost": 0.00041443927691042976,
+    "quality": 0.8125034237195289
+   },
+   "ecr_sub_gpt4_share_by_1000": [
+    0.105,
+    0.103,
+    0.13,
+    0.117,
+    0.11,
+    0.108,
+    0.11,
+    0.092,
+    0.077,
+    0.065,
+    0.052,
+    0.043,
+    0.046,
+    0.047,
+    0.041,
+    0.041,
+    0.03,
+    0.028,
+    0.042,
+    0.027,
+    0.036,
+    0.027901785714285716
+   ]
+  },
+  {
+   "seed": 23,
+   "w_C": 0.1,
+   "offline_honest": {
+    "cost": 0.0010825663469443585,
+    "quality": 0.7567004658810632,
+    "gpt4_share": 0.5908468073444779
+   },
+   "offline_sub": {
+    "cost": 0.0010825663469443585,
+    "quality": 0.6194025760482323,
+    "gpt4_share": 0.5908468073444779
+   },
+   "ecr_honest": {
+    "cost": 0.0011606915867360822,
+    "quality": 0.7677993970950945,
+    "gpt4_share": 0.627295149355988
+   },
+   "ecr_sub": {
+    "cost": 0.000665764757467789,
+    "quality": 0.6328035078103591,
+    "gpt4_share": 0.2162236229103864
+   },
+   "oracle_sub": {
+    "cost": 0.00043071126335981916,
+    "quality": 0.8181830638531105
+   },
+   "ecr_sub_gpt4_share_by_1000": [
+    0.576,
+    0.597,
+    0.592,
+    0.59,
+    0.56,
+    0.567,
+    0.542,
+    0.499,
+    0.486,
+    0.456,
+    0.409,
+    0.403,
+    0.383,
+    0.384,
+    0.371,
+    0.37,
+    0.335,
+    0.342,
+    0.315,
+    0.32,
+    0.26,
+    0.24721603563474387
+   ]
+  },
+  {
+   "seed": 23,
+   "w_C": 0.3,
+   "offline_honest": {
+    "cost": 0.00035029717730884145,
+    "quality": 0.6628391340093176,
+    "gpt4_share": 0.11975883803781857
+   },
+   "offline_sub": {
+    "cost": 0.00035029717730884145,
+    "quality": 0.6313236503151548,
+    "gpt4_share": 0.11975883803781857
+   },
+   "ecr_honest": {
+    "cost": 0.0004070383666757908,
+    "quality": 0.6770073992874759,
+    "gpt4_share": 0.16388051520964647
+   },
+   "ecr_sub": {
+    "cost": 0.00028769103864071294,
+    "quality": 0.6320635790627568,
+    "gpt4_share": 0.04138120032885722
+   },
+   "oracle_sub": {
+    "cost": 0.00043071126335981916,
+    "quality": 0.8181830638531105
+   },
+   "ecr_sub_gpt4_share_by_1000": [
+    0.154,
+    0.184,
+    0.161,
+    0.159,
+    0.184,
+    0.182,
+    0.151,
+    0.13,
+    0.104,
+    0.105,
+    0.094,
+    0.105,
+    0.087,
+    0.078,
+    0.09,
+    0.093,
+    0.059,
+    0.077,
+    0.07,
+    0.051,
+    0.05,
+    0.034521158129175944
+   ]
+  },
+  {
+   "seed": 37,
+   "w_C": 0.1,
+   "offline_honest": {
+    "cost": 0.001159364254385957,
+    "quality": 0.7500959429824561,
+    "gpt4_share": 0.6225328947368421
+   },
+   "offline_sub": {
+    "cost": 0.001159364254385957,
+    "quality": 0.611938048245614,
+    "gpt4_share": 0.6225328947368421
+   },
+   "ecr_honest": {
+    "cost": 0.001137283278508763,
+    "quality": 0.7493421052631579,
+    "gpt4_share": 0.6203399122807017
+   },
+   "ecr_sub": {
+    "cost": 0.000546501260964903,
+    "quality": 0.6229440789473685,
+    "gpt4_share": 0.19846491228070176
+   },
+   "oracle_sub": {
+    "cost": 0.00043205345394736267,
+    "quality": 0.8036595394736842
+   },
+   "ecr_sub_gpt4_share_by_1000": [
+    0.563,
+    0.561,
+    0.543,
+    0.557,
+    0.562,
+    0.528,
+    0.526,
+    0.43,
+    0.421,
+    0.398,
+    0.336,
+    0.323,
+    0.325,
+    0.309,
+    0.288,
+    0.269,
+    0.28,
+    0.2,
+    0.225,
+    0.224,
+    0.217,
+    0.2502768549280177
+   ]
+  },
+  {
+   "seed": 37,
+   "w_C": 0.3,
+   "offline_honest": {
+    "cost": 0.0003572050438596391,
+    "quality": 0.6441474780701754,
+    "gpt4_share": 0.12609649122807018
+   },
+   "offline_sub": {
+    "cost": 0.0003572050438596391,
+    "quality": 0.6142680921052631,
+    "gpt4_share": 0.12609649122807018
+   },
+   "ecr_honest": {
+    "cost": 0.0003727889254385879,
+    "quality": 0.6522889254385964,
+    "gpt4_share": 0.13898026315789475
+   },
+   "ecr_sub": {
+    "cost": 0.0002712324561403431,
+    "quality": 0.6218064692982456,
+    "gpt4_share": 0.02850877192982456
+   },
+   "oracle_sub": {
+    "cost": 0.00043205345394736267,
+    "quality": 0.8036595394736842
+   },
+   "ecr_sub_gpt4_share_by_1000": [
+    0.145,
+    0.119,
+    0.12,
+    0.132,
+    0.134,
+    0.119,
+    0.104,
+    0.074,
+    0.085,
+    0.078,
+    0.057,
+    0.06,
+    0.053,
+    0.052,
+    0.033,
+    0.039,
+    0.047,
+    0.034,
+    0.04,
+    0.036,
+    0.033,
+    0.036544850498338874
+   ]
+  },
+  {
+   "seed": 53,
+   "w_C": 0.1,
+   "offline_honest": {
+    "cost": 0.0011356073992874675,
+    "quality": 0.7624554672513016,
+    "gpt4_share": 0.603453000822143
+   },
+   "offline_sub": {
+    "cost": 0.0011356073992874675,
+    "quality": 0.6339271033159769,
+    "gpt4_share": 0.603453000822143
+   },
+   "ecr_honest": {
+    "cost": 0.001207069882159487,
+    "quality": 0.7707728144697178,
+    "gpt4_share": 0.6758015894765689
+   },
+   "ecr_sub": {
+    "cost": 0.000674945628939427,
+    "quality": 0.6361605919429982,
+    "gpt4_share": 0.2899424499862976
+   },
+   "oracle_sub": {
+    "cost": 0.0004326447793916092,
+    "quality": 0.8165798848999726
+   },
+   "ecr_sub_gpt4_share_by_1000": [
+    0.638,
+    0.634,
+    0.687,
+    0.627,
+    0.689,
+    0.64,
+    0.658,
+    0.597,
+    0.569,
+    0.477,
+    0.461,
+    0.449,
+    0.432,
+    0.405,
+    0.356,
+    0.345,
+    0.345,
+    0.341,
+    0.323,
+    0.349,
+    0.323,
+    0.2976588628762542
+   ]
+  },
+  {
+   "seed": 53,
+   "w_C": 0.3,
+   "offline_honest": {
+    "cost": 0.0003639914497122401,
+    "quality": 0.6604412167717182,
+    "gpt4_share": 0.1315428884625925
+   },
+   "offline_sub": {
+    "cost": 0.0003639914497122401,
+    "quality": 0.6322143052891203,
+    "gpt4_share": 0.1315428884625925
+   },
+   "ecr_honest": {
+    "cost": 0.00035218229651958437,
+    "quality": 0.6590298711975884,
+    "gpt4_share": 0.13017265004110715
+   },
+   "ecr_sub": {
+    "cost": 0.0002634544806796289,
+    "quality": 0.6280624828720198,
+    "gpt4_share": 0.019457385585091806
+   },
+   "oracle_sub": {
+    "cost": 0.0004326447793916092,
+    "quality": 0.8165798848999726
+   },
+   "ecr_sub_gpt4_share_by_1000": [
+    0.125,
+    0.123,
+    0.146,
+    0.143,
+    0.121,
+    0.146,
+    0.096,
+    0.101,
+    0.083,
+    0.073,
+    0.075,
+    0.059,
+    0.047,
+    0.054,
+    0.048,
+    0.04,
+    0.044,
+    0.032,
+    0.034,
+    0.029,
+    0.03,
+    0.024526198439241916
+   ]
+  },
+  {
+   "seed": 71,
+   "w_C": 0.1,
+   "offline_honest": {
+    "cost": 0.0011233620169909472,
+    "quality": 0.7475472732255413,
+    "gpt4_share": 0.6009865716634695
+   },
+   "offline_sub": {
+    "cost": 0.0011233620169909472,
+    "quality": 0.6184708139216224,
+    "gpt4_share": 0.6009865716634695
+   },
+   "ecr_honest": {
+    "cost": 0.0011949546177034713,
+    "quality": 0.7583858591394902,
+    "gpt4_share": 0.6527815839956153
+   },
+   "ecr_sub": {
+    "cost": 0.0006489291312688309,
+    "quality": 0.6175527541792272,
+    "gpt4_share": 0.27678816114003835
+   },
+   "oracle_sub": {
+    "cost": 0.00044797703480405033,
+    "quality": 0.8138805152096464
+   },
+   "ecr_sub_gpt4_share_by_1000": [
+    0.635,
+    0.638,
+    0.601,
+    0.648,
+    0.642,
+    0.634,
+    0.608,
+    0.589,
+    0.529,
+    0.522,
+    0.518,
+    0.463,
+    0.431,
+    0.447,
+    0.404,
+    0.369,
+    0.385,
+    0.317,
+    0.344,
+    0.297,
+    0.319,
+    0.27444444444444444
+   ]
+  },
+  {
+   "seed": 71,
+   "w_C": 0.3,
+   "offline_honest": {
+    "cost": 0.0003411406960811084,
+    "quality": 0.6428610578240614,
+    "gpt4_share": 0.1145519320361743
+   },
+   "offline_sub": {
+    "cost": 0.0003411406960811084,
+    "quality": 0.612989860235681,
+    "gpt4_share": 0.1145519320361743
+   },
+   "ecr_honest": {
+    "cost": 0.00042044812277335287,
+    "quality": 0.6625376815565909,
+    "gpt4_share": 0.18278980542614415
+   },
+   "ecr_sub": {
+    "cost": 0.00027298717456836636,
+    "quality": 0.6134831460674157,
+    "gpt4_share": 0.02877500685119211
+   },
+   "oracle_sub": {
+    "cost": 0.00044797703480405033,
+    "quality": 0.8138805152096464
+   },
+   "ecr_sub_gpt4_share_by_1000": [
+    0.136,
+    0.127,
+    0.134,
+    0.185,
+    0.184,
+    0.191,
+    0.176,
+    0.144,
+    0.113,
+    0.099,
+    0.088,
+    0.091,
+    0.077,
+    0.079,
+    0.061,
+    0.062,
+    0.061,
+    0.036,
+    0.032,
+    0.038,
+    0.043,
+    0.04666666666666667
+   ]
+  }
+ ],
+ "poison": [
+  {
+   "seed": 11,
+   "w_C": 0.1,
+   "rho": 0.1,
+   "none": {
+    "cost": 0.0007920980553272995,
+    "quality": 0.7178170364283758,
+    "instant_share": 0.3763352506162695,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0008021433579841059,
+    "quality": 0.7183648315529991,
+    "instant_share": 0.3722267871815941,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0009854770747740264,
+    "quality": 0.7321966584497398,
+    "instant_share": 0.31470829909613807,
+    "malicious_excluded": 1,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.001136337332237734,
+    "quality": 0.7539715146535196
+   }
+  },
+  {
+   "seed": 11,
+   "w_C": 0.1,
+   "rho": 0.2,
+   "none": {
+    "cost": 0.00042783757874554306,
+    "quality": 0.6529854834291975,
+    "instant_share": 0.6283210079430293,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.000505900356066824,
+    "quality": 0.6666803615447823,
+    "instant_share": 0.5524513831826897,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.00044335212270610146,
+    "quality": 0.6584634346754314,
+    "instant_share": 0.6387291153108737,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.001136337332237734,
+    "quality": 0.7539715146535196
+   }
+  },
+  {
+   "seed": 11,
+   "w_C": 0.1,
+   "rho": 0.3,
+   "none": {
+    "cost": 0.0002615147630786038,
+    "quality": 0.6268967406190086,
+    "instant_share": 0.8088195015064366,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0002656415776499539,
+    "quality": 0.6279923308682553,
+    "instant_share": 0.7830731306491372,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0002626799780881896,
+    "quality": 0.6299096138044372,
+    "instant_share": 0.7893727745823063,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.001136337332237734,
+    "quality": 0.7539715146535196
+   }
+  },
+  {
+   "seed": 11,
+   "w_C": 0.3,
+   "rho": 0.1,
+   "none": {
+    "cost": 0.0002804684743905708,
+    "quality": 0.6405231443440154,
+    "instant_share": 0.6173651054505614,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0002895356888523617,
+    "quality": 0.6427143248425089,
+    "instant_share": 0.6012051492741715,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0002804684743905708,
+    "quality": 0.6405231443440154,
+    "instant_share": 0.6173651054505614,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.00035310298548341904,
+    "quality": 0.6603670227334977
+   }
+  },
+  {
+   "seed": 11,
+   "w_C": 0.3,
+   "rho": 0.2,
+   "none": {
+    "cost": 0.00024566151739248925,
+    "quality": 0.6293618186798138,
+    "instant_share": 0.7080251985757327,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0002481087373322316,
+    "quality": 0.6324431662558204,
+    "instant_share": 0.6899479594631608,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0002476027937551302,
+    "quality": 0.6260750479320735,
+    "instant_share": 0.7233634620651876,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.00035310298548341904,
+    "quality": 0.6603670227334977
+   }
+  },
+  {
+   "seed": 11,
+   "w_C": 0.3,
+   "rho": 0.3,
+   "none": {
+    "cost": 0.0002399190906600888,
+    "quality": 0.6247055601205149,
+    "instant_share": 0.822788277184333,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.00024180010955902052,
+    "quality": 0.6271706381813202,
+    "instant_share": 0.7937551355792933,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.00023954270062996003,
+    "quality": 0.6216926869350863,
+    "instant_share": 0.8099150917556833,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.00035310298548341904,
+    "quality": 0.6603670227334977
+   }
+  },
+  {
+   "seed": 23,
+   "w_C": 0.1,
+   "rho": 0.1,
+   "none": {
+    "cost": 0.0008164908742121045,
+    "quality": 0.7173061112633597,
+    "instant_share": 0.36914223074815017,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0008513181145519237,
+    "quality": 0.7219649218964099,
+    "instant_share": 0.3526993696903261,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0009986781583995522,
+    "quality": 0.744491641545629,
+    "instant_share": 0.30912578788709233,
+    "malicious_excluded": 1,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0011555111537407407,
+    "quality": 0.7664291586736092
+   }
+  },
+  {
+   "seed": 23,
+   "w_C": 0.1,
+   "rho": 0.2,
+   "none": {
+    "cost": 0.0004301332419840976,
+    "quality": 0.6609893121403123,
+    "instant_share": 0.607289668402302,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.000446393148807885,
+    "quality": 0.6620855028775007,
+    "instant_share": 0.6122225267196493,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.00043606215401479097,
+    "quality": 0.6631816936146889,
+    "instant_share": 0.5878322828172102,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0011555111537407407,
+    "quality": 0.7664291586736092
+   }
+  },
+  {
+   "seed": 23,
+   "w_C": 0.1,
+   "rho": 0.3,
+   "none": {
+    "cost": 0.00029851778569470514,
+    "quality": 0.6287338996985475,
+    "instant_share": 0.7884351877226637,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.00029794480679637674,
+    "quality": 0.628596875856399,
+    "instant_share": 0.7873389969854755,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0002750401753905118,
+    "quality": 0.625513839408057,
+    "instant_share": 0.7870649493011784,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0011555111537407407,
+    "quality": 0.7664291586736092
+   }
+  },
+  {
+   "seed": 23,
+   "w_C": 0.3,
+   "rho": 0.1,
+   "none": {
+    "cost": 0.00030248248835296475,
+    "quality": 0.6486571663469444,
+    "instant_share": 0.6023568100849548,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.000309824993148799,
+    "quality": 0.6500137023842147,
+    "instant_share": 0.579062756919704,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0003038713072074453,
+    "quality": 0.6522745957796655,
+    "instant_share": 0.5738558509180598,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0004112020827623896,
+    "quality": 0.6748835297341736
+   }
+  },
+  {
+   "seed": 23,
+   "w_C": 0.3,
+   "rho": 0.2,
+   "none": {
+    "cost": 0.0002522851192107359,
+    "quality": 0.6314743765415183,
+    "instant_share": 0.7476020827624007,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0002561608111811386,
+    "quality": 0.6325705672787065,
+    "instant_share": 0.7371882707591121,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0002526068511921007,
+    "quality": 0.6314743765415183,
+    "instant_share": 0.7506166072896684,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0004112020827623896,
+    "quality": 0.6748835297341736
+   }
+  },
+  {
+   "seed": 23,
+   "w_C": 0.3,
+   "rho": 0.3,
+   "none": {
+    "cost": 0.0002442095916689449,
+    "quality": 0.6229788983283091,
+    "instant_share": 0.830090435735818,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0002455121951219457,
+    "quality": 0.6232529460126062,
+    "instant_share": 0.8199506714168265,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0002450070156207125,
+    "quality": 0.6222252671964922,
+    "instant_share": 0.8311866264730063,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0004112020827623896,
+    "quality": 0.6748835297341736
+   }
+  },
+  {
+   "seed": 37,
+   "w_C": 0.1,
+   "rho": 0.1,
+   "none": {
+    "cost": 0.0007061835526315705,
+    "quality": 0.6981907894736842,
+    "instant_share": 0.37143640350877194,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0007287365679824477,
+    "quality": 0.7025767543859649,
+    "instant_share": 0.3673245614035088,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0009084664473684121,
+    "quality": 0.7206003289473685,
+    "instant_share": 0.30372807017543857,
+    "malicious_excluded": 1,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0011296670504385873,
+    "quality": 0.7498218201754385
+   }
+  },
+  {
+   "seed": 37,
+   "w_C": 0.1,
+   "rho": 0.2,
+   "none": {
+    "cost": 0.0003842792763157833,
+    "quality": 0.6451480263157895,
+    "instant_share": 0.6461074561403509,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0004118526864035029,
+    "quality": 0.6445997807017544,
+    "instant_share": 0.6631030701754386,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0004397547697368364,
+    "quality": 0.6555921052631579,
+    "instant_share": 0.6365131578947368,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0011296670504385873,
+    "quality": 0.7498218201754385
+   }
+  },
+  {
+   "seed": 37,
+   "w_C": 0.1,
+   "rho": 0.3,
+   "none": {
+    "cost": 0.00026937631578946927,
+    "quality": 0.6193530701754385,
+    "instant_share": 0.8168859649122807,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.00026940115131578494,
+    "quality": 0.6204495614035087,
+    "instant_share": 0.8196271929824561,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.00027890849780701286,
+    "quality": 0.6171600877192982,
+    "instant_share": 0.8026315789473685,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0011296670504385873,
+    "quality": 0.7498218201754385
+   }
+  },
+  {
+   "seed": 37,
+   "w_C": 0.3,
+   "rho": 0.1,
+   "none": {
+    "cost": 0.0002952541666666603,
+    "quality": 0.6291392543859649,
+    "instant_share": 0.647203947368421,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.00029944150219297607,
+    "quality": 0.6298930921052631,
+    "instant_share": 0.6370614035087719,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0002952541666666603,
+    "quality": 0.6291392543859649,
+    "instant_share": 0.647203947368421,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0003745855811403426,
+    "quality": 0.6529879385964912
+   }
+  },
+  {
+   "seed": 37,
+   "w_C": 0.3,
+   "rho": 0.2,
+   "none": {
+    "cost": 0.00024586030701753865,
+    "quality": 0.6188459429824562,
+    "instant_share": 0.7475328947368421,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0002530770285087665,
+    "quality": 0.6212445175438597,
+    "instant_share": 0.7365679824561403,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0002464989035087667,
+    "quality": 0.6196683114035089,
+    "instant_share": 0.7467105263157895,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0003745855811403426,
+    "quality": 0.6529879385964912
+   }
+  },
+  {
+   "seed": 37,
+   "w_C": 0.3,
+   "rho": 0.3,
+   "none": {
+    "cost": 0.00023816239035087298,
+    "quality": 0.6108552631578946,
+    "instant_share": 0.840734649122807,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.00023860378289473246,
+    "quality": 0.6114035087719297,
+    "instant_share": 0.8368969298245614,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0002374479166666627,
+    "quality": 0.6111293859649122,
+    "instant_share": 0.8626644736842105,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0003745855811403426,
+    "quality": 0.6529879385964912
+   }
+  },
+  {
+   "seed": 53,
+   "w_C": 0.1,
+   "rho": 0.1,
+   "none": {
+    "cost": 0.0008454544258700932,
+    "quality": 0.7224308029597151,
+    "instant_share": 0.39873938065223347,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0008366222526719565,
+    "quality": 0.7261304466977254,
+    "instant_share": 0.3825705672787065,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.001069384160043839,
+    "quality": 0.7504521786790901,
+    "instant_share": 0.2762400657714442,
+    "malicious_excluded": 1,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0012045638805152012,
+    "quality": 0.7699095642641819
+   }
+  },
+  {
+   "seed": 53,
+   "w_C": 0.1,
+   "rho": 0.2,
+   "none": {
+    "cost": 0.0003940947108796859,
+    "quality": 0.6553576322280077,
+    "instant_share": 0.5459029871197588,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0004467165798848926,
+    "quality": 0.6651548369416279,
+    "instant_share": 0.5220608385859139,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.00042535220608385136,
+    "quality": 0.6559057275966018,
+    "instant_share": 0.5612496574403947,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0012045638805152012,
+    "quality": 0.7699095642641819
+   }
+  },
+  {
+   "seed": 53,
+   "w_C": 0.1,
+   "rho": 0.3,
+   "none": {
+    "cost": 0.0002967615237051197,
+    "quality": 0.6330364483420114,
+    "instant_share": 0.7484242258152919,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0002788137571937474,
+    "quality": 0.6213209098383118,
+    "instant_share": 0.8152918607837764,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.00026902378733899236,
+    "quality": 0.6176075637160866,
+    "instant_share": 0.8059742395176761,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0012045638805152012,
+    "quality": 0.7699095642641819
+   }
+  },
+  {
+   "seed": 53,
+   "w_C": 0.3,
+   "rho": 0.1,
+   "none": {
+    "cost": 0.00030153751712797276,
+    "quality": 0.6465744039462867,
+    "instant_share": 0.5557687037544533,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0003014811729240813,
+    "quality": 0.6469169635516581,
+    "instant_share": 0.5535763222800767,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0003013923266648321,
+    "quality": 0.6463688681830639,
+    "instant_share": 0.5543984653329679,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0003528252123869451,
+    "quality": 0.6575226089339545
+   }
+  },
+  {
+   "seed": 53,
+   "w_C": 0.3,
+   "rho": 0.2,
+   "none": {
+    "cost": 0.0002477623458481719,
+    "quality": 0.6208961359276515,
+    "instant_share": 0.7270485064401205,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.000249624664291581,
+    "quality": 0.622334886270211,
+    "instant_share": 0.7188270759112085,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.00024854140860509135,
+    "quality": 0.6206220882433544,
+    "instant_share": 0.7122499314880789,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0003528252123869451,
+    "quality": 0.6575226089339545
+   }
+  },
+  {
+   "seed": 53,
+   "w_C": 0.3,
+   "rho": 0.3,
+   "none": {
+    "cost": 0.00023912743217319334,
+    "quality": 0.6132228007673335,
+    "instant_share": 0.8158399561523705,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.00023923973691421824,
+    "quality": 0.6145930391888189,
+    "instant_share": 0.8106330501507262,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.00024146697725403716,
+    "quality": 0.615141134557413,
+    "instant_share": 0.7909016168813373,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0003528252123869451,
+    "quality": 0.6575226089339545
+   }
+  },
+  {
+   "seed": 71,
+   "w_C": 0.1,
+   "rho": 0.1,
+   "none": {
+    "cost": 0.0007374684023019919,
+    "quality": 0.7043573581803233,
+    "instant_share": 0.39325842696629215,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0007857945738558423,
+    "quality": 0.7101123595505617,
+    "instant_share": 0.37873389969854754,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0007741781309947842,
+    "quality": 0.7117566456563441,
+    "instant_share": 0.38120032885722116,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0011874135927651326,
+    "quality": 0.7580021923814744
+   }
+  },
+  {
+   "seed": 71,
+   "w_C": 0.1,
+   "rho": 0.2,
+   "none": {
+    "cost": 0.000381364264181961,
+    "quality": 0.6387914497122499,
+    "instant_share": 0.6286653877774733,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0004216462044395658,
+    "quality": 0.6494793093998356,
+    "instant_share": 0.6037270485064401,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.00042165902987119076,
+    "quality": 0.6435872841874486,
+    "instant_share": 0.5922170457659632,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0011874135927651326,
+    "quality": 0.7580021923814744
+   }
+  },
+  {
+   "seed": 71,
+   "w_C": 0.1,
+   "rho": 0.3,
+   "none": {
+    "cost": 0.0002819958892847303,
+    "quality": 0.6127569197040285,
+    "instant_share": 0.7851466155110989,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.00029505645382295976,
+    "quality": 0.6138531104412167,
+    "instant_share": 0.7478761304466978,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.000283516689503968,
+    "quality": 0.615976979994519,
+    "instant_share": 0.7295149355987942,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.0011874135927651326,
+    "quality": 0.7580021923814744
+   }
+  },
+  {
+   "seed": 71,
+   "w_C": 0.3,
+   "rho": 0.1,
+   "none": {
+    "cost": 0.0002825590572759589,
+    "quality": 0.6268703754453274,
+    "instant_share": 0.6144149081940258,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0002834808440668606,
+    "quality": 0.6268703754453274,
+    "instant_share": 0.6130446697725405,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.0002837984653329612,
+    "quality": 0.6257741847081392,
+    "instant_share": 0.6399013428336531,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.00042647613044668797,
+    "quality": 0.6639079199780762
+   }
+  },
+  {
+   "seed": 71,
+   "w_C": 0.3,
+   "rho": 0.2,
+   "none": {
+    "cost": 0.00024366977254041655,
+    "quality": 0.6144012058098108,
+    "instant_share": 0.7295149355987942,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.0002442247739106551,
+    "quality": 0.614949301178405,
+    "instant_share": 0.7240339819128528,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.00024295790627568685,
+    "quality": 0.6122088243354343,
+    "instant_share": 0.7415730337078652,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.00042647613044668797,
+    "quality": 0.6639079199780762
+   }
+  },
+  {
+   "seed": 71,
+   "w_C": 0.3,
+   "rho": 0.3,
+   "none": {
+    "cost": 0.00023950079473828022,
+    "quality": 0.6104960263085777,
+    "instant_share": 0.8122773362565087,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_local": {
+    "cost": 0.00023964077829541895,
+    "quality": 0.6083036448342011,
+    "instant_share": 0.8106330501507262,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "audit_ledger": {
+    "cost": 0.00023975385036995974,
+    "quality": 0.6104960263085777,
+    "instant_share": 0.7999451904631406,
+    "malicious_excluded": 0,
+    "honest_excluded": 0
+   },
+   "ecr_clean": {
+    "cost": 0.00042647613044668797,
+    "quality": 0.6639079199780762
+   }
+  }
+ ],
+ "tamper": [
+  {
+   "seed": 11,
+   "w_C": 0.1,
+   "records": 21896,
+   "edited": 6551,
+   "batches": 86,
+   "batches_touched": 86,
+   "batches_detected": 86,
+   "false_alarms": 0,
+   "clean": {
+    "cost": 0.001136337332237734,
+    "quality": 0.7539715146535196,
+    "gpt4_share": 0.6373596274993153
+   },
+   "local_edited": {
+    "cost": 0.00037155371131195985,
+    "quality": 0.6381128457956724,
+    "gpt4_share": 0.0049301561216105174
+   },
+   "ledger_verified": {
+    "cost": 0.0011358073404546603,
+    "quality": 0.7466584497397973,
+    "gpt4_share": 0.6247603396329773
+   }
+  },
+  {
+   "seed": 11,
+   "w_C": 0.3,
+   "records": 21896,
+   "edited": 1318,
+   "batches": 86,
+   "batches_touched": 86,
+   "batches_detected": 86,
+   "false_alarms": 0,
+   "clean": {
+    "cost": 0.00035310298548341904,
+    "quality": 0.6603670227334977,
+    "gpt4_share": 0.12106272254176938
+   },
+   "local_edited": {
+    "cost": 0.0002506725828540031,
+    "quality": 0.6305121884415229,
+    "gpt4_share": 0.001917282936181868
+   },
+   "ledger_verified": {
+    "cost": 0.0003423724459052208,
+    "quality": 0.6516844700082169,
+    "gpt4_share": 0.11503697617091208
+   }
+  },
+  {
+   "seed": 23,
+   "w_C": 0.1,
+   "records": 21898,
+   "edited": 6684,
+   "batches": 86,
+   "batches_touched": 86,
+   "batches_detected": 86,
+   "false_alarms": 0,
+   "clean": {
+    "cost": 0.0011555111537407407,
+    "quality": 0.7664291586736092,
+    "gpt4_share": 0.6215401479857495
+   },
+   "local_edited": {
+    "cost": 0.00048454836941626826,
+    "quality": 0.6417374623184433,
+    "gpt4_share": 0.007399287476020828
+   },
+   "ledger_verified": {
+    "cost": 0.0010825663469443585,
+    "quality": 0.7567004658810632,
+    "gpt4_share": 0.5908468073444779
+   }
+  },
+  {
+   "seed": 23,
+   "w_C": 0.3,
+   "records": 21898,
+   "edited": 1986,
+   "batches": 86,
+   "batches_touched": 86,
+   "batches_detected": 86,
+   "false_alarms": 0,
+   "clean": {
+    "cost": 0.0004112020827623896,
+    "quality": 0.6748835297341736,
+    "gpt4_share": 0.1652507536311318
+   },
+   "local_edited": {
+    "cost": 0.000266895642641809,
+    "quality": 0.6302137571937516,
+    "gpt4_share": 0.001644286105782406
+   },
+   "ledger_verified": {
+    "cost": 0.00035029717730884145,
+    "quality": 0.6628391340093176,
+    "gpt4_share": 0.11975883803781857
+   }
+  },
+  {
+   "seed": 37,
+   "w_C": 0.1,
+   "records": 21903,
+   "edited": 6289,
+   "batches": 86,
+   "batches_touched": 86,
+   "batches_detected": 86,
+   "false_alarms": 0,
+   "clean": {
+    "cost": 0.0011296670504385873,
+    "quality": 0.7498218201754385,
+    "gpt4_share": 0.6211622807017544
+   },
+   "local_edited": {
+    "cost": 0.0004386200109649026,
+    "quality": 0.6300301535087719,
+    "gpt4_share": 0.010964912280701754
+   },
+   "ledger_verified": {
+    "cost": 0.001159364254385957,
+    "quality": 0.7500959429824561,
+    "gpt4_share": 0.6225328947368421
+   }
+  },
+  {
+   "seed": 37,
+   "w_C": 0.3,
+   "records": 21903,
+   "edited": 1409,
+   "batches": 86,
+   "batches_touched": 86,
+   "batches_detected": 86,
+   "false_alarms": 0,
+   "clean": {
+    "cost": 0.0003745855811403426,
+    "quality": 0.6529879385964912,
+    "gpt4_share": 0.14199561403508773
+   },
+   "local_edited": {
+    "cost": 0.0002503013157894663,
+    "quality": 0.6220120614035087,
+    "gpt4_share": 0.0
+   },
+   "ledger_verified": {
+    "cost": 0.0003572050438596391,
+    "quality": 0.6441474780701754,
+    "gpt4_share": 0.12609649122807018
+   }
+  },
+  {
+   "seed": 53,
+   "w_C": 0.1,
+   "records": 21897,
+   "edited": 7246,
+   "batches": 86,
+   "batches_touched": 86,
+   "batches_detected": 86,
+   "false_alarms": 0,
+   "clean": {
+    "cost": 0.0012045638805152012,
+    "quality": 0.7699095642641819,
+    "gpt4_share": 0.6744313510550836
+   },
+   "local_edited": {
+    "cost": 0.0004924710331597611,
+    "quality": 0.6307755549465607,
+    "gpt4_share": 0.0021923814743765417
+   },
+   "ledger_verified": {
+    "cost": 0.0011356073992874675,
+    "quality": 0.7624554672513016,
+    "gpt4_share": 0.603453000822143
+   }
+  },
+  {
+   "seed": 53,
+   "w_C": 0.3,
+   "records": 21897,
+   "edited": 1487,
+   "batches": 86,
+   "batches_touched": 86,
+   "batches_detected": 86,
+   "false_alarms": 0,
+   "clean": {
+    "cost": 0.0003528252123869451,
+    "quality": 0.6575226089339545,
+    "gpt4_share": 0.13099479309399836
+   },
+   "local_edited": {
+    "cost": 0.00025195500137022885,
+    "quality": 0.6273773636612772,
+    "gpt4_share": 0.000822143052891203
+   },
+   "ledger_verified": {
+    "cost": 0.0003639914497122401,
+    "quality": 0.6604412167717182,
+    "gpt4_share": 0.1315428884625925
+   }
+  },
+  {
+   "seed": 71,
+   "w_C": 0.1,
+   "records": 21900,
+   "edited": 6914,
+   "batches": 86,
+   "batches_touched": 86,
+   "batches_detected": 86,
+   "false_alarms": 0,
+   "clean": {
+    "cost": 0.0011874135927651326,
+    "quality": 0.7580021923814744,
+    "gpt4_share": 0.6530556316799123
+   },
+   "local_edited": {
+    "cost": 0.00044753132365030597,
+    "quality": 0.62289668402302,
+    "gpt4_share": 0.00712523979172376
+   },
+   "ledger_verified": {
+    "cost": 0.0011233620169909472,
+    "quality": 0.7475472732255413,
+    "gpt4_share": 0.6009865716634695
+   }
+  },
+  {
+   "seed": 71,
+   "w_C": 0.3,
+   "records": 21900,
+   "edited": 1953,
+   "batches": 86,
+   "batches_touched": 86,
+   "batches_detected": 86,
+   "false_alarms": 0,
+   "clean": {
+    "cost": 0.00042647613044668797,
+    "quality": 0.6639079199780762,
+    "gpt4_share": 0.18607837763770896
+   },
+   "local_edited": {
+    "cost": 0.0002613099479309317,
+    "quality": 0.6118388599616333,
+    "gpt4_share": 0.001644286105782406
+   },
+   "ledger_verified": {
+    "cost": 0.0003411406960811084,
+    "quality": 0.6428610578240614,
+    "gpt4_share": 0.1145519320361743
+   }
+  }
+ ]
+}

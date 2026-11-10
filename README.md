@@ -126,3 +126,27 @@ python -m src.routing.run_stage2 --data data/processed/11_models/routerbench_0sh
 The 64/16/20 split has the same test questions as the 80/20 one. Add `--w-C`
 or `--seeds` to run only some w_C values or seeds; results go to
 `results/stage2/<mode>_<split>.csv`.
+
+## Phase 5: improvement of the experimental results
+
+Everything runs on the CPU (the BERT file is shared with Stage 1/2). From the repository root:
+
+```bash
+export PYTHONPATH=$PWD
+python -m src.evaluation.run_phase5 offline   # E1: single models, random, oracle, zero router, AIQ, per benchmark (both pools)
+python -m src.evaluation.run_phase5 online    # E2: evidence-corrected online router vs the frozen router (5 models)
+python -m src.evaluation.run_phase5 attacks   # E3 silent substitution, E5 edited records (and a first fake-rating run)
+python -m src.evaluation.run_phase5 poison    # E4 fake ratings: noisy honest reporters, two reputation rules
+python -m src.evaluation.run_phase5_rf --w 0.1   # Phase 4 forest retraining on the same streams (slow, ~13 min per run)
+python -m src.evaluation.figures_phase5
+```
+
+`src/routing/evidence_router.py` is the evidence-corrected router: the offline forests stay frozen and a
+per-(k-means cluster, model) shrunken mean of observed − predicted quality and cost corrects them online;
+records are attributed to reporters so audits can exclude a reporter retroactively.
+
+Ledger (Stage 4): `infrastructure/besu/start_besu.sh` starts a single-validator Hyperledger Besu 26.11.0 network
+with QBFT (Docker); `contracts/src/EvidenceLedger.sol` stores evidence as storage records, event logs or
+Merkle batch roots; `python contracts/measure_ledger.py --rpc http://127.0.0.1:8560 --label besu-qbft` measures gas,
+latency, burst throughput and Merkle proof verification from real receipts (`forge build` in `contracts/` first).
+Raw results are in `results/phase5/*.json`.

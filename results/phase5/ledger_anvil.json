@@ -1,0 +1,61 @@
+{
+ "label": "anvil",
+ "client": "anvil/v1.8.3",
+ "chain_id": 31337,
+ "contract": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+ "deploy_gas": 665990,
+ "store_record": {
+  "gas_mean": 119931.4,
+  "gas_first": 136451,
+  "gas_rest_mean": 119361.75862068965,
+  "latency_s_mean": 0.05628922780354818,
+  "latency_s_p95": 0.05700397491455078
+ },
+ "log_record": {
+  "gas_mean": 28346.4,
+  "gas_first": 28336,
+  "gas_rest_mean": 28346.758620689656,
+  "latency_s_mean": 0.05588123798370361,
+  "latency_s_p95": 0.05719900131225586
+ },
+ "commit_batch": {
+  "gas_mean": 66766.73333333334,
+  "gas_first": 114605,
+  "gas_rest_mean": 65117.137931034486,
+  "latency_s_mean": 0.05628693103790283
+ },
+ "verify_inclusion": {
+  "16": {
+   "depth": 4,
+   "verify_gas_estimate": 32011,
+   "valid_proof_accepted": true,
+   "edited_record_rejected": true
+  },
+  "64": {
+   "depth": 6,
+   "verify_gas_estimate": 34474,
+   "valid_proof_accepted": true,
+   "edited_record_rejected": true
+  },
+  "256": {
+   "depth": 8,
+   "verify_gas_estimate": 36949,
+   "valid_proof_accepted": true,
+   "edited_record_rejected": true
+  },
+  "1024": {
+   "depth": 10,
+   "verify_gas_estimate": 39425,
+   "valid_proof_accepted": true,
+   "edited_record_rejected": true
+  }
+ },
+ "burst_log_record": {
+  "records": 2000,
+  "seconds": 13.467512130737305,
+  "records_per_s": 148.5055280132505,
+  "blocks_used": 1353,
+  "first_block_after_start": 1,
+  "all_ok": true
+ }
+}
