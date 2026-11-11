@@ -3,9 +3,12 @@
     python -m src.data.live_table
     python -m src.routing.embeddings --data data/processed/supergpqa_live.csv.gz \
         --config configs/experiment_stage3.json
+    python -m src.data.splits --data data/processed/supergpqa_live.csv.gz \
+        --config configs/experiment_stage3.json --out-dir data/splits/live
     python -m src.routing.run_stage3 --config configs/experiment_stage3.json
 
-For every seed the questions are split 30/60/10 (offline / online / test). The
+For every seed the questions are split 30/60/10 (offline / online / test) by
+the seed's manifest in data/splits/live/. The
 guessers learn accuracy, cost and latency from the offline answers. The online
 questions are routed in blocks; the picked model's real cost and latency go
 into c and l (router.Scales), the guessers stay as they are. Then every test
@@ -26,8 +29,7 @@ from typing import Any, Dict, Mapping, Optional, Sequence
 import numpy as np
 import pandas as pd
 
-from src.data.splits import make_split
-from src.data.tables import read_table
+from src.data.tables import read_table, table_stem
 from src.routing.embeddings import cache_path, load_embeddings
 from src.routing.predictors import Predictors
 from src.routing.router import Router, Scales
@@ -57,13 +59,11 @@ def measure(real: Mapping[str, np.ndarray], picks: np.ndarray, reference: int, m
     return out
 
 
-def run_seed(table: pd.DataFrame, X: np.ndarray, config: Mapping[str, Any], seed: int) -> pd.DataFrame:
+def run_seed(table: pd.DataFrame, X: np.ndarray, config: Mapping[str, Any], split_path: Path, seed: int) -> pd.DataFrame:
     models = config["data"]["model_keys_primary"]
     reference = models.index(config["data"]["reference_model"])
     settings = config["router"]
-    fractions = {key: float(config["data"][key]) for key in
-                 ("offline_fraction", "online_fraction", "test_fraction", "validation_fraction_of_offline")}
-    split = make_split(table[["sample_id", "group_id"]], seed, **fractions).set_index("sample_id")
+    split = read_table(split_path).set_index("sample_id")
     position = pd.Series(np.arange(len(table)), index=table["sample_id"])
 
     def rows(name: str) -> np.ndarray:
@@ -103,6 +103,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     parser = argparse.ArgumentParser(description="Evaluate the Stage 3 router with latency on the live answers.")
     parser.add_argument("--data", type=Path, default=Path("data/processed/supergpqa_live.csv.gz"))
     parser.add_argument("--config", required=True, type=Path)
+    parser.add_argument("--splits-dir", type=Path, default=Path("data/splits/live"))
     parser.add_argument("--out", type=Path, default=Path("results/stage3/live_claude.csv"))
     args = parser.parse_args(argv)
     config = json.loads(args.config.read_text(encoding="utf-8"))
@@ -110,7 +111,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     table = read_table(args.data)
     X = load_embeddings(cache_path(args.data, config["router"]["encoder_checkpoint"]), table["sample_id"])
 
-    results = pd.concat([run_seed(table, X, config, int(seed)) for seed in config["seeds"]], ignore_index=True)
+    splits = {int(seed): args.splits_dir / f"{table_stem(args.data)}_seed{seed}.csv.gz" for seed in config["seeds"]}
+    results = pd.concat([run_seed(table, X, config, path, seed) for seed, path in splits.items()], ignore_index=True)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     results.to_csv(args.out, index=False)
 
