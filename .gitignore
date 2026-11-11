@@ -29,3 +29,7 @@ results/phase5/logs_all.txt
 infrastructure/besu/data/node/
 infrastructure/besu/data/networkFiles/keys/
 infrastructure/besu/dev_wallet.json
+
+# SuperGPQA download, rebuilt by src/data/supergpqa.py; the question batches stay in Git.
+data/supergpqa/*
+!data/supergpqa/batches/
