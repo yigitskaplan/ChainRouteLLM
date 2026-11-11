@@ -164,15 +164,22 @@ Claude models.
 python -m src.data.live_table       # one table of the live answers (Claude models)
 python -m src.routing.embeddings --data data/processed/supergpqa_live.csv.gz \
     --config configs/experiment_stage3.json
+python -m src.data.splits --data data/processed/supergpqa_live.csv.gz \
+    --config configs/experiment_stage3.json --out-dir data/splits/live_30_70
 python -m src.routing.run_stage3 --config configs/experiment_stage3.json
 ```
 
 `predictors.py` now also guesses each model's latency when the data has it,
 and `router.py` scores accuracy − w_C·cost/c − w_L·latency/l, where c and l
 are the cost and latency of a typical model (the mean over models of each
-model's own mean). They start from the offline answers and take in every
+model's own mean). They start from the warm-start answers and take in every
 answer seen online (`Scales`). Stages 1 and 2 are unchanged: no latency and a
-fixed c. `run_stage3` splits the questions 30/60/10 for 5 seeds and reports
-quality, cost and latency on the test questions as a share of always using
-Opus, for a w_C × w_L grid, next to single models, a random pick and the
-oracle; every seed's numbers go to `results/stage3/live_claude.csv`.
+fixed c. `online.py` now also relearns latency and feeds c and l.
+
+`run_stage3` evaluates online the way online routers are evaluated: a 30%
+warm start where every model's answer is known, then a 70% stream graded as
+it goes. Each block of 25 questions is routed and scored before the router
+learns from it. For 5 seeds and a w_C × w_L grid it reports quality, cost and
+latency on the whole stream as a share of always using Opus, next to the same
+router without learning, single models, a random pick and the oracle; every
+seed's numbers go to `results/stage3/live_30_70.csv`.

@@ -1,6 +1,6 @@
 {
   "experiment": "stage3_live_latency",
-  "description": "Stage 3: the router with latency on the live SuperGPQA answers of the three Claude models (250 questions), split 30/60/10 like the project design. The GPT models join once their answers are complete.",
+  "description": "Stage 3: the router with latency and online learning on the live SuperGPQA answers of the three Claude models (250 questions). Online evaluation: a 30% warm start where every model's answer is known, then a 70% stream graded as it goes (each block routed and scored before it is learned from). The GPT models join once their answers are complete.",
   "seeds": [
     11,
     23,
@@ -16,8 +16,8 @@
     ],
     "reference_model": "claude-opus-5-5",
     "offline_fraction": 0.3,
-    "online_fraction": 0.6,
-    "test_fraction": 0.1,
+    "online_fraction": 0.7,
+    "test_fraction": 0.0,
     "validation_fraction_of_offline": 0.0
   },
   "router": {
@@ -25,10 +25,22 @@
     "encoder_pooling": "mean_of_last_hidden_layer",
     "encoder_max_tokens": 512,
     "score": "A_hat - w_C*C_hat/c - w_L*L_hat/l",
-    "scales": "c, l = mean over models of each model's mean cost / latency, updated with every online answer",
+    "scales": "c, l = mean over models of each model's mean cost / latency; start from the warm start, take in every answer seen",
     "online_block": 25,
-    "w_C_grid": [0.0, 0.02, 0.05, 0.1, 0.2],
-    "w_L_grid": [0.0, 0.05, 0.1, 0.2, 0.5],
+    "w_C_grid": [
+      0.0,
+      0.02,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "w_L_grid": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.5
+    ],
     "predictors": {
       "quality": "random_forest",
       "cost": "random_forest",
