@@ -89,7 +89,7 @@ python -m src.data.build_dataset --pickle data/routerbench_0shot.pkl \
     meta/code-llama-instruct-34b-chat mistralai/mistral-7b-chat
 python -m src.data.splits --data data/processed/11_models/routerbench_0shot.csv.gz \
     --config configs/experiment_mixllm_8020.json --out-dir data/splits/80_20
-python -m src.routing.run_stage2 --data data/processed/11_models/routerbench_0shot.csv.gz \
+python -m src.routing.archive.run_stage2 --data data/processed/11_models/routerbench_0shot.csv.gz \
     --config configs/experiment_mixllm_8020.json --splits-dir data/splits/80_20   # about 30 min
 ```
 
@@ -112,13 +112,13 @@ both ways, so there are three runs:
 python -m src.data.splits --data data/processed/11_models/routerbench_0shot.csv.gz \
     --config configs/experiment_mixllm_64_16_20.json --out-dir data/splits/64_16_20
 # 1. 64/16/20: learn online, then test
-python -m src.routing.run_stage2 --data data/processed/11_models/routerbench_0shot.csv.gz \
+python -m src.routing.archive.run_stage2 --data data/processed/11_models/routerbench_0shot.csv.gz \
     --config configs/experiment_mixllm_64_16_20.json --splits-dir data/splits/64_16_20 --online
 # 2. 64/16/20: learn online, then keep learning during the test
-python -m src.routing.run_stage2 --data data/processed/11_models/routerbench_0shot.csv.gz \
+python -m src.routing.archive.run_stage2 --data data/processed/11_models/routerbench_0shot.csv.gz \
     --config configs/experiment_mixllm_64_16_20.json --splits-dir data/splits/64_16_20 --online --test-updates
 # 3. 80/20: learn during the test
-python -m src.routing.run_stage2 --data data/processed/11_models/routerbench_0shot.csv.gz \
+python -m src.routing.archive.run_stage2 --data data/processed/11_models/routerbench_0shot.csv.gz \
     --config configs/experiment_mixllm_8020.json --splits-dir data/splits/80_20 --test-updates \
     --out results/stage2/online_test_updates_80_20.csv
 ```
@@ -157,3 +157,22 @@ limited to 3 requests per minute and 50 per day per model, so they have only a
 few answers so far (a support request about the account's usage tier is open).
 They will be completed on their own branch; until then Stage 3 uses the three
 Claude models.
+
+### Router with latency
+
+```bash
+python -m src.data.live_table       # one table of the live answers (Claude models)
+python -m src.routing.embeddings --data data/processed/supergpqa_live.csv.gz \
+    --config configs/experiment_stage3.json
+python -m src.routing.run_stage3 --config configs/experiment_stage3.json
+```
+
+`predictors.py` now also guesses each model's latency when the data has it,
+and `router.py` scores accuracy − w_C·cost/c − w_L·latency/l, where c and l
+are the cost and latency of a typical model (the mean over models of each
+model's own mean). They start from the offline answers and take in every
+answer seen online (`Scales`). Stages 1 and 2 are unchanged: no latency and a
+fixed c. `run_stage3` splits the questions 30/60/10 for 5 seeds and reports
+quality, cost and latency on the test questions as a share of always using
+Opus, for a w_C × w_L grid, next to single models, a random pick and the
+oracle; every seed's numbers go to `results/stage3/live_claude.csv`.
