@@ -1,0 +1,91 @@
+uuid,discipline,field,subfield,difficulty,answer_letter
+f4633db0181f42e9993b833dd4e1b91a,Engineering,Information and Communication Engineering,Signal and Information Processing,middle,A
+d3dcd692f18e49b080be7e0323f5f985,Engineering,Optical Engineering,Theoretical Optics,middle,B
+fb41440f181242a1a6b3ce7b9664a762,Engineering,Information and Communication Engineering,Antenna and Radio Communication,hard,J
+6f36bde3786344368dfe8ed8d99b7181,Engineering,Power Engineering and Engineering Thermophysics,Fluid Machinery and Engineering,hard,G
+7aadaa0acebb4eb58b62c4fceae3bf60,Engineering,Power Engineering and Engineering Thermophysics,Engineering Thermophysics,hard,E
+7877eb2d7b9840abae4e4576314b369f,Science,Biology,Ecology,easy,D
+0669792e475a49fe8e746713b21225d7,Medicine,Basic Medicine,Pathology and Pathophysiology,middle,D
+2ee372f987304fe882e13238d4c6925e,Science,Physics,Electrodynamics,hard,E
+03834d242a554304a6246038f232969a,Science,Physics,Acoustics,hard,H
+a333f3ff9bae4768a87a87b853a20912,Agronomy,Crop Science,Crop Science,middle,H
+7a51b2fa2657429aa4eca2acbaf1151d,Science,Mathematics,Number Theory,hard,G
+75d65eadc9584a80b2589a012cffe512,Engineering,Geological Resources and Geological Engineering,Geological Resources and Geological Engineering,middle,A
+a4bb7e1d8f564763b183e3861cace1c2,Science,Physics,Particle and Nuclear Physics,middle,I
+16082a3174b74ab6a956488ffb7102cd,History,History,World History,easy,I
+a9db113c7ef1455399f83fd37be01832,Engineering,Mechanics,Fundamentals of Dynamics and Control,middle,G
+731a0d1792c94eb696716015f6c617f1,Science,Physics,Fluid Physics,hard,D
+530a6c1b54cb409c8785941fb637e814,Science,Physics,Thermodynamics and Statistical Physics,hard,A
+f1631ade51294d618ad50091e5abd1b0,Science,Geology,"Mineralogy, Petrology, and Economic Geology",middle,I
+1f5bb1ab224a4685ac5ef72f94942ac6,Law,Law,Contract Law,easy,F
+b641be0d00314000bb74274ed144adfc,Science,Biology,Genetics,easy,H
+87e28dd9423245ff86f217a0fb5b7512,Science,Biology,Physiology,middle,G
+c52ddb9b99164f3984bc3b0b5373e810,Engineering,Power Engineering and Engineering Thermophysics,Refrigeration and Cryogenic Engineering,hard,J
+2fa51f60928346888a6e89a8fab97428,Medicine,Basic Medicine,Human Anatomy and Histology-Embryology,middle,C
+0abd798f2a774ea2af8cff1b2c086f81,Medicine,Stomatology,Clinical Stomatology,middle,C
+33d3d5b423384bba847a4a1ac00749ed,Medicine,Pharmacy,Medicinal Chemistry,middle,D
+e685abfde6fe4467bd2ce668197d23e6,Science,Physics,Atomic and Molecular Physics,middle,G
+91a2057d13ed46ef8ee13b7e6d0100ad,Medicine,Clinical Medicine,Imaging and Nuclear Medicine,easy,F
+b8415e8f8c6b458ba97f6b194ef337e8,Literature and Arts,Journalism and Communication,Journalism and News Practice,easy,E
+5001aee457944ef6a1f02ae3ac50ca95,Medicine,Basic Medicine,Human Anatomy and Histology-Embryology,middle,F
+e874576a9e6c4a2aae7593e3388d03c9,Medicine,Clinical Medicine,Internal Medicine,easy,F
+be529e4267c8488f8df3970620cef40e,Science,Physics,Relativity,hard,G
+1fc03de98f3a420391c2af4409828067,Science,Physics,Subatomic and Atomic Physics,middle,I
+ba93133d2f97402081520002ee2d4928,Science,Atmospheric Science,Dynamic Meteorology,middle,D
+2019129df6c146feb718bdc975a430f9,Science,Geophysics,Solid Earth Geophysics,middle,E
+c87e2a9e4dcd4bd2ae6328650875b4de,Engineering,Metallurgical Engineering,Iron and Steel Metallurgy,hard,A
+8dcbb2d6f85149cb9896954fc33ac7b8,Science,Mathematics,Probability and Statistics,middle,B
+025f644245a04129ba54cd909a5e97b2,Law,Law,Civil and Commercial Law,middle,D
+6e93f26fd86f4d678ae35d7d7506c0f0,Management,Public Administration,Social Medicine and Health Management,middle,I
+096c6a79df9a4a119188f1fcf0845753,Literature and Arts,Journalism and Communication,Journalism and News Practice,easy,J
+23c53c65a8634afe9c40f32445d2ed4e,Economics,Applied Economics,Public Finance,middle,J
+b4428815b1a8424eba16c46275857ecd,Science,Mathematics,Geometry and Topology,middle,J
+de8d713b6d5b4a0a9648f5969dc186d0,Science,Chemistry,Physical Chemistry,hard,H
+61fcd7e73e194e2ebea202afec24e266,Engineering,Electrical Engineering,Power Electronics and Electrical Drives,hard,I
+392a3c64dcf04dadb402f24760a9518b,Science,Physics,Thermodynamics,middle,H
+0529e135a4ea4db59069d0d081f2960a,Science,Oceanography,Marine Chemistry,middle,F
+701898aad61a489886c2eb8f4db59cdd,Science,Mathematics,Discrete Mathematics,hard,I
+b51077373ccc4c22ad200c476b3b88aa,Engineering,Surveying and Mapping Science and Technology,Cartography and Geographic Information Engineering,middle,A
+d3de7be9e1374bfcbb7d9ecb90eb20c6,Science,Chemistry,Physical Chemistry,hard,J
+7248e6195d44495e9c2ac9cff9de1eed,Engineering,Mechanics,Fundamentals of Dynamics and Control,hard,A
+f1e9a09803c04326ad285b6839ee7e38,Economics,Applied Economics,Public Finance,middle,D
+1dc6148db1d940c4aaf21dfc3b4f9b30,Medicine,Basic Medicine,Immunology,middle,D
+c617c8fb2b9f43dfa8f4ea345ab88f45,Economics,Applied Economics,Labor Economics,middle,I
+e8f13d774f2f490ca4ab5f1ee2b7221f,Agronomy,Animal Husbandry,Animal Rearing and Breeding,middle,G
+0e4c0c0966594c50a314899ff5da9b98,Science,Physics,Polymer Physics,hard,F
+a7a3dc6d5b5b4d37a32c2839833a4d6c,Science,Astronomy,Solar System Science,hard,E
+146be28f445041beb942056acaa87ae1,Economics,Theoretical Economics,Western Economics,easy,G
+36623ae8930e4409bdf77302cb196a8f,Medicine,Pharmacy,Microbiology and Biochemical Pharmacy,middle,D
+41a1deebc51847799fc5e83cab58c313,Engineering,Chemical Engineering and Technology,Fluid Flow and Heat Transfer in Chemical Engineering,hard,H
+fdd4b913338843cfbb64180ad80c2cf5,Medicine,Public Health and Preventive Medicine,"Maternal, Child and Adolescent Health",middle,D
+763f186b89c9449e827fc6547b7827f6,Philosophy,Philosophy,Logic,easy,A
+d638c218a851446ab3bf2e6a9178d67b,Science,Physics,Thermodynamics and Statistical Physics,hard,E
+dd9099ac09d846628ebe511b50ffc963,Education,Education,Preschool Education,middle,C
+2685f5ce38354990923908a993698992,Law,Law,Civil and Commercial Law,middle,D
+32797bc3fa7f4daf8f67bce39e12ec8e,Engineering,Information and Communication Engineering,Communication and Information Systems,middle,J
+005c69a0ce0f4b978b4aa4e0a49beef7,Medicine,Clinical Medicine,Imaging and Nuclear Medicine,easy,B
+301af223949442048982df544c1a5308,Science,Chemistry,Physical Chemistry,middle,G
+ae905e8fa80e4cd49953be1607d30ecc,Engineering,Nuclear Science and Technology,Nuclear Energy and Reactor Technology,middle,D
+1f27cbb732a148b58d7fc3ab537d8399,Science,Geology,Structural Geology,middle,J
+4e409fed9d954f0ba07347e3b3e343ea,Engineering,Chemical Engineering and Technology,Elements of Chemical Reaction Engineering,hard,H
+f1c339ef9e8347c2b06fe68af5d12d8f,Engineering,Architecture,Architectural History,middle,D
+89f6324e20a04b999956d73f93970ac0,Science,Mathematics,Combinatorial Mathematics,hard,B
+739ff662a82a4b7d878172a0b65b29a6,Economics,Applied Economics,Finance,easy,J
+f8e18a2c177e4b988bb9990e38fc7264,Science,Physics,Thermodynamics and Statistical Physics,middle,C
+d2112d932a714bbf875080626c135d31,Science,Chemistry,Organic Chemistry,hard,C
+46f1a88a59424571a17781f183b756fc,Philosophy,Philosophy,Ethics,middle,J
+1a6b76c36b6348f9ba1457f72c5abaff,Engineering,Mechanics,Theoretical Fluid Mechanics,hard,I
+080d84821fa8414ebb6b4140bba9ddc7,Science,Mathematics,Combinatorial Mathematics,hard,B
+6de6df0213f540939da09b6896691185,Medicine,Stomatology,Clinical Stomatology,middle,G
+a3de2c40bc584fe59b6383d705c41209,Science,Biology,Biophysics,easy,C
+132385d27da740c1837048272302679c,Science,Geology,"Mineralogy, Petrology, and Economic Geology",middle,J
+1cc76e4be35d47dbb83d923d39b8e9a8,Engineering,Civil Engineering,Bridge and Tunnel Engineering,easy,A
+2df325c6ce2b432789338e3d4148ea1e,Engineering,Civil Engineering,Urban Infrastructure Engineering,easy,A
+0036a747285943dd8f2876ab1c7829be,Science,Geology,"Mineralogy, Petrology, and Economic Geology",middle,F
+2d3bb9a1988b4c81927bab8d6fe89f81,Science,Biology,Zoology,middle,A
+cea59dc6b38b4544912f2e7f6ffb1acb,Engineering,Mechanics,Fundamentals of Dynamics and Control,hard,H
+127b1c62b4a54075a1fec123cfa24bb6,Science,Physics,Thermodynamics,easy,G
+38e7e19db99946f1a190f00426b229c0,Engineering,Mechanics,Fundamentals of Dynamics and Control,hard,H
+93b020939eb74524a4ff361087379b90,Engineering,Electrical Engineering,Power Systems and Automation,middle,B
+792854ac5b2b44a88913aada9a223a73,Engineering,Mechanics,Theoretical Mechanics,middle,A
+bf5cb743f64947f6ac35c779ec5d3096,Science,Chemistry,Polymer Chemistry and Physics,hard,E

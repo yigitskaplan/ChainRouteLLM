@@ -21,3 +21,7 @@ data/df5_filtered.csv
 
 # BERT numbers of every question, rebuilt by src/routing/embeddings.py.
 data/embeddings/*.npz
+
+# SuperGPQA download, rebuilt by src/data/supergpqa.py; the question batches stay in Git.
+data/supergpqa/*
+!data/supergpqa/batches/

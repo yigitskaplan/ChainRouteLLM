@@ -126,3 +126,34 @@ python -m src.routing.run_stage2 --data data/processed/11_models/routerbench_0sh
 The 64/16/20 split has the same test questions as the 80/20 one. Add `--w-C`
 or `--seeds` to run only some w_C values or seeds; results go to
 `results/stage2/<mode>_<split>.csv`.
+
+## Stage 3: live models
+
+Stage 3 measures latency on real API models instead of RouterBench's old
+answers. The questions come from SuperGPQA (m-a-p/SuperGPQA, ODC-BY licence):
+26,529 multiple-choice questions from 13 disciplines, each with its correct
+letter, so grading is automatic.
+
+```bash
+pip install -r requirements.txt
+python -m src.data.supergpqa        # download SuperGPQA, write the question batches
+python -m src.data.collect_live --batch data/supergpqa/batches/batch_1_90.csv
+```
+
+`supergpqa` writes three batches to `data/supergpqa/batches/`: the 10-question
+test run, then 90 and 150 questions from a seeded random draw (250 in all; near-
+identical questions are dropped and no question is in two batches).
+`collect_live` asks every question of a batch to each model with the same
+settings (effort "low", at most 4,000 answer tokens), one timed call at a time
+per model, and appends every answer to `data/live/supergpqa_<batch>.csv`:
+correct or not, tokens, cost (USD), latency (seconds) and the call time. It
+needs the API keys in `.env` (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY`; never
+committed), stops calling a provider at its budget and, when run again, asks
+only what is missing. `--models` asks only some of the models.
+
+Models: Claude Haiku 5.5, Sonnet 5.5 and Opus 5.5 have answered all 250
+questions. **GPT-6.1 Terra and Sol are not finished:** a new OpenAI account is
+limited to 3 requests per minute and 50 per day per model, so they have only a
+few answers so far (a support request about the account's usage tier is open).
+They will be completed on their own branch; until then Stage 3 uses the three
+Claude models.
