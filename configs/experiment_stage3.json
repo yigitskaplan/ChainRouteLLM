@@ -26,7 +26,7 @@
     "encoder_checkpoint": "bert-base-multilingual-cased",
     "encoder_pooling": "mean_of_last_hidden_layer",
     "encoder_max_tokens": 512,
-    "score": "A_hat - w_C*C_hat/c - w_L*L_hat/l",
+    "score": "A_hat - w_C*C_hat/c - w_L*L_hat/l + w_R*R",
     "scales": "c, l = mean over models of each model's mean cost / latency; start from the warm start, take in every answer seen",
     "online_block": 25,
     "w_C_grid": [
@@ -43,6 +43,12 @@
       0.2,
       0.5
     ],
+    "w_R_grid": [
+      0.0,
+      0.05,
+      0.1,
+      0.2
+    ],
     "predictors": {
       "quality": "random_forest",
       "cost": "random_forest",
@@ -52,6 +58,7 @@
         "min_samples_leaf": 5,
         "max_features": "sqrt"
       }
-    }
+    },
+    "reputation": "data/reputation/reputation.json"
   }
 }

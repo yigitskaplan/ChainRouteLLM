@@ -1,0 +1,24 @@
+{
+  "source": "GDELT DOC 2.0 API, modes timelinetone and timelinevolraw",
+  "window": [
+    "2026-10-12",
+    "2026-11-11"
+  ],
+  "query": {
+    "anthropic": "Anthropic",
+    "openai": "OpenAI"
+  },
+  "spread": 0.9886,
+  "providers": {
+    "anthropic": {
+      "tone": -0.3098,
+      "days": 22,
+      "R": 0.3749
+    },
+    "openai": {
+      "tone": -1.051,
+      "days": 22,
+      "R": -0.3749
+    }
+  }
+}

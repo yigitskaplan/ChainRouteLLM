@@ -17,7 +17,9 @@ router learns from the block (online.py: the picked models' forests are
 retrained and c and l take in the answers). The router is graded on the whole
 stream, for every (w_C, w_L) pair, next to the same router without learning,
 each single model, a random pick and the oracle (a right model, cheapest
-first), all on the same stream questions. Quality (share right), cost (USD) and
+first), all on the same stream questions. With a reputation weight w_R, each
+model's score also gets w_R * R of its provider (data/reputation/reputation.json,
+from src.data.reputation). Quality (share right), cost (USD) and
 latency (seconds) are reported as means and as a share of always using the
 reference model, for the whole stream and for its first and second half.
 Prints the mean ± sd over the seeds and saves every seed's numbers.
@@ -33,6 +35,7 @@ from typing import Any, Dict, Mapping, Optional, Sequence
 import numpy as np
 import pandas as pd
 
+from src.data.collect_live import MODELS as LIVE_MODELS
 from src.data.tables import read_table, table_stem
 from src.routing.embeddings import cache_path, load_embeddings
 from src.routing.online import learn_online
@@ -69,6 +72,15 @@ def measure(real: Mapping[str, np.ndarray], picks: np.ndarray, reference: int, m
     return out
 
 
+def model_reputation(config: Mapping[str, Any], models: Sequence[str]) -> np.ndarray:
+    """R of every model's provider, in model order (zeros without a reputation file)."""
+    path = config["router"].get("reputation")
+    if not path:
+        return np.zeros(len(models))
+    providers = json.loads(Path(path).read_text(encoding="utf-8"))["providers"]
+    return np.array([providers[LIVE_MODELS[model][0]]["R"] for model in models])
+
+
 def run_seed(table: pd.DataFrame, X: np.ndarray, config: Mapping[str, Any], split_path: Path, seed: int) -> pd.DataFrame:
     models = config["data"]["model_keys_primary"]
     reference = models.index(config["data"]["reference_model"])
@@ -88,16 +100,19 @@ def run_seed(table: pd.DataFrame, X: np.ndarray, config: Mapping[str, Any], spli
     guessers = Predictors(models, settings["predictors"]["random_forest"], seed).fit(X[warm], part(warm))
     frozen_guess = guessers.predict(X[stream])
     block = int(settings["online_block"])
+    reputation = model_reputation(config, models)
     results = []
-    for w_C, w_L in itertools.product(settings["w_C_grid"], settings["w_L_grid"]):
+    grid = itertools.product(settings["w_C_grid"], settings["w_L_grid"], settings.get("w_R_grid", [0.0]))
+    for w_C, w_L, w_R in grid:
         # Learning: every block is routed and scored first, then learned from.
         scales = Scales(part(warm))
-        _, picks = learn_online(guessers, Router(w_C, scales, w_L), X[warm], part(warm), X[stream], part(stream), block)
-        results.append(dict(method="router", w_C=w_C, w_L=w_L, c=scales.c, l=scales.l,
+        router = Router(w_C, scales, w_L, w_R, reputation)
+        _, picks = learn_online(guessers, router, X[warm], part(warm), X[stream], part(stream), block)
+        results.append(dict(method="router", w_C=w_C, w_L=w_L, w_R=w_R, c=scales.c, l=scales.l,
                             **measure(part(stream), picks, reference, models)))
         # The same router without learning: warm-start guessers, c and l throughout.
-        frozen = Router(w_C, Scales(part(warm)), w_L).route(frozen_guess)
-        results.append(dict(method="router, no learning", w_C=w_C, w_L=w_L,
+        frozen = Router(w_C, Scales(part(warm)), w_L, w_R, reputation).route(frozen_guess)
+        results.append(dict(method="router, no learning", w_C=w_C, w_L=w_L, w_R=w_R,
                             **measure(part(stream), frozen, reference, models)))
 
     rng = np.random.default_rng(seed)
@@ -129,7 +144,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 
     reference = config["data"]["reference_model"]
     columns = ["quality_vs_ref", "cost_vs_ref", "latency_vs_ref"]
-    summary = results.groupby(["method", "w_C", "w_L"], dropna=False, sort=False)
+    summary = results.groupby(["method", "w_C", "w_L", "w_R"], dropna=False, sort=False)
     stats = summary[columns].agg(["mean", "std"])
     halves = summary[["quality_vs_ref_first_half", "quality_vs_ref_second_half"]].mean()
     picks = summary[[f"picks_{m}" for m in models]].mean()
@@ -137,10 +152,10 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
           f"{len(config['seeds'])} seeds; quality / cost / latency as a share of always using {reference}, mean ± sd; "
           "quality in the stream's first -> second half; picks")
     # The three summaries share the group order; baselines have no w_C / w_L, so match rows by position.
-    for ((method, w_C, w_L), row), (_, h), (_, p) in zip(stats.iterrows(), halves.iterrows(), picks.iterrows()):
-        name = f"{method} w_C={w_C:g} w_L={w_L:g}" if method.startswith("router") else method
+    for ((method, w_C, w_L, w_R), row), (_, h), (_, p) in zip(stats.iterrows(), halves.iterrows(), picks.iterrows()):
+        name = f"{method} w_C={w_C:g} w_L={w_L:g} w_R={w_R:g}" if method.startswith("router") else method
         shares = "   ".join(f"{row[(k, 'mean')]:6.1%} ± {row[(k, 'std')]:4.1%}" for k in columns)
-        print(f"{name:40s} {shares}   {h.iloc[0]:6.1%} -> {h.iloc[1]:6.1%}   " + "/".join(f"{v:.0%}" for v in p))
+        print(f"{name:48s} {shares}   {h.iloc[0]:6.1%} -> {h.iloc[1]:6.1%}   " + "/".join(f"{v:.0%}" for v in p))
     print(f"wrote {out}")
     return 0
 

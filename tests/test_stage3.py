@@ -3,6 +3,7 @@ import pandas as pd
 import pytest
 
 from src.data.live_table import build
+from src.data.reputation import reputation
 from src.routing.run_stage3 import measure, oracle
 from src.routing.predictors import Predictors
 from src.routing.router import Router, Scales
@@ -61,6 +62,27 @@ def test_router_without_scales_is_stage_1_and_refuses_a_latency_weight():
     assert Router(0.1, 2.0).scores(guess)[0] == pytest.approx([0.9 - 0.1, 0.6 - 0.025])
     with pytest.raises(ValueError):
         Router(0.1, 2.0, w_L=0.5)
+
+
+def test_reputation_weight_adds_each_providers_r():
+    guess = {"quality": np.array([[0.70, 0.72]]), "cost": np.ones((1, 2)), "latency": np.ones((1, 2))}
+    scales = Scales({"cost": np.ones((1, 2)), "latency": np.ones((1, 2))})
+    r = [0.375, -0.375]  # model 0's provider has the better reputation
+    assert Router(0.0, scales).route(guess).tolist() == [1]
+    assert Router(0.0, scales, w_R=0.1, reputation=r).route(guess).tolist() == [0]
+    assert Router(0.0, scales, w_R=0.1, reputation=r).scores(guess)[0] == pytest.approx([0.70 + 0.0375, 0.72 - 0.0375])
+    with pytest.raises(ValueError):
+        Router(0.0, scales, w_R=0.1)
+
+
+def test_r_puts_providers_on_one_scale():
+    daily = pd.DataFrame({"provider": ["a", "a", "b", "b"], "tone": [0.0, 1.0, -2.0, -1.0]})
+    out = reputation(daily)
+    spread = pd.Series([0.0, 1.0, -2.0, -1.0]).std()
+    assert out["a"]["tone"] == pytest.approx(0.5) and out["b"]["days"] == 2
+    # Tones: a 0.5, b -1.5, average provider -0.5, so a is 1.0 above it.
+    assert out["a"]["R"] == pytest.approx(round(1.0 / spread, 4))
+    assert out["a"]["R"] == pytest.approx(-out["b"]["R"])
 
 
 def test_oracle_picks_the_cheapest_right_model():

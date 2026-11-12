@@ -159,7 +159,8 @@ minute and 50 per day per model; at that limit set `GAP["openai"] = 20.5` in
 ### Router with latency
 
 ```bash
-python -m src.data.live_table       # one table of the live answers (Claude models)
+python -m src.data.live_table       # one table of the live answers (all five models)
+python -m src.data.reputation       # each provider's news tone from GDELT -> R
 python -m src.routing.embeddings --data data/processed/supergpqa_live.csv.gz \
     --config configs/experiment_stage3.json
 python -m src.data.splits --data data/processed/supergpqa_live.csv.gz \
@@ -174,10 +175,17 @@ model's own mean). They start from the warm-start answers and take in every
 answer seen online (`Scales`). Stages 1 and 2 are unchanged: no latency and a
 fixed c. `online.py` now also relearns latency and feeds c and l.
 
+The score also adds w_R·R, where R is the public reputation of the model's
+provider. `reputation` asks GDELT for the daily tone of news that mentions
+Anthropic or OpenAI (2026-10-12 to 2026-11-11), averages it per provider and
+puts the providers on one scale: R = (tone − average over providers) / spread
+of the daily tones. It writes `data/reputation/gdelt_daily.csv` and
+`reputation.json`; the weight w_R is the user's choice.
+
 `run_stage3` evaluates online the way online routers are evaluated: a 30%
 warm start where every model's answer is known, then a 70% stream graded as
 it goes. Each block of 25 questions is routed and scored before the router
-learns from it. For 5 seeds and a w_C × w_L grid it reports quality, cost and
+learns from it. For 5 seeds and a w_C × w_L × w_R grid it reports quality, cost and
 latency on the whole stream as a share of always using Opus, next to the same
 router without learning, single models, a random pick and the oracle; every
 seed's numbers go to `results/stage3/live_30_70.csv` (the earlier run with the
