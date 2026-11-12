@@ -7,9 +7,9 @@ Every question goes to all five models with the same settings as the
 answers in its own thread, one call at a time, so its latency is not distorted;
 a call over the account's rate limit waits as long as the provider says and is
 sent again, and the latency is that of the attempt that answered. GPT calls are
-spaced to stay under the 3-requests-per-minute limit of a new OpenAI account,
-which also allows only 50 requests per model per day, so a GPT batch can take
-days. ``--models`` asks only some of the models. Every answer is
+spaced only if ``GAP`` says so: a new OpenAI account allows 3 requests per
+minute and 50 per day per model (then ``GAP["openai"] = 20.5`` and a batch takes
+days); the Build tier allows 5,000 per minute. ``--models`` asks only some of the models. Every answer is
 appended to data/live/supergpqa_<batch>.csv as soon as it arrives: correctness,
 tokens, cost (USD), latency (seconds) and the call time (UTC). Failed calls are
 saved with their error; running the command again asks only what is missing.
@@ -41,8 +41,8 @@ MODELS = {
     "gpt-6.1-sol": ("openai", 2.00, 10.00),
 }
 BUDGET = {"anthropic": 4.70, "openai": 4.70}  # of the $5 on each account
-# Seconds between the starts of two calls to the same model (new OpenAI accounts: 3 per minute).
-GAP = {"anthropic": 0.0, "openai": 20.5}
+# Seconds between the starts of two calls to the same model (20.5 for a new OpenAI account: 3 per minute).
+GAP = {"anthropic": 0.0, "openai": 0.0}
 EFFORT, MAX_TOKENS = "low", 4000
 LETTERS = "ABCDEFGHIJ"
 COLUMNS = ["question", "uuid", "difficulty", "discipline", "truth", "model", "seconds", "answer", "stop",
