@@ -4,7 +4,7 @@ import pytest
 
 from src.data.live_table import build
 from src.data.reputation import reputation
-from src.routing.run_stage3 import measure, oracle
+from src.routing.run_live import measure, oracle
 from src.routing.predictors import Predictors
 from src.routing.router import Router, Scales
 

@@ -165,7 +165,7 @@ python -m src.routing.embeddings --data data/processed/supergpqa_live.csv.gz \
     --config configs/experiment_stage3.json
 python -m src.data.splits --data data/processed/supergpqa_live.csv.gz \
     --config configs/experiment_stage3.json --out-dir data/splits/live_30_70
-python -m src.routing.run_stage3 --config configs/experiment_stage3.json
+python -m src.routing.run_live --config configs/experiment_stage3.json
 ```
 
 `predictors.py` now also guesses each model's latency when the data has it,
@@ -182,7 +182,7 @@ puts the providers on one scale: R = (tone − average over providers) / spread
 of the daily tones. It writes `data/reputation/gdelt_daily.csv` and
 `reputation.json`; the weight w_R is the user's choice.
 
-`run_stage3` evaluates online the way online routers are evaluated: a 30%
+`run_live` evaluates online the way online routers are evaluated: a 30%
 warm start where every model's answer is known, then a 70% stream graded as
 it goes. Each block of 25 questions is routed and scored before the router
 learns from it. For 5 seeds and a w_C × w_L × w_R grid it reports quality, cost and

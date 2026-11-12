@@ -1,11 +1,12 @@
-"""Stage 3: the router with latency and online learning on the live answers.
+"""The router evaluated on the live answers (from Stage 3 on): latency, reputation and
+online learning. Later stages reuse this evaluation, so it is not archived per stage.
 
     python -m src.data.live_table
     python -m src.routing.embeddings --data data/processed/supergpqa_live.csv.gz \
         --config configs/experiment_stage3.json
     python -m src.data.splits --data data/processed/supergpqa_live.csv.gz \
         --config configs/experiment_stage3.json --out-dir data/splits/live_30_70
-    python -m src.routing.run_stage3 --config configs/experiment_stage3.json
+    python -m src.routing.run_live --config configs/experiment_stage3.json
 
 Online evaluation the way online routers are evaluated (warm start, then a
 stream graded as it goes; "test-then-train"). For every seed the manifest in
