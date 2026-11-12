@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 
-from src.routing.run_stage2 import measure
+from src.routing.archive.run_stage2 import measure
 
 
 def test_quality_and_cost_are_shares_of_always_using_the_reference_model():

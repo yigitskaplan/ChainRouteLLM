@@ -1,9 +1,10 @@
-"""Per-model guesses of quality and cost from the query embedding.
+"""Per-model guesses of quality, cost and latency from the query embedding.
 
 For each model, one random forest guesses the quality score and one guesses the
-cost (USD). They are fitted on offline rows, where every model's outcome is
-known, and stay fixed online. MixLLM (Wang et al., NAACL 2025) also guesses
-quality with a random forest.
+cost (USD); when the data has latency (the live answers of Stage 3; RouterBench
+has none), one more guesses the latency (seconds). They are fitted on offline
+rows, where every model's outcome is known, and stay fixed online. MixLLM
+(Wang et al., NAACL 2025) also guesses quality with a random forest.
 """
 from __future__ import annotations
 
@@ -27,16 +28,24 @@ class Predictors:
         return forest
 
     def fit(self, X: np.ndarray, outcomes: Mapping[str, np.ndarray]) -> "Predictors":
-        """Fit on offline rows; ``outcomes`` holds the real quality and cost, each [rows, models]."""
+        """Fit on offline rows; ``outcomes`` holds the real quality, cost and, if known, latency, each [rows, models]."""
         self.quality_ = [self._fit_forest(X, outcomes["quality"][:, j]) for j in range(len(self.models))]
         self.cost_ = [self._fit_forest(X, outcomes["cost"][:, j]) for j in range(len(self.models))]
+        self.latency_ = (
+            [self._fit_forest(X, outcomes["latency"][:, j]) for j in range(len(self.models))]
+            if "latency" in outcomes
+            else []
+        )
         # The router divides cost by this: the average cost over all models.
         self.cost_scale_ = float(outcomes["cost"].mean())
         return self
 
     def predict(self, X: np.ndarray) -> Dict[str, np.ndarray]:
-        """Guessed quality and cost (USD), each [rows, models]."""
-        return {
+        """Guessed quality, cost (USD) and, if learned, latency (seconds), each [rows, models]."""
+        guess = {
             "quality": np.column_stack([forest.predict(X) for forest in self.quality_]),
             "cost": np.column_stack([forest.predict(X) for forest in self.cost_]),
         }
+        if self.latency_:
+            guess["latency"] = np.column_stack([forest.predict(X) for forest in self.latency_])
+        return guess

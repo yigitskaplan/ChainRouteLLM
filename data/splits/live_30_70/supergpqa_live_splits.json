@@ -1,0 +1,96 @@
+{
+  "data": {
+    "path": "data/processed/supergpqa_live.csv.gz",
+    "sha256": "d718e0522f37c9c6545d10ec779a46d0b9edd6c332f3002e005758a09eec87af",
+    "rows": 250,
+    "groups": 250
+  },
+  "config": "configs/experiment_stage3.json",
+  "experiment": "stage3_live_latency",
+  "offline_fraction": 0.3,
+  "online_fraction": 0.7,
+  "test_fraction": 0.0,
+  "validation_fraction_of_offline": 0.0,
+  "seeds": {
+    "11": {
+      "manifest": "data/splits/live_30_70/supergpqa_live_seed11.csv.gz",
+      "sha256": "36e94ca13265581be0635020dc2379b9211c91a94e6ca8ae6954fbaa74a17a8c",
+      "rows": {
+        "offline_fit": 75,
+        "offline_val": 0,
+        "online": 175,
+        "test": 0
+      },
+      "groups": {
+        "offline_fit": 75,
+        "offline_val": 0,
+        "online": 175,
+        "test": 0
+      }
+    },
+    "23": {
+      "manifest": "data/splits/live_30_70/supergpqa_live_seed23.csv.gz",
+      "sha256": "25018af3e071cb2ab6e3869608396c2975e828eeb5f276ac7d9f5f56aafdd2f9",
+      "rows": {
+        "offline_fit": 75,
+        "offline_val": 0,
+        "online": 175,
+        "test": 0
+      },
+      "groups": {
+        "offline_fit": 75,
+        "offline_val": 0,
+        "online": 175,
+        "test": 0
+      }
+    },
+    "37": {
+      "manifest": "data/splits/live_30_70/supergpqa_live_seed37.csv.gz",
+      "sha256": "6020ed6996dd6adddbe617107b556175880127dfa2f945ce28fad7016f40d556",
+      "rows": {
+        "offline_fit": 75,
+        "offline_val": 0,
+        "online": 175,
+        "test": 0
+      },
+      "groups": {
+        "offline_fit": 75,
+        "offline_val": 0,
+        "online": 175,
+        "test": 0
+      }
+    },
+    "53": {
+      "manifest": "data/splits/live_30_70/supergpqa_live_seed53.csv.gz",
+      "sha256": "6ef5b8ac47724bc40dfd9bfa2fe22fa396364e88cc6013e78d4fe481e623db62",
+      "rows": {
+        "offline_fit": 75,
+        "offline_val": 0,
+        "online": 175,
+        "test": 0
+      },
+      "groups": {
+        "offline_fit": 75,
+        "offline_val": 0,
+        "online": 175,
+        "test": 0
+      }
+    },
+    "71": {
+      "manifest": "data/splits/live_30_70/supergpqa_live_seed71.csv.gz",
+      "sha256": "35148c07e2b76c78d4f8379673734647c4d12afb0b57ec8a6f3a8212e4608e00",
+      "rows": {
+        "offline_fit": 75,
+        "offline_val": 0,
+        "online": 175,
+        "test": 0
+      },
+      "groups": {
+        "offline_fit": 75,
+        "offline_val": 0,
+        "online": 175,
+        "test": 0
+      }
+    }
+  }
+}
