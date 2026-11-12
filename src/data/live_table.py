@@ -11,8 +11,7 @@ question that every chosen model has answered:
 * ``<model>|quality`` (1 right, 0 wrong), ``<model>|cost`` (USD) and
   ``<model>|latency`` (seconds) for every chosen model.
 
-By default the models are the three Claude models; the GPT models join once
-their answers are complete.
+By default the models are all five live models of the collector.
 """
 from __future__ import annotations
 
@@ -22,10 +21,8 @@ from typing import Optional, Sequence
 
 import pandas as pd
 
-from src.data.collect_live import prompt
+from src.data.collect_live import MODELS, prompt
 from src.data.tables import PathLike, write_table
-
-CLAUDE = ["claude-haiku-5-5", "claude-sonnet-5-5", "claude-opus-5-5"]
 
 
 def build(live_dir: PathLike, data_dir: PathLike, models: Sequence[str]) -> pd.DataFrame:
@@ -53,7 +50,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     parser = argparse.ArgumentParser(description="Build the table of live answers for Stage 3.")
     parser.add_argument("--live-dir", type=Path, default=Path("data/live"))
     parser.add_argument("--data-dir", type=Path, default=Path("data/supergpqa"))
-    parser.add_argument("--models", nargs="+", default=CLAUDE)
+    parser.add_argument("--models", nargs="+", default=list(MODELS))
     parser.add_argument("--out", type=Path, default=Path("data/processed/supergpqa_live.csv.gz"))
     args = parser.parse_args(argv)
     table = build(args.live_dir, args.data_dir, args.models)

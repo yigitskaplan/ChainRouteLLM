@@ -1,6 +1,6 @@
 {
   "experiment": "stage3_live_latency",
-  "description": "Stage 3: the router with latency and online learning on the live SuperGPQA answers of the three Claude models (250 questions). Online evaluation: a 30% warm start where every model's answer is known, then a 70% stream graded as it goes (each block routed and scored before it is learned from). The GPT models join once their answers are complete.",
+  "description": "Stage 3: the router with latency and online learning on the live SuperGPQA answers of five models (Claude Haiku, Sonnet and Opus 5.5; GPT-6.1 Terra and Sol; 250 questions). Online evaluation: a 30% warm start where every model's answer is known, then a 70% stream graded as it goes (each block routed and scored before it is learned from).",
   "seeds": [
     11,
     23,
@@ -12,7 +12,9 @@
     "model_keys_primary": [
       "claude-haiku-5-5",
       "claude-sonnet-5-5",
-      "claude-opus-5-5"
+      "claude-opus-5-5",
+      "gpt-6.1-terra",
+      "gpt-6.1-sol"
     ],
     "reference_model": "claude-opus-5-5",
     "offline_fraction": 0.3,

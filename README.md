@@ -151,12 +151,10 @@ needs the API keys in `.env` (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY`; never
 committed), stops calling a provider at its budget and, when run again, asks
 only what is missing. `--models` asks only some of the models.
 
-Models: Claude Haiku 5.5, Sonnet 5.5 and Opus 5.5 have answered all 250
-questions. **GPT-6.1 Terra and Sol are not finished:** a new OpenAI account is
-limited to 3 requests per minute and 50 per day per model, so they have only a
-few answers so far (a support request about the account's usage tier is open).
-They will be completed on their own branch; until then Stage 3 uses the three
-Claude models.
+Models: Claude Haiku 5.5, Sonnet 5.5 and Opus 5.5 and GPT-6.1 Terra and Sol have
+answered all 250 questions. A new OpenAI account is limited to 3 requests per
+minute and 50 per day per model; at that limit set `GAP["openai"] = 20.5` in
+`collect_live.py` (the Build tier needs no spacing).
 
 ### Router with latency
 
@@ -182,4 +180,5 @@ it goes. Each block of 25 questions is routed and scored before the router
 learns from it. For 5 seeds and a w_C × w_L grid it reports quality, cost and
 latency on the whole stream as a share of always using Opus, next to the same
 router without learning, single models, a random pick and the oracle; every
-seed's numbers go to `results/stage3/live_30_70.csv`.
+seed's numbers go to `results/stage3/live_30_70.csv` (the earlier run with the
+three Claude models only is kept as `results/stage3/live_30_70_claude.csv`).
