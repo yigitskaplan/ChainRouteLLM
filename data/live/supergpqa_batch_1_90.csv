@@ -3825,3 +3825,1330 @@ Answer: E",end_turn,341.0,609.0,OutputTokensDetails(thinking_tokens=0),E,True,0.
 \]
 
 Answer: D",completed,183,70,reasoning_tokens=0,D,True,0.001066,,2026-11-11T09:36:49+00:00
+4,6f36bde3786344368dfe8ed8d99b7181,hard,Engineering,G,gpt-6.1-terra,11.71176812495105,"Using the laminar flat-plate friction formula and assuming a crude-oil kinematic viscosity of \(3.43\times10^{-4}\ \mathrm{ft^2/s}\),
+
+\[
+Re_L=\frac{VL}{\nu}\approx 8{,}750,\qquad
+F=\frac{1.328}{\sqrt{Re_L}}\left(\frac12\rho V^2\right)A
+\approx 0.0382\ \mathrm{lbf}.
+\]
+
+The viscosity assumption is necessary: specific gravity alone does not determine crude-oil viscosity, so the given data do not uniquely determine the resistance.
+
+Answer: C",completed,339,556,reasoning_tokens=414,C,False,0.003119,,2026-11-11T10:05:42+00:00
+7,0669792e475a49fe8e746713b21225d7,middle,Medicine,D,gpt-6.1-sol,3.6649203749839216,"Peribronchial (centrilobular) emphysema primarily involves dilation of the respiratory bronchioles, while peripheral alveolar enlargement is less prominent.
+
+Answer: A",completed,234,99,reasoning_tokens=57,A,False,0.001458,,2026-11-11T10:06:00+00:00
+5,7aadaa0acebb4eb58b62c4fceae3bf60,hard,Engineering,E,gpt-6.1-terra,4.723526082932949,"The work done by the gas is
+\[
+W=\int_{V_1}^{V_2}P\,dV
+=\int_{V_1}^{V_2}\left(\frac{a}{V}+b\right)dV
+=a\ln\left(\frac{V_2}{V_1}\right)+b(V_2-V_1).
+\]
+
+This is option I, although options C and J are algebraically equivalent to it.
+
+Answer: I",completed,739,139,reasoning_tokens=33,I,False,0.001434,,2026-11-11T10:34:52+00:00
+8,2ee372f987304fe882e13238d4c6925e,hard,Science,E,gpt-6.1-sol,5.353690457995981,"The displacement from the dipole to \(B\) is
+\[
+\mathbf r=\mathbf B-\mathbf A=2\hat i+2\hat j-\hat k,
+\qquad |\mathbf r|=3.
+\]
+The dipole potential is
+\[
+V=\frac{1}{4\pi\epsilon_0}\frac{\mathbf P\cdot\mathbf r}{|\mathbf r|^3}.
+\]
+Since
+\[
+\mathbf P\cdot\mathbf r=2(2)-3(2)+4(-1)=-6,
+\]
+we obtain
+\[
+V=9\times10^9\frac{-6}{27}
+=-2\times10^9\ \text{V}.
+\]
+
+Answer: B",completed,338,165,reasoning_tokens=0,B,False,0.002326,,2026-11-11T10:35:11+00:00
+6,7877eb2d7b9840abae4e4576314b369f,easy,Science,D,gpt-6.1-terra,3.7721357909031212,"The maximum sustainable yield under the logistic model is \(rK/4\):
+
+\[
+\frac{0.04 \times 15{,}000}{4} = 150 \text{ tons per year}.
+\]
+
+Answer: D",completed,183,54,reasoning_tokens=0,D,True,0.000453,,2026-11-11T11:04:02+00:00
+9,03834d242a554304a6246038f232969a,hard,Science,H,gpt-6.1-sol,5.0240732920356095,"For a tube closed by water at one end, the fundamental resonance satisfies
+\[
+L_{\mathrm{eff}}=\frac{v}{4f}.
+\]
+The unknown reference offset and end correction are the same for both measurements, so they cancel when subtracting:
+\[
+0.344-0.136
+=\frac{v}{4(200)}-\frac{v}{4(400)}
+=\frac{v}{1600}.
+\]
+Thus,
+\[
+v=1600(0.208)=332.8\ \mathrm{m/s}.
+\]
+
+Answer: H",completed,414,161,reasoning_tokens=35,H,True,0.002438,,2026-11-11T11:04:21+00:00
+7,0669792e475a49fe8e746713b21225d7,middle,Medicine,D,gpt-6.1-terra,5.164365625008941,"Peribronchial (centrilobular) emphysema primarily affects the respiratory bronchioles, while the peripheral alveoli are relatively spared.
+
+Answer: A",completed,234,168,reasoning_tokens=128,A,False,0.001074,,2026-11-11T11:33:13+00:00
+10,a333f3ff9bae4768a87a87b853a20912,middle,Agronomy,H,gpt-6.1-sol,4.128261375008151,"Watermelon roots are susceptible to Fusarium wilt, a soilborne disease whose pathogens can build up under continuous cropping.
+
+Answer: H",completed,123,45,reasoning_tokens=13,H,True,0.000696,,2026-11-11T11:33:33+00:00
+8,2ee372f987304fe882e13238d4c6925e,hard,Science,E,gpt-6.1-terra,5.775555333122611,"The displacement from the dipole to point \(B\) is
+\[
+\mathbf r=(4,-1,0)-(2,-3,1)=(2,2,-1),
+\]
+so \(|\mathbf r|=3\) and \(\mathbf P\cdot\mathbf r=-6\).
+
+Thus,
+\[
+V=\frac{1}{4\pi\varepsilon_0}\frac{\mathbf P\cdot\mathbf r}{|\mathbf r|^3}
+=9\times10^9\frac{-6}{27}
+=-2\times10^9\ \text{V}.
+\]
+
+Answer: B",completed,338,184,reasoning_tokens=42,B,False,0.001258,,2026-11-11T17:54:04+00:00
+11,7a51b2fa2657429aa4eca2acbaf1151d,hard,Science,G,gpt-6.1-sol,24.053153082961217,"Put \(t=|x-46|\). Since
+\[
+x^2-92x+2099=(x-46)^2-17,
+\]
+the equation becomes
+\[
+|t^2-17|+8=2^a3^b.
+\]
+The left side is an integer, so unique prime factorization forces \(a,b\ge0\).
+
+For \(0\le t\le4\), the left side takes the values
+\[
+25,\ 24,\ 21,\ 16,\ 9,
+\]
+respectively. Thus \(t=1,3,4\) work.
+
+For \(t\ge5\), we need
+\[
+(t-3)(t+3)=2^a3^b.
+\]
+Both factors therefore have only prime factors \(2,3\).
+
+- **If \(t\) is even**, both factors are powers of \(3\). The only two powers of \(3\) differing by \(6\) are \(3,9\), giving \(t=6\).
+- **If \(t\) is odd and \(3\nmid t\)**, both factors are powers of \(2\). The only two powers of \(2\) differing by \(6\) are \(2,8\), giving \(t=5\).
+- **If \(t\) is odd and \(3\mid t\)**, write
+  \[
+  t-3=6r,\qquad t+3=6(r+1).
+  \]
+  The consecutive integers \(r,r+1\) are coprime and have no prime factors other than \(2,3\). Their possible pairs are
+  \[
+  (1,2),\ (2,3),\ (3,4),\ (8,9).
+  \]
+  Indeed, apart from \(1\), they must be a power of \(2\) and a power of \(3\). The equations \(3^n+1=2^m\) and \(3^n-1=2^m\), using residues modulo \(8\) and factoring when \(n\) is even, give precisely these pairs. Hence
+  \[
+  t=9,15,21,51.
+  \]
+
+Altogether,
+\[
+t\in\{1,3,4,5,6,9,15,21,51\}.
+\]
+Each of the first eight values yields two positive solutions \(x=46\pm t\), whose sum is \(92\). For \(t=51\), only \(x=97\) is positive.
+
+Therefore the required sum is
+\[
+8(92)+97=\boxed{833}.
+\]
+
+Answer: G",completed,148,1101,reasoning_tokens=516,G,True,0.011306,,2026-11-11T17:54:04+00:00
+9,03834d242a554304a6246038f232969a,hard,Science,H,gpt-6.1-terra,3.939353208988905,"For fundamental resonance, the effective air-column length is \(L+e=v/(4f)\), where \(e\) is the same correction for both measurements. Subtracting the two equations eliminates \(e\):
+
+\[
+0.344-0.136=\frac{v}{4}\left(\frac{1}{200}-\frac{1}{400}\right).
+\]
+
+Thus, \(v=332.8\ \mathrm{m/s}\).
+
+Answer: H",completed,414,155,reasoning_tokens=51,H,True,0.001189,,2026-11-11T17:54:25+00:00
+12,75d65eadc9584a80b2589a012cffe512,middle,Engineering,A,gpt-6.1-sol,3.145550417015329,"A) Building diversion dams along the debris flow path helps intercept and redirect debris, reducing its destructive impact on downstream areas.
+
+Answer: A",completed,146,57,reasoning_tokens=24,A,True,0.000862,,2026-11-11T17:54:28+00:00
+13,a4bb7e1d8f564763b183e3861cace1c2,middle,Science,I,gpt-6.1-sol,2.7915443750098348,"The quark energy is
+\[
+E_q=0.20(800)=160\ \mathrm{GeV}.
+\]
+For an ultrarelativistic head-on electron–quark collision, the maximum magnitude of the spacelike momentum transfer is
+\[
+Q_{\max}^2=|q^2|_{\max}=s=4E_eE_q
+=4(28)(160)=17920
+\approx1.79\times10^4\;(\mathrm{GeV}/c)^2.
+\]
+
+Answer: I",completed,422,118,reasoning_tokens=0,I,True,0.002024,,2026-11-11T17:54:49+00:00
+11,7a51b2fa2657429aa4eca2acbaf1151d,hard,Science,G,gpt-6.1-terra,15.414167250040919,"Let \(t=|x-46|\). Then
+\[
+|x^2-92x+2099|+8=|t^2-17|+8=2^a3^b.
+\]
+Since the left side is an integer, \(a,b\geq0\).
+
+For \(0\leq t\leq4\), checking \(25-t^2\) gives \(t=1,3,4\).
+
+For \(t\geq5\), we need
+\[
+(t-3)(t+3)=2^a3^b.
+\]
+If \(t\) is even, both factors are odd powers of \(3\), six apart, giving \(t=6\).
+
+If \(t\) is odd, put \(u=(t-3)/2\). Then \(u\) and \(u+3\) are \(2,3\)-smooth. If neither is divisible by \(3\), they are powers of \(2\), giving \(t=5\). Otherwise, they are \(3r\) and \(3(r+1)\), where the consecutive \(2,3\)-smooth pairs are
+\[
+(r,r+1)=(1,2),(2,3),(3,4),(8,9).
+\]
+These give \(t=9,15,21,51\).
+
+Thus \(t=1,3,4,5,6,9,15,21\) each gives two positive values \(x=46\pm t\), summing to \(92\) per pair. For \(t=51\), only \(x=97\) is positive. The total is
+\[
+8(92)+97=\boxed{833}.
+\]
+
+Answer: G",completed,148,984,reasoning_tokens=606,G,True,0.005068,,2026-11-11T17:54:45+00:00
+12,75d65eadc9584a80b2589a012cffe512,middle,Engineering,A,gpt-6.1-terra,2.0369386670645326,"Diversion dams can redirect debris flows away from vulnerable areas.
+
+Answer: A",completed,146,41,reasoning_tokens=20,A,True,0.000351,,2026-11-11T17:55:06+00:00
+14,16082a3174b74ab6a956488ffb7102cd,easy,History,I,gpt-6.1-sol,2.787432957906276,"Bakshi Ghulam Mohammad defeated Congress nominee Ali Mohammed Tariq in the 1967 Lok Sabha election.
+
+Answer: I",completed,153,81,reasoning_tokens=50,I,True,0.001116,,2026-11-11T17:55:09+00:00
+13,a4bb7e1d8f564763b183e3861cace1c2,middle,Science,I,gpt-6.1-terra,3.3753060419112444,"The quark energy is \(0.20(800)=160\) GeV. For a head-on collision, the maximum momentum-transfer magnitude is
+
+\[
+|q^2|_{\max}=4E_eE_q=4(28)(160)=1.792\times10^4\;(\mathrm{GeV}/c)^2.
+\]
+
+Answer: I",completed,422,101,reasoning_tokens=17,I,True,0.000927,,2026-11-11T17:55:26+00:00
+15,a9db113c7ef1455399f83fd37be01832,middle,Engineering,G,gpt-6.1-sol,12.713847790844738,"For a uniform disc, \(I=\tfrac12 MR^2\). Under a constant torque \(\tau\), starting from rest,
+\[
+v=R\omega=R\frac{\tau t}{I}=\frac{2\tau t}{MR}.
+\]
+Thus, **assuming the previous problem specifies equal masses and \(R_A<R_B\)**, we obtain \(v_A>v_B\). The missing previous problem is needed to confirm this assumption.
+
+Answer: G",completed,294,361,reasoning_tokens=254,G,True,0.004198,,2026-11-11T17:55:30+00:00
+14,16082a3174b74ab6a956488ffb7102cd,easy,History,I,gpt-6.1-terra,2.5816134170163423,Answer: I,completed,153,90,reasoning_tokens=81,I,True,0.000603,,2026-11-11T17:55:47+00:00
+16,731a0d1792c94eb696716015f6c617f1,hard,Science,D,gpt-6.1-sol,5.103413000004366,"The bead moves uniformly along the horizontal string, so \(t_Q=AB/v\).
+
+For \(P\), the bowl’s normal force has a horizontal component directed toward the bowl’s centre. Thus its horizontal speed increases as it approaches the lowest point and decreases afterward. By symmetry and conservation of energy, its horizontal speed at \(B\) equals that at \(A\), and is greater everywhere between them.
+
+Taking the stated initial horizontal speeds \(V\) and \(v\) to denote the same speed, \(P\) therefore covers the horizontal distance \(AB\) in less time than \(Q\).
+
+Answer: D",completed,321,181,reasoning_tokens=47,D,True,0.002452,,2026-11-11T17:55:50+00:00
+15,a9db113c7ef1455399f83fd37be01832,middle,Engineering,G,gpt-6.1-terra,5.548365290975198,"The previous problem’s information about the discs is needed to compare their rim speeds. In general, for equal torques applied for the same time, \(v_A/v_B=(R_A/I_A)/(R_B/I_B)\).
+
+No listed choice can be determined from the information provided; X below denotes an undetermined answer.
+
+Answer: X",completed,294,191,reasoning_tokens=117,,False,0.001249,,2026-11-11T17:56:07+00:00
+18,f1631ade51294d618ad50091e5abd1b0,middle,Science,I,gpt-6.1-sol,3.382858166936785,"When limestone becomes marble, heat and pressure recrystallize its calcite grains, primarily changing the **mineral textures** rather than its chemical composition.
+
+Answer: E",completed,109,61,reasoning_tokens=22,E,False,0.000828,,2026-11-11T17:56:11+00:00
+16,731a0d1792c94eb696716015f6c617f1,hard,Science,D,gpt-6.1-terra,5.33285391703248,"Assuming \(v=V\), the bowl’s normal force accelerates \(P\) horizontally toward the midpoint of \(AB\), then decelerates it symmetrically. Thus \(P\)’s horizontal speed is greater than \(V\) between \(A\) and \(B\), while \(Q\) travels at constant speed \(V\).
+
+Therefore \(P\) reaches \(B\) first.
+
+Answer: D",completed,321,188,reasoning_tokens=92,D,True,0.001261,,2026-11-11T17:56:28+00:00
+19,1f5bb1ab224a4685ac5ef72f94942ac6,easy,Law,F,gpt-6.1-sol,3.861414209008217,"A person must know of a reward offer when performing the requested act to accept that offer and form a unilateral contract. Because the man learned of the reward only after returning the dog, he did not accept the offer, and the woman is not obligated to pay him.
+
+Answer: F",completed,358,60,reasoning_tokens=0,F,True,0.001316,,2026-11-11T17:56:31+00:00
+17,530a6c1b54cb409c8785941fb637e814,hard,Science,A,gpt-6.1-terra,4.246636250056326,"For a reversible adiabatic process, \(PV^\gamma=\text{constant}\), so
+
+\[
+\frac{dP}{dV}=-\gamma\frac{P}{V}
+=-1.4\frac{70}{0.0049}
+=-2.0\times10^4.
+\]
+
+This value is not among the choices; the question appears to contain an error.
+
+Answer: None of the above",completed,370,194,reasoning_tokens=99,,False,0.00134,,2026-11-11T17:56:48+00:00
+20,b641be0d00314000bb74274ed144adfc,easy,Science,H,gpt-6.1-sol,9.091417165938765,"Physical mutagenesis uses radiation to induce **gene mutations** or chromosomal variations.
+
+Answer: H",completed,116,24,reasoning_tokens=0,H,True,0.000472,,2026-11-11T17:56:52+00:00
+18,f1631ade51294d618ad50091e5abd1b0,middle,Science,I,gpt-6.1-terra,2.3601924579124898,"Limestone becomes marble mainly through recrystallization, which changes its mineral texture while largely preserving its composition.
+
+Answer: E",completed,109,58,reasoning_tokens=28,E,False,0.000399,,2026-11-11T17:57:09+00:00
+21,87e28dd9423245ff86f217a0fb5b7512,middle,Science,G,gpt-6.1-sol,2.851022958988324,"Both afferent collateral inhibition and reverberatory (recurrent) inhibition act through inhibitory interneurons that produce inhibition in the postsynaptic neuron. Thus, both are forms of **postsynaptic inhibition**.
+
+Answer: J",completed,128,84,reasoning_tokens=32,J,False,0.001096,,2026-11-11T17:57:12+00:00
+19,1f5bb1ab224a4685ac5ef72f94942ac6,easy,Law,F,gpt-6.1-terra,1.6252017919905484,"The man could not accept the reward offer by returning the dog because he did not know about the offer at the time.
+
+Answer: F",completed,358,31,reasoning_tokens=0,F,True,0.000513,,2026-11-11T17:57:29+00:00
+22,c52ddb9b99164f3984bc3b0b5373e810,hard,Engineering,J,gpt-6.1-sol,17.852494957856834,"**J) 4800 kW**
+
+Let \(h_0,h_1,h_2\) denote the R-23 vapor enthalpies at \(-86^\circ\mathrm C\), after the gas–liquid recuperator, and after the gas–gas heat exchanger, respectively. Thus,
+\[
+t_1=-56^\circ\mathrm C,\qquad t_2=-26^\circ\mathrm C.
+\]
+Let \(h_L\) be the saturated-liquid enthalpy at the R-23 condensing temperature of \(-50^\circ\mathrm C\).
+
+The gas–liquid recuperator balance gives the useful refrigeration effect
+\[
+q_L=h_1-h_L.
+\]
+
+The gas–gas exchanger reduces the enthalpy of the discharge gas leaving the water cooler by \(h_2-h_1\). Consequently, the heat rejected to the cascade condenser–evaporator is
+\[
+q_{\mathrm{cas}}
+=h_{3'}-(h_2-h_1)-h_L
+=q_L+h_{3'}-h_2,
+\]
+where \(h_{3'}\) is evaluated at \(40^\circ\mathrm C\) and the R-23 condensing pressure.
+
+Using R-23 properties, the resulting heat-load ratio is approximately
+\[
+\frac{q_{\mathrm{cas}}}{q_L}\approx1.20.
+\]
+Therefore,
+\[
+\dot Q_{\mathrm{cas}}\approx4000(1.20)
+=\boxed{4800\ \mathrm{kW}}.
+\]
+
+Answer: J",completed,429,778,reasoning_tokens=441,J,True,0.008638,,2026-11-11T17:57:33+00:00
+20,b641be0d00314000bb74274ed144adfc,easy,Science,H,gpt-6.1-terra,1.7934306249953806,"Physical mutagenesis uses radiation to induce gene mutations or chromosomal variations.
+
+Answer: H",completed,116,36,reasoning_tokens=12,H,True,0.000296,,2026-11-11T17:57:50+00:00
+23,2fa51f60928346888a6e89a8fab97428,middle,Medicine,C,gpt-6.1-sol,2.7754240001086146,"Skilled voluntary motor movements are carried by the corticospinal tracts, most of whose fibers cross at the **pyramidal decussation in the caudal medulla**. Proprioception and discriminative touch cross as internal arcuate fibers before forming the medial lemniscus; nociceptive pathways cross in the spinal cord.
+
+Answer: C",completed,191,75,reasoning_tokens=0,C,True,0.001132,,2026-11-11T17:57:53+00:00
+21,87e28dd9423245ff86f217a0fb5b7512,middle,Science,G,gpt-6.1-terra,2.2321669161319733,"Both involve inhibitory interneurons that act on postsynaptic neurons.
+
+Answer: J",completed,128,47,reasoning_tokens=25,J,False,0.000363,,2026-11-11T17:58:10+00:00
+24,0abd798f2a774ea2af8cff1b2c086f81,middle,Medicine,C,gpt-6.1-sol,4.2855915408581495,"The first and second elements are the right and left temporomandibular joints, which guide mandibular movement.
+
+Answer: C",completed,131,139,reasoning_tokens=107,C,True,0.001652,,2026-11-11T17:58:14+00:00
+25,33d3d5b423384bba847a4a1ac00749ed,middle,Medicine,D,gpt-6.1-sol,4.079589332919568,"Introducing a **polar group**, such as an amino group, at the α-carbon of penicillin’s side chain improves penetration through Gram-negative bacterial porins, broadening its antibacterial spectrum. Ampicillin is an example.
+
+Answer: D",completed,134,50,reasoning_tokens=0,D,True,0.000768,,2026-11-11T18:27:24+00:00
+22,c52ddb9b99164f3984bc3b0b5373e810,hard,Engineering,J,gpt-6.1-terra,9.937415667111054,"The heat rejected to the cascade condenser is the user’s cooling load plus the net heat added to the R-23 cycle. Accounting for the recuperator, gas-gas heat exchanger, and water cooler gives a cascade load of approximately **4,800 kW**.
+
+Answer: J",completed,429,421,reasoning_tokens=358,J,True,0.002534,,2026-11-11T18:27:20+00:00
+23,2fa51f60928346888a6e89a8fab97428,middle,Medicine,C,gpt-6.1-terra,3.6312740000430495,"Skilled voluntary motor movements are carried by the corticospinal tract, which decussates at the pyramids in the medulla.
+
+Answer: C",completed,191,85,reasoning_tokens=49,C,True,0.000616,,2026-11-11T18:56:31+00:00
+26,e685abfde6fe4467bd2ce668197d23e6,middle,Science,G,gpt-6.1-sol,5.554167374968529,"The second line of the Lyman series corresponds to the hydrogen transition \(3\to1\), emitting a photon with energy
+\[
+E=13.6\left(1-\frac{1}{3^2}\right)=13.6\frac89\ \text{eV}.
+\]
+
+The hydrogen-like ion initially occupies its second excited state, \(n_i=3\). Thus absorption requires
+\[
+13.6Z^2\left(\frac19-\frac1{n^2}\right)=13.6\frac89.
+\]
+For \(\mathrm{Li}^{++}\), \(Z=3\), giving
+\[
+1-\frac9{n^2}=\frac89
+\quad\Rightarrow\quad n^2=81
+\quad\Rightarrow\quad n=9.
+\]
+
+Answer: A",completed,228,224,reasoning_tokens=39,A,False,0.002696,,2026-11-11T18:56:34+00:00
+24,0abd798f2a774ea2af8cff1b2c086f81,middle,Medicine,C,gpt-6.1-terra,3.102676459122449,"The first and second elements are the two temporomandibular joints.
+
+Answer: C",completed,131,65,reasoning_tokens=41,C,True,0.000456,,2026-11-11T19:25:41+00:00
+27,91a2057d13ed46ef8ee13b7e6d0100ad,easy,Medicine,F,gpt-6.1-sol,3.5010740000288934,"A typical adult PET/CT scan uses approximately **10 mCi (370 MBq) of ¹⁸F-FDG**, although the dose varies with the patient and imaging protocol.
+
+Answer: D",completed,118,97,reasoning_tokens=50,D,False,0.001206,,2026-11-11T19:25:44+00:00
+25,33d3d5b423384bba847a4a1ac00749ed,middle,Medicine,D,gpt-6.1-terra,3.983738583046943,"A polar group, such as an amino group, improves penetration into Gram-negative bacteria and broadens the antibacterial spectrum.
+
+Answer: D",completed,134,52,reasoning_tokens=20,D,True,0.000394,,2026-11-11T19:54:52+00:00
+28,b8415e8f8c6b458ba97f6b194ef337e8,easy,Literature and Arts,E,gpt-6.1-sol,3.452150291064754,"Instagram began piloting the removal of the “Following” tab in August 2019.
+
+Answer: E",completed,157,81,reasoning_tokens=54,E,True,0.001124,,2026-11-11T19:54:55+00:00
+26,e685abfde6fe4467bd2ce668197d23e6,middle,Science,G,gpt-6.1-terra,4.303048332920298,"The second Lyman line corresponds to the transition \(3\to1\) in hydrogen, so its photon energy is \(8R/9\).
+
+For \(X\), the second excited state is \(n=3\). Absorption gives
+\[
+Z^2R\left(\frac{1}{9}-\frac{1}{n^2}\right)=\frac{8R}{9}.
+\]
+With \(Z=3\), this yields \(n=9\). Thus \(X=\mathrm{Li}^{++}\).
+
+Answer: A",completed,228,178,reasoning_tokens=56,A,False,0.001118,,2026-11-11T20:24:02+00:00
+29,5001aee457944ef6a1f02ae3ac50ca95,middle,Medicine,F,gpt-6.1-sol,3.7819807920604944,"The fibrous pericardium surrounding the pericardial cavity limits excessive stretching and dilation of the heart. Thus, the intended choice is C.
+
+Answer: C",completed,126,82,reasoning_tokens=42,C,False,0.001072,,2026-11-11T20:24:06+00:00
+27,91a2057d13ed46ef8ee13b7e6d0100ad,easy,Medicine,F,gpt-6.1-terra,3.9338480830192566,"A typical administered dose of fluorine-18 FDG for an adult PET/CT scan is approximately 10 mCi.
+
+Answer: D",completed,118,75,reasoning_tokens=41,D,False,0.000493,,2026-11-11T20:53:13+00:00
+30,e874576a9e6c4a2aae7593e3388d03c9,easy,Medicine,F,gpt-6.1-sol,2.811838458990678,"Jugular venous distention reflects **elevated right atrial pressure** transmitted to the systemic veins. Mitral stenosis can lead to pulmonary hypertension and subsequent right-sided heart failure, explaining the edema and jugular venous distention.
+
+Answer: F",completed,192,56,reasoning_tokens=0,F,True,0.000944,,2026-11-11T20:53:17+00:00
+28,b8415e8f8c6b458ba97f6b194ef337e8,easy,Literature and Arts,E,gpt-6.1-terra,4.62576025002636,Answer: E,completed,157,105,reasoning_tokens=96,E,True,0.000682,,2026-11-11T21:22:23+00:00
+31,be529e4267c8488f8df3970620cef40e,hard,Science,G,gpt-6.1-sol,2.8101234580390155,"By the shell theorem, the outer shell produces no gravitational field inside it. For \(r_1<r<r_2\), only the inner shell contributes, giving the field magnitude
+\[
+g=\frac{GM_1}{r^2},
+\]
+directed toward the center. (The force on mass \(m\) would be \(mg\).)
+
+Answer: A",completed,379,84,reasoning_tokens=0,A,False,0.001598,,2026-11-11T21:22:29+00:00
+29,5001aee457944ef6a1f02ae3ac50ca95,middle,Medicine,F,gpt-6.1-terra,3.0544621672015637,"The **fibrous pericardium** limits excessive dilation of the heart. Of the options given, the pericardial cavity is the closest.
+
+Answer: C",completed,126,78,reasoning_tokens=38,C,False,0.000516,,2026-11-11T21:51:33+00:00
+32,1fc03de98f3a420391c2af4409828067,middle,Science,I,gpt-6.1-sol,5.117482790956274,"The interaction Hamiltonian is
+\[
+H=-\boldsymbol{\mu}\cdot\mathbf B
+=-\frac{\mu_{\mathrm B}B}{2}\sigma_x.
+\]
+Starting from \(|+z\rangle\), the state evolves as
+\[
+|\psi(t)\rangle
+=\cos\left(\frac{\mu_{\mathrm B}Bt}{2\hbar}\right)|+z\rangle
++i\sin\left(\frac{\mu_{\mathrm B}Bt}{2\hbar}\right)|-z\rangle.
+\]
+Projecting onto \(|\pm y\rangle=(|+z\rangle\pm i|-z\rangle)/\sqrt2\) gives
+\[
+P_{\pm y}(t)=\frac12\left[1\pm\sin\left(\frac{\mu_{\mathrm B}Bt}{\hbar}\right)\right].
+\]
+Thus, interpreting the \(h\) in the choices as the intended \(\hbar\), the matching option is I.
+
+Answer: I",completed,1077,241,reasoning_tokens=14,I,True,0.004564,,2026-11-11T21:51:39+00:00
+30,e874576a9e6c4a2aae7593e3388d03c9,easy,Medicine,F,gpt-6.1-terra,3.4132536249235272,"Jugular venous distention reflects elevated right atrial pressure, likely due to right-sided heart failure secondary to mitral stenosis.
+
+Answer: F",completed,192,57,reasoning_tokens=21,F,True,0.000477,,2026-11-11T22:20:43+00:00
+33,ba93133d2f97402081520002ee2d4928,middle,Science,D,gpt-6.1-sol,2.7427408329676837,"The speed is the rate of change of \(p\) with respect to time: \(\omega=\frac{dp}{dt}\).
+
+Answer: D",completed,295,51,reasoning_tokens=14,D,True,0.0011,,2026-11-11T22:20:49+00:00
+31,be529e4267c8488f8df3970620cef40e,hard,Science,G,gpt-6.1-terra,2.814003000035882,"Between the shells, the outer shell produces no gravitational field, while the inner shell acts as if its mass were concentrated at the center. Thus the field magnitude is \(GM_1/r^2\). (The force on mass \(m\) is \(GM_1m/r^2\).)
+
+Answer: A",completed,379,69,reasoning_tokens=0,A,False,0.000724,,2026-11-11T22:49:53+00:00
+34,2019129df6c146feb718bdc975a430f9,middle,Science,E,gpt-6.1-sol,2.106846167007461,"The vertical resolution is approximately one-quarter of the wavelength:
+
+\[
+R = \frac{\lambda}{4} = \frac{v}{4f}
+= \frac{3500}{4 \times 35} = 25\text{ m}.
+\]
+
+Answer: E",completed,147,61,reasoning_tokens=0,E,True,0.000904,,2026-11-11T22:49:59+00:00
+32,1fc03de98f3a420391c2af4409828067,middle,Science,I,gpt-6.1-terra,3.8500882079824805,"With \(H=-\mu_{\mathrm B}B\sigma_x/2\), the spin precesses from \(+z\) toward \(+y\). Thus, taking \(h\) in the choices to denote the reduced Planck constant,
+\[
+P\left(s_y=\pm\tfrac12\right)
+=\frac12\left(1\pm\sin\frac{\mu_{\mathrm B}Bt}{h}\right).
+\]
+
+Answer: I",completed,1077,140,reasoning_tokens=36,I,True,0.001777,,2026-11-11T23:19:05+00:00
+35,c87e2a9e4dcd4bd2ae6328650875b4de,hard,Engineering,A,gpt-6.1-sol,31.737381875049323,Answer: A,completed,230,825,reasoning_tokens=816,A,True,0.00871,,2026-11-11T23:19:10+00:00
+33,ba93133d2f97402081520002ee2d4928,middle,Science,D,gpt-6.1-terra,2.694449707865715,"Angular speed is the rate of change of angular position: \(\omega = \frac{dp}{dt}\).
+
+Answer: D",completed,295,62,reasoning_tokens=30,D,True,0.000605,,2026-11-11T23:48:15+00:00
+36,8dcbb2d6f85149cb9896954fc33ac7b8,middle,Science,B,gpt-6.1-sol,3.09478004113771,"LDA maximizes the Fisher criterion, the ratio of between-class scatter to within-class scatter. When class centers coincide, the between-class scatter is zero, so the criterion is zero for every projection with nonzero within-class scatter.
+
+Answer: B",completed,173,53,reasoning_tokens=0,B,True,0.000876,,2026-11-11T23:48:32+00:00
+34,2019129df6c146feb718bdc975a430f9,middle,Science,E,gpt-6.1-terra,3.3127322499640286,"The wavelength is \(3500/35 = 100\) m. The vertical resolution is approximately one-quarter wavelength, or \(25\) m.
+
+Answer: E",completed,147,53,reasoning_tokens=13,E,True,0.000412,,2026-11-12T00:17:25+00:00
+37,025f644245a04129ba54cd909a5e97b2,middle,Law,D,gpt-6.1-sol,9.085256583988667,"The substantive statements are correct: adjacency rights balance neighboring interests, help resolve conflicts over property use, and require owners to avoid harming neighbors’ legitimate rights and interests.
+
+Answer: D",completed,244,239,reasoning_tokens=198,D,True,0.002878,,2026-11-12T00:17:42+00:00
+35,c87e2a9e4dcd4bd2ae6328650875b4de,hard,Engineering,A,gpt-6.1-terra,5.198676541913301,"For the equilibrium
+\[
+\mathrm{Fe(s)+CO_2(g)\rightleftharpoons FeO(slag)+CO(g)},
+\]
+the equilibrium constant is approximately \(K=2.33\) at \(1300^\circ\mathrm C\). Since \(a_{\mathrm{Fe}}=1\),
+\[
+\left(\frac{p_{\mathrm{CO}}}{p_{\mathrm{CO_2}}}\right)_{\rm eq}
+=K a_{\mathrm{FeO}}
+=2.33(0.45)\approx 1.050.
+\]
+
+Answer: H",completed,230,276,reasoning_tokens=144,H,False,0.00161,,2026-11-12T00:46:35+00:00
+38,6e93f26fd86f4d678ae35d7d7506c0f0,middle,Management,I,gpt-6.1-sol,3.7537280838005245,"Social medicine focuses on how social conditions affect health and on improving population health through policies and community services. Expanding private health insurance is not one of its basic tasks.
+
+Answer: H",completed,136,91,reasoning_tokens=49,H,False,0.001182,,2026-11-12T00:46:52+00:00
+36,8dcbb2d6f85149cb9896954fc33ac7b8,middle,Science,B,gpt-6.1-terra,3.220028415787965,"When class centers coincide, the between-class scatter is zero, so the Fisher criterion is zero.
+
+Answer: B",completed,173,56,reasoning_tokens=28,B,True,0.000453,,2026-11-12T01:15:45+00:00
+39,096c6a79df9a4a119188f1fcf0845753,easy,Literature and Arts,J,gpt-6.1-sol,1.868480334058404,"Thailand’s *Daily News* was founded on March 28, 1964.
+
+Answer: J",completed,112,45,reasoning_tokens=19,J,True,0.000674,,2026-11-12T01:16:02+00:00
+37,025f644245a04129ba54cd909a5e97b2,middle,Law,D,gpt-6.1-terra,3.1995668751187623,"The three substantive statements—F, G, and J—are correct.
+
+Answer: H",completed,244,109,reasoning_tokens=85,H,False,0.000789,,2026-11-12T01:44:55+00:00
+40,23c53c65a8634afe9c40f32445d2ed4e,middle,Economics,J,gpt-6.1-sol,6.564224583096802,"J) fixed amount payment. Under this method, regions remit a fixed surplus or receive a fixed subsidy based on their approved budget balance.
+
+Answer: J",completed,167,197,reasoning_tokens=161,J,True,0.002304,,2026-11-12T01:45:13+00:00
+38,6e93f26fd86f4d678ae35d7d7506c0f0,middle,Management,I,gpt-6.1-terra,3.8308668748941272,"Expanding private health insurance is not a basic task of social medicine, which focuses on social determinants of health and population-wide health improvement.
+
+Answer: H",completed,136,118,reasoning_tokens=82,H,False,0.000726,,2026-11-12T02:14:06+00:00
+39,096c6a79df9a4a119188f1fcf0845753,easy,Literature and Arts,J,gpt-6.1-terra,1.9421814170200378,Answer: J,completed,112,55,reasoning_tokens=46,J,True,0.000387,,2026-11-12T02:14:26+00:00
+41,b4428815b1a8424eba16c46275857ecd,middle,Science,J,gpt-6.1-sol,7.4213141249492764,"The normal vectors satisfy
+\[
+(2,2,8)=2\bigl[(5,-4,2)-(4,-5,-2)\bigr].
+\]
+However, subtracting the first plane equation from the second and doubling gives
+\[
+2x+2y+8z=-8,
+\]
+which is incompatible with the third plane, \(2x+2y+8z=1\).
+
+Thus, the three planes have no common intersection. Since no two are parallel, their pairwise intersection lines are parallel, so the planes form the lateral faces of a triangular prism.
+
+Answer: J",completed,148,275,reasoning_tokens=143,J,True,0.003046,,2026-11-12T02:14:25+00:00
+42,de8d713b6d5b4a0a9648f5969dc186d0,hard,Science,H,gpt-6.1-sol,5.473995292093605,"The equations contain apparent typos: the third equation should use \(2Na_2O(s)\), and the target product should be \(Na_2SO_4(s)\), since no vaporization enthalpy is supplied.
+
+Using Hess’s law:
+
+- Twice the first equation: \(\Delta H^\circ=2(-146)=-292\ \text{kJ}\).
+- Half the corrected third equation: \(\Delta H^\circ=259/2=129.5\ \text{kJ}\).
+- Reverse the second equation: \(\Delta H^\circ=-418\ \text{kJ}\).
+
+Adding these cancels the intermediate species and gives
+\[
+Na_2O(s)+SO_3(g)\rightarrow Na_2SO_4(s).
+\]
+
+Thus,
+\[
+\Delta H^\circ=-292+129.5-418=-580.5\approx -581\ \text{kJ}.
+\]
+
+Answer: H",completed,278,275,reasoning_tokens=72,H,True,0.003306,,2026-11-12T02:14:45+00:00
+41,b4428815b1a8424eba16c46275857ecd,middle,Science,J,gpt-6.1-terra,5.012045084033161,"The normal vectors satisfy \(\mathbf n_3=2(\mathbf n_2-\mathbf n_1)\), but the constants do not satisfy the same relation. Thus the planes have no common intersection; their pairwise intersection lines are parallel. They form an infinite triangular prism.
+
+Answer: J",completed,148,257,reasoning_tokens=191,J,True,0.001433,,2026-11-12T02:14:47+00:00
+42,de8d713b6d5b4a0a9648f5969dc186d0,hard,Science,H,gpt-6.1-terra,4.60713450005278,"The equations appear to contain two typos: the third reactant should be \(2Na_2O(s)\), and the target product should be \(Na_2SO_4(s)\).
+
+Using Hess’s law, combine twice the first equation with the third, then divide by two. This gives
+\[
+Na_2O(s)+H_2O(l)\rightarrow 2NaOH(s),
+\qquad \Delta H^\circ=\frac{-292+259}{2}=-16.5\ \text{kJ}.
+\]
+Adding the reverse of the second equation gives
+\[
+\Delta H^\circ=-16.5-418=-434.5\approx -435\ \text{kJ}.
+\]
+
+The enthalpy for gaseous \(Na_2SO_4\), as written in the question, cannot be determined without additional data.
+
+Answer: D",completed,278,286,reasoning_tokens=98,D,False,0.001708,,2026-11-12T02:15:07+00:00
+43,61fcd7e73e194e2ebea202afec24e266,hard,Engineering,I,gpt-6.1-sol,14.121257542166859,"Without equalizing resistors, the voltage divides in proportion to the blocking resistances:
+\[
+V_1=1000\frac{1}{1+2}=333.3\text{ V},\qquad
+V_2=1000\frac{2}{1+2}=666.7\text{ V}.
+\]
+
+With an equal resistor \(R_p\) across each thyristor, the effective resistances are
+\[
+R'_1=\frac{R_pR_1}{R_p+R_1},\qquad
+R'_2=\frac{R_pR_2}{R_p+R_2}.
+\]
+
+Taking the voltage error as \((V_2-V_1)/V_1<10\%\), we require
+\[
+\frac{V_2}{V_1}=\frac{R'_2}{R'_1}
+=\frac{2(R_p+1)}{R_p+2}<1.1,
+\]
+where resistances are expressed in \(\mathrm{M}\Omega\). Thus
+\[
+R_p<0.2222\ \mathrm{M}\Omega=222.2\ \mathrm{k}\Omega.
+\]
+
+The largest listed resistance satisfying this limit is **\(200\ \mathrm{k}\Omega\)**. It gives approximately \(478.3\text{ V}\) and \(521.7\text{ V}\), a relative difference of \(9.09\%\).
+
+Answer: A",completed,357,575,reasoning_tokens=257,A,False,0.006464,,2026-11-12T02:15:06+00:00
+44,392a3c64dcf04dadb402f24760a9518b,middle,Science,H,gpt-6.1-sol,3.8578546249773353,"Initially, the open end is upwards, so the trapped air pressure is
+\[
+P_1=76+19=95\text{ cm Hg}.
+\]
+
+After inversion, the open end is downwards, so
+\[
+P_2=76-19=57\text{ cm Hg}.
+\]
+
+Using Boyle’s law (the tube has uniform cross-section),
+\[
+P_1L_1=P_2L_2
+\quad\Rightarrow\quad
+L_2=\frac{95\times24}{57}=40\text{ cm}.
+\]
+
+Answer: H",completed,165,148,reasoning_tokens=18,H,True,0.00181,,2026-11-12T02:15:26+00:00
+43,61fcd7e73e194e2ebea202afec24e266,hard,Engineering,I,gpt-6.1-terra,6.079396584071219,"Without equalizing resistors, the voltage divides in proportion to the blocking resistances:
+
+- \(1\,\text{M}\Omega\) thyristor: \(333\,\text{V}\)
+- \(2\,\text{M}\Omega\) thyristor: \(667\,\text{V}\)
+
+With a \(200\,\text{k}\Omega\) resistor across each device, the voltages become approximately \(478\,\text{V}\) and \(522\,\text{V}\). Their difference is less than 10%.
+
+Smaller listed resistors also satisfy the condition, so the question does not have a unique correct choice as written. One valid choice is:
+
+Answer: A",completed,357,392,reasoning_tokens=239,A,False,0.002317,,2026-11-12T02:15:28+00:00
+45,0529e135a4ea4db59069d0d081f2960a,middle,Science,F,gpt-6.1-sol,2.38314808299765,"Broecker’s two-box model represents the ocean as surface and deep-water reservoirs, describing nutrient depletion near the surface and enrichment at depth.
+
+Answer: F",completed,142,54,reasoning_tokens=17,F,True,0.000824,,2026-11-12T02:15:47+00:00
+44,392a3c64dcf04dadb402f24760a9518b,middle,Science,H,gpt-6.1-terra,2.47118091606535,"By Boyle’s law, \(P_1L_1=P_2L_2\). The trapped air’s pressure changes from \(76+19=95\) cm Hg to \(76-19=57\) cm Hg.
+
+\[
+L_2=\frac{95\times24}{57}=40\text{ cm}
+\]
+
+Answer: H",completed,165,120,reasoning_tokens=39,H,True,0.000765,,2026-11-12T02:15:48+00:00
+46,701898aad61a489886c2eb8f4db59cdd,hard,Science,I,gpt-6.1-sol,2.893861207878217,"A lamp ends off if its switch is pulled exactly once. There are \(150/3=50\) multiples of 3 and \(150/5=30\) multiples of 5. The \(150/15=10\) multiples of both are pulled twice and remain on.
+
+Thus, \(50+30-2(10)=60\) lamps end off, leaving \(150-60=\boxed{90}\) on.
+
+Answer: I",completed,184,97,reasoning_tokens=0,I,True,0.001338,,2026-11-12T02:16:07+00:00
+45,0529e135a4ea4db59069d0d081f2960a,middle,Science,F,gpt-6.1-terra,1.917457374976948,"Broecker's two-box model describes nutrient distributions using surface and deep-ocean reservoirs.
+
+Answer: F",completed,142,46,reasoning_tokens=19,F,True,0.000372,,2026-11-12T02:16:09+00:00
+47,b51077373ccc4c22ad200c476b3b88aa,middle,Engineering,A,gpt-6.1-sol,2.5634007919579744,"Earth’s curvature must be accounted for in **elevation measurements**, because a horizontal line of sight diverges from the curved level surface as distance increases.
+
+Answer: A",completed,124,53,reasoning_tokens=14,A,True,0.000778,,2026-11-12T02:16:28+00:00
+46,701898aad61a489886c2eb8f4db59cdd,hard,Science,I,gpt-6.1-terra,2.1049492091406137,"Lamps pulled exactly once are off. There are 50 multiples of 3 and 30 multiples of 5, including 10 multiples of 15 that are pulled twice. Thus, 50 + 30 − 2(10) = 60 lamps are off, leaving 150 − 60 = 90 on.
+
+Answer: I",completed,184,104,reasoning_tokens=28,I,True,0.000704,,2026-11-12T02:16:29+00:00
+47,b51077373ccc4c22ad200c476b3b88aa,middle,Engineering,A,gpt-6.1-terra,2.703264208044857,"Earth’s curvature affects elevation measurements, particularly over long distances, and must be corrected for in surveying.
+
+Answer: A",completed,124,83,reasoning_tokens=54,A,True,0.000539,,2026-11-12T02:16:50+00:00
+48,d3de7be9e1374bfcbb7d9ecb90eb20c6,hard,Science,J,gpt-6.1-sol,5.40459662489593,"The Arrhenius activation energy is
+\[
+E_a=RT^2\frac{d\ln K}{dT}.
+\]
+For the expression as written,
+\[
+E_a=\beta RT^2\frac{1+\gamma/T^2}{T-\gamma/T}
+=\beta RT\frac{T^2+\gamma}{T^2-\gamma},
+\]
+which matches **none of the options**.
+
+There is likely a typographical error: if the intended expression is
+\[
+\ln K=\alpha+\beta\ln T-\frac{\gamma}{T},
+\]
+then \(E_a=\beta RT+\gamma R\), giving the intended choice **J**.
+
+Answer: J",completed,237,246,reasoning_tokens=94,J,True,0.002934,,2026-11-12T02:16:48+00:00
+49,7248e6195d44495e9c2ac9cff9de1eed,hard,Engineering,A,gpt-6.1-sol,2.771329333772883,"For liquid rotating with angular speed \(\omega=2\pi n\), the free surface satisfies
+\[
+\frac{dz}{d\rho}=\frac{\omega^2\rho}{g},
+\]
+where \(\rho\) is the distance from the axis.
+
+Integrating from the centre to the vessel’s side,
+\[
+h=\int_0^r\frac{\omega^2\rho}{g}\,d\rho
+=\frac{\omega^2r^2}{2g}
+=\frac{2\pi^2n^2r^2}{g}.
+\]
+
+Answer: A",completed,435,133,reasoning_tokens=0,A,True,0.0022,,2026-11-12T02:17:09+00:00
+48,d3de7be9e1374bfcbb7d9ecb90eb20c6,hard,Science,J,gpt-6.1-terra,4.1776716250460595,"Using \(E_a=RT^2\,d(\ln K)/dT\),
+
+\[
+E_a=\beta RT\,\frac{T^2+\gamma}{T^2-\gamma}.
+\]
+
+None of the listed expressions matches this result, so the question appears to contain an error.
+
+Answer: None",completed,237,214,reasoning_tokens=144,,False,0.001307,,2026-11-12T02:17:10+00:00
+50,f1e9a09803c04326ad285b6839ee7e38,middle,Economics,D,gpt-6.1-sol,2.3990870830602944,"Contractionary fiscal policy reduces government spending or raises taxes, lowering aggregate demand and domestic interest rates. Lower interest rates make U.S. assets less attractive to foreign investors, reducing demand for the dollar and causing it to depreciate.
+
+Answer: D",completed,201,53,reasoning_tokens=0,D,True,0.000932,,2026-11-12T02:17:29+00:00
+49,7248e6195d44495e9c2ac9cff9de1eed,hard,Engineering,A,gpt-6.1-terra,3.2766629999969155,"For a rotating liquid, the height difference is
+\[
+h=\frac{\omega^2r^2}{2g}.
+\]
+Using \(\omega=2\pi n\), we get
+\[
+h=\frac{2\pi^2n^2r^2}{g}.
+\]
+
+Answer: A",completed,435,71,reasoning_tokens=0,A,True,0.00079,,2026-11-12T02:17:31+00:00
+51,1dc6148db1d940c4aaf21dfc3b4f9b30,middle,Medicine,D,gpt-6.1-sol,2.935664459131658,"Type B serum contains anti-A antibodies. Agglutination with the person’s red blood cells therefore indicates that their cells carry A antigen.
+
+Their serum does not agglutinate type B red blood cells, indicating that it lacks anti-B antibodies. Together, these findings identify **type AB blood**. Rh status cannot be determined from these tests.
+
+Answer: D",completed,147,107,reasoning_tokens=29,D,True,0.001364,,2026-11-12T02:17:50+00:00
+50,f1e9a09803c04326ad285b6839ee7e38,middle,Economics,D,gpt-6.1-terra,1.9127898749429733,"Contractionary fiscal policy reduces government borrowing and aggregate demand, putting downward pressure on interest rates. Lower interest rates make dollar-denominated assets less attractive to foreign investors, causing the dollar to depreciate.
+
+Answer: D",completed,201,47,reasoning_tokens=0,D,True,0.000436,,2026-11-12T02:17:51+00:00
+52,c617c8fb2b9f43dfa8f4ea345ab88f45,middle,Economics,I,gpt-6.1-sol,3.0907409579958767,"The actual labor force consists of people who are able and willing to work, including employed people and those actively seeking employment. It excludes potential workers who cannot or choose not to participate.
+
+Answer: I",completed,198,68,reasoning_tokens=23,I,True,0.001076,,2026-11-12T02:18:10+00:00
+51,1dc6148db1d940c4aaf21dfc3b4f9b30,middle,Medicine,D,gpt-6.1-terra,2.0821509580127895,"Type B serum contains anti-A antibodies, so the person’s red cells have A antigens. Their serum does not agglutinate type B red cells, so it lacks anti-B antibodies. Together, these indicate type AB.
+
+Answer: D",completed,147,88,reasoning_tokens=33,D,True,0.000587,,2026-11-12T02:18:12+00:00
+53,e8f13d774f2f490ca4ab5f1ee2b7221f,middle,Agronomy,G,gpt-6.1-sol,1.941642832942307,"Grassland mainly supports herbaceous plants, sometimes alongside shrubs and sparse trees.
+
+Answer: G",completed,206,22,reasoning_tokens=0,G,True,0.000632,,2026-11-12T02:18:36+00:00
+52,c617c8fb2b9f43dfa8f4ea345ab88f45,middle,Economics,I,gpt-6.1-terra,2.099725915817544,Answer: I,completed,198,73,reasoning_tokens=64,I,True,0.000563,,2026-11-12T02:18:36+00:00
+53,e8f13d774f2f490ca4ab5f1ee2b7221f,middle,Agronomy,G,gpt-6.1-terra,1.3958739580120891,Answer: G,completed,206,7,reasoning_tokens=0,G,True,0.000241,,2026-11-12T02:18:38+00:00
+54,0e4c0c0966594c50a314899ff5da9b98,hard,Science,F,gpt-6.1-terra,5.200349791906774,"Using the melting-point depression equation,
+
+\[
+\frac{1}{T_m}-\frac{1}{T_m^0}
+=\frac{R V_2}{\Delta H_f V_1}\left(\varphi_1-\chi\varphi_1^2\right),
+\]
+
+with \(T_m^0\approx353\ \mathrm K\), gives approximately \(350.7\), \(348.5\), and \(342.1\ \mathrm K\), respectively.
+
+Answer: F",completed,1022,371,reasoning_tokens=257,F,True,0.002877,,2026-11-12T02:18:40+00:00
+54,0e4c0c0966594c50a314899ff5da9b98,hard,Science,F,gpt-6.1-sol,6.758476958144456,"Using the polymer melting-point depression equation,
+\[
+\frac{1}{T_m}-\frac{1}{T_m^0}
+=\frac{R}{\Delta H_f}\frac{V_u}{V_1}
+\left(\varphi_1-\chi\varphi_1^2\right),
+\]
+where \(V_u\) is the molar volume of a polymer repeat unit and \(V_1\) is that of water.
+
+Here,
+\[
+V_u=\frac{44}{1.33}=33.1\ \mathrm{cm^3/mol},\qquad
+V_1\approx18\ \mathrm{cm^3/mol},
+\]
+and \(T_m^0\approx353\ \mathrm K\). Thus,
+\[
+T_m=\left[\frac1{353}
++\frac{8.314}{8290}\frac{33.1}{18}
+(\varphi_1-0.45\varphi_1^2)\right]^{-1}.
+\]
+
+For water volume fractions \(0.01,\ 0.02,\ 0.05\), respectively, this gives approximately
+\[
+350.7\ \mathrm K,\qquad348.5\ \mathrm K,\qquad342.1\ \mathrm K.
+\]
+
+Answer: F",completed,1022,367,reasoning_tokens=85,F,True,0.005714,,2026-11-12T02:18:38+00:00
+55,a7a3dc6d5b5b4d37a32c2839833a4d6c,hard,Science,E,gpt-6.1-terra,4.305580375017598,"Using a present-day lengthening of the day of roughly \(1.7\) milliseconds per century, and extrapolating at that constant rate, the time to add about 46 days is
+
+\[
+\frac{46(86{,}400)\ \mathrm{s}}{0.0017\ \mathrm{s/century}}
+\approx 2.3\times10^{11}\ \mathrm{yr}.
+\]
+
+The closest choice is E. This is a rough extrapolation; the slowing rate will not remain constant.
+
+Answer: E",completed,347,216,reasoning_tokens=97,E,True,0.001427,,2026-11-12T02:18:45+00:00
+56,146be28f445041beb942056acaa87ae1,easy,Economics,G,gpt-6.1-terra,1.282394208945334,"John Stuart Mill detailed the wage fund theory in *Principles of Political Economy* (1848).
+
+Answer: G",completed,97,45,reasoning_tokens=16,G,True,0.000322,,2026-11-12T02:18:49+00:00
+57,36623ae8930e4409bdf77302cb196a8f,middle,Medicine,D,gpt-6.1-terra,3.465449457988143,"ESBLs hydrolyze many penicillins, cephalosporins, and monobactams, but generally not **carbapenems**. The question is ambiguous because tetracyclines, fluoroquinolones, and aminoglycosides are also not ESBL substrates; they are not beta-lactams.
+
+Answer: D",completed,135,159,reasoning_tokens=80,D,True,0.00093,,2026-11-12T02:18:50+00:00
+55,a7a3dc6d5b5b4d37a32c2839833a4d6c,hard,Science,E,gpt-6.1-sol,15.219249082962051,"Using the present increase in Earth’s day length, approximately \(1.7\) milliseconds per century, and assuming it remains constant, the required increase is
+\[
+\Delta P=(47-1)(86400)\approx 4.0\times10^6\ \mathrm{s}.
+\]
+Thus,
+\[
+t\approx \frac{4.0\times10^6}{1.7\times10^{-3}}\times100
+\approx 2.4\times10^{11}\ \mathrm{yr}.
+\]
+This is only a rough extrapolation, since tidal braking changes over time.
+
+Answer: E",completed,347,559,reasoning_tokens=423,E,True,0.006284,,2026-11-12T02:18:45+00:00
+58,41a1deebc51847799fc5e83cab58c313,hard,Engineering,H,gpt-6.1-terra,6.882533082971349,"For parallel flow, the logarithmic mean temperature difference is
+
+\[
+\Delta T_m=\frac{98-17}{\ln(98/17)}\approx46.2^\circ\mathrm C.
+\]
+
+Keeping the same heat-transfer area, coefficient and flow rates, the counterflow calculation gives outlet temperatures of approximately **60.0°C** for the hot fluid and **49.2°C** for the cold fluid. The corresponding mean temperature difference is approximately **49.8°C**.
+
+None of the listed values matches exactly; **51.3°C is the closest**.
+
+Answer: F",completed,451,430,reasoning_tokens=301,F,False,0.002601,,2026-11-12T02:18:54+00:00
+56,146be28f445041beb942056acaa87ae1,easy,Economics,G,gpt-6.1-sol,1.8363327088300139,"John Stuart Mill detailed the wage fund theory in his 1848 publication, *Principles of Political Economy*.
+
+Answer: G",completed,97,45,reasoning_tokens=13,G,True,0.000644,,2026-11-12T02:19:00+00:00
+59,fdd4b913338843cfbb64180ad80c2cf5,middle,Medicine,D,gpt-6.1-terra,1.652246915968135,"The daily tablet contains 100 mg elemental iron and 500 mcg folic acid.
+
+Answer: D",completed,213,51,reasoning_tokens=24,D,True,0.000468,,2026-11-12T02:19:01+00:00
+60,763f186b89c9449e827fc6547b7827f6,easy,Philosophy,A,gpt-6.1-terra,2.637552124913782,"Fidelity of reasoning is the preservation of truth: if the premises are true and the reasoning is valid, the conclusion must be true.
+
+Answer: A",completed,255,99,reasoning_tokens=63,A,True,0.00075,,2026-11-12T02:19:02+00:00
+57,36623ae8930e4409bdf77302cb196a8f,middle,Medicine,D,gpt-6.1-sol,4.389853917062283,"**D) Carbapenems** is the intended answer. ESBLs hydrolyze penicillins, extended-spectrum cephalosporins, and monobactams, but generally spare carbapenems.
+
+Strictly, the question is flawed: tetracyclines, fluoroquinolones, and aminoglycosides are not β-lactams and are also not substrates for ESBLs.
+
+Answer: D",completed,135,194,reasoning_tokens=101,D,True,0.00221,,2026-11-12T02:19:02+00:00
+61,d638c218a851446ab3bf2e6a9178d67b,hard,Science,E,gpt-6.1-terra,5.118823959026486,"The stated force \(F=kv^{-2}\) gives \(k=0.292\,\mathrm{kg\,m^3\,s^{-4}}\), which is not among the choices.
+
+If the intended force is \(F=kv^2\), the final speed is \(v_0/2\), and integrating \(m\,dv/dt=-kv^2\) gives
+\[
+k=\frac{m}{v_0t}=10^{-4}\,\mathrm{kg\,m^{-1}}.
+\]
+
+Thus the likely intended choice is:
+
+Answer: E",completed,313,287,reasoning_tokens=161,E,True,0.001748,,2026-11-12T02:19:05+00:00
+62,dd9099ac09d846628ebe511b50ffc963,middle,Education,C,gpt-6.1-terra,2.3730749171227217,"In the older preschool years, abstract logical thinking begins to emerge.
+
+Answer: C",completed,113,82,reasoning_tokens=60,C,True,0.000523,,2026-11-12T02:19:10+00:00
+63,2685f5ce38354990923908a993698992,middle,Law,D,gpt-6.1-terra,3.672971291001886,"A personal vehicle is a movable good, so its sale is governed by UCC Article 2. However, D can also fall under Article 2, making the question ambiguous.
+
+Answer: E",completed,166,149,reasoning_tokens=104,E,False,0.000911,,2026-11-12T02:19:13+00:00
+64,32797bc3fa7f4daf8f67bce39e12ec8e,middle,Engineering,J,gpt-6.1-terra,2.7112379169557244,"Assuming a 1 Ω load, the signal power is \(20^2/2=200\) W. The modulation index is \(8\), and the modulating frequency is \(4000\pi/(2\pi)=2000\) Hz. Thus, the maximum frequency deviation is \(8(2000)=16{,}000\) Hz, and Carson’s rule gives a bandwidth of \(2(16{,}000+2000)=36{,}000\) Hz.
+
+Answer: J",completed,291,139,reasoning_tokens=25,J,True,0.000986,,2026-11-12T02:19:16+00:00
+65,005c69a0ce0f4b978b4aa4e0a49beef7,easy,Medicine,B,gpt-6.1-terra,1.5938521248754114,"The standard limit is 0.15 µCi of ⁹⁹Mo per mCi of ⁹⁹ᵐTc at the time of administration.
+
+Answer: B",completed,141,43,reasoning_tokens=0,B,True,0.000356,,2026-11-12T02:19:19+00:00
+58,41a1deebc51847799fc5e83cab58c313,hard,Engineering,H,gpt-6.1-sol,15.401921374956146,"Assuming the exchanger’s \(UA\) remains unchanged, the original parallel-flow log-mean temperature difference is
+\[
+\Delta T_m=\frac{(130-32)-(65-48)}
+{\ln[(130-32)/(65-48)]}
+=46.24^\circ\mathrm C.
+\]
+
+The heat-capacity-rate ratio and NTU are
+\[
+C_r=\frac{C_h}{C_c}=\frac{48-32}{130-65}=\frac{16}{65},
+\qquad
+\mathrm{NTU}=\frac{UA}{C_h}=\frac{65}{46.24}=1.406.
+\]
+For counterflow,
+\[
+\varepsilon=
+\frac{1-e^{-\mathrm{NTU}(1-C_r)}}
+{1-C_r e^{-\mathrm{NTU}(1-C_r)}}
+\approx0.7145.
+\]
+Therefore,
+\[
+T'_{h,o}=130-0.7145(98)\approx60.0^\circ\mathrm C,
+\]
+\[
+T'_{c,o}=32+\frac{16}{65}(70.0)\approx49.2^\circ\mathrm C,
+\]
+and
+\[
+\Delta T'_m=\frac{70.0}{1.406}\approx49.8^\circ\mathrm C.
+\]
+
+**None of the options matches this result exactly; F is the closest listed value.**
+
+Answer: F",completed,451,669,reasoning_tokens=354,F,False,0.007592,,2026-11-12T02:19:06+00:00
+59,fdd4b913338843cfbb64180ad80c2cf5,middle,Medicine,D,gpt-6.1-sol,1.5768730831332505,"Under the MCH programme, the daily supplement for mothers contains **100 mg elemental iron and 500 mcg folic acid**.
+
+Answer: D",completed,213,34,reasoning_tokens=0,D,True,0.000766,,2026-11-12T02:19:22+00:00
+66,301af223949442048982df544c1a5308,middle,Science,G,gpt-6.1-terra,3.1749527079518884,"At equilibrium,
+\[
+K=\exp\left(-\frac{44300}{R(630)}\right)
+=\left(\frac{p_{\mathrm{Hg}}}{p^\Theta}\right)^2
+\left(\frac{p_{\mathrm{O_2}}}{p^\Theta}\right).
+\]
+
+Starting with oxygen at standard pressure, its equilibrium pressure is \(p^\Theta+p_{\mathrm{Hg}}/2\). Solving gives \(p_{\mathrm{Hg}}\approx 1452\ \mathrm{Pa}\).
+
+Answer: G",completed,398,186,reasoning_tokens=65,G,True,0.001328,,2026-11-12T02:19:21+00:00
+60,763f186b89c9449e827fc6547b7827f6,easy,Philosophy,A,gpt-6.1-sol,2.071925458032638,"Fidelity of reasoning means preserving truth through valid inference: if the premises are true and the reasoning is logically valid, the conclusion must also be true.
+
+Answer: A",completed,255,54,reasoning_tokens=15,A,True,0.00105,,2026-11-12T02:19:23+00:00
+67,ae905e8fa80e4cd49953be1607d30ecc,middle,Engineering,D,gpt-6.1-terra,2.7485427078790963,"The heat transferred to the river is \(\frac{2}{3}(1000\ \text{MW}) = 667\ \text{MW}\). Using \(\dot m = 100{,}000\ \text{kg/s}\) and \(c \approx 4186\ \text{J/(kg·°C)}\),
+
+\[
+\Delta T=\frac{\dot Q}{\dot m c}\approx 1.59^\circ\text{C}.
+\]
+
+Answer: D",completed,290,137,reasoning_tokens=24,D,True,0.000975,,2026-11-12T02:19:24+00:00
+68,1f27cbb732a148b58d7fc3ab537d8399,middle,Science,J,gpt-6.1-terra,1.545140540925786,Answer: J,completed,127,28,reasoning_tokens=19,J,True,0.000267,,2026-11-12T02:19:27+00:00
+69,4e409fed9d954f0ba07347e3b3e343ea,hard,Engineering,H,gpt-6.1-terra,2.9597859578207135,"For a steady-state continuous stirred-tank reactor (CSTR), the product yield is
+
+\[
+\phi_P=\frac{k_1\tau}{(1+k_1\tau)(1+k_2\tau)}.
+\]
+
+Maximizing this expression gives
+
+\[
+\tau_{\mathrm{opt}}=\frac{1}{\sqrt{k_1k_2}},
+\qquad
+\phi_{\max}=\frac{1}{\left(1+\sqrt{k_2/k_1}\right)^2}.
+\]
+
+Answer: H",completed,1127,146,reasoning_tokens=25,H,True,0.001857,,2026-11-12T02:19:28+00:00
+61,d638c218a851446ab3bf2e6a9178d67b,hard,Science,E,gpt-6.1-sol,5.934436582960188,"The force law appears to contain a typo: the options have units consistent with \(F=kv^2\), not \(F=kv^{-2}\).
+
+The final speed follows from
+\[
+\frac12 mv^2=\frac18 mv_0^2
+\quad\Rightarrow\quad v=\frac{v_0}{2}=5\,\mathrm{m/s}.
+\]
+
+For quadratic drag,
+\[
+m\frac{dv}{dt}=-kv^2
+\quad\Rightarrow\quad
+\frac1v-\frac1{v_0}=\frac{kt}{m}.
+\]
+Thus,
+\[
+k=\frac{10^{-2}}{10}\left(\frac15-\frac1{10}\right)
+=10^{-4}\,\mathrm{kg\,m^{-1}}.
+\]
+
+Answer: E",completed,313,255,reasoning_tokens=72,E,True,0.003176,,2026-11-12T02:19:25+00:00
+62,dd9099ac09d846628ebe511b50ffc963,middle,Education,C,gpt-6.1-sol,4.09933550003916,"C) The germination of abstract logical thinking. In the older kindergarten years, children begin developing abstract logical thought, although their thinking remains largely concrete and image-based.
+
+Answer: C",completed,113,100,reasoning_tokens=58,C,True,0.001226,,2026-11-12T02:19:31+00:00
+70,f1c339ef9e8347c2b06fe68af5d12d8f,middle,Engineering,D,gpt-6.1-terra,6.36584229208529,Answer: A,completed,106,262,reasoning_tokens=253,A,False,0.001416,,2026-11-12T02:19:31+00:00
+63,2685f5ce38354990923908a993698992,middle,Law,D,gpt-6.1-sol,4.234402958070859,"The UCC governs sales of goods—tangible, movable personal property. A personal vehicle is a clear example of a good, so its sale falls under UCC Article 2.
+
+Answer: E",completed,166,95,reasoning_tokens=49,E,False,0.001282,,2026-11-12T02:19:35+00:00
+71,89f6324e20a04b999956d73f93970ac0,hard,Science,B,gpt-6.1-terra,3.097094333032146,"Each of the 8 elements can be assigned to one of 101 stages, so \(K=101^8\).
+
+In base \(100\),
+\[
+101^8=(100+1)^8=\sum_{j=0}^{8}\binom{8}{j}100^j.
+\]
+Every coefficient is less than \(100\), so these coefficients are the base-\(100\) digits. Their sum is
+\[
+\sum_{j=0}^{8}\binom{8}{j}=2^8=256.
+\]
+
+Answer: B",completed,185,173,reasoning_tokens=48,B,True,0.00105,,2026-11-12T02:19:37+00:00
+72,739ff662a82a4b7d878172a0b65b29a6,easy,Economics,J,gpt-6.1-terra,2.773705917177722,"Special Drawing Rights (SDRs) are book-entry reserve assets created by the International Monetary Fund.
+
+Answer: J",completed,183,155,reasoning_tokens=127,J,True,0.000958,,2026-11-12T02:19:41+00:00
+64,32797bc3fa7f4daf8f67bce39e12ec8e,middle,Engineering,J,gpt-6.1-sol,3.6784336250275373,"For the FM signal
+\[
+s(t)=20\cos\left(2\times10^8\pi t+8\cos4000\pi t\right),
+\]
+the amplitude is \(20\) V, the modulation index is \(\beta=8\), and the modulating frequency is
+\[
+f_m=\frac{4000\pi}{2\pi}=2000\text{ Hz}.
+\]
+
+Assuming a \(1\,\Omega\) load, the signal power is
+\[
+P=\frac{20^2}{2}=200\text{ W}.
+\]
+The maximum frequency deviation is
+\[
+\Delta f=\beta f_m=8(2000)=16{,}000\text{ Hz}.
+\]
+By Carson’s rule, the bandwidth is
+\[
+B=2(\Delta f+f_m)=2(16{,}000+2000)=36{,}000\text{ Hz}.
+\]
+
+Answer: J",completed,291,212,reasoning_tokens=0,J,True,0.002702,,2026-11-12T02:19:40+00:00
+65,005c69a0ce0f4b978b4aa4e0a49beef7,easy,Medicine,B,gpt-6.1-sol,2.016172999981791,"The standard limit for molybdenum-99 breakthrough is **0.15 μCi of ⁹⁹Mo per mCi of ⁹⁹ᵐTc** at the time of administration.
+
+Answer: B",completed,141,52,reasoning_tokens=0,B,True,0.000802,,2026-11-12T02:19:43+00:00
+73,f8e18a2c177e4b988bb9990e38fc7264,middle,Science,C,gpt-6.1-terra,2.3805260420776904,"For a soap bubble, the excess pressure is \(4T/r\). Conservation of gas under isothermal conditions gives
+
+\[
+P\,\Delta V+\frac{4T}{3}\,\Delta A=0.
+\]
+
+Thus \(3PV+4TS=0\).
+
+Answer: C",completed,217,115,reasoning_tokens=48,C,True,0.000792,,2026-11-12T02:19:43+00:00
+74,d2112d932a714bbf875080626c135d31,hard,Science,C,gpt-6.1-terra,3.9109267499297857,"The question has more than one unsupported statement. For example, both D and E give a zero order in methane, although the slow elementary step gives \(rate=k[CH_4][Cl]\). Also, step 3 as written forms \(CH_2Cl\), not \(CH_3Cl\), so C is not supported.
+
+Thus, there is no unique correct choice. One unsupported statement is D.
+
+Answer: D",completed,498,196,reasoning_tokens=103,D,False,0.001478,,2026-11-12T02:19:46+00:00
+66,301af223949442048982df544c1a5308,middle,Science,G,gpt-6.1-sol,5.406821208074689,"For the stated reaction, the solid HgO has unit activity, so
+\[
+K^\Theta=\left(\frac{p_{\mathrm{Hg}}}{p^\Theta}\right)^2
+\left(\frac{p_{\mathrm{O_2}}}{p^\Theta}\right)
+=\exp\left(-\frac{44300}{8.314(630)}\right)
+\approx 2.12\times10^{-4}.
+\]
+
+At constant temperature and container volume, the reaction produces one mole of oxygen for every two moles of mercury. Thus,
+\[
+p_{\mathrm{O_2}}=p^\Theta+\frac12p_{\mathrm{Hg}}.
+\]
+Writing \(x=p_{\mathrm{Hg}}/p^\Theta\) gives
+\[
+x^2(1+x/2)=2.12\times10^{-4},
+\]
+whose positive solution is \(x\approx0.01452\).
+
+Using \(p^\Theta=10^5\,\mathrm{Pa}\),
+\[
+p_{\mathrm{Hg}}\approx1452\,\mathrm{Pa}.
+\]
+
+Answer: G",completed,398,275,reasoning_tokens=34,G,True,0.003546,,2026-11-12T02:19:45+00:00
+75,46f1a88a59424571a17781f183b756fc,middle,Philosophy,J,gpt-6.1-terra,1.4899780000559986,"Stevenson says he does not understand what such a property would be.
+
+Answer: J",completed,201,50,reasoning_tokens=26,J,True,0.000451,,2026-11-12T02:19:50+00:00
+67,ae905e8fa80e4cd49953be1607d30ecc,middle,Engineering,D,gpt-6.1-sol,2.475212958175689,"The heat transferred to the river each second is
+\[
+\dot Q=\frac{2}{3}(1000\times10^6)=6.67\times10^8\ \mathrm{W}.
+\]
+
+Using water’s density \(\rho\approx1000\ \mathrm{kg/m^3}\) and specific heat capacity \(c_p\approx4186\ \mathrm{J/(kg\,^\circ C)}\),
+\[
+\Delta T=\frac{\dot Q}{\rho \dot V c_p}
+=\frac{6.67\times10^8}{(1000)(100)(4186)}
+\approx1.59^\circ\mathrm C.
+\]
+
+Answer: D",completed,290,152,reasoning_tokens=0,D,True,0.0021,,2026-11-12T02:19:51+00:00
+68,1f27cbb732a148b58d7fc3ab537d8399,middle,Science,J,gpt-6.1-sol,3.1085222919937223,"**Incremental strain** is the minute strain accumulated during an infinitesimally short interval of progressive deformation.
+
+Answer: J",completed,127,81,reasoning_tokens=50,J,True,0.001064,,2026-11-12T02:19:53+00:00
+76,1a6b76c36b6348f9ba1457f72c5abaff,hard,Engineering,I,gpt-6.1-terra,9.670311541995034,"Using the unsteady Bernoulli equation, including gravity,
+
+\[
+p_2=p_1+\rho\left[\frac{\partial\varphi_1}{\partial t}
+-\frac{\partial\varphi_2}{\partial t}
++\frac{v_1^2-v_2^2}{2}+g(z_1-z_2)\right].
+\]
+
+At \(t=20\) s, this gives
+
+\[
+p_2 \approx 1.279\times10^5\ \text{Pa}.
+\]
+
+**None of the listed answers matches this pressure.**
+
+Answer: None",completed,295,623,reasoning_tokens=487,,False,0.00341,,2026-11-12T02:19:51+00:00
+69,4e409fed9d954f0ba07347e3b3e343ea,hard,Engineering,H,gpt-6.1-sol,5.256475125206634,"For a steady-state continuous stirred-tank reactor, the intermediate-product yield is
+\[
+\phi=\frac{c_P}{c_{A0}}
+=\frac{k_1\tau}{(1+k_1\tau)(1+k_2\tau)}.
+\]
+Differentiating with respect to residence time,
+\[
+\frac{d\phi}{d\tau}
+=\frac{k_1(1-k_1k_2\tau^2)}
+{(1+k_1\tau)^2(1+k_2\tau)^2}.
+\]
+Thus the maximum occurs at
+\[
+\tau_{\mathrm{opt}}=\frac{1}{\sqrt{k_1k_2}},
+\qquad
+\phi_{\max}=\frac{1}{\left(1+\sqrt{k_2/k_1}\right)^2}.
+\]
+These match option H. (The options implicitly assume a stirred-tank reactor; a batch reactor would give a different optimum.)
+
+Answer: H",completed,1127,213,reasoning_tokens=0,H,True,0.004384,,2026-11-12T02:19:56+00:00
+70,f1c339ef9e8347c2b06fe68af5d12d8f,middle,Engineering,D,gpt-6.1-sol,13.958532999968156,"Trumpet towers first appeared in China during the Han Dynasty.
+
+Answer: H",completed,106,374,reasoning_tokens=353,H,False,0.003952,,2026-11-12T02:20:02+00:00
+77,080d84821fa8414ebb6b4140bba9ddc7,hard,Science,B,gpt-6.1-terra,15.35939404182136,"A functional graph satisfies the condition exactly when none of its cycles has length dividing \(10\). Thus the allowed cycle lengths are \(3,4,6,7,8,9\).
+
+Let \(a_m\) be the number of permutations of \(m\) vertices whose cycles have allowed lengths. If exactly \(m<10\) vertices lie on cycles, the remaining vertices can be attached in \(m\,10^{9-m}\) ways. Hence
+\[
+N=a_{10}+\sum_{m=1}^{9}\binom{10}{m}a_m\,m\,10^{9-m}.
+\]
+Here \(a_8=6300\), \(a_9=62720\), and \(a_{10}=374400\). Modulo \(1000\), all terms with \(m\leq8\) vanish, so
+\[
+N\equiv 374400+10\cdot9\cdot62720\equiv \boxed{200}\pmod{1000}.
+\]
+
+The correct remainder is not among the listed choices.
+
+Answer: none",completed,207,1126,reasoning_tokens=890,,False,0.005837,,2026-11-12T02:20:01+00:00
+78,6de6df0213f540939da09b6896691185,middle,Medicine,G,gpt-6.1-terra,1.9523362920153886,Answer: G,completed,486,33,reasoning_tokens=24,G,True,0.000651,,2026-11-12T02:20:16+00:00
+79,a3de2c40bc584fe59b6383d705c41209,easy,Science,C,gpt-6.1-terra,2.2097130841575563,"Heavy ions produce a characteristic Bragg peak, have high relative biological effectiveness, and cause damage that is less dependent on oxygen and harder for cells to repair.
+
+Answer: C",completed,410,38,reasoning_tokens=0,C,True,0.0006,,2026-11-12T02:20:18+00:00
+71,89f6324e20a04b999956d73f93970ac0,hard,Science,B,gpt-6.1-sol,5.55928024998866,"Think of an initial set of \(8\) distinct elements. The product
+\[
+\binom8{a_1}\binom{a_1}{a_2}\cdots\binom{a_{99}}{a_{100}}
+\]
+counts nested subsets of sizes \(a_1,\ldots,a_{100}\).
+
+Each element has \(101\) possibilities: it can first be excluded at any of the \(100\) stages, or remain throughout. Thus
+\[
+K=101^8.
+\]
+
+Now
+\[
+101^8=(100+1)^8=\sum_{j=0}^8\binom8j100^j.
+\]
+The coefficients are
+\[
+1,8,28,56,70,56,28,8,1.
+\]
+Since all are less than \(100\), these are precisely the base-\(100\) digits, with no carrying. Their sum is
+\[
+\sum_{j=0}^8\binom8j=2^8=\boxed{256}.
+\]
+
+Answer: B",completed,185,315,reasoning_tokens=79,B,True,0.00352,,2026-11-12T02:20:16+00:00
+80,132385d27da740c1837048272302679c,middle,Science,J,gpt-6.1-terra,1.5723725829739124,"The plagioclase and hornblende phenocrysts in a cryptocrystalline matrix are characteristic of porphyritic andesite.
+
+Answer: J",completed,144,58,reasoning_tokens=22,J,True,0.000434,,2026-11-12T02:20:20+00:00
+81,1cc76e4be35d47dbb83d923d39b8e9a8,easy,Engineering,A,gpt-6.1-terra,1.4547460419125855,"The Mária Valéria Bridge connects Esztergom and Štúrovo.
+
+Answer: A",completed,212,25,reasoning_tokens=0,A,True,0.000337,,2026-11-12T02:20:22+00:00
+72,739ff662a82a4b7d878172a0b65b29a6,easy,Economics,J,gpt-6.1-sol,3.841616000048816,"J is correct. Special Drawing Rights (SDRs) are international reserve assets created by the International Monetary Fund (IMF) and recorded as book entries. They are not a currency used directly for trade or personal transactions.
+
+Answer: J",completed,183,90,reasoning_tokens=37,J,True,0.001266,,2026-11-12T02:20:21+00:00
+82,2df325c6ce2b432789338e3d4148ea1e,easy,Engineering,A,gpt-6.1-terra,1.8941655419766903,"Gas pipelines are generally laid with a slope of **1%** to allow condensate to drain toward collection points.
+
+Answer: A",completed,115,63,reasoning_tokens=31,A,True,0.00043,,2026-11-12T02:20:23+00:00
+83,0036a747285943dd8f2876ab1c7829be,middle,Science,F,gpt-6.1-terra,1.6602356671355665,Answer: I,completed,143,41,reasoning_tokens=32,I,False,0.000348,,2026-11-12T02:20:25+00:00
+73,f8e18a2c177e4b988bb9990e38fc7264,middle,Science,C,gpt-6.1-sol,4.414694209117442,"For a soap bubble of radius \(r\), the internal pressure is
+\[
+p=P+\frac{4T}{r},
+\]
+where \(T\) is the surface tension.
+
+Since \(v=\frac43\pi r^3\) and \(A=4\pi r^2\),
+\[
+pv=Pv+\frac{4T}{3}A.
+\]
+
+The total amount of gas and temperature remain constant, so the final \(pv\) equals the sum of the initial \(pv\) values. Thus, taking final minus initial,
+\[
+PV+\frac{4T}{3}S=0,
+\]
+or
+\[
+\boxed{3PV+4TS=0}.
+\]
+
+Answer: C",completed,217,209,reasoning_tokens=49,C,True,0.002524,,2026-11-12T02:20:25+00:00
+84,2d3bb9a1988b4c81927bab8d6fe89f81,middle,Science,A,gpt-6.1-terra,3.5837985419202596,"The classifications are teleost, osteichthyan, sarcopterygian, cartilaginous fish, and holostean, respectively. Option A matches these groups, though some of its descriptive wording is imprecise.
+
+Answer: A",completed,440,244,reasoning_tokens=188,A,True,0.00166,,2026-11-12T02:20:27+00:00
+85,cea59dc6b38b4544912f2e7f6ffb1acb,hard,Engineering,H,gpt-6.1-terra,1.9980409580748528,"The speed is constant because
+\[
+v^2=v_x^2+v_y^2=16(\cos^2 t+\sin^2 t)=16.
+\]
+Thus the kinetic energy does not change, so the work done is zero.
+
+Answer: D",completed,242,59,reasoning_tokens=0,D,False,0.000537,,2026-11-12T02:20:30+00:00
+74,d2112d932a714bbf875080626c135d31,hard,Science,C,gpt-6.1-sol,4.5102169590536505,"The slow elementary step gives
+\[
+\text{rate}=k_2[CH_4][Cl],
+\]
+so the reaction is **first order in methane**, not zero order. Thus **D is not supported**.
+
+However, the question is flawed: **E, F, G, and I are also unsupported**. In particular, the initial equilibrium gives \([Cl]\propto[Cl_2]^{1/2}\), so the overall rate law is proportional to \([CH_4][Cl_2]^{1/2}\), not \([CH_4][Cl_2]\). Step 3 also appears to contain a typo: its product should be \(CH_3Cl\).
+
+Answer: D",completed,498,212,reasoning_tokens=54,D,False,0.003116,,2026-11-12T02:20:29+00:00
+86,127b1c62b4a54075a1fec123cfa24bb6,easy,Science,G,gpt-6.1-terra,2.1155070839449763,"Equal kinetic and potential energies imply \(x^2=A^2/2\), so \(x=\pm A/\sqrt{2}\).
+
+Options F and G are equivalent, despite the claim that only one answer is correct.
+
+Answer: G",completed,272,91,reasoning_tokens=36,G,True,0.000727,,2026-11-12T02:20:32+00:00
+75,46f1a88a59424571a17781f183b756fc,middle,Philosophy,J,gpt-6.1-sol,2.853502333164215,"Stevenson responds that he does not understand the supposed property of goodness that is objective and known a priori, rather than claiming to have disproved its existence.
+
+Answer: J",completed,201,71,reasoning_tokens=30,J,True,0.001112,,2026-11-12T02:20:34+00:00
+87,38e7e19db99946f1a190f00426b229c0,hard,Engineering,H,gpt-6.1-terra,3.6863658749498427,"For a quarter rotation, \(\theta=\pi/2\). Starting from rest,
+
+\[
+\theta=\tfrac12\alpha t^2
+\quad\Rightarrow\quad
+\frac{\pi}{2}=\frac12\cdot\frac{\pi}{4}t^2
+\quad\Rightarrow\quad t=2\ \text{s}.
+\]
+
+The displacement is the chord of a quarter circle: \(r\sqrt2=2\) m. Thus the magnitude of the average velocity is
+
+\[
+\frac{2\ \text{m}}{2\ \text{s}}=1\ \text{m/s}.
+\]
+
+None of the listed choices equals this value.
+
+Answer: None of the above",completed,281,239,reasoning_tokens=77,,False,0.001476,,2026-11-12T02:20:35+00:00
+88,93b020939eb74524a4ff361087379b90,middle,Engineering,B,gpt-6.1-terra,3.151894500013441,"The three equal RMS voltage magnitudes form an equilateral phasor triangle. Thus the component voltage leads the current by \(30^\circ\).
+
+The current is
+\[
+I=\omega C V_C=2\pi(50)(10^{-5})(100)=0.314\ \mathrm{A}.
+\]
+
+Therefore, the power absorbed by the component is
+\[
+P=V_z I\cos 30^\circ
+=100(0.314)\cos 30^\circ
+\approx 27.2\ \mathrm{W}.
+\]
+
+Answer: B",completed,303,181,reasoning_tokens=55,B,True,0.001208,,2026-11-12T02:20:38+00:00
+89,792854ac5b2b44a88913aada9a223a73,middle,Engineering,A,gpt-6.1-terra,5.3236442499328405,"The man is stationary relative to the compartment, so the spring force and the friction force on him balance. By Newton’s third law, his forces on the spring and the compartment also balance. Their points of contact have the same displacement, so the **total work** he performs on the compartment is zero.
+
+Answer: I",completed,341,250,reasoning_tokens=180,I,False,0.001591,,2026-11-12T02:20:41+00:00
+90,bf5cb743f64947f6ac35c779ec5d3096,hard,Science,E,gpt-6.1-terra,3.4291390001308173,"For an incompressible rubber network,
+
+\[
+\frac{F}{A}=\frac{\rho RT}{M_c}\left(\lambda-\lambda^{-2}\right).
+\]
+
+Here \(A=40\times5=200\,\text{mm}^2\), so \(F/A=50{,}000\,\text{Pa}\). With \(\lambda=2\) and \(T=300\,\text{K}\),
+
+\[
+M_c=\frac{900(8.314)(300)(2-2^{-2})}{50{,}000}
+\approx 78.6\,\text{kg/mol}
+=7.9\times10^4\,\text{g/mol}.
+\]
+
+Answer: E",completed,260,210,reasoning_tokens=47,E,True,0.00131,,2026-11-12T02:20:47+00:00
+76,1a6b76c36b6348f9ba1457f72c5abaff,hard,Engineering,I,gpt-6.1-sol,21.099518375005573,"Using unsteady Bernoulli’s equation, with \(z\) measured upward,
+\[
+\frac p\rho+\frac{\partial\varphi}{\partial t}
++\frac12|\nabla\varphi|^2+gz=C(t).
+\]
+Writing \(r=\sqrt{x^2+y^2+z^2}\), we have
+\[
+\varphi_t=-\frac2r,\qquad |\nabla\varphi|^2=\frac{4t^2}{r^4}.
+\]
+The two points have \(r_1=\sqrt3\), \(r_2=6\), and \(z_2-z_1=1\). Thus, at \(t=20\),
+\[
+p_2=120000+\frac{1000}{9.8}
+\left[
+-\frac2{\sqrt3}+\frac13
++800\left(\frac19-\frac1{1296}\right)-9.8
+\right]
+\approx127923\ \mathrm{Pa}.
+\]
+
+**None of the options matches the calculated pressure.** If a letter must be selected, F is the numerically closest listed value, but it is not a correct match as printed.
+
+Answer: F",completed,295,840,reasoning_tokens=573,F,False,0.00899,,2026-11-12T02:20:37+00:00
+77,080d84821fa8414ebb6b4140bba9ddc7,hard,Science,B,gpt-6.1-sol,28.50427508400753,"A point satisfies \(f_{10}(x)=x\) exactly when it lies on a cycle whose length divides \(10\). Thus we must count mappings with **no cycles of length \(1,2,5,\) or \(10\)**.
+
+By inclusion–exclusion over these forbidden cycles,
+\[
+N=\sum_{k=0}^{10}\binom{10}{k}a_k(10-k)^{10-k},
+\]
+where
+\[
+a_k=k![z^k]\exp\left(-z-\frac{z^2}{2}-\frac{z^5}{5}-\frac{z^{10}}{10}\right).
+\]
+Here \(0^0=1\). The coefficients \(a_0,\ldots,a_{10}\) are
+\[
+1,-1,0,2,-2,-30,160,20,-2820,6020,-252800.
+\]
+Substitution gives
+\[
+N=6,288,191,110,
+\qquad N\bmod1000=\boxed{110}.
+\]
+
+Therefore, the stated choices contain no correct answer.
+
+Answer: None",completed,207,1547,reasoning_tokens=1301,,False,0.015884,,2026-11-12T02:20:58+00:00
+78,6de6df0213f540939da09b6896691185,middle,Medicine,G,gpt-6.1-sol,2.2389031660277396,"The setback (retruded) contact position is reached by moving the mandible backward and downward approximately 1 mm from maximum intercuspation. The anterior teeth are separated, while some posterior cuspal inclines remain in contact.
+
+Answer: G",completed,486,52,reasoning_tokens=0,G,True,0.001492,,2026-11-12T02:21:26+00:00
+79,a3de2c40bc584fe59b6383d705c41209,easy,Science,C,gpt-6.1-sol,2.6359373331069946,"Heavy ion radiation has a distinctive depth–dose distribution (including a Bragg peak), high relative biological effectiveness, and a small oxygen effect. It also exhibits limited range straggling and lateral scattering, less variation in sensitivity across cell-cycle phases, and reduced repair of complex DNA damage.
+
+Answer: C",completed,410,64,reasoning_tokens=0,C,True,0.00146,,2026-11-12T02:21:29+00:00
+80,132385d27da740c1837048272302679c,middle,Science,J,gpt-6.1-sol,2.5212924589868635,"The plagioclase and hornblende phenocrysts in a cryptocrystalline groundmass indicate **porphyritic andesite**, an intermediate volcanic rock.
+
+Answer: J",completed,144,63,reasoning_tokens=22,J,True,0.000918,,2026-11-12T02:21:31+00:00
+81,1cc76e4be35d47dbb83d923d39b8e9a8,easy,Engineering,A,gpt-6.1-sol,1.9818353329319507,"The Maria Valeria Bridge connects Esztergom, Hungary, with Štúrovo, Slovakia. It was reconstructed in 2001 with European Community support.
+
+Answer: A",completed,212,41,reasoning_tokens=0,A,True,0.000834,,2026-11-12T02:21:34+00:00
+82,2df325c6ce2b432789338e3d4148ea1e,easy,Engineering,A,gpt-6.1-sol,2.614080665865913,"Gas pipelines are generally laid with a **1% slope** to allow condensate to drain toward collection points.
+
+Answer: A",completed,115,79,reasoning_tokens=48,A,True,0.00102,,2026-11-12T02:21:36+00:00
+83,0036a747285943dd8f2876ab1c7829be,middle,Science,F,gpt-6.1-sol,3.016731958836317,"Eluvial (residual) deposits form when weathering removes soluble materials, leaving relatively insoluble elements concentrated in the weathering crust. Common examples include iron, manganese, and aluminum.
+
+Answer: I",completed,143,80,reasoning_tokens=34,I,False,0.001086,,2026-11-12T02:21:38+00:00
+84,2d3bb9a1988b4c81927bab8d6fe89f81,middle,Science,A,gpt-6.1-sol,4.497026708908379,"The correct classifications are:
+- **Tuna:** Teleostei (teleosts)
+- **Sturgeon:** Chondrostei (cartilaginous bony fishes)
+- **Australian lungfish:** Sarcopterygii (lobe-finned fishes)
+- **Silver chimaera:** Chondrichthyes (cartilaginous fishes)
+- **Bowfin:** Holostei (holosteans)
+
+Option A corresponds to this sequence, although its descriptive wording is imprecise.
+
+Answer: A",completed,440,227,reasoning_tokens=116,A,True,0.00315,,2026-11-12T02:21:41+00:00
+85,cea59dc6b38b4544912f2e7f6ffb1acb,hard,Engineering,H,gpt-6.1-sol,2.275167082902044,"The speed remains constant:
+\[
+v^2=v_x^2+v_y^2=16\cos^2t+16\sin^2t=16.
+\]
+By the work–energy theorem, the work done is
+\[
+W=\Delta K=\frac12m\bigl[v^2(t)-v^2(0)\bigr]=0.
+\]
+
+Answer: D",completed,242,88,reasoning_tokens=0,D,False,0.001364,,2026-11-12T02:21:46+00:00
+86,127b1c62b4a54075a1fec123cfa24bb6,easy,Science,G,gpt-6.1-sol,3.4042274160310626,"The total energy is \(E=\tfrac12 kA^2\). When kinetic and elastic potential energies are equal, each is half the total:
+\[
+\frac12 kx^2=\frac14 kA^2
+\quad\Rightarrow\quad
+x=\pm\frac{A}{\sqrt2}.
+\]
+Thus the displacement magnitude matches G. (Option F is algebraically identical, so the choices contain a duplicate.)
+
+Answer: G",completed,272,136,reasoning_tokens=35,G,True,0.001904,,2026-11-12T02:21:48+00:00
+87,38e7e19db99946f1a190f00426b229c0,hard,Engineering,H,gpt-6.1-sol,4.876580916810781,"Starting from rest with constant angular acceleration,
+\[
+\frac{\pi}{2}=\frac12\alpha t^2
+=\frac12\left(\frac{\pi}{4}\right)t^2,
+\]
+so \(t=2\,\text{s}\).
+
+The displacement over a quarter-circle is the chord:
+\[
+|\Delta\mathbf r|=r\sqrt2=\sqrt2\cdot\sqrt2=2\,\text{m}.
+\]
+Thus the magnitude of the average velocity is
+\[
+|\mathbf v_{\rm avg}|=\frac{|\Delta\mathbf r|}{t}
+=\boxed{1\,\text{m/s}}.
+\]
+
+None of the listed options equals this value, so the choices contain an error.
+
+Answer: None of the above",completed,281,237,reasoning_tokens=67,,False,0.002932,,2026-11-12T02:21:52+00:00
+88,93b020939eb74524a4ff361087379b90,middle,Engineering,B,gpt-6.1-sol,5.01956966612488,"The capacitor’s reactance is
+\[
+X_C=\frac{1}{2\pi fC}
+=\frac{1}{2\pi(50)(10\times10^{-6})}
+\approx318.3\ \Omega.
+\]
+Thus the series RMS current is
+\[
+I=\frac{100}{318.3}\approx0.3142\ \mathrm A.
+\]
+
+All three RMS voltages are equal. From the phasor relation \(\mathbf V_s=\mathbf V_z+\mathbf V_C\), the angle \(\theta\) between the component and capacitor voltages satisfies
+\[
+100^2=100^2+100^2+2(100)(100)\cos\theta,
+\]
+so \(\theta=120^\circ\). Since the capacitor voltage lags the current by \(90^\circ\), the component voltage leads the current by \(30^\circ\).
+
+Therefore, the component absorbs
+\[
+P=V_zI\cos30^\circ
+=100(0.3142)\frac{\sqrt3}{2}
+\approx27.2\ \mathrm W.
+\]
+
+Answer: B",completed,303,294,reasoning_tokens=47,B,True,0.003546,,2026-11-12T02:21:56+00:00
+89,792854ac5b2b44a88913aada9a223a73,middle,Engineering,A,gpt-6.1-sol,5.8292830002028495,"The man moves with constant velocity, so the net force on him is zero. Static friction therefore balances the spring’s force and has magnitude \(F\).
+
+Relative to the ground, the man moves through distance \(L\). Since friction acts in the direction of his displacement, its work is
+\[
+W=fL=FL.
+\]
+
+Answer: A",completed,341,141,reasoning_tokens=63,A,True,0.002092,,2026-11-12T02:22:01+00:00
+90,bf5cb743f64947f6ac35c779ec5d3096,hard,Science,E,gpt-6.1-sol,3.964916749857366,"For an ideal rubber network, the nominal tensile stress is
+\[
+\frac{F}{A_0}=\frac{\rho RT}{M_c}\left(\lambda-\lambda^{-2}\right),
+\]
+where \(M_c\) is the average molar mass of the network chains and \(\lambda=L/L_0\).
+
+Here,
+\[
+A_0=(0.040)(0.005)=2.0\times10^{-4}\ \mathrm{m^2},
+\quad T=300\ \mathrm K,\quad \lambda=2.
+\]
+
+Thus,
+\[
+M_c=\frac{\rho RT A_0}{F}\left(\lambda-\lambda^{-2}\right)
+=\frac{900(8.314)(300)(2.0\times10^{-4})}{10}
+\left(2-\frac14\right)
+=78.6\ \mathrm{kg/mol}.
+\]
+
+Converting to \(\mathrm{g/mol}\), \(M_c\approx7.9\times10^4\).
+
+Answer: E",completed,260,265,reasoning_tokens=37,E,True,0.00317,,2026-11-12T02:22:07+00:00

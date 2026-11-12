@@ -5743,3 +5743,2264 @@ Answer: F",end_turn,442,544,OutputTokensDetails(thinking_tokens=116),F,True,0.01
 150,afb90e71b5cd49e7a51c921825479f96,middle,Engineering,B,claude-opus-5-5,2.2310448749922216,"High-speed steel keeps its high hardness when hot (its ""red hardness"") up to roughly 600 °C. That is why it is used for high-speed cutting tools such as drill bits and turning tools.
 
 Answer: B",end_turn,151,125,OutputTokensDetails(thinking_tokens=53),B,True,0.003104,,2026-11-11T10:02:23+00:00
+1,13452daddc2049ec9051b004937673f9,easy,Philosophy,E,gpt-6.1-terra,2.603622541995719,"C is not a related viewpoint. The *Record of Music* emphasizes music’s role in creating harmony and rites’ role in establishing order, rather than assigning them to chaotic and harmonious societies respectively.
+
+Answer: C",completed,178,86,reasoning_tokens=38,C,False,0.000608,,2026-11-12T02:22:13+00:00
+1,13452daddc2049ec9051b004937673f9,easy,Philosophy,E,gpt-6.1-sol,3.9902208340354264,"C is not a related viewpoint. The *Record of Music* presents rites and music as complementary: rites establish order and regulate conduct, while music harmonizes emotions. It does not assign music to chaotic societies and rites to harmonious societies in the manner stated.
+
+Answer: C",completed,178,89,reasoning_tokens=29,C,False,0.001246,,2026-11-12T02:22:13+00:00
+2,4ff848d29ada4329af5b7e4fd8d74764,hard,Science,E,gpt-6.1-terra,3.462461832910776,"For a molecule in a cubic box, the zero-point energy is
+
+\[
+E_0=\frac{3h^2}{8mL^2}.
+\]
+
+Equating this to \(\frac{3}{2}kT\) gives
+
+\[
+L=\frac{h}{\sqrt{4mkT}}.
+\]
+
+Using the mass of a hydrogen molecule, \(m\approx3.34\times10^{-27}\,\mathrm{kg}\), at \(T=300\,\mathrm K\),
+
+\[
+L\approx 0.9\times10^{-10}\,\mathrm m.
+\]
+
+Answer: E",completed,262,221,reasoning_tokens=82,E,True,0.001367,,2026-11-12T02:22:16+00:00
+2,4ff848d29ada4329af5b7e4fd8d74764,hard,Science,E,gpt-6.1-sol,4.88874820782803,"For a molecule in a cubic box of side length \(L\), the ground-state (zero-point) energy is
+\[
+E_0=\frac{h^2}{8mL^2}(1^2+1^2+1^2)=\frac{3h^2}{8mL^2}.
+\]
+Equating this to the average translational kinetic energy gives
+\[
+\frac{3h^2}{8mL^2}=\frac32 kT
+\quad\Rightarrow\quad
+L=\frac{h}{\sqrt{4mkT}}.
+\]
+Using the hydrogen molecule mass \(m_{\mathrm{H_2}}\approx3.35\times10^{-27}\,\mathrm{kg}\) and \(T=300\,\mathrm K\),
+\[
+L=\frac{6.626\times10^{-34}}
+{\sqrt{4(3.35\times10^{-27})(1.381\times10^{-23})(300)}}
+\approx 8.9\times10^{-11}\,\mathrm m.
+\]
+
+Answer: E",completed,262,293,reasoning_tokens=56,E,True,0.003454,,2026-11-12T02:22:17+00:00
+3,64937b7ec92a4c93aa2f87495f628b8c,hard,Engineering,G,gpt-6.1-terra,3.835323667153716,"The interstitial gas velocity is \(u=1.4/0.42=3.33\ \mathrm{cm/s}\). For the 80 cm between detection points, the mean transit time is \(L/u=24\ \mathrm{s}\).
+
+Using the variance increase,
+\[
+\frac{D_e}{uL}
+=\frac{\sigma_{2,t}^2-\sigma_{1,t}^2}{2(L/u)^2}
+=\frac{68-42}{2(24)^2}
+\approx 0.0226.
+\]
+
+Answer: G",completed,329,229,reasoning_tokens=103,G,True,0.001474,,2026-11-12T02:22:19+00:00
+3,64937b7ec92a4c93aa2f87495f628b8c,hard,Engineering,G,gpt-6.1-sol,3.893722375156358,"The interstitial gas velocity is the superficial velocity divided by the bed porosity:
+\[
+u=\frac{1.4}{0.42}=3.33\ \mathrm{cm/s}.
+\]
+
+For the section between the two detection points, \(L=80\ \mathrm{cm}\), so the mean transit time is
+\[
+\bar t=\frac{L}{u}=\frac{80}{3.33}=24.0\ \mathrm{s}.
+\]
+
+The increase in tracer-response variance is
+\[
+\Delta \sigma_t^2=68-42=26\ \mathrm{s^2}.
+\]
+
+Using the axial-dispersion relation
+\[
+\frac{D_e}{uL}=\frac{\Delta \sigma_t^2}{2\bar t^{\,2}},
+\]
+we obtain
+\[
+\frac{D_e}{uL}=\frac{26}{2(24)^2}=0.02257\approx 0.0225.
+\]
+
+Answer: G",completed,329,256,reasoning_tokens=37,G,True,0.003218,,2026-11-12T02:22:22+00:00
+4,106646bb79a14b509656b0b75521c994,hard,Engineering,C,gpt-6.1-terra,9.829357665963471,"For a VSWR of 1.08, the reflection coefficient is
+\[
+|\Gamma|=\frac{1.08-1}{1.08+1}=0.03846,
+\]
+so the peak reflected power is \(100\,\text{kW}\times|\Gamma|^2=147.9\,\text{W}\).
+
+**C is the intended choice**: its listed maximum and minimum fields follow from its listed incident field and this reflection coefficient. However, using the stated waveguide dimensions and 100 kW incident power, the calculated peak incident field is approximately \(292\,\text{kV/m}\), not \(190.5\,\text{kV/m}\). Thus, no option is fully consistent with the given data.
+
+Answer: C",completed,962,599,reasoning_tokens=434,C,True,0.003957,,2026-11-12T02:22:23+00:00
+4,106646bb79a14b509656b0b75521c994,hard,Engineering,C,gpt-6.1-sol,9.826460625045002,"The reflection coefficient corresponding to the given VSWR is
+\[
+|\Gamma|=\frac{1.08-1}{1.08+1}=0.03846.
+\]
+Thus, the peak reflected power is
+\[
+P_r=|\Gamma|^2P_i=(0.03846)^2(100\,000)
+\approx147.9\ \mathrm W.
+\]
+
+This identifies **option C**. Its field amplitudes are also consistent with this reflection coefficient:
+\[
+E_{\max}=190.5(1+0.03846)\approx197.8\ \mathrm{kV/m},
+\]
+\[
+E_{\min}=190.5(1-0.03846)\approx183.2\ \mathrm{kV/m}.
+\]
+
+Answer: C",completed,962,360,reasoning_tokens=190,C,True,0.005524,,2026-11-12T02:22:26+00:00
+5,faef3a6d64a347708fbe57619a3052de,hard,Science,E,gpt-6.1-terra,3.78865695791319,"Let \(y=x^2\). Then
+\[
+y^2-1865y+861184=(y-841)(y-1024)\le 0,
+\]
+so \(841\le x^2\le 1024\), or \(29\le |x|\le 32\).
+
+Since \(f(x)=x^3-3x\) is increasing on both permitted intervals and is positive for positive \(x\), its maximum occurs at \(x=32\):
+\[
+f(32)=32^3-3(32)=32672.
+\]
+
+Answer: E",completed,147,222,reasoning_tokens=90,E,True,0.001257,,2026-11-12T02:22:33+00:00
+6,9ecb765d09c7435cb9463778737edca0,easy,Management,D,gpt-6.1-terra,1.2249888749793172,"Information management involves collecting, processing, storing, retrieving, and delivering information to users.
+
+Answer: D",completed,243,24,reasoning_tokens=0,D,True,0.000363,,2026-11-12T02:22:37+00:00
+7,634a5dd5a011410aa94645722bd7de1b,middle,Economics,D,gpt-6.1-terra,2.139153666095808,"An expansion tends to increase tax revenue, producing a surplus; a recession tends to reduce revenue, producing a deficit.
+
+Both C and D state this relationship, so the question has two equivalent correct choices.
+
+Answer: C",completed,140,95,reasoning_tokens=46,C,False,0.000615,,2026-11-12T02:22:38+00:00
+5,faef3a6d64a347708fbe57619a3052de,hard,Science,E,gpt-6.1-sol,4.450468374881893,"Let \(t=x^2\). The inequality becomes
+\[
+t^2-1865t+861184=(t-841)(t-1024)\leq 0.
+\]
+Thus \(841\leq x^2\leq1024\), so
+\[
+x\in[-32,-29]\cup[29,32].
+\]
+
+On these intervals, \(f'(x)=3x^2-3>0\). The negative interval gives negative values of \(f\), so the maximum occurs at \(x=32\):
+\[
+f(32)=32^3-3(32)=32768-96=\boxed{32672}.
+\]
+
+Answer: E",completed,147,220,reasoning_tokens=67,E,True,0.002494,,2026-11-12T02:22:36+00:00
+8,026ac5d694cf4a9b81b0891cd9948300,middle,Management,J,gpt-6.1-terra,1.4607595840934664,"When local laws or regulations conflict with GIPS, firms must comply with the local requirements and disclose the conflict.
+
+Answer: J",completed,263,29,reasoning_tokens=0,J,True,0.000408,,2026-11-12T02:22:40+00:00
+6,9ecb765d09c7435cb9463778737edca0,easy,Management,D,gpt-6.1-sol,1.586327499942854,"Information management involves collecting, processing, organizing, storing, retrieving, and delivering information to users through manual and computerized methods.
+
+Answer: D",completed,243,31,reasoning_tokens=0,D,True,0.000796,,2026-11-12T02:22:40+00:00
+9,df91f480915e45eb8d59b4b6446bc487,hard,Science,C,gpt-6.1-terra,2.336516374954954,"The magnetic field keeps the perpendicular speed at \(u_0\), while the electric field produces a parallel velocity \(v_x=qEt/m\). Thus,
+
+\[
+\frac{5u_0^2}{4}=u_0^2+\left(\frac{qEt}{m}\right)^2,
+\]
+
+giving \(t=\dfrac{mu_0}{2qE}\).
+
+Answer: A",completed,432,120,reasoning_tokens=28,A,False,0.001032,,2026-11-12T02:22:41+00:00
+7,634a5dd5a011410aa94645722bd7de1b,middle,Economics,D,gpt-6.1-sol,2.884299041936174,"During economic expansion, tax revenues rise, tending to produce a budget surplus. During recession, tax revenues fall, tending to produce a budget deficit, assuming government spending is unchanged.
+
+Answer: C",completed,140,75,reasoning_tokens=31,C,False,0.00103,,2026-11-12T02:22:42+00:00
+10,e4bfaef69f124c399d293b5f59197f5b,easy,Engineering,A,gpt-6.1-terra,1.6379988749977201,"Aromatic amino acids in proteins characteristically absorb ultraviolet light at around 280 nm.
+
+Answer: A",completed,149,24,reasoning_tokens=0,A,True,0.000269,,2026-11-12T02:22:44+00:00
+8,026ac5d694cf4a9b81b0891cd9948300,middle,Management,J,gpt-6.1-sol,2.035175499971956,"GIPS requires firms to comply with applicable local laws and regulations when they conflict with GIPS and to fully disclose the conflict.
+
+Answer: J",completed,263,32,reasoning_tokens=0,J,True,0.000846,,2026-11-12T02:22:45+00:00
+11,cddc8290e79b4960a2583c4526339766,middle,Science,G,gpt-6.1-terra,2.9593389169313014,"Transverse refolding of a recumbent fold generally produces crescent or mushroom-shaped interference patterns.
+
+Answer: G",completed,130,67,reasoning_tokens=38,G,True,0.000465,,2026-11-12T02:22:45+00:00
+12,cb28047b4efb4635908e1f921d39747a,easy,Engineering,D,gpt-6.1-terra,1.323334249900654,Answer: D,completed,181,7,reasoning_tokens=0,D,True,0.000216,,2026-11-12T02:22:48+00:00
+9,df91f480915e45eb8d59b4b6446bc487,hard,Science,C,gpt-6.1-sol,3.0515710420440882,"The electric and magnetic fields are both along the \(x\)-axis. The magnetic field rotates the transverse velocity without changing its magnitude, so
+\[
+v_y^2+v_z^2=u_0^2.
+\]
+The electric field gives
+\[
+v_x=\frac{qE_0}{m}t.
+\]
+Thus,
+\[
+v^2=u_0^2+\left(\frac{qE_0t}{m}\right)^2.
+\]
+Setting \(v=\frac{\sqrt5}{2}u_0\) yields
+\[
+\left(\frac{qE_0t}{m}\right)^2=\frac{u_0^2}{4},
+\qquad
+t=\frac{mu_0}{2|q|E_0},
+\]
+which corresponds to option A (with \(q\) taken as the charge magnitude).
+
+Answer: A",completed,432,195,reasoning_tokens=0,A,False,0.002814,,2026-11-12T02:22:47+00:00
+10,e4bfaef69f124c399d293b5f59197f5b,easy,Engineering,A,gpt-6.1-sol,1.6494228749070317,"Aromatic amino acids in proteins absorb ultraviolet light, producing a characteristic absorption peak near **280 nm**, primarily due to tryptophan and tyrosine.
+
+Answer: A",completed,149,39,reasoning_tokens=0,A,True,0.000688,,2026-11-12T02:22:50+00:00
+13,7c1c85d9a27e42a0a22b9deb4fdd9dc1,middle,Medicine,A,gpt-6.1-terra,3.1507556249853224,"The mitochondrial volume is
+
+\[
+V=\pi(0.5)^2(1.8)\approx1.41\ \mu\text{m}^3
+=1.41\times10^{-15}\ \text{L}.
+\]
+
+At pH 6.0, \([H^+]=10^{-6}\ \text{mol/L}\). Thus the number of ions is approximately
+
+\[
+(10^{-6})(1.41\times10^{-15})(6.022\times10^{23})
+\approx 850.
+\]
+
+The closest choice is 843.
+
+Answer: A",completed,185,193,reasoning_tokens=59,A,True,0.00115,,2026-11-12T02:22:50+00:00
+11,cddc8290e79b4960a2583c4526339766,middle,Science,G,gpt-6.1-sol,5.028514290926978,"A recumbent first-phase fold refolded transversely typically produces a **Type 2 interference pattern**, characterized by crescent- or mushroom-shaped folds.
+
+Answer: G",completed,130,115,reasoning_tokens=73,G,True,0.00141,,2026-11-12T02:22:51+00:00
+14,a43d58a0930442169380d296aecfa08d,middle,Science,H,gpt-6.1-terra,4.7151165418326855,"Using the importance weights additively, the F-integral is
+
+\[
+\max\{\min(0.6,1),\min(0.7,0.8),\min(0.9,0.7),\min(1,0.4)\}=0.7.
+\]
+
+Answer: D",completed,305,268,reasoning_tokens=193,D,False,0.001645,,2026-11-12T02:22:53+00:00
+12,cb28047b4efb4635908e1f921d39747a,easy,Engineering,D,gpt-6.1-sol,2.049491540994495,"The expression must reference the “Gender” field in the “Student” form and put the text value “Male” in quotation marks: `[Forms]![Student]![Gender]=""Male""`.
+
+Answer: D",completed,181,46,reasoning_tokens=0,D,True,0.000822,,2026-11-12T02:22:56+00:00
+15,e8e77a390e7b43b48fabe4e11fdfae0c,easy,Engineering,I,gpt-6.1-terra,1.9379452499561012,"Removing the zone prefix 19 gives an easting of 678,626.68 m. Since this exceeds the central meridian’s false easting of 500,000 m, point A is east of the central meridian.
+
+Answer: I",completed,138,86,reasoning_tokens=30,I,True,0.000568,,2026-11-12T02:22:58+00:00
+13,7c1c85d9a27e42a0a22b9deb4fdd9dc1,middle,Medicine,A,gpt-6.1-sol,4.081639332929626,"At pH 6.0, the hydrogen ion concentration is
+\[
+[H^+]=10^{-6}\ \text{mol/L}.
+\]
+
+The cylindrical volume is
+\[
+V=\pi r^2h=\pi(0.50)^2(1.8)=1.414\ \mu\text{m}^3
+=1.414\times10^{-15}\ \text{L}.
+\]
+
+Thus, the number of hydrogen ions is
+\[
+N=[H^+]VN_A
+=(10^{-6})(1.414\times10^{-15})(6.022\times10^{23})
+\approx851.
+\]
+
+The closest option is **843 H⁺ ions**.
+
+Answer: A",completed,185,186,reasoning_tokens=26,A,True,0.00223,,2026-11-12T02:22:58+00:00
+16,80ef1390eaf1459bb673f8e6cbe46b36,hard,Engineering,J,gpt-6.1-terra,3.0957955829799175,"Using the Bragg condition and assuming an ultrasonic speed of \(v_s \approx 5960\,\text{m/s}\) in quartz,
+
+\[
+\theta \approx \frac{\lambda f_s}{2nv_s}
+= \frac{(1.06\times10^{-6})(40\times10^6)}{2(1.54)(5960)}
+\approx 2.31\times10^{-3}\ \text{rad}.
+\]
+
+The ultrasonic speed is needed for this calculation but is not specified in the question.
+
+Answer: J",completed,323,183,reasoning_tokens=61,J,True,0.001238,,2026-11-12T02:22:59+00:00
+17,2fb54a379811445da48de3f3d2127a50,middle,Science,J,gpt-6.1-terra,3.1766415839083493,"Using the Rayleigh criterion, the angular resolution is approximately \(1.22\lambda/D\). For visible light and a 20-cm aperture, this corresponds to about **1.3 km** at the Moon’s distance.
+
+Answer: J",completed,230,203,reasoning_tokens=147,J,True,0.001245,,2026-11-12T02:23:03+00:00
+14,a43d58a0930442169380d296aecfa08d,middle,Science,H,gpt-6.1-sol,4.390431124949828,"Using the fuzzy (Sugeno) integral, order the satisfaction levels from highest to lowest and accumulate their importance weights:
+
+\[
+\begin{array}{c|c|c}
+\text{Satisfaction} & \text{Cumulative weight} & \min(\text{satisfaction},\text{weight})\\
+\hline
+1.0 & 0.4 & 0.4\\
+0.9 & 0.4+0.3=0.7 & 0.7\\
+0.7 & 0.7+0.1=0.8 & 0.7\\
+0.6 & 0.8+0.2=1.0 & 0.6
+\end{array}
+\]
+
+The evaluation is the maximum of the last column:
+\[
+F=\max(0.4,0.7,0.7,0.6)=0.7.
+\]
+
+Answer: D",completed,305,251,reasoning_tokens=45,D,False,0.00312,,2026-11-12T02:23:02+00:00
+15,e8e77a390e7b43b48fabe4e11fdfae0c,easy,Engineering,I,gpt-6.1-sol,2.8785385000519454,"The transverse coordinate includes the zone number 19 and a false easting of 500,000 m. Removing these gives:
+
+\[
+y_A = 19{,}678{,}626.68 - 19{,}000{,}000 - 500{,}000
+= 178{,}626.68\text{ m}.
+\]
+
+Since this is positive, point A lies **east of the central meridian**.
+
+Answer: I",completed,138,133,reasoning_tokens=30,I,True,0.001606,,2026-11-12T02:23:07+00:00
+18,ac6b4283ff104d23a3b64ffd33e6e56d,easy,History,F,gpt-6.1-terra,5.685868375003338,Answer: E,completed,184,336,reasoning_tokens=327,E,False,0.001864,,2026-11-12T02:23:06+00:00
+16,80ef1390eaf1459bb673f8e6cbe46b36,hard,Engineering,J,gpt-6.1-sol,3.8899413750041276,"The Bragg condition is
+\[
+\sin\theta=\frac{\lambda f_s}{2nv_s},
+\]
+where the longitudinal sound speed in fused quartz is approximately \(v_s=5.96\times10^3\,\text{m/s}\).
+
+Thus,
+\[
+\theta\approx\frac{(1.06\times10^{-6})(40\times10^6)}
+{2(1.54)(5.96\times10^3)}
+=2.31\times10^{-3}\ \text{rad}.
+\]
+
+Answer: J",completed,323,180,reasoning_tokens=55,J,True,0.002446,,2026-11-12T02:23:10+00:00
+17,2fb54a379811445da48de3f3d2127a50,middle,Science,J,gpt-6.1-sol,4.332314083818346,"Using the Rayleigh criterion with visible light of wavelength \(\lambda \approx 550\,\text{nm}\),
+\[
+\theta_{\min}=\frac{1.22\lambda}{D}
+=\frac{1.22(550\times10^{-9})}{0.20}
+\approx 3.36\times10^{-6}\ \text{rad}.
+\]
+At the Moon’s distance, \(L\approx 3.84\times10^5\,\text{km}\), this corresponds to
+\[
+s=L\theta_{\min}\approx 1.29\,\text{km}\approx 1.3\,\text{km}.
+\]
+
+Answer: J",completed,230,193,reasoning_tokens=41,J,True,0.00239,,2026-11-12T02:23:14+00:00
+18,ac6b4283ff104d23a3b64ffd33e6e56d,easy,History,F,gpt-6.1-sol,3.4508870420977473,"Lawrence F. Kramer, who served as Mayor of Paterson during those terms, died on 24 August 2023.
+
+Answer: F",completed,184,91,reasoning_tokens=56,F,True,0.001278,,2026-11-12T02:23:18+00:00
+19,75cff59143364543a0c1ac0300bc8286,hard,Engineering,H,gpt-6.1-terra,12.522542082937434,"Using the isentropic compressible-flow equation with the given inlet pressure and temperature gives a weight flow rate of approximately \(198\ \text{N/s}\). The closest choice is \(197.1\ \text{N/s}\).
+
+Answer: H",completed,300,726,reasoning_tokens=668,H,True,0.00393,,2026-11-12T02:23:11+00:00
+20,ea1eee5a4df641c9aa1ebd9a7af1ddd9,hard,Science,E,gpt-6.1-terra,3.862468709005043,"After mixing, the acid concentrations are 0.10 M for HN₃ and 0.080 M for HOCN. Using the weak-acid approximation,
+
+\[
+[H^+] \approx \sqrt{K_{a1}C_1+K_{a2}C_2}
+=\sqrt{(3.6\times10^{-4})(0.10)+(8.0\times10^{-4})(0.080)}
+=1.0\times10^{-2}\ \mathrm M.
+\]
+
+The exact equilibrium value is about \(9.7\times10^{-3}\ \mathrm M\), so E is the intended approximate answer.
+
+Answer: E",completed,395,272,reasoning_tokens=124,E,True,0.001755,,2026-11-12T02:23:24+00:00
+21,95e8a70d70f943c897f6a2483e20a453,easy,Science,F,gpt-6.1-terra,1.6913934999611229,"A uniform temperature on an isobaric surface implies no horizontal temperature gradient and therefore no geostrophic wind shear.
+
+Answer: F",completed,148,79,reasoning_tokens=47,F,True,0.000543,,2026-11-12T02:23:28+00:00
+22,472e3ff65a29404cb9da9fe5fee7bd96,hard,Science,C,gpt-6.1-terra,2.783522415906191,"For any integer-coefficient polynomial, its \(y\)-th derivative has coefficients divisible by \(y!\). Conversely, taking \(t(x)=x^y\) shows that \(2016\mid y!\) is necessary.
+
+Since \(2016=2^5\cdot3^2\cdot7\), we have \(2016\nmid 7!\), but \(2016\mid 8!\). Thus the smallest value is \(y=8\).
+
+Answer: C",completed,185,172,reasoning_tokens=64,C,True,0.001045,,2026-11-12T02:23:30+00:00
+23,b4bd67b018234ad1b5fac3311541dbdf,middle,Agronomy,E,gpt-6.1-terra,1.4775012501049787,"Nutritional level influences the onset of sexual maturity, along with breed, climate, and season of birth.
+
+Answer: E",completed,139,56,reasoning_tokens=25,E,True,0.000419,,2026-11-12T02:23:32+00:00
+24,6f5791cd815243098c2762a9f9042611,easy,Education,D,gpt-6.1-terra,1.5703060838859528,"Children’s communication ability is grounded in their rich perceptual knowledge of the world.
+
+Answer: D",completed,103,38,reasoning_tokens=13,D,True,0.000293,,2026-11-12T02:23:34+00:00
+19,75cff59143364543a0c1ac0300bc8286,hard,Engineering,H,gpt-6.1-sol,17.05734229204245,"For compressible, isentropic airflow through a Venturi, the mass flow rate is
+
+\[
+\dot m=C A_t
+\sqrt{\frac{2\gamma}{\gamma-1}\frac{p_1^2}{RT_1}
+\frac{r^{2/\gamma}-r^{(\gamma+1)/\gamma}}
+{1-\beta^4r^{2/\gamma}}},
+\]
+
+where
+\[
+r=\frac{400}{700},\qquad
+\beta=\frac{125}{250}=0.5,\qquad
+A_t=\frac{\pi(0.125)^2}{4}.
+\]
+
+Using \(T_1=293.15\,\mathrm K\), \(R=287\,\mathrm{J/(kg\,K)}\), and \(\gamma=1.4\),
+
+\[
+\dot m\approx20.2\ \mathrm{kg/s}.
+\]
+
+Thus the gravitational (weight) flow rate is
+\[
+\dot W=g\dot m\approx 198\ \mathrm{N/s}.
+\]
+
+The closest listed value is **197.1 N/s**.
+
+Answer: H",completed,300,699,reasoning_tokens=449,H,True,0.00759,,2026-11-12T02:23:21+00:00
+25,833ebd8efa83453f895a1e3419c25126,hard,Engineering,D,gpt-6.1-terra,4.753005750011653,"The force graph is missing. Its direction and variation during the first 0.2 s are needed to determine the stopping time, so no answer choice can be established.",completed,235,199,reasoning_tokens=159,,False,0.00123,,2026-11-12T02:23:35+00:00
+26,328c0f219f704f959061d937ff196770,easy,Literature and Arts,A,gpt-6.1-terra,2.0064972918480635,"The scene occurs during the film’s opening.
+
+Answer: A",completed,136,65,reasoning_tokens=47,A,True,0.000461,,2026-11-12T02:23:40+00:00
+27,324ac45684024abd9e65bc4a7199dd77,middle,Engineering,G,gpt-6.1-terra,2.350683999946341,"For the circular waveguide’s \(H_{01}\) mode, the cutoff frequency is
+
+\[
+f_c=\frac{3.832c}{2\pi a}
+=\frac{3.832(3\times10^8)}{2\pi(0.05)}
+\approx 3.659\ \text{GHz}.
+\]
+
+Answer: G",completed,168,114,reasoning_tokens=32,G,True,0.000738,,2026-11-12T02:23:42+00:00
+20,ea1eee5a4df641c9aa1ebd9a7af1ddd9,hard,Science,E,gpt-6.1-sol,6.499420583015308,"The total volume is \(0.500\,\mathrm L\), so the acid concentrations after mixing are
+\[
+C_{\mathrm{HN_3}}=\frac{0.100(0.50)}{0.500}=0.10\,\mathrm M,
+\qquad
+C_{\mathrm{HOCN}}=\frac{0.400(0.10)}{0.500}=0.080\,\mathrm M.
+\]
+
+Using the usual weak-acid approximation, both acids contribute to the same hydrogen-ion concentration:
+\[
+[H^+]^2\approx K_{a1}C_1+K_{a2}C_2.
+\]
+Thus,
+\[
+[H^+]\approx
+\sqrt{(3.6\times10^{-4})(0.10)+(8\times10^{-4})(0.080)}
+=\sqrt{1.00\times10^{-4}}
+=1.0\times10^{-2}\,\mathrm M.
+\]
+
+(The exact equilibrium value is approximately \(9.69\times10^{-3}\,\mathrm M\), consistent with the intended approximation.)
+
+Answer: E",completed,395,332,reasoning_tokens=87,E,True,0.00411,,2026-11-12T02:23:38+00:00
+28,330e870f56054bd1adb5ae37b3cbbe18,middle,Engineering,A,gpt-6.1-terra,3.0077144580427557,"The round-trip time in Earth’s frame is \(2(4.31)/0.8=10.775\) years. Since \(\sqrt{1-0.8^2}=0.6\), the spaceship’s elapsed time is \(6.465\) years.
+
+Thus A receives approximately 1,078 signals, and B approximately 647. **A is the closest choice**; its figures correspond to rounding the distance to 4.3 light-years.
+
+Answer: A",completed,364,193,reasoning_tokens=86,A,True,0.001329,,2026-11-12T02:23:44+00:00
+21,95e8a70d70f943c897f6a2483e20a453,easy,Science,F,gpt-6.1-sol,2.530022375052795,"Uniform temperature on an isobaric surface means there is no horizontal temperature gradient. By the thermal wind relationship, there is no vertical shear of the geostrophic wind, so it remains constant with height.
+
+Answer: F",completed,148,72,reasoning_tokens=22,F,True,0.001016,,2026-11-12T02:23:45+00:00
+29,02405da167f242c2bd9f8c532f25cfa7,middle,Science,J,gpt-6.1-terra,1.2503657089546323,"The Lineweaver–Burk plot has a y-intercept of \(1/v_{\max}\).
+
+Answer: J",completed,242,28,reasoning_tokens=0,J,True,0.000382,,2026-11-12T02:23:47+00:00
+30,0e07c14642034780b1116cae65aa2f53,middle,Engineering,F,gpt-6.1-terra,1.8382422500289977,Answer: A,completed,146,59,reasoning_tokens=50,A,False,0.000441,,2026-11-12T02:23:49+00:00
+31,f061a2869e3347c3939088bbcbd4661d,middle,Science,A,gpt-6.1-terra,2.709318625042215,"For a basic buffer,
+
+\[
+\mathrm{pOH}=pK_b+\log\frac{[NH_4Cl]}{[NH_4OH]}
+=4.8+\log\frac{0.2}{0.02}=5.8
+\]
+
+Thus, \(\mathrm{pH}=14-5.8=8.2\).
+
+Answer: A",completed,190,113,reasoning_tokens=27,A,True,0.000755,,2026-11-12T02:23:51+00:00
+22,472e3ff65a29404cb9da9fe5fee7bd96,hard,Science,C,gpt-6.1-sol,5.754540416877717,"For a monomial \(x^n\) with \(n\ge y\),
+\[
+\frac{d^y}{dx^y}x^n
+= y!\binom{n}{y}x^{n-y}.
+\]
+Thus every \(y\)-th derivative evaluated at an integer is divisible by \(y!\). Conversely, taking \(t(x)=x^y\) gives \(t^{(y)}(k)=y!\). Therefore, the required condition is exactly
+\[
+2016\mid y!.
+\]
+
+Now \(2016=2^5\cdot3^2\cdot7\). For \(y<7\), \(y!\) lacks a factor of \(7\), while
+\[
+7!=2^4\cdot3^2\cdot5\cdot7
+\]
+lacks the required fifth factor of \(2\). But \(8!=40320=20\cdot2016\).
+
+Hence the smallest value is \(y=8\).
+
+Answer: C",completed,185,285,reasoning_tokens=60,C,True,0.00322,,2026-11-12T02:23:48+00:00
+32,e70e8175ca1e40e5ac422ac61aeb5f61,easy,Engineering,C,gpt-6.1-terra,1.976606999989599,"Statements (1), (3), (4), and (5) are incorrect. DEM models discrete particles rather than a continuum; fibrous crop material models remain challenging; rapid high-temperature grain drying can cause cracking; and dehydration removes moisture rather than accelerating moisture-mediated deterioration.
+
+Answer: C",completed,414,61,reasoning_tokens=0,C,True,0.000719,,2026-11-12T02:23:53+00:00
+23,b4bd67b018234ad1b5fac3311541dbdf,middle,Agronomy,E,gpt-6.1-sol,2.5580357499420643,"Nutritional level influences reproductive development and the timing of the initial courtship period, alongside breed, climate, and season of birth.
+
+Answer: E",completed,139,61,reasoning_tokens=25,E,True,0.000888,,2026-11-12T02:23:53+00:00
+33,41f479627a3740558bf084f58482de75,hard,Science,B,gpt-6.1-terra,2.2165187089703977,"Using the image-charge method, the induced charge contributes \(-q/(4\pi\varepsilon_0 R)\) at the center. Thus,
+
+\[
+V(0)=\frac{q}{4\pi\varepsilon_0}\left(\frac{1}{d}-\frac{1}{R}\right).
+\]
+
+Answer: B",completed,390,103,reasoning_tokens=24,B,True,0.000905,,2026-11-12T02:23:55+00:00
+24,6f5791cd815243098c2762a9f9042611,easy,Education,D,gpt-6.1-sol,2.2633165419101715,"Children’s communication ability develops from rich perceptual knowledge—the experiences and observations that give them ideas to express.
+
+Answer: D",completed,103,49,reasoning_tokens=19,D,True,0.000696,,2026-11-12T02:23:56+00:00
+34,8259b1c32b004b45bdcbdbd8c9900de0,easy,Education,G,gpt-6.1-terra,1.948510207934305,"Accuracy depends on where and how the head contacts the ball.
+
+Answer: G",completed,125,61,reasoning_tokens=40,G,True,0.00043,,2026-11-12T02:23:57+00:00
+25,833ebd8efa83453f895a1e3419c25126,hard,Engineering,D,gpt-6.1-sol,7.4042427078820765,"The force–time graph is missing, so the impulse during the first \(0.2\,\text{s}\) is unknown.
+
+Taking rightward as positive, the initial momentum is \(-12\,\text{kg·m/s}\), and friction while the block moves left is
+\[
+f_k=\mu_k mg=20\,\text{N}.
+\]
+If \(F\) acts rightward and the block stops after \(0.2\,\text{s}\), impulse–momentum gives
+\[
+12=20t+\int_0^{0.2}F(\tau)\,d\tau+10(t-0.2).
+\]
+Thus the stopping time cannot be determined without the graph. **As presented, none of the numerical choices can be justified.**
+
+Answer: I",completed,235,332,reasoning_tokens=159,I,False,0.00379,,2026-11-12T02:23:58+00:00
+35,8096946e4d0442f694c7d223a44f8259,middle,Science,A,gpt-6.1-terra,6.858482207870111,"Under the usual strong-complexation approximation, the pM after the equivalence point depends on the titration fraction, not the concentrations. Thus **150%** works, but so do the other choices above 100%; the question does not have a unique answer.
+
+Answer: A",completed,156,368,reasoning_tokens=305,A,True,0.001996,,2026-11-12T02:23:59+00:00
+36,e4cb69fc977e4886a54f730affe04bac,easy,Education,I,gpt-6.1-terra,1.5377116249874234,"The two basic factors are training intensity and volume.
+
+Answer: D",completed,128,33,reasoning_tokens=14,D,False,0.000293,,2026-11-12T02:24:06+00:00
+26,328c0f219f704f959061d937ff196770,easy,Literature and Arts,A,gpt-6.1-sol,2.445352250011638,"Hiroko’s silent appearance in the snow occurs during the film’s opening.
+
+Answer: A",completed,136,61,reasoning_tokens=36,A,True,0.000882,,2026-11-12T02:24:06+00:00
+37,98332f31f95049c9b8bb899378f67898,hard,Science,C,gpt-6.1-terra,2.862549874931574,"At infinity,
+\[
+f(z)=z^3\frac{1}{(1-z^{-2})(1+z^{-8})}
+=z^3+z+z^{-1}+\cdots.
+\]
+The coefficient of \(z^{-1}\) is \(1\), so the sum of the residues at all finite singularities is \(1\).
+
+Answer: C",completed,141,139,reasoning_tokens=55,C,True,0.000836,,2026-11-12T02:24:08+00:00
+27,324ac45684024abd9e65bc4a7199dd77,middle,Engineering,G,gpt-6.1-sol,3.2438653339631855,"For the \(H_{01}\) (TE\(_{01}\)) mode in a circular air-filled waveguide,
+\[
+f_c=\frac{x'_{01}c}{2\pi a},
+\]
+where \(x'_{01}=3.8317\) is the first nonzero root of \(J_0'(x)=0\).
+
+With \(a=0.050\,\text{m}\),
+\[
+f_c=\frac{3.8317(3.00\times10^8)}{2\pi(0.050)}
+\approx 3.659\,\text{GHz}.
+\]
+
+Answer: G",completed,168,166,reasoning_tokens=24,G,True,0.001996,,2026-11-12T02:24:08+00:00
+38,75edb218cf4a499aacaeec8a8cf0d33e,easy,Medicine,A,gpt-6.1-terra,2.047827292000875,Answer: A,completed,137,65,reasoning_tokens=56,A,True,0.000462,,2026-11-12T02:24:11+00:00
+39,53444cefe0994861b19a2eb0ba6f7de0,easy,Engineering,A,gpt-6.1-terra,1.7385922078974545,"The voltage across the potentiometer is $V_s\frac{R_p}{R_s+R_p}$. For a linear potentiometer, the output is this voltage multiplied by $\theta/\theta_F$.
+
+Answer: A",completed,293,69,reasoning_tokens=17,A,True,0.000638,,2026-11-12T02:24:13+00:00
+40,a72c691f336a4001ac022500b280d527,middle,Engineering,G,gpt-6.1-terra,3.047584417043254,"Using viscous shear for a thin oil film,
+
+\[
+T=\frac{2\pi\mu\omega R^3L}{c}
+\]
+
+With \(R=0.05\,\text{m}\), \(L=0.2\,\text{m}\), \(c=0.0025\,\text{m}\), and \(\omega=2\pi(600)/60\),
+
+\[
+T\approx 0.987\,\text{N·m}.
+\]
+
+Answer: G",completed,207,174,reasoning_tokens=59,G,True,0.001077,,2026-11-12T02:24:14+00:00
+28,330e870f56054bd1adb5ae37b3cbbe18,middle,Engineering,A,gpt-6.1-sol,6.873796707950532,"The Earth-frame duration of the round trip is
+\[
+T_B=\frac{2(4.31)}{0.8}=10.775\ \text{years}.
+\]
+The spaceship’s time-dilation factor is
+\[
+\sqrt{1-0.8^2}=0.6,
+\]
+so the traveling brother experiences
+\[
+T_A=0.6(10.775)=6.465\ \text{years}.
+\]
+
+By their reunion, each brother has received the signals the other emitted during the trip. Thus the approximate counts are
+\[
+N_{A\text{ receives}}=\frac{10.775}{0.01}=1077.5,
+\qquad
+N_{B\text{ receives}}=\frac{6.465}{0.01}=646.5.
+\]
+
+The choices have a small numerical inconsistency: **A is the intended answer**, giving exactly the counts obtained if the distance is rounded to \(4.30\) light-years.
+
+Answer: A",completed,364,302,reasoning_tokens=82,A,True,0.003748,,2026-11-12T02:24:11+00:00
+29,02405da167f242c2bd9f8c532f25cfa7,middle,Science,J,gpt-6.1-sol,1.82200308307074,"The Lineweaver–Burk equation is
+\[
+\frac{1}{v}=\frac{K_m}{v_{\max}}\frac{1}{[S]}+\frac{1}{v_{\max}}.
+\]
+Thus, the ordinate (y-axis) intercept is \(1/v_{\max}\).
+
+Answer: J",completed,242,72,reasoning_tokens=0,J,True,0.001204,,2026-11-12T02:24:18+00:00
+41,5c4cbccbd4234174a223abc25918bd70,hard,Engineering,C,gpt-6.1-terra,3.708973665954545,"Replacing \(\vec c\) with \(-\vec c\) gives a resultant of
+\[
+(3+2\cos30^\circ,\;2\sin30^\circ)\ \text{km},
+\]
+whose magnitude is approximately \(4.8\) km.
+
+Choice C is the intended answer, though its unit should be km, not m.
+
+Answer: C",completed,320,178,reasoning_tokens=93,C,True,0.00121,,2026-11-12T02:24:18+00:00
+30,0e07c14642034780b1116cae65aa2f53,middle,Engineering,F,gpt-6.1-sol,3.1774488750379533,"Forests support nutrient cycling through decomposition and help conserve soil and water by reducing erosion and regulating runoff.
+
+Answer: A",completed,146,65,reasoning_tokens=36,A,False,0.000942,,2026-11-12T02:24:20+00:00
+31,f061a2869e3347c3939088bbcbd4661d,middle,Science,A,gpt-6.1-sol,2.7611738750711083,"For a basic buffer,
+\[
+\mathrm{pOH}=pK_b+\log\frac{[\text{salt}]}{[\text{base}]}.
+\]
+Since equal volumes are mixed, the concentration ratio is \(0.2/0.02=10\). Thus,
+\[
+\mathrm{pOH}=4.8+\log 10=5.8.
+\]
+At \(25^\circ\mathrm C\),
+\[
+\mathrm{pH}=14-5.8=\boxed{8.2}.
+\]
+
+Answer: A",completed,190,122,reasoning_tokens=0,A,True,0.0016,,2026-11-12T02:24:23+00:00
+42,4d621331c4cb4c4bb2730d00daa0d5b1,hard,Engineering,D,gpt-6.1-terra,5.433971666032448,"Using the conservative Weisz–Prater criterion,
+
+\[
+\frac{(-r_A)R_P^2}{D_e c_A}<0.3,
+\qquad c_A=10^{-5}\ \mathrm{mol/cm^3}.
+\]
+
+Thus,
+
+\[
+R_P<\sqrt{\frac{0.3(10^{-3})(10^{-5})}{10^{-6}}}
+\approx 0.055\ \mathrm{cm}.
+\]
+
+The largest listed radius below this limit is \(0.05\ \mathrm{cm}\).
+
+Answer: E",completed,514,283,reasoning_tokens=158,E,False,0.001929,,2026-11-12T02:24:21+00:00
+43,9f02e13aaf6e4f02960b107f8cbf34cb,easy,History,A,gpt-6.1-terra,1.9366997920442373,Answer: I,completed,127,68,reasoning_tokens=59,I,False,0.000467,,2026-11-12T02:24:27+00:00
+32,e70e8175ca1e40e5ac422ac61aeb5f61,easy,Engineering,C,gpt-6.1-sol,3.2520738751627505,"The incorrect statements are **(1), (3), (4), and (5)**:
+
+- **(1):** DEM models soil and crops as discrete particles, not as a continuum.
+- **(3):** Accurate models of fibrous biological materials remain challenging and are not readily available for all crop–machine interactions.
+- **(4):** Rapid, high-temperature drying can create moisture gradients and internal stresses, causing grain cracking rather than preventing it.
+- **(5):** Dehydration removes moisture, reducing water activity and slowing deterioration—not accelerating it.
+
+Statement **(2)** correctly describes the benefits and potential drawbacks of blanching.
+
+Answer: C",completed,414,138,reasoning_tokens=0,C,True,0.002208,,2026-11-12T02:24:26+00:00
+33,41f479627a3740558bf084f58482de75,hard,Science,B,gpt-6.1-sol,3.402357416925952,"Grounding allows charge to flow onto the shell, leaving charge \(-q\) on its inner surface and zero charge on its outer surface. Removing the wire does not change this distribution.
+
+Every element of the inner surface is a distance \(R\) from the center, so its contribution to the potential there is
+\[
+V_{\text{inner}}=\frac{-q}{4\pi\varepsilon_0R}.
+\]
+Adding the point charge’s contribution gives
+\[
+V(0)=\frac{q}{4\pi\varepsilon_0}\left(\frac1d-\frac1R\right).
+\]
+
+Answer: B",completed,390,138,reasoning_tokens=0,B,True,0.00216,,2026-11-12T02:24:29+00:00
+44,2f26c5552e134f88947d8fd9d6dfb851,easy,Medicine,D,gpt-6.1-terra,3.8907798749860376,"Terminal disinfection is performed after an infectious patient leaves, to disinfect potentially contaminated items and surfaces.
+
+Answer: B",completed,200,132,reasoning_tokens=104,B,False,0.00086,,2026-11-12T02:24:29+00:00
+34,8259b1c32b004b45bdcbdbd8c9900de0,easy,Education,G,gpt-6.1-sol,2.3842161670327187,"Accurate heading depends primarily on where and how the head contacts the ball, which controls its direction.
+
+Answer: G",completed,125,54,reasoning_tokens=25,G,True,0.00079,,2026-11-12T02:24:33+00:00
+45,82891443cf8349e083a1c511ad1cee4b,hard,Science,H,gpt-6.1-terra,12.905120291979983,"For hemispherical spreading, the power without air absorption is approximately
+
+\[
+P=2\pi(300)^2(10^{-6})\approx 0.56\ \text{W}.
+\]
+
+Using the absorption coefficient in H, the loss over 300 m is \(0.00898\times300=2.694\) dB. The required power is therefore approximately \(0.56\times10^{2.694/10}\approx1.05\) W.
+
+**H** is consistent with these power values. The absorption coefficient itself cannot be determined from frequency alone without specifying air properties.
+
+Answer: H",completed,409,794,reasoning_tokens=658,H,True,0.004379,,2026-11-12T02:24:33+00:00
+46,905c4598767047f9b1007dfe97bd2d26,middle,Engineering,H,gpt-6.1-terra,3.066192917060107,Answer: F,completed,129,90,reasoning_tokens=81,F,False,0.000579,,2026-11-12T02:24:45+00:00
+35,8096946e4d0442f694c7d223a44f8259,middle,Science,A,gpt-6.1-sol,15.12707829196006,"After the equivalence point, excess EDTA controls the free-metal concentration:
+
+\[
+[M]\approx \frac{[MY]}{K_f'[Y]_{\text{excess}}}.
+\]
+
+Increasing both concentrations tenfold leaves this ratio—and therefore pM—unchanged. Thus **110% (I)** satisfies the usual approximation.
+
+However, the question is not uniquely specified: the other listed fractions above 100% also satisfy that approximation.
+
+Answer: I",completed,156,482,reasoning_tokens=382,I,False,0.005132,,2026-11-12T02:24:35+00:00
+47,53ebdeba3e4c44688f5a012bb861d7a2,middle,Science,C,gpt-6.1-terra,2.8663824580144137,"The net force is
+\[
+F_x=\frac{2kQq\,x}{(x^2+y^2)^{3/2}}.
+\]
+Its magnitude is maximum at \(x=\pm y/\sqrt2\), so **J is correct**.
+
+However, the question does not have only one correct answer: A, C, D, and E are also true.
+
+Answer: J",completed,264,152,reasoning_tokens=62,J,False,0.001024,,2026-11-12T02:24:48+00:00
+36,e4cb69fc977e4886a54f730affe04bac,easy,Education,I,gpt-6.1-sol,1.938905999995768,"Overload is adjusted through **training intensity** (how hard you work) and **training volume** (the total amount of work performed).
+
+Answer: D",completed,128,35,reasoning_tokens=0,D,False,0.000606,,2026-11-12T02:24:50+00:00
+37,98332f31f95049c9b8bb899378f67898,hard,Science,C,gpt-6.1-sol,3.5880853328853846,"The sum of all finite residues equals the coefficient of \(z^{-1}\) in the Laurent expansion of \(f\) at infinity.
+
+For large \(|z|\),
+\[
+f(z)=\frac{z^3}{(1-z^{-2})(1+z^{-8})}
+=z^3(1+z^{-2}+z^{-4}+\cdots)(1-z^{-8}+\cdots).
+\]
+The coefficient of \(z^{-1}\) is \(1\), coming from \(z^3z^{-4}\). Hence the sum of the residues is \(1\).
+
+Answer: C",completed,141,174,reasoning_tokens=40,C,True,0.002022,,2026-11-12T02:24:52+00:00
+38,75edb218cf4a499aacaeec8a8cf0d33e,easy,Medicine,A,gpt-6.1-sol,2.9382917499169707,"The bar code medication administration system was first implemented at the Colmery-O'Neil Veterans Affairs Medical Center in **1995**.
+
+Answer: A",completed,137,90,reasoning_tokens=54,A,True,0.001174,,2026-11-12T02:24:56+00:00
+48,3bd0bfc73f4c420b90bf03e6eb7cf2f5,hard,Engineering,A,gpt-6.1-terra,8.371078917058185,"G) \(8.01 \times 10^{-4}\%\)
+
+Answer: G",completed,387,388,reasoning_tokens=364,G,False,0.002327,,2026-11-12T02:24:51+00:00
+39,53444cefe0994861b19a2eb0ba6f7de0,easy,Engineering,A,gpt-6.1-sol,2.3347113342024386,"The series resistor and potentiometer form a voltage divider, so the voltage across the potentiometer is
+\[
+V_p=V_s\frac{R_p}{R_s+R_p}.
+\]
+For a linear potentiometer, the output at angle \(\theta\) is the fraction \(\theta/\theta_F\) of this voltage:
+\[
+V_{\text{out}}=V_s\frac{R_p}{R_s+R_p}\frac{\theta}{\theta_F}.
+\]
+
+Answer: A",completed,293,111,reasoning_tokens=0,A,True,0.001696,,2026-11-12T02:24:58+00:00
+49,ba37c4ef7c7d494eb716759836fc06eb,middle,Science,B,gpt-6.1-terra,3.2475384580902755,"The isochoric (Otto) cycle efficiency depends on the compression ratio and the isentropic index. “Isentropic exponent” in A is another name for the same parameter, so A and B are equivalent.
+
+Answer: B",completed,137,148,reasoning_tokens=94,B,True,0.000877,,2026-11-12T02:25:00+00:00
+40,a72c691f336a4001ac022500b280d527,middle,Engineering,G,gpt-6.1-sol,3.996733915992081,"The shaft surface speed is
+\[
+v=\frac{\pi DN}{60}
+=\frac{\pi(0.1)(600)}{60}=3.142\ \text{m/s}.
+\]
+
+Using viscous shear, the torque is
+\[
+T=\left(\mu\frac{v}{c}\right)(\pi DL)\frac{D}{2}.
+\]
+
+Substituting the values in SI units:
+\[
+T=\left(0.25\frac{3.142}{0.0025}\right)
+\left(\pi(0.1)(0.2)\right)(0.05)
+=0.987\ \text{N·m}.
+\]
+
+Answer: G",completed,207,170,reasoning_tokens=16,G,True,0.002114,,2026-11-12T02:25:01+00:00
+50,904a4aeefbb644f684bed204a8647109,hard,Science,H,gpt-6.1-terra,2.6020510410889983,"At constant volume, the pressure without dissociation would be
+
+\[
+P=15\left(\frac{620}{300}\right)=31\ \text{atm}.
+\]
+
+Dissociation increases the total number of moles by a factor of \(1+\alpha\), so
+
+\[
+50=31(1+\alpha)
+\quad\Rightarrow\quad
+\alpha=0.613=61.3\%.
+\]
+
+Answer: H",completed,291,137,reasoning_tokens=37,H,True,0.000976,,2026-11-12T02:25:03+00:00
+51,67427cf15c1244e6a4a3ae7ea7384997,middle,Management,C,gpt-6.1-terra,2.87522237515077,Answer: J,completed,160,147,reasoning_tokens=138,J,False,0.000895,,2026-11-12T02:25:06+00:00
+52,2fc3c55350384b748e2cca0254e04e99,easy,Engineering,C,gpt-6.1-terra,1.2268944999668747,"`World` is logged immediately; `Hello` is logged after approximately one second.
+
+Answer: C",completed,121,24,reasoning_tokens=0,C,True,0.000241,,2026-11-12T02:25:08+00:00
+41,5c4cbccbd4234174a223abc25918bd70,hard,Engineering,C,gpt-6.1-sol,6.085032874951139,"To maximize the distance, substitute \(-\vec c\) for \(\vec c\), so that this displacement is eastward. Keep \(\vec b\) pointing northeast. The order of the moves does not affect their sum.
+
+The resultant components are
+\[
+x=2+2\cos30^\circ+1=4.732\text{ km},\qquad
+y=2\sin30^\circ=1.000\text{ km}.
+\]
+Thus,
+\[
+d=\sqrt{4.732^2+1.000^2}\approx4.8\text{ km}.
+\]
+
+Option C evidently has a unit typo: it should read **4.8 km**, not 4.8 m.
+
+Answer: C",completed,320,259,reasoning_tokens=95,C,True,0.00323,,2026-11-12T02:25:05+00:00
+53,fd25671ce6d9467ba46a9c260f5b4719,middle,Science,A,gpt-6.1-terra,4.199921666877344,"The 2:1 orbital resonance with Jupiter produces a Kirkwood gap: asteroids there would orbit the Sun in half of Jupiter’s orbital period.
+
+Answer: A",completed,197,209,reasoning_tokens=170,A,True,0.001242,,2026-11-12T02:25:10+00:00
+54,e30f8511e63e43c2bb02a13f68ae92ea,easy,Engineering,J,gpt-6.1-terra,1.7391398749314249,"A screw-cap oil cup can be used for grease lubrication: tightening the cap forces grease into the bearing.
+
+Answer: J",completed,131,45,reasoning_tokens=15,J,True,0.000356,,2026-11-12T02:25:14+00:00
+55,84994381ba8e462399f87cd5439c790a,middle,Science,J,gpt-6.1-terra,3.1621515001170337,"The foil’s volume is \(1.5 \times 0.12 = 0.18\ \text{cm}^3\), so its mass is \(0.18 \times 2.7 = 0.486\ \text{g}\).
+
+The number of aluminum nuclei is
+\[
+N=\frac{0.486}{27}(6.02\times10^{23})\approx1.08\times10^{22}.
+\]
+
+Thus the activation rate is
+\[
+R=N\phi\sigma
+=(1.08\times10^{22})(10^7)(0.232\times10^{-24})
+\approx 2.5\times10^4\ \text{s}^{-1}.
+\]
+
+Answer: J",completed,303,209,reasoning_tokens=44,J,True,0.001348,,2026-11-12T02:25:16+00:00
+42,4d621331c4cb4c4bb2730d00daa0d5b1,hard,Engineering,D,gpt-6.1-sol,9.828291040845215,"Using the Weisz–Prater criterion, internal diffusion is negligible when
+\[
+C_{\mathrm{WP}}=\frac{(-r_A)R_P^2}{D_e c_A}<0.3.
+\]
+Convert the concentration:
+\[
+c_A=10^{-2}\ \mathrm{mol/L}=10^{-5}\ \mathrm{mol/cm^3}.
+\]
+Thus,
+\[
+R_P<\sqrt{\frac{0.3D_ec_A}{(-r_A)}}
+=\sqrt{\frac{0.3(10^{-3})(10^{-5})}{10^{-6}}}
+=0.0548\ \mathrm{cm}.
+\]
+The appropriate listed particle radius is therefore \(R_P=0.05\ \mathrm{cm}\) (diameter \(0.10\ \mathrm{cm}\)).
+
+Answer: E",completed,514,388,reasoning_tokens=204,E,False,0.004908,,2026-11-12T02:25:11+00:00
+56,642d583ff81a4f2da477d9f6178d1f9d,hard,Science,E,gpt-6.1-terra,3.9897993330378085,"The corresponding sequence is option E.
+
+Answer: E",completed,795,186,reasoning_tokens=170,E,True,0.001725,,2026-11-12T02:25:19+00:00
+43,9f02e13aaf6e4f02960b107f8cbf34cb,easy,History,A,gpt-6.1-sol,2.6041259579360485,"The Western capitalist countries, led by the United States, imposed an **economic blockade** on the newly founded People’s Republic of China, restricting trade and access to strategic goods.
+
+Answer: I",completed,127,81,reasoning_tokens=37,I,False,0.001064,,2026-11-12T02:25:21+00:00
+44,2f26c5552e134f88947d8fd9d6dfb851,easy,Medicine,D,gpt-6.1-sol,3.221930833067745,"Terminal disinfection is the disinfection of a patient’s environment and potentially contaminated items after the infectious patient has left, such as following discharge.
+
+Answer: B",completed,200,81,reasoning_tokens=44,B,False,0.00121,,2026-11-12T02:25:23+00:00
+57,8483667a25e74fdfa3188de4ea734f03,middle,Science,A,gpt-6.1-terra,6.98685466684401,"**E** has a benzylic C–Cl bond, which is generally more readily hydrolyzed than the aryl C–Cl bonds in the other compounds.
+
+Answer: E",completed,184,444,reasoning_tokens=401,E,False,0.002404,,2026-11-12T02:25:23+00:00
+58,db65e3ae66234cfea848428c58042f07,easy,Medicine,G,gpt-6.1-terra,2.659909958951175,"*Culex tritaeniorhynchus* transmits Japanese encephalitis, historically called Japanese encephalitis B. Options E and G therefore refer to the same disease.
+
+Answer: E",completed,125,131,reasoning_tokens=85,E,False,0.00078,,2026-11-12T02:25:30+00:00
+59,680075d5c2684ec2a869f062a990e40b,middle,Economics,A,gpt-6.1-terra,1.9354376669507474,"Children are regarded as both durable consumer goods and investment goods.
+
+Answer: A",completed,133,39,reasoning_tokens=18,A,True,0.000328,,2026-11-12T02:25:32+00:00
+45,82891443cf8349e083a1c511ad1cee4b,hard,Science,H,gpt-6.1-sol,8.78883787500672,"The 60 dB level corresponds to an intensity of approximately
+\[
+I=10^{-12}10^{60/10}=10^{-6}\ \mathrm{W/m^2}.
+\]
+
+For hemispherical spreading, the required power without absorption is
+\[
+P_0=2\pi r^2I
+=2\pi(300)^2(10^{-6})
+\approx0.565\ \mathrm W.
+\]
+
+With an attenuation coefficient \(\alpha\) in dB/m,
+\[
+P=P_0\,10^{\alpha r/10}.
+\]
+Using \(\alpha=8.98\times10^{-3}\ \mathrm{dB/m}\),
+\[
+P=0.565\,10^{(8.98\times10^{-3})(300)/10}
+\approx1.05\ \mathrm W.
+\]
+
+Thus **H** is the internally consistent choice. Strictly, independently calculating the viscous absorption coefficient requires air properties not specified in the question.
+
+Answer: H",completed,409,383,reasoning_tokens=164,H,True,0.004648,,2026-11-12T02:25:27+00:00
+60,bd3deb27b5364a5db6f22ae151715e8b,hard,Engineering,H,gpt-6.1-terra,2.1362683749757707,"Using \(2\sin x\cos x=\sin 2x\),
+
+\[
+V=60\sin(200\pi t).
+\]
+
+The peak voltage is \(60\text{ V}\), and the frequency is \(200\pi/(2\pi)=100\text{ Hz}\).
+
+Both C and G state these values; the choices are duplicated.
+
+Answer: C",completed,276,107,reasoning_tokens=22,C,False,0.000811,,2026-11-12T02:25:34+00:00
+61,43b85949f89c4ced866cc8222329c0d5,hard,Science,E,gpt-6.1-terra,2.005257625132799,"Using the Heisenberg uncertainty principle,
+
+\[
+\Delta v \geq \frac{\hbar}{2m\Delta x}
+= \frac{1.055\times10^{-34}}{2(10^{-13})(10^{-7})}
+\approx 5.3\times10^{-15}\ \mathrm{m/s}.
+\]
+
+The closest choice is I.
+
+Answer: I",completed,398,111,reasoning_tokens=23,I,False,0.000953,,2026-11-12T02:25:36+00:00
+46,905c4598767047f9b1007dfe97bd2d26,middle,Engineering,H,gpt-6.1-sol,3.3207217501476407,"Retrograde sand waves (antidunes) form under high-velocity, upper-flow-regime conditions and can migrate upstream against the current.
+
+Answer: F",completed,129,83,reasoning_tokens=46,F,False,0.001088,,2026-11-12T02:25:35+00:00
+62,4b451034c8114602b8a0f9fd4cd32766,middle,Engineering,E,gpt-6.1-terra,2.095996499992907,"A differential amplifier helps cancel temperature-induced drift that affects both inputs equally.
+
+Answer: E",completed,127,77,reasoning_tokens=54,E,True,0.000512,,2026-11-12T02:25:38+00:00
+47,53ebdeba3e4c44688f5a012bb861d7a2,middle,Science,C,gpt-6.1-sol,4.80128716584295,"The vertical force components cancel, while the horizontal components add:
+\[
+\mathbf F(x)=\frac{2kQq\,x}{(x^2+y^2)^{3/2}}\,\hat{\mathbf x}.
+\]
+Thus the force magnitude is proportional to
+\[
+\frac{|x|}{(x^2+y^2)^{3/2}},
+\]
+which is maximized at \(|x|=y/\sqrt2\). Hence **J is correct**.
+
+However, the question is not actually single-answer: **A, C, D, and E are also true** from the same force expression.
+
+Answer: J",completed,264,196,reasoning_tokens=53,J,False,0.002488,,2026-11-12T02:25:39+00:00
+63,616a83b2d66a4b3b982c9faae1af622e,middle,Science,G,gpt-6.1-terra,2.916279959026724,"The maximum non-expansion work is given by $-\Delta G^\circ$. For the reaction, $\Delta G^\circ \approx -2.83 \times 10^3\ \mathrm{kJ\,mol^{-1}}$.
+
+For $2.0\ \mathrm{kg}$ of glucose, this gives approximately $3.1 \times 10^4\ \mathrm{kJ}$.
+
+Answer: G",completed,437,155,reasoning_tokens=63,G,True,0.001212,,2026-11-12T02:25:41+00:00
+64,ac53fc0afe4a43a2ad48ce3acfb33c39,easy,Literature and Arts,J,gpt-6.1-terra,4.010591625003144,Answer: C,completed,147,195,reasoning_tokens=186,C,False,0.001122,,2026-11-12T02:25:44+00:00
+65,3897ab262fe9400da64efe756bb06bac,hard,Science,J,gpt-6.1-terra,4.665654540993273,"For an fcc lattice, summing the Lennard-Jones interactions and minimizing with respect to the lattice spacing gives
+
+\[
+U_{\rm tot}\approx -8.61\varepsilon
+=-8.61(50\times10^{-23}\,\mathrm{J})(N_A)
+\approx -2.59\,\mathrm{kJ/mol}.
+\]
+
+The closest choice is **J**. The calculated binding-energy magnitude is about 3.5 times the experimental value of \(0.751\,\mathrm{kJ/mol}\).
+
+Answer: J",completed,472,259,reasoning_tokens=139,J,True,0.001767,,2026-11-12T02:25:48+00:00
+66,329f130a773c43fe8bef4fdac24bc1b9,middle,Science,C,gpt-6.1-terra,2.900963749969378,"Using the Henderson–Hasselbalch equation,
+
+\[
+\frac{[A^-]}{[HA]}=10^{4.4-pK_a}
+=10^{4.4-4.699}\approx 0.50.
+\]
+
+The solution contains \(0.10\) mol of \(HA\), so approximately \(0.050\) mol of \(NaA\) is needed. Its mass is
+
+\[
+0.050\times100=5.0\ \text{g}.
+\]
+
+Answer: C",completed,218,162,reasoning_tokens=43,C,True,0.001028,,2026-11-12T02:25:52+00:00
+67,cffab014553d48228b5b62c8497affc7,hard,Science,E,gpt-6.1-terra,1.5858755831141025,"The product \(F_1(x)F_2(x)\) is a valid distribution function. Its derivative is
+\[
+f_1(x)F_2(x)+f_2(x)F_1(x),
+\]
+so this expression must be a probability density.
+
+Answer: E",completed,587,64,reasoning_tokens=0,E,True,0.000907,,2026-11-12T02:25:55+00:00
+68,3b370bbe4405431bbe1a977ea55eacf3,middle,Law,A,gpt-6.1-terra,2.8669795419555157,"In interregional conflicts, the parties generally share the same nationality, so nationality cannot distinguish between the relevant regional legal systems.
+
+Answer: A",completed,119,67,reasoning_tokens=34,A,True,0.000454,,2026-11-12T02:25:57+00:00
+69,8652fa26377a4f7ea855762c364fa1c8,middle,Economics,C,gpt-6.1-terra,3.070729833096266,"The sub-port tax was an inland transit tax on foreign goods transported into China’s interior.
+
+Answer: C",completed,192,125,reasoning_tokens=98,C,True,0.000817,,2026-11-12T02:26:00+00:00
+70,ba440a19bd824af9a9fae49b0593d9cb,middle,Science,F,gpt-6.1-terra,1.7850377499125898,"The white-fruited parent is \(Ww\), and the yellow-fruited parent is \(ww\). Their offspring are expected to be half white and half yellow.
+
+Answer: F",completed,211,69,reasoning_tokens=26,F,True,0.000556,,2026-11-12T02:26:03+00:00
+71,ed970b5e848b4e08a8df7bac7e2a80eb,easy,Science,G,gpt-6.1-terra,2.062991041922942,Answer: G,completed,257,49,reasoning_tokens=40,G,True,0.000502,,2026-11-12T02:26:04+00:00
+72,02e993311f05413ca04e490d794884e1,easy,Engineering,B,gpt-6.1-terra,1.6417632498778403,"The system boundary is chosen according to the needs of the problem and the convenience of analysis.
+
+Answer: B",completed,143,37,reasoning_tokens=10,B,True,0.000328,,2026-11-12T02:26:06+00:00
+73,a4466c023959488aa046e6a975ab9a06,easy,Literature and Arts,F,gpt-6.1-terra,2.697339416947216,Answer: D,completed,279,159,reasoning_tokens=150,D,False,0.001074,,2026-11-12T02:26:08+00:00
+74,3e77c7c944c14b2197c15b5f7b24b66b,hard,Science,G,gpt-6.1-terra,6.169940208084881,"Dividing both sides by \(4^{a+b+2}\) and expanding gives
+\[
+2^{2a-2b-1}+2^{2b-2a-3}
++2^{a+b-10}+2^{6-a-b}=1.
+\]
+The product of the two terms in each pair is \(2^{-4}\). By AM–GM, each pair therefore sums to at least \(2\sqrt{2^{-4}}=\tfrac12\). Since their total is \(1\), equality holds in both pairs.
+
+Thus
+\[
+2a-2b-1=2b-2a-3,\qquad a+b-10=6-a-b,
+\]
+so \(a-b=-\tfrac12\) and \(a+b=8\). Hence
+\[
+a=\frac{15}{4},\quad b=\frac{17}{4},\quad ab=\frac{255}{16}.
+\]
+Therefore \(m+n=255+16=271\).
+
+Answer: G",completed,191,415,reasoning_tokens=193,G,True,0.002266,,2026-11-12T02:26:11+00:00
+75,da0c6931b5fe4adf922e0e15bac3cac1,middle,Engineering,E,gpt-6.1-terra,1.1845679169055074,Answer: B,completed,198,7,reasoning_tokens=0,B,False,0.000233,,2026-11-12T02:26:17+00:00
+76,43564ffadaef44bd92b2d7322e9cb29d,hard,Engineering,J,gpt-6.1-terra,2.8026126669719815,"In series, all three resistors carry the same current, so their powers are proportional to their resistances. The 100 Ω, 1 kΩ, and 10 kΩ resistors consume 0.01 W, 0.1 W, and 1 W, respectively.
+
+Thus, the first two are below their rated voltages, while the third is above its rated voltage.
+
+Answer: J",completed,542,114,reasoning_tokens=25,J,True,0.001112,,2026-11-12T02:26:18+00:00
+48,3bd0bfc73f4c420b90bf03e6eb7cf2f5,hard,Engineering,A,gpt-6.1-sol,39.27534699998796,"The water-vapor partial pressure is obtained from the ideal-gas law:
+\[
+p_{\mathrm{H_2O}}
+=\frac{30}{18.0}RT
+=\frac{30}{18.0}(8.206\times10^{-5})(1873)
+\approx0.256\ \text{atm}.
+\]
+
+At 1873 K, the equilibrium
+\[
+\mathrm{H_2O(g)\rightleftharpoons H_2(g)+\tfrac12O_2(g)}
+\]
+gives a hydrogen partial pressure of approximately \(1.1\times10^{-3}\) atm.
+
+Using Sieverts’ law with the alloying-element activity correction,
+\[
+f_{\mathrm H}w[\mathrm H]=K_{\mathrm H}\sqrt{p_{\mathrm H_2}},
+\]
+where \(K_{\mathrm H}\approx2.7\times10^{-3}\) and \(f_{\mathrm H}\approx1.19\), gives
+\[
+w[\mathrm H]\approx
+\frac{2.7\times10^{-3}\sqrt{1.1\times10^{-3}}}{1.19}
+\approx 7.6\times10^{-5}\%.
+\]
+
+Thus the matching value is \(7.58\times10^{-5}\%\).
+
+Answer: A",completed,387,1408,reasoning_tokens=1123,A,True,0.014854,,2026-11-12T02:25:43+00:00
+77,1ec620bd5816462290d81bf0ffe11d10,middle,Literature and Arts,H,gpt-6.1-terra,2.830822667106986,Answer: E,completed,144,147,reasoning_tokens=138,E,False,0.000879,,2026-11-12T02:26:21+00:00
+49,ba37c4ef7c7d494eb716759836fc06eb,middle,Science,B,gpt-6.1-sol,3.515996624948457,"For an ideal isochoric (Otto) cycle,
+\[
+\eta_{\mathrm{th}}=1-\frac{1}{r^{\gamma-1}},
+\]
+where \(r\) is the compression ratio and \(\gamma=C_p/C_v\) is the isentropic exponent.
+
+(Note: “isentropic index” in B is commonly synonymous with “isentropic exponent,” so the options are not strictly distinct.)
+
+Answer: A",completed,137,141,reasoning_tokens=43,A,False,0.001684,,2026-11-12T02:26:23+00:00
+78,4d66e55a804b48dcb25aa4470f1967d8,middle,Science,B,gpt-6.1-terra,2.7596050000283867,"The interface is at the center, so each liquid occupies 18 cm of the horizontal tube. Since each liquid has a total length of 36 cm, each column rises 18 cm vertically.
+
+Balancing pressures at the interface gives
+\[
+P_{\text{gas,gauge}}=(\rho_{\text{oil}}-\rho_{\text{water}})gh
+=(800-1000)(9.81)(0.18)\approx -353\ \text{Pa}.
+\]
+
+Answer: B",completed,355,147,reasoning_tokens=38,B,True,0.00109,,2026-11-12T02:26:24+00:00
+79,d308ef75f3754c2ba761534562dbe244,easy,Science,I,gpt-6.1-terra,1.6062892079353333,"Changing the objective coefficient of a non-basic variable changes its reduced cost in the optimal tableau.
+
+Answer: I",completed,147,55,reasoning_tokens=28,I,True,0.000422,,2026-11-12T02:26:27+00:00
+50,904a4aeefbb644f684bed204a8647109,hard,Science,H,gpt-6.1-sol,3.811405333923176,"Let \(\alpha\) be the degree of dissociation. From
+\[
+2NH_3 \rightleftharpoons N_2+3H_2,
+\]
+the total number of moles at equilibrium is
+\[
+n_{\rm eq}=10(1-\alpha)+5\alpha+15\alpha=10(1+\alpha).
+\]
+
+At constant volume, \(P\propto nT\), so
+\[
+\frac{50}{15}=(1+\alpha)\frac{347+273}{27+273}.
+\]
+Thus,
+\[
+\alpha=\frac{50\times300}{15\times620}-1
+=0.6129\approx61.3\%.
+\]
+
+Answer: H",completed,291,194,reasoning_tokens=32,H,True,0.002522,,2026-11-12T02:26:26+00:00
+80,f8e673e369e9436eae9295460df53fa9,easy,Literature and Arts,F,gpt-6.1-terra,4.1579624998848885,Answer: G,completed,134,172,reasoning_tokens=163,G,False,0.000994,,2026-11-12T02:26:28+00:00
+51,67427cf15c1244e6a4a3ae7ea7384997,middle,Management,C,gpt-6.1-sol,3.727009541122243,"China’s information law system includes the Information Security Legal System (II), Information Standards Legal System (III), and Information Environment Legal System (IV).
+
+Answer: C",completed,160,118,reasoning_tokens=80,C,True,0.0015,,2026-11-12T02:26:30+00:00
+81,cbe0b9f1ef0b4cf1824f390639ce4c70,middle,Medicine,A,gpt-6.1-terra,3.481121249962598,"HIV Nef downregulates HLA class I molecules on infected cells, helping them evade cytotoxic T cells.
+
+Answer: F",completed,111,109,reasoning_tokens=76,F,False,0.000656,,2026-11-12T02:26:32+00:00
+52,2fc3c55350384b748e2cca0254e04e99,easy,Engineering,C,gpt-6.1-sol,2.9534651250578463,"`console.log(""World"")` runs immediately. The `setTimeout` callback logs `""Hello""` after approximately one second, so the output is:
+
+```text
+World
+Hello
+```
+
+Answer: C",completed,121,46,reasoning_tokens=0,C,True,0.000702,,2026-11-12T02:26:34+00:00
+82,369e463e182d46a8bf06418354f7b7d2,hard,Science,J,gpt-6.1-terra,2.694946749834344,"Deuterium survives photodissociation once the temperature falls to roughly $kT\sim 0.06$–$0.08\,\mathrm{MeV}$. This is well below its binding energy because photons greatly outnumber baryons.
+
+Answer: J",completed,316,118,reasoning_tokens=57,J,True,0.000906,,2026-11-12T02:26:36+00:00
+53,fd25671ce6d9467ba46a9c260f5b4719,middle,Science,A,gpt-6.1-sol,3.637981167063117,"Kirkwood gaps occur at orbital resonances with Jupiter, where repeated gravitational perturbations destabilize asteroid orbits. One major gap is at the 2:1 resonance, where an asteroid’s orbital period would be half that of Jupiter.
+
+Answer: A",completed,197,90,reasoning_tokens=33,A,True,0.001294,,2026-11-12T02:26:37+00:00
+83,c56aaca8d684429c8a9a9c827ff92e39,middle,Medicine,C,gpt-6.1-terra,2.940700416918844,"Wrist extension involves C6–C7, but paresthesia over the posterior arm and forearm points most strongly to **C7**.
+
+Answer: C",completed,129,146,reasoning_tokens=107,C,True,0.000859,,2026-11-12T02:26:39+00:00
+84,2adca578b9b74511a354ec60d6a491a2,middle,Engineering,A,gpt-6.1-terra,1.6163352080620825,"Ore/oil carriers load oil in the wing tanks and some center tanks.
+
+Answer: A",completed,119,44,reasoning_tokens=20,A,True,0.000339,,2026-11-12T02:26:41+00:00
+54,e30f8511e63e43c2bb02a13f68ae92ea,easy,Engineering,J,gpt-6.1-sol,2.8976099158171564,"J) Screw-cap oil cup can be used for grease lubrication; tightening the cap forces grease into the bearing.
+
+Answer: J",completed,131,69,reasoning_tokens=38,J,True,0.000952,,2026-11-12T02:26:40+00:00
+55,84994381ba8e462399f87cd5439c790a,middle,Science,J,gpt-6.1-sol,5.496915666852146,"The production rate is
+\[
+R=N\sigma\phi,
+\]
+where \(N\) is the number of aluminum nuclei in the foil.
+
+Using thickness \(1.2\,\text{mm}=0.12\,\text{cm}\) and density \(2.7\,\text{g/cm}^3\), the foil mass is
+\[
+m=(1.5)(0.12)(2.7)=0.486\,\text{g}.
+\]
+Thus,
+\[
+N=\frac{0.486}{27}(6.022\times10^{23})
+  =1.084\times10^{22}.
+\]
+
+Since \(1\,\text{barn}=10^{-24}\,\text{cm}^2\),
+\[
+R=(1.084\times10^{22})(0.232\times10^{-24})(10^7)
+  \approx2.5\times10^4\ \text{nuclei/s}.
+\]
+
+Answer: J",completed,303,256,reasoning_tokens=39,J,True,0.003166,,2026-11-12T02:26:43+00:00
+85,e8802864001647569f1567674fea611b,middle,Engineering,G,gpt-6.1-terra,5.906802125042304,"The void ratio is
+
+\[
+e=\frac{G_s\gamma_w(1+w)}{\gamma}-1\approx 0.582.
+\]
+
+This is closest to **F**. However, the corresponding relative density is about 31%, which is commonly classified as **loose**, rather than compact.
+
+Answer: F",completed,223,338,reasoning_tokens=264,F,False,0.001913,,2026-11-12T02:26:43+00:00
+86,718246a557084a1fbe7c770bcde894fc,easy,Philosophy,D,gpt-6.1-terra,2.5910275829955935,"The ratio **7:4** produces a harmonic seventh, not the standard minor seventh (commonly 9:5 or 16:9 in just intonation).
+
+Answer: C",completed,138,134,reasoning_tokens=91,C,False,0.000808,,2026-11-12T02:26:49+00:00
+87,bdfecaac7afb4e60a4179faf3a749b71,middle,Medicine,F,gpt-6.1-terra,2.2019535419531167,"CNS infection can spread to the inner ear through the **cochlear aqueduct**, which connects the subarachnoid space with the perilymphatic space.
+
+Answer: F",completed,131,63,reasoning_tokens=20,F,True,0.000446,,2026-11-12T02:26:52+00:00
+88,7c16b18118ce424eb467014032a775d8,easy,Education,H,gpt-6.1-terra,2.4033462090883404,"The estimated probability is \(\frac{288}{500}=\frac{144}{250}=\frac{72}{125}\). Both A and H are correct, despite the question stating there is only one answer.
+
+Answer: A",completed,196,84,reasoning_tokens=31,A,False,0.000616,,2026-11-12T02:26:54+00:00
+89,2e273e9a0669419cad779d93955dd9a0,middle,Medicine,F,gpt-6.1-terra,1.7676482920069247,"Paroxysmal nocturnal dyspnea is characteristic of chronic left heart dysfunction.
+
+Answer: B",completed,128,47,reasoning_tokens=21,B,False,0.000363,,2026-11-12T02:26:56+00:00
+90,fc3deb8167d34b6fb367fdc5ebd5b796,easy,Literature and Arts,B,gpt-6.1-terra,1.831555875018239,"G has two enharmonic equivalents: F𝄪 and A𝄫.
+
+Answer: D",completed,76,61,reasoning_tokens=34,D,False,0.000381,,2026-11-12T02:26:58+00:00
+56,642d583ff81a4f2da477d9f6178d1f9d,hard,Science,E,gpt-6.1-sol,11.897978959139436,"The coefficient magnitudes in
+\[
+\operatorname{arccosh}(x)-\log(2x)
+=-\sum_{n=1}^{\infty}\frac{\binom{2n}{n}}{2n\,4^n}x^{-2n}
+\]
+give the listed numerators after reduction to lowest terms.
+
+For indices \(18\) through \(27\), these are
+\[
+[756261275,\ 4418157975,\ 6892326441,\ 22427411435,\ 263012370465,\ 514589420475,\ 2687300306925,\ 15801325804719,\ 61989816618513,\ 121683714103007].
+\]
+
+Answer: E",completed,795,452,reasoning_tokens=290,E,True,0.00611,,2026-11-12T02:26:49+00:00
+91,6271feca2aac4c6693f2e374e5326ee0,easy,Management,E,gpt-6.1-terra,2.2655857079662383,"UNFPA focuses on sexual and reproductive health, including improving maternal health and reducing maternal mortality.
+
+Answer: I",completed,178,98,reasoning_tokens=70,I,False,0.000668,,2026-11-12T02:27:00+00:00
+92,3cbdc660bb014628bd47c5cfad63051a,hard,Medicine,C,gpt-6.1-terra,2.8258220001589507,"The patient has acute urinary retention, but the question asks for its underlying cause. The unsuccessful transurethral catheterization suggests a urethral stricture, potentially related to prior sexually transmitted infection.
+
+Answer: B",completed,358,88,reasoning_tokens=39,B,False,0.000798,,2026-11-12T02:27:02+00:00
+93,f1a4d252f2bd435cb14eaf83bd84e251,hard,Science,D,gpt-6.1-terra,4.199513416970149,"Integrating the Salpeter birth-rate function over \(4\)–\(8\,M_\odot\) for \(12\times10^9\) years, then multiplying by the \(1.4\,M_\odot\) yield per explosion, gives approximately \(3\times10^{-3}\,M_\odot\,\mathrm{pc}^{-3}\).
+
+Answer: D",completed,480,239,reasoning_tokens=150,D,True,0.001675,,2026-11-12T02:27:05+00:00
+57,8483667a25e74fdfa3188de4ea734f03,middle,Science,A,gpt-6.1-sol,9.810413665836677,"**E) 3-nitro-4-chloromethylbenzeneamine** contains a **benzylic chloride group (–CH₂Cl)**, which readily undergoes substitution by hydroxide during alkaline hydrolysis.
+
+The other compounds have chlorine bonded directly to an aromatic ring. Although nitro groups can activate these aryl chlorides toward nucleophilic substitution, the benzylic chloride is more readily hydrolyzed.
+
+Answer: E",completed,184,339,reasoning_tokens=243,E,False,0.003758,,2026-11-12T02:27:01+00:00
+58,db65e3ae66234cfea848428c58042f07,easy,Medicine,G,gpt-6.1-sol,2.1497035829816014,"*Culex tritaeniorhynchus* is the principal mosquito vector of Japanese encephalitis, historically called **Japanese encephalitis B**.
+
+Answer: E",completed,125,75,reasoning_tokens=34,E,False,0.001,,2026-11-12T02:27:11+00:00
+59,680075d5c2684ec2a869f062a990e40b,middle,Economics,A,gpt-6.1-sol,2.150033083045855,"Western economic theories of fertility regard children as **durable consumer goods**, providing long-term satisfaction, and **investment goods**, potentially providing future income or support for parents.
+
+Answer: A",completed,133,40,reasoning_tokens=0,A,True,0.000666,,2026-11-12T02:27:13+00:00
+94,2c9318c99c3b4f36af8aa8826b68f572,hard,Science,J,gpt-6.1-terra,6.252903915941715,"The molality before dimerization is \((75.2/94)/0.960 = 0.8333\ \mathrm{mol\,kg^{-1}}\).
+
+Thus \(i = 7/(15 \times 0.8333) = 0.56\). For dimerization, \(i = 1-\alpha/2\), so \(\alpha = 0.88\), or **88%**.
+
+None of the listed options is correct; N denotes no valid option.
+
+Answer: N",completed,166,390,reasoning_tokens=275,,False,0.002116,,2026-11-12T02:27:09+00:00
+60,bd3deb27b5364a5db6f22ae151715e8b,hard,Engineering,H,gpt-6.1-sol,2.3905414170585573,"Using \(2\sin x\cos x=\sin 2x\),
+\[
+V=60\sin(200\pi t).
+\]
+Thus the peak voltage is \(60\ \text{V}\), and the frequency is
+\[
+f=\frac{\omega}{2\pi}=\frac{200\pi}{2\pi}=100\ \text{Hz}.
+\]
+(Options C and G are identical.)
+
+Answer: C",completed,276,114,reasoning_tokens=15,C,False,0.001692,,2026-11-12T02:27:15+00:00
+95,6f96efa7f63842f5b105d860ecb9e6eb,middle,Science,C,gpt-6.1-terra,2.788229958852753,"Since \(I=\tfrac12 MR^2\), to first order in the expansion,
+\[
+\frac{\Delta I}{I}\approx 2\frac{\Delta R}{R},
+\]
+which gives **C**.
+
+However, the question is ambiguous: conservation of angular momentum also gives \(\Delta\omega/\omega_0\approx-2\alpha\Delta T\), so **D** is correct to the same approximation.
+
+Answer: C",completed,389,161,reasoning_tokens=60,C,True,0.001194,,2026-11-12T02:27:15+00:00
+96,8bc03731483e47f69c9169b2afac68ab,easy,Engineering,H,gpt-6.1-terra,1.2844669581390917,"Blackbody directional radiation intensity is independent of direction.
+
+Answer: H",completed,127,34,reasoning_tokens=15,H,True,0.000297,,2026-11-12T02:27:18+00:00
+97,8ced55a98f3c4940856180c697f97f7b,middle,Engineering,H,gpt-6.1-terra,1.5489093330688775,"A nonsingular linear change of coordinates preserves controllability. In the standard linear-system setting, external disturbances do not change the controllability of the system with respect to its control input.
+
+Answer: H",completed,350,43,reasoning_tokens=0,H,True,0.000565,,2026-11-12T02:27:19+00:00
+61,43b85949f89c4ced866cc8222329c0d5,hard,Science,E,gpt-6.1-sol,3.8775838748551905,"By the Heisenberg uncertainty principle,
+\[
+\Delta x\,\Delta p\geq \frac{\hbar}{2},
+\qquad \Delta p=m\Delta v.
+\]
+The minimum velocity uncertainty is therefore
+\[
+\Delta v_{\min}=\frac{\hbar}{2m\Delta x}.
+\]
+Using \(\Delta x=0.1\,\mu\mathrm m=10^{-7}\,\mathrm m\),
+\[
+\Delta v_{\min}
+=\frac{1.055\times10^{-34}}{2(10^{-13})(10^{-7})}
+\approx5.3\times10^{-15}\,\mathrm{m/s}.
+\]
+This corresponds to option I.
+
+Answer: I",completed,398,213,reasoning_tokens=52,I,False,0.002926,,2026-11-12T02:27:17+00:00
+62,4b451034c8114602b8a0f9fd4cd32766,middle,Engineering,E,gpt-6.1-sol,2.2703554169274867,"A differential amplifier uses matched transistors so that temperature-induced changes largely cancel, reducing temperature drift in the output.
+
+Answer: E",completed,127,45,reasoning_tokens=14,E,True,0.000704,,2026-11-12T02:27:21+00:00
+98,c744fc6d46804983959695ccb036806a,middle,Science,C,gpt-6.1-terra,3.1710359579883516,"The face-centred cubic unit cell has atoms at 8 corners and 6 face centres, for 14 atom positions. Accounting for sharing with neighbouring cells, it contains 4 atoms effectively.
+
+Answer: C",completed,148,160,reasoning_tokens=112,C,True,0.000948,,2026-11-12T02:27:21+00:00
+99,e5e76ea416b64e209a51d8bba6166806,middle,Engineering,F,gpt-6.1-terra,2.7628927079495043,"As evaporator temperature decreases, evaporator pressure falls. For a given condensation temperature, this increases the required compression ratio.
+
+Answer: F",completed,140,142,reasoning_tokens=109,F,True,0.00085,,2026-11-12T02:27:24+00:00
+63,616a83b2d66a4b3b982c9faae1af622e,middle,Science,G,gpt-6.1-sol,5.248635041993111,"The maximum non-expansion work obtainable at constant temperature and pressure is the decrease in Gibbs energy:
+\[
+w_{\max,\mathrm{nonexp}}=-\Delta G^\circ.
+\]
+
+Using standard Gibbs energies of formation (in \(\mathrm{kJ\,mol^{-1}}\)),
+\[
+\Delta_rG^\circ
+=6(-394.4)+6(-228.6)-(-910.5)
+\approx-2827.5\ \mathrm{kJ\,mol^{-1}}.
+\]
+
+The amount of glucose is
+\[
+n=\frac{2000\ \mathrm{g}}{180.16\ \mathrm{g\,mol^{-1}}}
+\approx11.10\ \mathrm{mol}.
+\]
+
+Therefore,
+\[
+w_{\max,\mathrm{nonexp}}
+=(11.10)(2827.5)
+\approx3.1\times10^4\ \mathrm{kJ}.
+\]
+
+Answer: G",completed,437,252,reasoning_tokens=49,G,True,0.003394,,2026-11-12T02:27:23+00:00
+100,37bee659d0f24b6bbb7cf0019b18266b,hard,Science,J,gpt-6.1-terra,3.06321783317253,"The critical points are \((0,0)\) and \((-1,-1)\). The Hessian shows that \((0,0)\) is a saddle point and \((-1,-1)\) is a local maximum.
+
+Thus **D is correct**, but J is also correct with \(P\) and \(Q\) interchanged. The question does not have only one correct answer.
+
+Answer: D",completed,209,187,reasoning_tokens=96,D,False,0.001144,,2026-11-12T02:27:27+00:00
+101,7352d8d0aadc4cb88b39e90896626804,middle,Medicine,C,gpt-6.1-terra,3.0362751248758286,"The San Jiao is the main pathway for the movement of body fluids (Jinbo) and Yuanqi.
+
+Answer: C",completed,111,71,reasoning_tokens=39,C,True,0.000466,,2026-11-12T02:27:30+00:00
+102,8cd24612957d419ba2004dbe384acb7e,middle,Law,E,gpt-6.1-terra,1.6818723338656127,"The defendant waived its objection to the number of interrogatories by answering them without objecting.
+
+Answer: E",completed,359,51,reasoning_tokens=24,E,True,0.000614,,2026-11-12T02:27:33+00:00
+103,97a25d6720af4713a2e3b05199169bbe,easy,Engineering,J,gpt-6.1-terra,2.6942078748252243,"Good clusters have high similarity among members of the same class.
+
+Answer: J",completed,127,98,reasoning_tokens=77,J,True,0.000617,,2026-11-12T02:27:35+00:00
+104,01c23fbbdaea44d8ae31c98c54cb4243,middle,Science,C,gpt-6.1-terra,1.8081209170632064,"The isothermal atmospheric pressure-height equation relates pressure to height and is used for these calculations.
+
+Answer: C",completed,159,65,reasoning_tokens=38,C,True,0.000484,,2026-11-12T02:27:37+00:00
+64,ac53fc0afe4a43a2ad48ce3acfb33c39,easy,Literature and Arts,J,gpt-6.1-sol,14.15963950008154,Answer: J,completed,147,426,reasoning_tokens=417,J,True,0.004554,,2026-11-12T02:27:29+00:00
+105,9f79b51e78f14c82b122ffe3ea213d36,hard,Science,F,gpt-6.1-terra,8.084887374890968,"Differentiating and simplifying gives
+\[
+y'=\frac{1}{\sin^2(x)\cos^6(x)}.
+\]
+Both E and F express this result, so the choices are not unique.
+
+Answer: F",completed,299,521,reasoning_tokens=467,F,True,0.002904,,2026-11-12T02:27:39+00:00
+106,8eb4ca49282b46429ea96961378e56d5,easy,Science,E,gpt-6.1-terra,1.334982416126877,"Physiological density is the number of people per unit of agriculturally usable land.
+
+Answer: E",completed,120,25,reasoning_tokens=0,E,True,0.000245,,2026-11-12T02:27:47+00:00
+107,729103e93cda40b59f19784283c98914,easy,Medicine,H,gpt-6.1-terra,2.0981572919990867,"The physical features suggest Marfan syndrome, which commonly causes dilation of the aortic root.
+
+Answer: H",completed,188,75,reasoning_tokens=48,H,True,0.000563,,2026-11-12T02:27:49+00:00
+65,3897ab262fe9400da64efe756bb06bac,hard,Science,J,gpt-6.1-sol,8.378503584070131,"For a Lennard–Jones solid, the energy per molecule in an fcc lattice is
+\[
+u(r)=2\varepsilon\left[A_{12}\left(\frac{\sigma}{r}\right)^{12}
+-A_6\left(\frac{\sigma}{r}\right)^6\right],
+\]
+where \(r\) is the nearest-neighbor distance, \(A_{12}=12.13\), and \(A_6=14.45\). The factor \(1/2\) for counting each pair once is included.
+
+Minimizing with respect to \(r\) gives
+\[
+\left(\frac{\sigma}{r}\right)^6=\frac{A_6}{2A_{12}},
+\qquad
+u_{\min}=-\frac{A_6^2}{2A_{12}}\varepsilon
+\approx-8.61\varepsilon.
+\]
+
+Since
+\[
+\varepsilon=50\times10^{-16}\ \mathrm{erg}
+=5.0\times10^{-22}\ \mathrm{J},
+\]
+the molar energy is
+\[
+U_{\min}=-8.61(5.0\times10^{-22})(6.022\times10^{23})
+\approx-2.59\ \mathrm{kJ/mol}.
+\]
+
+The closest listed value is **J**, \(-2.55\ \mathrm{kJ/mol}\). The calculated binding-energy magnitude is about **3.4 times** the experimental \(0.751\ \mathrm{kJ/mol}\). This classical calculation overestimates binding, notably because it neglects the substantial quantum zero-point motion of light hydrogen molecules.
+
+Answer: J",completed,472,476,reasoning_tokens=116,J,True,0.005704,,2026-11-12T02:27:43+00:00
+108,1e295b4894fc4eecb7a96f96dd2f183f,middle,Science,H,gpt-6.1-terra,2.225695624947548,"Linear dependence requires the determinant to be zero:
+
+\[
+\det\begin{pmatrix}
+k & -2 & -\frac12\\
+1 & 2 & -3\\
+4 & 1 & 0
+\end{pmatrix}
+=3k+\frac{55}{2}=0.
+\]
+
+Thus \(k=-\frac{55}{6}\).
+
+Answer: H",completed,319,129,reasoning_tokens=41,H,True,0.000964,,2026-11-12T02:27:51+00:00
+66,329f130a773c43fe8bef4fdac24bc1b9,middle,Science,C,gpt-6.1-sol,3.1434412919916213,"Using the Henderson–Hasselbalch equation,
+\[
+pH=pK_a+\log\frac{[A^-]}{[HA]}.
+\]
+Here,
+\[
+pK_a=-\log(2.0\times10^{-5})=4.699,
+\]
+so
+\[
+\frac{[A^-]}{[HA]}=10^{4.4-4.699}\approx0.502.
+\]
+
+The solution contains \(0.1\times1=0.1\) mol of \(HA\). Thus, approximately \(0.0502\) mol of \(NaA\) is needed:
+\[
+m=0.0502\times100=5.02\ \text{g}\approx5.0\ \text{g}.
+\]
+
+Answer: C",completed,218,191,reasoning_tokens=13,C,True,0.002346,,2026-11-12T02:27:51+00:00
+109,e3d9ccb6351a4a06aacb5e0ed6260534,middle,Engineering,C,gpt-6.1-terra,2.2579162498004735,"The request and response each travel up to the satellite and back down, for a total distance of \(4 \times 22{,}500 = 90{,}000\) km.
+
+At 300,000 km/s, the minimum delay is \(90{,}000 / 300{,}000 = 0.3\) seconds, or 300 ms.
+
+Answer: C",completed,217,109,reasoning_tokens=21,C,True,0.000762,,2026-11-12T02:27:53+00:00
+67,cffab014553d48228b5b62c8497affc7,hard,Science,E,gpt-6.1-sol,2.500514042098075,"A probability density must be nonnegative and integrate to \(1\). For option E, both terms are nonnegative, and
+\[
+f_1(x)F_2(x)+f_2(x)F_1(x)
+=\frac{d}{dx}\bigl(F_1(x)F_2(x)\bigr).
+\]
+Thus its integral over \(\mathbb R\) is
+\[
+\left[F_1(x)F_2(x)\right]_{-\infty}^{\infty}
+=1\cdot1-0\cdot0=1.
+\]
+Therefore, this expression must be a probability density.
+
+Answer: E",completed,587,144,reasoning_tokens=0,E,True,0.002614,,2026-11-12T02:27:54+00:00
+110,146747fd2f6d4caca5ec3101c03104aa,middle,Engineering,I,gpt-6.1-terra,1.7167197919916362,"A fluidised bed freezer is well suited to small, uniformly sized products that can be frozen individually.
+
+Answer: I",completed,128,49,reasoning_tokens=20,I,True,0.000373,,2026-11-12T02:27:55+00:00
+111,e53fb10c526b4d2a9033e3d8025ad9ce,middle,Science,F,gpt-6.1-terra,2.854039957979694,"A has stronger intermolecular forces, so it has a lower pure-component vapour pressure than B. By Raoult’s law, the vapour is therefore depleted in A: \(X'_A/X_A<1\).
+
+This also makes option A true, so the question is not strictly single-answer. The intended choice is G.
+
+Answer: G",completed,337,110,reasoning_tokens=33,G,False,0.000887,,2026-11-12T02:27:57+00:00
+68,3b370bbe4405431bbe1a977ea55eacf3,middle,Law,A,gpt-6.1-sol,2.9760117910336703,"Nationality is ineffective in resolving interregional legal conflicts because the regions belong to the same country, so shared nationality does not identify which region’s law applies.
+
+Answer: A",completed,119,64,reasoning_tokens=25,A,True,0.000878,,2026-11-12T02:27:57+00:00
+112,874a9474b9ed4b19b4013f26f145880c,easy,Management,J,gpt-6.1-terra,3.1730139169376343,"The seller’s reproduction of the buyer’s sample is a **duplicate sample** (also called a counter sample).
+
+Answer: G",completed,124,142,reasoning_tokens=111,G,False,0.000834,,2026-11-12T02:28:00+00:00
+69,8652fa26377a4f7ea855762c364fa1c8,middle,Economics,C,gpt-6.1-sol,3.812933708075434,"The sub-port tax (子口税) was an inland transit tax on foreign goods, typically paid at half the regular customs duty rate to exempt them from further inland levies.
+
+Answer: C",completed,192,87,reasoning_tokens=42,C,True,0.001254,,2026-11-12T02:28:00+00:00
+113,7becb6c49d3d402686a0eafc9041a91f,hard,Science,B,gpt-6.1-terra,2.558764792047441,"The photon energy is \(E = 1240/31 = 40\,\text{eV}\). Thus,
+
+\[
+K_{\max}=40-12.8=27.2\,\text{eV},
+\qquad
+v_{\max}=\sqrt{\frac{2K_{\max}}{m_e}}
+=2.18\sqrt{2}\times10^6\,\text{m/s}.
+\]
+
+Answer: B",completed,297,135,reasoning_tokens=35,B,True,0.000972,,2026-11-12T02:28:03+00:00
+70,ba440a19bd824af9a9fae49b0593d9cb,middle,Science,F,gpt-6.1-sol,2.5275250000413507,"The white-fruited parent must be heterozygous (\(Ww\)), and the yellow-fruited parent must be homozygous recessive (\(ww\)). Crossing \(Ww \times ww\) produces 50% \(Ww\) (white) and 50% \(ww\) (yellow).
+
+Answer: F",completed,211,91,reasoning_tokens=15,F,True,0.001332,,2026-11-12T02:28:04+00:00
+114,c2b95606a3474d8f83668bc523975dc1,hard,Science,C,gpt-6.1-terra,2.5221666251309216,"\(f''(x)=\frac{8(x+3)}{x^4}\), which changes sign at \(x=-3\). Since \(f(-3)=-\frac{26}{9}\), the inflection point is \(\left(-3,-\frac{26}{9}\right)\).
+
+Answer: H",completed,177,143,reasoning_tokens=68,H,False,0.000892,,2026-11-12T02:28:05+00:00
+71,ed970b5e848b4e08a8df7bac7e2a80eb,easy,Science,G,gpt-6.1-sol,1.9209435831289738,"Geochemical affinity describes an element’s ability to form cations and its preference for bonding with particular anions, influencing its distribution among minerals.
+
+Answer: G",completed,257,52,reasoning_tokens=15,G,True,0.001034,,2026-11-12T02:28:06+00:00
+72,02e993311f05413ca04e490d794884e1,easy,Engineering,B,gpt-6.1-sol,2.504524416057393,"A thermodynamic system’s boundaries are chosen according to the problem’s needs and the convenience of the analysis method.
+
+Answer: B",completed,143,51,reasoning_tokens=20,B,True,0.000796,,2026-11-12T02:28:08+00:00
+115,ff998459bc604670bb0cb1185f7e2f28,hard,Science,E,gpt-6.1-terra,3.8043987080454826,"The last digit must be \(0\) or \(5\), giving 2 choices. The first digit has 9 choices.
+
+For any fixed first and last digits, the sum of the eight middle digits is equally distributed among the five residue classes modulo 5. Thus \(10^8/5\) choices give a total digit sum divisible by 5.
+
+Therefore,
+\[
+n=9\cdot 2\cdot \frac{10^8}{5}
+=360{,}000{,}000
+=2^9\cdot 3^2\cdot 5^7.
+\]
+The number of divisors is
+\[
+(9+1)(2+1)(7+1)=240.
+\]
+
+Answer: E",completed,135,266,reasoning_tokens=101,E,True,0.001465,,2026-11-12T02:28:08+00:00
+116,f6e3a7bb606943a7b2b8bf460772fa19,middle,Science,D,gpt-6.1-terra,2.905890124849975,"By Coulomb’s law,
+
+\[
+q_1q_2=\frac{Fr^2}{k}
+=\frac{(48\times10^{-3})(3^2)}{9\times10^9}
+=48\,(\mu\text{C})^2.
+\]
+
+The charges with sum \(16\,\mu\text{C}\) and product \(48\,(\mu\text{C})^2\) are \(12\,\mu\text{C}\) and \(4\,\mu\text{C}\).
+
+Answer: F",completed,265,156,reasoning_tokens=31,F,False,0.001045,,2026-11-12T02:28:12+00:00
+73,a4466c023959488aa046e6a975ab9a06,easy,Literature and Arts,F,gpt-6.1-sol,5.868674749974161,Answer: E,completed,279,200,reasoning_tokens=191,E,False,0.002558,,2026-11-12T02:28:11+00:00
+117,390b5fa49d48415d87072d1d0ea39b3e,hard,Engineering,G,gpt-6.1-terra,2.641022542025894,"The positive x-axis values follow \(a(n)=4n^2+3n+1\). Substituting \(n=38,\ldots,47\) gives the sequence in option G.
+
+Answer: G",completed,588,133,reasoning_tokens=82,G,True,0.001253,,2026-11-12T02:28:15+00:00
+74,3e77c7c944c14b2197c15b5f7b24b66b,hard,Science,G,gpt-6.1-sol,5.885707249864936,"Expanding and dividing by \(2^{2a+2b+4}\) gives
+\[
+2^{2a-2b-1}+2^{a+b-10}+2^{6-a-b}+2^{2b-2a-3}=1.
+\]
+By AM–GM,
+\[
+2^{2a-2b-1}+2^{2b-2a-3}\ge 2\sqrt{2^{-4}}=\frac12,
+\]
+and
+\[
+2^{a+b-10}+2^{6-a-b}\ge 2\sqrt{2^{-4}}=\frac12.
+\]
+Since their total is exactly \(1\), equality must hold in both inequalities. Thus
+\[
+2a-2b-1=2b-2a-3,\qquad a+b-10=6-a-b,
+\]
+so
+\[
+a-b=-\frac12,\qquad a+b=8.
+\]
+Therefore \(a=\frac{15}{4}\), \(b=\frac{17}{4}\), and
+\[
+ab=\frac{255}{16}.
+\]
+The fraction is reduced, giving \(m+n=255+16=271\).
+
+Answer: G",completed,191,433,reasoning_tokens=169,G,True,0.004712,,2026-11-12T02:28:16+00:00
+118,40dab16a43d7435bae1b4a75192703b4,hard,Engineering,C,gpt-6.1-terra,5.760409374954179,"Using the front unsprung mass, the angular frequency is approximately \(\sqrt{10000/25}=20\ \text{rad/s}\). The closest choice is 19.78, though the question’s “Hz” unit is inconsistent with angular frequency.
+
+Answer: F",completed,234,319,reasoning_tokens=257,F,False,0.001829,,2026-11-12T02:28:17+00:00
+75,da0c6931b5fe4adf922e0e15bac3cac1,middle,Engineering,E,gpt-6.1-sol,1.9192201250698417,"HBase identifies each value by its **row key, column family, column qualifier, and timestamp**, in that order.
+
+Answer: B",completed,198,31,reasoning_tokens=0,B,False,0.000706,,2026-11-12T02:28:22+00:00
+119,05ab770fbfb64a4e9c714389428800e4,easy,Engineering,B,gpt-6.1-terra,1.2617054998409003,Answer: B,completed,125,28,reasoning_tokens=19,B,True,0.000265,,2026-11-12T02:28:23+00:00
+120,f4aa55ba8d064c809455e8d881af9d6b,middle,Science,B,gpt-6.1-terra,1.4715106659568846,"Dividing numerator and denominator by \(3^n\), the terms involving \((2/3)^n\) vanish. The limit is \(\frac{1/3}{-1}=-\frac13\).
+
+Answer: B",completed,217,53,reasoning_tokens=0,B,True,0.000482,,2026-11-12T02:28:24+00:00
+121,70a177536cd94e23897c1edc97bdec91,middle,Science,B,gpt-6.1-terra,1.5094850410241634,"Noise is generally treated as a stationary random process, while reverberation is non-stationary. The equations given correspond to reverberation-limited and noise-limited sonar, respectively.
+
+Answer: B",completed,434,45,reasoning_tokens=0,B,True,0.000659,,2026-11-12T02:28:26+00:00
+76,43564ffadaef44bd92b2d7322e9cb29d,hard,Engineering,J,gpt-6.1-sol,3.199111209018156,"The series current is
+\[
+I=\sqrt{\frac{P_2}{R_2}}=\sqrt{\frac{0.1}{1000}}=0.01\ \text{A}.
+\]
+
+Thus, the actual voltages are
+\[
+U_1=1\text{ V},\qquad U_2=10\text{ V},\qquad U_3=100\text{ V}.
+\]
+
+Using \(U_{\mathrm{rated}}=\sqrt{P_{\mathrm{rated}}R}\), the respective rated voltages are \(5\text{ V}\), \(15.8\text{ V}\), and \(50\text{ V}\). Therefore,
+\[
+U_1<U_{\mathrm{1H}},\qquad U_2<U_{\mathrm{2H}},\qquad U_3>U_{\mathrm{3H}}.
+\]
+
+Answer: J",completed,542,197,reasoning_tokens=0,J,True,0.003054,,2026-11-12T02:28:24+00:00
+122,260b544384934fc1b246e9912b49d4e6,easy,Literature and Arts,F,gpt-6.1-terra,1.5619298750534654,Answer: F,completed,158,37,reasoning_tokens=28,F,True,0.000343,,2026-11-12T02:28:27+00:00
+77,1ec620bd5816462290d81bf0ffe11d10,middle,Literature and Arts,H,gpt-6.1-sol,4.191595749929547,Answer: I,completed,144,126,reasoning_tokens=117,I,False,0.001548,,2026-11-12T02:28:27+00:00
+123,d7f9b5a785a94530a9e737656ec0dcaa,hard,Science,B,gpt-6.1-terra,3.3355628750286996,"At the threshold for complete conversion, the reaction has consumed 0.1 mol each of CO₂ and H₂O. If \(x\) is the amount of CO₂ introduced, the remaining amounts are \(x-0.1\) mol CO₂ and \(0.1\) mol H₂O.
+
+Using \(p_i=n_iRT/V\) and the standard pressure \(p^\Theta=100\ \mathrm{kPa}\),
+
+\[
+0.231=\left(\frac{RT}{Vp^\Theta}\right)^2(0.1)(x-0.1).
+\]
+
+At 373 K, \(RT/(Vp^\Theta)\approx 3.10\ \mathrm{mol^{-1}}\), giving \(x\approx 0.34\ \mathrm{mol}\).
+
+Answer: B",completed,497,229,reasoning_tokens=54,B,True,0.001642,,2026-11-12T02:28:29+00:00
+124,b2765e178196465eba0852003bb75538,middle,Medicine,F,gpt-6.1-terra,1.8504491669591516,"Dendritic cells initiate Tfh differentiation, with IL-6 and IL-21 promoting the process.
+
+Answer: D",completed,238,79,reasoning_tokens=49,D,False,0.000633,,2026-11-12T02:28:32+00:00
+125,2e77a1c361f44816baeff50011d27831,middle,Science,D,gpt-6.1-terra,1.9773785420693457,"For free-radical polymerization with termination entirely by coupling, the molecular weight distribution index at low conversion is **1.5**.
+
+Answer: D",completed,149,57,reasoning_tokens=20,D,True,0.000434,,2026-11-12T02:28:34+00:00
+78,4d66e55a804b48dcb25aa4470f1967d8,middle,Science,B,gpt-6.1-sol,4.686766333179548,"Because the tube has constant cross-sectional area, each liquid occupies a total tube length of \(36\text{ cm}\).
+
+When the interface is at the midpoint of the horizontal base, each liquid occupies \(18\text{ cm}\) of the base. Therefore, each also forms a vertical column of height
+\[
+h=36-18=18\text{ cm}=0.18\text{ m}.
+\]
+
+Equating pressures at the oil–water interface,
+\[
+P_{\mathrm{atm}}+\rho_o gh=P_{\mathrm{gas}}+\rho_w gh.
+\]
+Thus the gas gauge pressure is
+\[
+P_{\mathrm{gas}}-P_{\mathrm{atm}}
+=(800-1000)(9.8)(0.18)
+=-352.8\text{ Pa}\approx-353\text{ Pa}.
+\]
+
+Answer: B",completed,355,227,reasoning_tokens=41,B,True,0.00298,,2026-11-12T02:28:32+00:00
+126,be0a3aef02e449e298936d3080730f3b,easy,Engineering,E,gpt-6.1-terra,2.770007292041555,"Categorical comparison overlays categorical map layers to compare their spatial relationships.
+
+Answer: D",completed,112,113,reasoning_tokens=91,D,False,0.000677,,2026-11-12T02:28:36+00:00
+79,d308ef75f3754c2ba761534562dbe244,easy,Science,I,gpt-6.1-sol,3.4001660419162363,"Changing the objective coefficient \(c_j\) of a non-basic variable changes its reduced cost,
+\[
+\bar c_j=c_j-c_B^{T}B^{-1}a_j.
+\]
+The current basic solution, simplex multipliers, and objective value remain unchanged because \(x_j=0\).
+
+Answer: I",completed,147,90,reasoning_tokens=18,I,True,0.001194,,2026-11-12T02:28:36+00:00
+127,fd7ba6b99edd4a8cbd1f44482eaf4ed9,middle,Engineering,E,gpt-6.1-terra,4.408407999901101,"The composite contains 57.4% \(\mathrm{Al_2O_3}\) and 42.6% \(\mathrm{ZrO_2}\) by mass.
+
+- Al: \(57.4\%\times \frac{54}{102}=30.4\%\)
+- Zr: \(42.6\%\times \frac{91.2}{123.2}=31.5\%\)
+- O: \(100\%-30.4\%-31.5\%=38.1\%\)
+
+Answer: E",completed,401,160,reasoning_tokens=37,E,True,0.001201,,2026-11-12T02:28:39+00:00
+80,f8e673e369e9436eae9295460df53fa9,easy,Literature and Arts,F,gpt-6.1-sol,4.607070583151653,Answer: F,completed,134,103,reasoning_tokens=94,F,True,0.001298,,2026-11-12T02:28:40+00:00
+128,184beb4beec2451d80070c8f33c5ab79,easy,Science,G,gpt-6.1-terra,2.4439285420812666,"Lagrange strongly opposed Fourier’s claim that arbitrary functions could be represented by trigonometric series.
+
+Answer: G",completed,107,55,reasoning_tokens=26,G,True,0.000382,,2026-11-12T02:28:43+00:00
+81,cbe0b9f1ef0b4cf1824f390639ce4c70,middle,Medicine,A,gpt-6.1-sol,7.4733892909716815,"**B) Breast Cancer.** Breast cancer cells can downregulate HLA class I expression, helping them evade recognition by cytotoxic T cells.
+
+Answer: B",completed,111,189,reasoning_tokens=150,B,False,0.002112,,2026-11-12T02:28:44+00:00
+129,1f34296d31a14eb3910b05a047c17ffa,middle,Science,E,gpt-6.1-terra,9.419619041960686,"**C and I both appear correct.** Each acid has at least one X=O bond and an X–O–X linkage: the first two are open-chain acids, while H₃P₃O₉ is cyclic. Thus the question does not have a unique answer as written.
+
+Answer: C",completed,178,586,reasoning_tokens=516,C,False,0.003108,,2026-11-12T02:28:46+00:00
+130,230b7259b76343eea138c4890b932108,middle,Science,J,gpt-6.1-terra,2.1473179580643773,"For a plane wave, \(I=p_{\mathrm{eff}}^{2}/(\rho c)\). With corresponding reference values, the sound intensity level and sound pressure level are equal: \(\mathrm{IL}=\mathrm{SPL}\).
+
+Answer: J",completed,346,57,reasoning_tokens=0,J,True,0.000631,,2026-11-12T02:28:55+00:00
+82,369e463e182d46a8bf06418354f7b7d2,hard,Science,J,gpt-6.1-sol,7.617054334143177,"Deuterium survives once photodissociation becomes ineffective. Because photons outnumber baryons by roughly \(10^9\), the temperature must be much smaller than the binding energy \(Q=2.22\,\mathrm{MeV}\).
+
+The equilibrium abundance scales approximately as
+\[
+\frac{n_d}{n_n}\sim \eta
+\left(\frac{kT}{m_Nc^2}\right)^{3/2}
+e^{Q/(kT)},
+\]
+up to numerical factors, where \(\eta\sim 10^{-9}\). Requiring a substantial deuterium abundance gives \(Q/(kT)\sim 30\text{–}40\), hence
+\[
+kT\sim \frac{2.22}{30\text{–}40}\,\mathrm{MeV}
+\sim 0.06\text{–}0.07\,\mathrm{MeV}.
+\]
+The closest option is \(0.06\,\mathrm{MeV}\).
+
+Answer: J",completed,316,293,reasoning_tokens=72,J,True,0.003562,,2026-11-12T02:28:52+00:00
+83,c56aaca8d684429c8a9a9c827ff92e39,middle,Medicine,C,gpt-6.1-sol,2.825948208104819,"The **C7 spinal nerve** is most likely injured. C7 radiculopathy can cause weakness of wrist extension and sensory disturbances along the posterior arm and forearm, often extending toward the middle finger.
+
+Answer: C",completed,129,88,reasoning_tokens=38,C,True,0.001138,,2026-11-12T02:28:59+00:00
+131,b0c962e65001442ea12ea33cf2ab3c25,hard,Engineering,E,gpt-6.1-terra,5.53009512508288,"Using the ideal-gas equation, the mass of air used is
+
+\[
+m=\frac{(p_1-p_2)V}{RT}
+=\frac{(8-0.46)\times10^6(0.3)}{287(303)}
+\approx 26.0\ \text{kg}.
+\]
+
+None of the choices matches the stated data. Choice E would result if the final pressure were **4.6 MPa**, rather than 0.46 MPa.
+
+Answer: None of the above",completed,270,343,reasoning_tokens=228,,False,0.001985,,2026-11-12T02:28:57+00:00
+84,2adca578b9b74511a354ec60d6a491a2,middle,Engineering,A,gpt-6.1-sol,2.5776630830951035,"Ore/oil carriers carry ore in reinforced center holds. When carrying oil, they use wing tanks and some center tanks.
+
+Answer: A",completed,119,51,reasoning_tokens=18,A,True,0.000748,,2026-11-12T02:29:02+00:00
+132,875332548d544bd6b43eb97ecf95c040,middle,Science,F,gpt-6.1-terra,2.2463225829415023,"The inequality \(|n|<|n-3|\) gives \(n<\frac32\), while \(|n-3|<9\) gives \(n>-6\). Thus the integer solutions are \(-5,-4,-3,-2,-1,0,1\), whose sum is \(-14\).
+
+Answer: F",completed,118,122,reasoning_tokens=43,F,True,0.000728,,2026-11-12T02:29:03+00:00
+133,37403c03f97d448eab5fd617df82ddfe,middle,Science,B,gpt-6.1-terra,2.3639105421025306,"Assuming the angles are in degrees,
+
+\[
+E=\frac{\cos 10^\circ-\sqrt3\sin 10^\circ}{\sin 10^\circ\cos 10^\circ}
+=\frac{2\cos 70^\circ}{\tfrac12\sin 20^\circ}
+=4.
+\]
+
+Answer: B",completed,148,118,reasoning_tokens=40,B,True,0.000738,,2026-11-12T02:29:05+00:00
+85,e8802864001647569f1567674fea611b,middle,Engineering,G,gpt-6.1-sol,4.571092583006248,"The void ratio (pore ratio) is found from
+\[
+\gamma=\frac{G_s\gamma_w(1+w)}{1+e}.
+\]
+Taking \(\gamma_w \approx 10\ \text{kN/m}^3\),
+\[
+e=\frac{2.65(10)(1+0.205)}{19.8}-1
+  \approx 0.613.
+\]
+
+The relative density is
+\[
+D_r=\frac{e_{\max}-e}{e_{\max}-e_{\min}}
+=\frac{0.625-0.613}{0.625-0.486}
+\approx 0.086=8.6\%.
+\]
+
+Since the relative density is below \(15\%\), the soil is **very loose**, corresponding to “extremely loose” in option C.
+
+Answer: C",completed,223,241,reasoning_tokens=54,C,False,0.002856,,2026-11-12T02:29:05+00:00
+134,83c46315de994227bf7527bd1fb2c47a,middle,Medicine,C,gpt-6.1-terra,2.349838250083849,"The opacity is caused by **lecithinase (alpha toxin)** acting on egg-yolk lecithin. Lecithinase is also called **phospholipase C**, so options C and D refer to the same enzyme.
+
+Answer: C",completed,134,106,reasoning_tokens=48,C,True,0.000664,,2026-11-12T02:29:07+00:00
+135,208c4119cc264841b1567ae3fa57b0dc,middle,Engineering,A,gpt-6.1-terra,2.8666347910184413,"The resistance coefficient is conventionally referenced to the velocity in the narrower pipe, A.
+
+Answer: A",completed,192,115,reasoning_tokens=89,A,True,0.000767,,2026-11-12T02:29:10+00:00
+86,718246a557084a1fbe7c770bcde894fc,easy,Philosophy,D,gpt-6.1-sol,3.6351245420519263,"C is incorrect. The ratio **7:4** produces a *harmonic seventh*, which is flatter than the conventional minor seventh. The ratio **3:5** between string lengths produces a major sixth.
+
+Answer: C",completed,138,96,reasoning_tokens=45,C,False,0.001236,,2026-11-12T02:29:09+00:00
+87,bdfecaac7afb4e60a4179faf3a749b71,middle,Medicine,F,gpt-6.1-sol,2.420320542063564,"CNS infection can spread to the inner ear through the **cochlear aqueduct**, which connects the subarachnoid space with the perilymphatic space of the cochlea.
+
+Answer: F",completed,131,72,reasoning_tokens=25,F,True,0.000982,,2026-11-12T02:29:13+00:00
+136,fdeb6306d8df4979aa65b22631c9f998,hard,Engineering,B,gpt-6.1-terra,4.4534391250927,"At the limiting height, the outflow rate equals the inflow rate. Using Torricelli’s law,
+
+\[
+100=2\sqrt{2gh}
+\]
+
+with rates and areas in centimetre units and \(g=1000\,\mathrm{cm/s^2}\). Thus,
+
+\[
+h=\frac{50^2}{2(1000)}=1.25\,\mathrm{cm}
+=1.25\times10^{-2}\,\mathrm m.
+\]
+
+This exact value is not listed; **F is the closest choice**.
+
+Answer: F",completed,269,225,reasoning_tokens=99,F,False,0.001394,,2026-11-12T02:29:13+00:00
+137,3e4c12057c7c478dae9526a6b92ebb04,hard,Engineering,E,gpt-6.1-terra,2.507387208053842,"The tangential velocity is
+\[
+v_\theta=-\frac{\partial\psi}{\partial r}
+=-U_\infty\left(1+\frac{a^2}{r^2}\right)\sin\theta.
+\]
+On the cylinder, \(r=a\), at \(\theta=90^\circ\), this gives \(v_\theta=-2U_\infty\).
+
+Answer: E",completed,299,127,reasoning_tokens=34,E,True,0.000934,,2026-11-12T02:29:17+00:00
+88,7c16b18118ce424eb467014032a775d8,easy,Education,H,gpt-6.1-sol,5.632427416974679,"The probability is
+\[
+\frac{288}{500}=\frac{144}{250}=0.576.
+\]
+This matches A. (H is also equivalent, so the options contain a duplicate correct value.)
+
+Answer: A",completed,196,98,reasoning_tokens=44,A,False,0.001372,,2026-11-12T02:29:15+00:00
+89,2e273e9a0669419cad779d93955dd9a0,middle,Medicine,F,gpt-6.1-sol,2.6617494160309434,"Paroxysmal nocturnal dyspnea is characteristic of **chronic left heart dysfunction**. Lying down increases venous return and redistributes fluid toward the lungs, worsening pulmonary congestion and causing sudden nighttime breathlessness.
+
+Answer: B",completed,128,76,reasoning_tokens=22,B,False,0.001016,,2026-11-12T02:29:21+00:00
+138,0fd95e486d0042d3b120a0609d306fc7,middle,Engineering,G,gpt-6.1-terra,5.938372333068401,Answer: F,completed,114,272,reasoning_tokens=263,F,False,0.001474,,2026-11-12T02:29:20+00:00
+90,fc3deb8167d34b6fb367fdc5ebd5b796,easy,Literature and Arts,B,gpt-6.1-sol,2.864556167041883,"The pitch G has two enharmonic equivalents: F𝄪 (F double-sharp) and A𝄫 (A double-flat).
+
+Answer: D",completed,76,59,reasoning_tokens=20,D,False,0.000742,,2026-11-12T02:29:24+00:00
+139,d94c7517b02943f1ae1d6d136e335ff0,hard,Science,H,gpt-6.1-terra,2.6503641670569777,"Assuming Neptune absorbs sunlight as a blackbody and radiates uniformly over its surface, its solar flux is
+
+\[
+J_N=1400\left(\frac{1.5\times10^8}{4.5\times10^9}\right)^2
+\approx 1.56\ \mathrm{W/m^2}.
+\]
+
+Using \(J_N/4=\sigma T^4\) gives \(T\approx 51\ \mathrm K\), closest to 52 K.
+
+Answer: H",completed,242,157,reasoning_tokens=43,H,True,0.001027,,2026-11-12T02:29:26+00:00
+91,6271feca2aac4c6693f2e374e5326ee0,easy,Management,E,gpt-6.1-sol,6.450412582838908,"E) UNFPA supports innovative approaches to family planning and maternal and child health (MCH) care.
+
+Answer: E",completed,178,158,reasoning_tokens=127,E,True,0.001936,,2026-11-12T02:29:27+00:00
+140,a6910a7baedd408db72c325eaa2f9973,hard,Science,D,gpt-6.1-terra,5.434286083793268,"Write \(x=a_1\) and \(y=a_2\). The recurrence determines a five-term cycle:
+
+\[
+x,\quad y,\quad \frac{1+y}{x},\quad
+\frac{1+x+y}{xy},\quad \frac{1+x}{y}.
+\]
+
+All terms are nonzero exactly when \(x,y\ne 0,-1\) and \(x+y\ne -1\). There are \((p-2)^2\) pairs satisfying the first condition, of which \(p-2\) have \(x+y=-1\). Thus
+
+\[
+f(p)=(p-2)(p-3).
+\]
+
+Since \(p>5\) is prime, \(p\bmod 5\) is \(1,2,3,\) or \(4\). Accordingly, \(f(p)\bmod 5\) can be \(2\) or \(0\), whose sum is \(2\).
+
+Answer: D",completed,201,388,reasoning_tokens=174,D,True,0.002141,,2026-11-12T02:29:28+00:00
+92,3cbdc660bb014628bd47c5cfad63051a,hard,Medicine,C,gpt-6.1-sol,4.913158084033057,"The patient has **acute urinary retention**, evidenced by decreasing urine output and a tender, distended bladder extending to the umbilicus. The most likely underlying cause is **urethral stricture**, suggested by the inability to pass a transurethral catheter. His history of inconsistent condom use raises the possibility of prior sexually transmitted urethritis leading to urethral scarring.
+
+General anesthesia can precipitate retention in someone with preexisting outflow obstruction. Acute urinary retention describes the presentation rather than its underlying cause.
+
+Answer: B",completed,358,156,reasoning_tokens=43,B,False,0.002276,,2026-11-12T02:29:33+00:00
+141,0e997dafbd26423597f6ce32b26978c7,hard,Science,C,gpt-6.1-terra,6.531858958071098,"The residence time of hydrogen and oxygen is
+
+\[
+\frac{13.18\times10^{17}\ \mathrm{t}}
+{3.6\times10^{13}\ \mathrm{t/y}}
+=3.66\times10^4\ \mathrm{y}.
+\]
+
+For calcium, the river input is \(5.4\times10^{14}\ \mathrm{g/y}\), giving
+
+\[
+\tau_{\mathrm{Ca^{2+}}}
+=\frac{5.61\times10^{20}}{5.4\times10^{14}}
+=1.04\times10^6\ \mathrm{y}.
+\]
+
+**No option is correct as written.** E appears to be the intended choice, but its calcium residence time is 100 times too small.
+
+Answer: E",completed,635,435,reasoning_tokens=258,E,False,0.00281,,2026-11-12T02:29:34+00:00
+142,0a2a0e0994f54b7d938a4a38ace3e5cf,middle,Engineering,F,gpt-6.1-terra,1.864975875010714,"Pink spoilage in dry salted fish is caused by the salt-loving microorganism **Halobacterium**.
+
+Answer: F",completed,127,28,reasoning_tokens=0,F,True,0.000267,,2026-11-12T02:29:40+00:00
+143,74eb2268c78d4f799095cb59d0652e43,easy,Economics,A,gpt-6.1-terra,2.8649679999798536,"The cost equation is
+\[
+C'(x)-\frac{C(x)}{x}=\frac{x}{a}-\frac{a}{x}.
+\]
+Solving gives
+\[
+C(x)=\frac{x^2}{a}+a+kx.
+\]
+Taking the stated output “A” to mean \(a\), the condition \(C(a)=2a\) gives \(k=0\). Thus \(C(x)=x^2/a+a\).
+
+Answer: A",completed,516,161,reasoning_tokens=52,A,True,0.001321,,2026-11-12T02:29:42+00:00
+144,85da846cb79840b487b5466e79c8189d,easy,Engineering,F,gpt-6.1-terra,1.1283072079531848,"The substance that enables heat-to-work conversion is called the **working medium**.
+
+Answer: F",completed,101,23,reasoning_tokens=0,F,True,0.000216,,2026-11-12T02:29:45+00:00
+145,f7edcf18dbc94537abb15638b703559a,middle,Agronomy,B,gpt-6.1-terra,2.5262310409452766,"Corn has 10 basic chromosomes. An autotriploid has three copies of each, giving 10 linkage groups and 3 homoeologous sets.
+
+Answer: B",completed,142,108,reasoning_tokens=67,B,True,0.000682,,2026-11-12T02:29:46+00:00
+146,6358bf1de49f4a1f930c0ce94a4de7e6,middle,Law,J,gpt-6.1-terra,2.470177249982953,"Warehouse-to-warehouse coverage includes the inland transit, but compensation may depend on the cause of the overheating and any applicable exclusions. Options A and J are equivalent.
+
+Answer: A",completed,276,91,reasoning_tokens=50,A,False,0.000731,,2026-11-12T02:29:49+00:00
+147,fa6ef9a2043e4608a0c65c8350c73187,middle,Science,H,gpt-6.1-terra,2.266929125180468,"Taking east as positive and writing the acceleration as \(-a\), where \(a>0\),
+
+\[
+x_A=|10u-50a|,\qquad x_B=|10u-150a|.
+\]
+
+Their relationship depends on the values of \(u\) and \(a\), which are not specified.
+
+Answer: H",completed,289,109,reasoning_tokens=31,H,True,0.000834,,2026-11-12T02:29:51+00:00
+148,ec76e9ea59454cb3a9a75738311bd119,easy,Agronomy,G,gpt-6.1-terra,2.649787832982838,"Fruit picked before it is fully ripe can be described as early-picked fruit.
+
+Answer: F",completed,137,117,reasoning_tokens=93,F,False,0.000722,,2026-11-12T02:29:53+00:00
+149,5fa6d7de524b4a73a7c177e513cdf404,middle,Law,F,gpt-6.1-terra,1.7496722501236945,"A person coerced into giving money or property to a state employee, without obtaining an improper benefit, is not considered to have committed bribery.
+
+Answer: F",completed,277,36,reasoning_tokens=0,F,True,0.000457,,2026-11-12T02:29:56+00:00
+150,afb90e71b5cd49e7a51c921825479f96,middle,Engineering,B,gpt-6.1-terra,1.8645244161598384,"High-speed steel retains its cutting hardness at approximately 600°C.
+
+Answer: B",completed,120,43,reasoning_tokens=21,B,True,0.000335,,2026-11-12T02:29:58+00:00
+93,f1a4d252f2bd435cb14eaf83bd84e251,hard,Science,D,gpt-6.1-sol,22.942259958013892,"Using the Salpeter birth-rate function
+\[
+\frac{d\dot N}{dM}=0.03\,M^{-2.35}
+\quad \mathrm{pc^{-3}\,Gyr^{-1}}\,M_\odot^{-1},
+\]
+where \(M\) is measured in solar masses, the iron density produced over \(T_0=12\) Gyr is
+\[
+\rho_{\rm Fe}
+=1.4(12)(0.03)\int_4^8 M^{-2.35}\,dM.
+\]
+Thus,
+\[
+\rho_{\rm Fe}
+=0.504\frac{4^{-1.35}-8^{-1.35}}{1.35}
+\simeq 3.5\times10^{-2}\ M_\odot\,\mathrm{pc}^{-3}
+\approx4\times10^{-2}\ M_\odot\,\mathrm{pc}^{-3}.
+\]
+
+Answer: A",completed,480,850,reasoning_tokens=636,A,False,0.00946,,2026-11-12T02:29:38+00:00
+94,2c9318c99c3b4f36af8aa8826b68f572,hard,Science,J,gpt-6.1-sol,8.911618041107431,"Phenol has molar mass \(94\ \mathrm{g\,mol^{-1}}\), so its molality is
+\[
+m=\frac{75.2/94}{0.960}=\frac56\ \mathrm{mol\,kg^{-1}}.
+\]
+
+The van ’t Hoff factor is
+\[
+i=\frac{\Delta T_f}{K_fm}
+=\frac{7}{15(5/6)}=0.56.
+\]
+
+For dimerization, \(i=1-\alpha/2\), where \(\alpha\) is the fraction of phenol that dimerizes. Thus,
+\[
+\alpha=2(1-0.56)=0.88.
+\]
+
+Therefore, **88% of the phenol dimerizes**. None of the listed options is correct.
+
+Answer: None of the above",completed,166,313,reasoning_tokens=129,,False,0.003462,,2026-11-12T02:30:01+00:00
+95,6f96efa7f63842f5b105d860ecb9e6eb,middle,Science,C,gpt-6.1-sol,4.188127874862403,"For a uniform cylinder,
+\[
+I=\frac12 MR^2.
+\]
+Since heating does not change its mass, the fractional change to first order is
+\[
+\frac{\Delta I}{I}=2\frac{\Delta R}{R}.
+\]
+Thus, option C gives the required relation.
+
+(Note: D also follows to first order from angular momentum conservation, so the options are not strictly mutually exclusive.)
+
+Answer: C",completed,389,132,reasoning_tokens=38,C,True,0.002098,,2026-11-12T02:30:10+00:00
+96,8bc03731483e47f69c9169b2afac68ab,easy,Engineering,H,gpt-6.1-sol,2.9691252920310944,"A blackbody’s directional radiation intensity is independent of direction; it is a diffuse emitter.
+
+Answer: H",completed,127,50,reasoning_tokens=23,H,True,0.000754,,2026-11-12T02:30:14+00:00
+97,8ced55a98f3c4940856180c697f97f7b,middle,Engineering,H,gpt-6.1-sol,4.195223750080913,"Controllability is determined by the system matrices \(A\) and \(B\). A nonsingular linear change of state coordinates preserves the rank of the controllability matrix. External disturbances do not change this structural property, though they can affect the system’s actual trajectory.
+
+Answer: H",completed,350,61,reasoning_tokens=0,H,True,0.00131,,2026-11-12T02:30:17+00:00
+98,c744fc6d46804983959695ccb036806a,middle,Science,C,gpt-6.1-sol,3.7890592499170452,"A face-centred cubic (FCC) unit cell has atoms at its **8 corners and 6 face centres**, giving 14 atom positions. Accounting for sharing between cells, its effective atom count is 4.
+
+Answer: C",completed,148,91,reasoning_tokens=39,C,True,0.001206,,2026-11-12T02:30:21+00:00
+99,e5e76ea416b64e209a51d8bba6166806,middle,Engineering,F,gpt-6.1-sol,2.661720999982208,"As evaporator temperature decreases, evaporator pressure falls. For a given condensation temperature, condenser pressure stays constant, so the required compression ratio \(P_{\text{condenser}}/P_{\text{evaporator}}\) increases.
+
+Answer: F",completed,140,72,reasoning_tokens=15,F,True,0.001,,2026-11-12T02:30:25+00:00
+100,37bee659d0f24b6bbb7cf0019b18266b,hard,Science,J,gpt-6.1-sol,6.847200582968071,"The critical points satisfy
+\[
+f_x=3x^2+3y=0,\qquad f_y=3y^2+3x=0,
+\]
+giving \((0,0)\) and \((-1,-1)\).
+
+The Hessian is
+\[
+H=\begin{pmatrix}6x&3\\3&6y\end{pmatrix}.
+\]
+At \((0,0)\), its determinant is \(-9<0\), so this is a saddle point. At \((-1,-1)\), its determinant is \(27>0\) and \(f_{xx}=-6<0\), so this is a local maximum.
+
+Thus D is correct. **Note:** J is equivalent to D after exchanging the labels \(P,Q\), so the question as written does not have a unique correct option.
+
+Answer: D",completed,209,286,reasoning_tokens=97,D,False,0.003278,,2026-11-12T02:30:28+00:00
+101,7352d8d0aadc4cb88b39e90896626804,middle,Medicine,C,gpt-6.1-sol,2.870097415987402,"The **San Jiao (Triple Burner)** is the main passageway for the movement of body fluids and the distribution of Yuanqi (original qi).
+
+Answer: C",completed,111,63,reasoning_tokens=24,C,True,0.000852,,2026-11-12T02:30:34+00:00
+102,8cd24612957d419ba2004dbe384acb7e,middle,Law,E,gpt-6.1-sol,2.40280233300291,"Under Federal Rule of Civil Procedure 33(a)(1), a party may serve no more than 25 interrogatories, including discrete subparts, without a stipulation or court order. By answering the excess interrogatories without objecting, the defendant waived its objection to their number. The fact that the 30-day response period has not yet expired does not undo that waiver.
+
+Answer: E",completed,359,82,reasoning_tokens=0,E,True,0.001538,,2026-11-12T02:30:37+00:00
+103,97a25d6720af4713a2e3b05199169bbe,easy,Engineering,J,gpt-6.1-sol,3.746742583811283,"A good clustering method produces clusters with high intra-class similarity: objects within the same cluster are highly similar.
+
+Answer: J",completed,127,77,reasoning_tokens=47,J,True,0.001024,,2026-11-12T02:30:40+00:00
+104,01c23fbbdaea44d8ae31c98c54cb4243,middle,Science,C,gpt-6.1-sol,3.5831441250629723,"C) The equation for isothermal atmospheric pressure height relates pressure differences to altitude and is commonly used to estimate isobaric heights and reduce observed pressure to sea level.
+
+Answer: C",completed,159,78,reasoning_tokens=36,C,True,0.001098,,2026-11-12T02:30:44+00:00
+105,9f79b51e78f14c82b122ffe3ea213d36,hard,Science,F,gpt-6.1-sol,8.907974957954139,"Differentiating gives
+\[
+y'=\frac15\left(-\frac{3}{\sin^2x\cos^4x}
++\frac{15}{\cos^6x}
+-\frac{2}{\cos^4x}
+-\frac{10\sin^2x}{\cos^6x}\right)
++\frac{32}{5\sin^2(2x)}.
+\]
+Using \(\sin(2x)=2\sin x\cos x\) and combining terms,
+\[
+y'=\frac{1}{\sin^2x\cos^6x}.
+\]
+
+This matches **F**. Note that **E is algebraically identical**, so the choices contain a duplicate correct answer.
+
+Answer: F",completed,299,414,reasoning_tokens=250,F,True,0.004738,,2026-11-12T02:30:47+00:00
+106,8eb4ca49282b46429ea96961378e56d5,easy,Science,E,gpt-6.1-sol,1.942905250005424,"Physiological density measures the number of people per unit of arable (agriculturally usable) land.
+
+Answer: E",completed,120,30,reasoning_tokens=0,E,True,0.00054,,2026-11-12T02:30:56+00:00
+107,729103e93cda40b59f19784283c98914,easy,Medicine,H,gpt-6.1-sol,4.404860584065318,"The tall, slender habitus, arachnodactyly, pectus excavatum, and high-arched palate suggest **Marfan syndrome**. A characteristic chest radiograph finding is **aortic ectasia**, reflecting enlargement of the ascending aorta due to abnormal connective tissue. Dissection and pneumothorax are potential complications but are less likely in this asymptomatic patient.
+
+Answer: A",completed,188,142,reasoning_tokens=55,A,False,0.001796,,2026-11-12T02:30:58+00:00
+108,1e295b4894fc4eecb7a96f96dd2f183f,middle,Science,H,gpt-6.1-sol,3.3747841250151396,"Linear dependence requires the determinant to be zero:
+\[
+\begin{vmatrix}
+k & -2 & -\frac12\\
+1 & 2 & -3\\
+4 & 1 & 0
+\end{vmatrix}
+=3k+24+\frac72=0.
+\]
+Thus \(3k=-\frac{55}{2}\), giving \(k=-\frac{55}{6}\).
+
+Answer: H",completed,319,161,reasoning_tokens=63,H,True,0.002248,,2026-11-12T02:31:02+00:00
+109,e3d9ccb6351a4a06aacb5e0ed6260534,middle,Engineering,C,gpt-6.1-sol,2.4337159579154104,"The request and response each travel up to the satellite and back down, for a total of four legs.
+
+\[
+t_{\min}=\frac{4(22{,}500{,}000\text{ m})}{300{,}000{,}000\text{ m/s}}
+=0.3\text{ s}=300\text{ ms}
+\]
+
+Answer: C",completed,217,86,reasoning_tokens=0,C,True,0.001294,,2026-11-12T02:31:06+00:00
+110,146747fd2f6d4caca5ec3101c03104aa,middle,Engineering,I,gpt-6.1-sol,2.9941638340242207,"A **fluidised bed freezer** is best suited for small, uniformly sized products such as shrimp, fish fillets, and small fish. Cold air suspends and separates the pieces, enabling rapid individual quick freezing (IQF).
+
+Answer: I",completed,128,77,reasoning_tokens=22,I,True,0.001026,,2026-11-12T02:31:08+00:00
+111,e53fb10c526b4d2a9033e3d8025ad9ce,middle,Science,F,gpt-6.1-sol,3.4922748329117894,"Stronger intermolecular forces make A less volatile than B, so its pure-component vapour pressure is lower: \(P_A^\circ<P_B^\circ\).
+
+By Raoult’s law,
+\[
+\frac{X'_A}{X_A}
+=\frac{P_A^\circ}{X_AP_A^\circ+(1-X_A)P_B^\circ}<1.
+\]
+Thus A is less abundant in the vapour than in the liquid, giving **G** as the intended answer. (Option A is also technically true, but is a weaker bound.)
+
+Answer: G",completed,337,139,reasoning_tokens=14,G,False,0.002064,,2026-11-12T02:31:11+00:00
+112,874a9474b9ed4b19b4013f26f145880c,easy,Management,J,gpt-6.1-sol,9.714277167106047,"The seller’s reproduced sample, submitted for the buyer’s confirmation, is an **equivalent sample**, commonly called a counter sample.
+
+Answer: J",completed,124,292,reasoning_tokens=257,J,True,0.003168,,2026-11-12T02:31:15+00:00
+113,7becb6c49d3d402686a0eafc9041a91f,hard,Science,B,gpt-6.1-sol,3.4422442079521716,"The photon energy is
+\[
+E=\frac{hc}{\lambda}=\frac{12400\ \text{eV}\cdot\text{\AA}}{310\ \text{\AA}}=40\ \text{eV}.
+\]
+
+Using Einstein’s photoelectric equation,
+\[
+K_{\max}=E-\phi=40-12.8=27.2\ \text{eV}.
+\]
+
+Hence,
+\[
+v_{\max}=\sqrt{\frac{2K_{\max}}{m_e}}
+=\sqrt{\frac{2(27.2)(1.602\times10^{-19})}{9.11\times10^{-31}}}
+\approx3.09\times10^6\ \text{m/s}
+=2.18\sqrt{2}\times10^6\ \text{m/s}.
+\]
+
+Answer: B",completed,297,212,reasoning_tokens=22,B,True,0.002714,,2026-11-12T02:31:24+00:00
+114,c2b95606a3474d8f83668bc523975dc1,hard,Science,C,gpt-6.1-sol,3.109958792105317,"Rewrite the function as
+\[
+f(x)=4x^{-1}+4x^{-2}-2.
+\]
+Then
+\[
+f''(x)=8x^{-3}+24x^{-4}=\frac{8(x+3)}{x^4}.
+\]
+Since \(x^4>0\) for \(x\ne0\), \(f''(x)\) changes sign at \(x=-3\). Also,
+\[
+f(-3)=\frac{4(-3+1)}{9}-2=-\frac{26}{9}.
+\]
+Thus the inflection point is \(\left(-3,-\frac{26}{9}\right)\).
+
+Answer: H",completed,177,202,reasoning_tokens=49,H,False,0.002374,,2026-11-12T02:31:28+00:00
+115,ff998459bc604670bb0cb1185f7e2f28,hard,Science,E,gpt-6.1-sol,6.247801540885121,"A 10-digit integer divisible by \(5\) must end in \(0\) or \(5\).
+
+Choose the first digit in \(9\) ways and the next seven digits in \(10^7\) ways. For each choice, exactly two choices of the ninth digit make the digit sum divisible by \(5\), since each residue modulo \(5\) occurs twice among \(0,\ldots,9\). The final digit has \(2\) choices, neither affecting the sum modulo \(5\).
+
+Thus
+\[
+n=9\cdot10^7\cdot2\cdot2
+=360{,}000{,}000
+=2^9\cdot3^2\cdot5^7.
+\]
+The number of positive divisors is
+\[
+(9+1)(2+1)(7+1)=240.
+\]
+
+Answer: E",completed,135,330,reasoning_tokens=135,E,True,0.00357,,2026-11-12T02:31:31+00:00
+116,f6e3a7bb606943a7b2b8bf460772fa19,middle,Science,D,gpt-6.1-sol,2.7677062910515815,"By Coulomb’s law,
+\[
+q_1q_2=\frac{Fr^2}{k}
+=\frac{(48\times10^{-3})(3^2)}{9\times10^9}
+=48\times10^{-12}\,\mathrm{C^2}.
+\]
+Thus, in units of \(\mu C\), the charges have sum \(16\) and product \(48\). They are the roots of
+\[
+x^2-16x+48=(x-12)(x-4)=0.
+\]
+Therefore, the charges are \(12\mu C\) and \(4\mu C\).
+
+Answer: F",completed,265,144,reasoning_tokens=0,F,False,0.00197,,2026-11-12T02:31:37+00:00
+117,390b5fa49d48415d87072d1d0ea39b3e,hard,Engineering,G,gpt-6.1-sol,4.0850823749788105,"The clockwise spiral’s positive-axis terms follow \(a(n)=4n^2+3n+1\), with \(n=0\) at the origin.
+
+For \(n=38,\ldots,47\), this gives:
+\[
+[5891, 6202, 6521, 6848, 7183, 7526, 7877, 8236, 8603, 8978].
+\]
+
+Answer: G",completed,588,154,reasoning_tokens=52,G,True,0.002716,,2026-11-12T02:31:40+00:00
+118,40dab16a43d7435bae1b4a75192703b4,hard,Engineering,C,gpt-6.1-sol,15.893416790990159,"The front-axle natural circular frequency is
+\[
+\omega_f=\sqrt{\frac{k_f}{m_f}}
+=\sqrt{\frac{10000}{25}}
+=20.0\ \text{rad/s}.
+\]
+
+The closest listed value is **20.32**, option **E**. Note that circular frequency is measured in rad/s, not Hz; the corresponding frequency is \(20/(2\pi)\approx3.18\) Hz, so the options are not exactly consistent with the stated data.
+
+Answer: E",completed,234,531,reasoning_tokens=415,E,False,0.005778,,2026-11-12T02:31:44+00:00
+119,05ab770fbfb64a4e9c714389428800e4,easy,Engineering,B,gpt-6.1-sol,1.4870949580799788,"A building’s physical entity generally consists of its load-bearing structure, enclosure structures, decorative finishes, and attached components.
+
+Answer: B",completed,125,30,reasoning_tokens=0,B,True,0.00055,,2026-11-12T02:32:00+00:00
+120,f4aa55ba8d064c809455e8d881af9d6b,middle,Science,B,gpt-6.1-sol,2.5262972079217434,"Divide the numerator and denominator by \(3^n\):
+\[
+\lim_{n\to\infty}
+\frac{\frac13-\left(\frac23\right)^n}
+{\frac12\left(\frac23\right)^n-1}
+=\frac{\frac13}{-1}=-\frac13,
+\]
+since \(\left(\frac23\right)^n\to0\).
+
+Answer: B",completed,217,93,reasoning_tokens=0,B,True,0.001364,,2026-11-12T02:32:01+00:00
+121,70a177536cd94e23897c1edc97bdec91,middle,Science,B,gpt-6.1-sol,2.0184696668293327,"Active sonar background interference consists of **reverberation and noise**. Noise is generally modeled as a stationary random process, while reverberation is non-stationary.
+
+The corresponding equations are:
+- Reverberation-limited: \(SL-2TL+TS-RL=DT\)
+- Noise-limited: \(SL-2TL+TS-(NL-DI)=DT\)
+
+Answer: B",completed,434,87,reasoning_tokens=0,B,True,0.001738,,2026-11-12T02:32:04+00:00
+122,260b544384934fc1b246e9912b49d4e6,easy,Literature and Arts,F,gpt-6.1-sol,3.366316416999325,"F) The Manuscript of Offering Nephews and Nephews, referring to Yan Zhenqing’s celebrated *Manuscript of a Eulogy to My Nephew*, is regarded as a pinnacle of Chinese calligraphy.
+
+Answer: F",completed,158,90,reasoning_tokens=36,F,True,0.001216,,2026-11-12T02:32:06+00:00
+123,d7f9b5a785a94530a9e737656ec0dcaa,hard,Science,B,gpt-6.1-sol,6.654275583801791,"The reverse reaction consumes \(0.1\) mol each of \(\mathrm{CO_2}\) and \(\mathrm{H_2O}\) to convert all \(0.1\) mol of \(\mathrm{Na_2CO_3}\). Thus, at complete conversion,
+\[
+n_{\mathrm{H_2O}}=0.2-0.1=0.1\ \mathrm{mol}.
+\]
+
+At the minimum required amount of \(\mathrm{CO_2}\), the final gas pressures satisfy
+\[
+K_p^\Theta=\frac{p_{\mathrm{CO_2}}p_{\mathrm{H_2O}}}{(p^\Theta)^2}=0.231.
+\]
+Using \(p^\Theta=10^5\ \mathrm{Pa}\),
+\[
+p_{\mathrm{H_2O}}=\frac{nRT}{V}
+=\frac{0.1(8.314)(373)}{10^{-2}}
+=3.10\times10^4\ \mathrm{Pa}.
+\]
+Therefore,
+\[
+p_{\mathrm{CO_2}}
+=\frac{0.231(10^5)^2}{3.10\times10^4}
+=7.45\times10^4\ \mathrm{Pa},
+\]
+so the remaining \(\mathrm{CO_2}\) is
+\[
+n_{\mathrm{CO_2,final}}=\frac{pV}{RT}\approx0.240\ \mathrm{mol}.
+\]
+Including the \(0.1\) mol consumed, the minimum initial amount is
+\[
+n_{\mathrm{CO_2,initial}}=0.240+0.100=\boxed{0.340\ \mathrm{mol}}.
+\]
+
+Answer: B",completed,497,419,reasoning_tokens=37,B,True,0.005184,,2026-11-12T02:32:09+00:00
+124,b2765e178196465eba0852003bb75538,middle,Medicine,F,gpt-6.1-sol,3.079457707935944,"D) Dendritic cells (DCs) initiate naïve CD4⁺ T-cell differentiation toward Tfh cells. IL-6 and IL-21 promote this differentiation, including induction of the transcription factor Bcl-6.
+
+Answer: D",completed,238,86,reasoning_tokens=30,D,False,0.001336,,2026-11-12T02:32:16+00:00
+125,2e77a1c361f44816baeff50011d27831,middle,Science,D,gpt-6.1-sol,2.4507392500527203,"At low conversion, termination exclusively by coupling gives a dispersity (molecular weight distribution index) of
+\[
+Đ=\frac{M_w}{M_n}=1.5.
+\]
+Coupling combines two growing radical chains, producing a narrower distribution than disproportionation termination.
+
+Answer: D",completed,149,63,reasoning_tokens=0,D,True,0.000928,,2026-11-12T02:32:19+00:00
+126,be0a3aef02e449e298936d3080730f3b,easy,Engineering,E,gpt-6.1-sol,2.6581220000516623,"Map overlay analysis combines multiple spatial layers to examine their relationships. A **joint operation** combines these layers into a new dataset.
+
+Answer: E",completed,112,62,reasoning_tokens=28,E,True,0.000844,,2026-11-12T02:32:22+00:00
+127,fd7ba6b99edd4a8cbd1f44482eaf4ed9,middle,Engineering,E,gpt-6.1-sol,3.1709332920145243,"Take 100 g of the composite: it contains 57.4 g of \(\mathrm{Al_2O_3}\) and 42.6 g of \(\mathrm{ZrO_2}\).
+
+Using atomic masses Al = 26.98, Zr = 91.22, and O = 16.00:
+\[
+w_{\mathrm{Al}}=57.4\frac{2(26.98)}{2(26.98)+3(16.00)}
+\approx30.4\%,
+\]
+\[
+w_{\mathrm{Zr}}=42.6\frac{91.22}{91.22+2(16.00)}
+\approx31.5\%.
+\]
+The remaining mass is oxygen:
+\[
+w_{\mathrm O}=100-30.4-31.5=38.1\%.
+\]
+
+Answer: E",completed,401,192,reasoning_tokens=0,E,True,0.002722,,2026-11-12T02:32:24+00:00
+128,184beb4beec2451d80070c8f33c5ab79,easy,Science,G,gpt-6.1-sol,2.253975332947448,"Lagrange strongly opposed Fourier’s paper, objecting to his claim that arbitrary functions could be represented by trigonometric series.
+
+Answer: G",completed,107,53,reasoning_tokens=18,G,True,0.000744,,2026-11-12T02:32:27+00:00
+129,1f34296d31a14eb3910b05a047c17ffa,middle,Science,E,gpt-6.1-sol,9.671963459113613,"All three acids contain an **X–O–X linkage**:
+- \(H_2S_2O_7\): S–O–S
+- \(H_4P_2O_5\): P–O–P
+- \(H_3P_3O_9\): P–O–P in a cyclic ring
+
+Thus **I** is correct. However, **C is also true** in their conventional structures, since each contains at least one X=O bond. The question therefore does not strictly have a unique correct answer.
+
+Answer: I",completed,178,360,reasoning_tokens=233,I,False,0.003956,,2026-11-12T02:32:30+00:00
+130,230b7259b76343eea138c4890b932108,middle,Science,J,gpt-6.1-sol,2.5373303340747952,"For a progressive plane acoustic wave,
+\[
+I=\frac{p_{\mathrm{eff}}^2}{\rho c},
+\]
+where \(\rho c\) is the medium’s acoustic impedance.
+
+The levels are
+\[
+\mathrm{SPL}=20\log_{10}\!\left(\frac{p_{\mathrm{eff}}}{p_0}\right),
+\qquad
+\mathrm{IL}=10\log_{10}\!\left(\frac{I}{I_0}\right).
+\]
+With corresponding reference values \(I_0=p_0^2/(\rho c)\), these levels are equal: \(\mathrm{IL}=\mathrm{SPL}\).
+
+Answer: J",completed,346,152,reasoning_tokens=0,J,True,0.002212,,2026-11-12T02:32:39+00:00
+131,b0c962e65001442ea12ea33cf2ab3c25,hard,Engineering,E,gpt-6.1-sol,7.4032860840670764,"Using the ideal-gas relation, the mass of air used is
+\[
+m_{\text{used}}=m_1-m_2
+=\frac{V(p_1-p_2)}{RT}.
+\]
+For air, \(R=0.287\ \mathrm{kPa\,m^3/(kg\,K)}\), so
+\[
+m_{\text{used}}
+=\frac{0.3(8000-460)}{0.287(303)}
+\approx 26.01\ \mathrm{kg}.
+\]
+
+None of the listed options matches this result; the question or choices contain an error.
+
+Answer: None of the above",completed,270,277,reasoning_tokens=134,,False,0.00331,,2026-11-12T02:32:42+00:00
+132,875332548d544bd6b43eb97ecf95c040,middle,Science,F,gpt-6.1-sol,2.9111335000488907,"Squaring \( |n|<|n-3| \) gives
+\[
+n^2<(n-3)^2 \implies 6n<9 \implies n<\frac32.
+\]
+Also,
+\[
+|n-3|<9 \implies -6<n<12.
+\]
+Thus the integer solutions are \(-5,-4,-3,-2,-1,0,1\), whose sum is \(-14\).
+
+Answer: F",completed,118,136,reasoning_tokens=29,F,True,0.001596,,2026-11-12T02:32:49+00:00
+133,37403c03f97d448eab5fd617df82ddfe,middle,Science,B,gpt-6.1-sol,3.2755820830352604,"Taking the angles in degrees,
+\[
+E=\frac{\cos10^\circ-\sqrt3\sin10^\circ}{\sin10^\circ\cos10^\circ}
+=\frac{2\cos70^\circ}{\tfrac12\sin20^\circ}
+=\frac{2\sin20^\circ}{\tfrac12\sin20^\circ}
+=4.
+\]
+
+Answer: B",completed,148,145,reasoning_tokens=55,B,True,0.001746,,2026-11-12T02:32:52+00:00
+134,83c46315de994227bf7527bd1fb2c47a,middle,Medicine,C,gpt-6.1-sol,2.66122950008139,"The opacity around *Clostridium perfringens* colonies on egg-yolk agar results from **lecithinase activity**, which breaks down lecithin and produces an opaque precipitate.
+
+Answer: C",completed,134,83,reasoning_tokens=34,C,True,0.001098,,2026-11-12T02:32:55+00:00
+135,208c4119cc264841b1567ae3fa57b0dc,middle,Engineering,A,gpt-6.1-sol,3.274868750013411,"The resistance coefficient for the connection is conventionally referenced to the velocity in the narrower pipe, where the flow velocity is higher. Thus, \(u = u_A\).
+
+Answer: A",completed,192,71,reasoning_tokens=28,A,True,0.001094,,2026-11-12T02:32:58+00:00
+136,fdeb6306d8df4979aa65b22631c9f998,hard,Engineering,B,gpt-6.1-sol,4.711120667168871,"At the maximum water level, the outflow rate equals the inflow rate. By Torricelli’s law,
+\[
+Q=A\sqrt{2gh}.
+\]
+Thus,
+\[
+h=\frac{(Q/A)^2}{2g}
+=\frac{\left(\frac{100\times10^{-6}}{2\times10^{-4}}\right)^2}{2(10)}
+=1.25\times10^{-2}\,\text{m}.
+\]
+
+This exact value is not listed; the closest option is **F**, suggesting a numerical error in the choices.
+
+Answer: F",completed,269,172,reasoning_tokens=42,F,False,0.002258,,2026-11-12T02:33:01+00:00
+137,3e4c12057c7c478dae9526a6b92ebb04,hard,Engineering,E,gpt-6.1-sol,2.2878805410582572,"The tangential velocity is
+\[
+u_\theta=-\frac{\partial\psi}{\partial r}
+=-U_\infty\left(1+\frac{a^2}{r^2}\right)\sin\theta.
+\]
+On the cylinder, \(r=a\), at \(\theta=90^\circ\),
+\[
+u_\theta=-2U_\infty.
+\]
+The radial velocity is zero on the cylinder.
+
+Answer: E",completed,299,100,reasoning_tokens=0,E,True,0.001598,,2026-11-12T02:33:06+00:00
+138,0fd95e486d0042d3b120a0609d306fc7,middle,Engineering,G,gpt-6.1-sol,7.939292874885723,"The practice of building emperors’ tombs into mountains began during the Tang Dynasty.
+
+Answer: F",completed,114,186,reasoning_tokens=160,F,False,0.002088,,2026-11-12T02:33:08+00:00
+139,d94c7517b02943f1ae1d6d136e335ff0,hard,Science,H,gpt-6.1-sol,4.923754082992673,"Assume Neptune is a blackbody with uniform temperature, absorbing sunlight over its cross-sectional area and radiating over its entire surface.
+
+The solar flux at Neptune is
+\[
+J_N=1400\left(\frac{1.5\times10^8}{4.5\times10^9}\right)^2
+=\frac{1400}{900}\approx1.56\ \mathrm{W/m^2}.
+\]
+
+Radiative equilibrium requires
+\[
+J_N\pi R^2=4\pi R^2\sigma T^4,
+\]
+so
+\[
+T=\left(\frac{J_N}{4\sigma}\right)^{1/4}
+=\left(\frac{1.56}{4(5.7\times10^{-8})}\right)^{1/4}
+\approx51\ \mathrm K.
+\]
+
+The closest option is **52 K**.
+
+Answer: H",completed,242,240,reasoning_tokens=41,H,True,0.002884,,2026-11-12T02:33:16+00:00
+140,a6910a7baedd408db72c325eaa2f9973,hard,Science,D,gpt-6.1-sol,10.029267000034451,"Work modulo \(p\). Any initial pair \(a_1=x,\ a_2=y\) uniquely determines the sequence, since
+\[
+a_{n+2}=\frac{1+a_{n+1}}{a_n}.
+\]
+Starting with nonzero \(x,y\), the successive terms are
+\[
+x,\quad y,\quad \frac{1+y}{x},\quad
+\frac{1+x+y}{xy},\quad \frac{1+x}{y},\quad x,\quad y,\ldots
+\]
+provided all displayed terms are nonzero. Thus the sequence is valid exactly when
+\[
+x\ne-1,\qquad y\ne-1,\qquad x+y\ne-1,
+\]
+in addition to \(x,y\ne0\).
+
+There are \((p-2)^2\) pairs satisfying the first two restrictions. Of these, exactly \(p-2\) satisfy \(x+y=-1\): each \(x\notin\{0,-1\}\) gives precisely one permissible \(y=-1-x\). Therefore
+\[
+f(p)=(p-2)^2-(p-2)=(p-2)(p-3).
+\]
+Modulo \(5\),
+\[
+f(p)\equiv p^2+1.
+\]
+Since \(p>5\) is prime, its residue modulo \(5\) is \(1,2,3,\) or \(4\), giving \(f(p)\equiv2\) or \(0\). Both occur, for example at \(p=11\) and \(p=7\), respectively.
+
+The sum of the possible residues is \(2+0=\boxed{2}\).
+
+Answer: D",completed,201,635,reasoning_tokens=262,D,True,0.006752,,2026-11-12T02:33:21+00:00
+141,0e997dafbd26423597f6ce32b26978c7,hard,Science,C,gpt-6.1-sol,6.765625874977559,"Residence time is the total inventory divided by its annual input.
+
+For hydrogen and oxygen (as water), using \(1\,t=10^3\,kg\) and water density \(1\,kg/dm^3\):
+\[
+\tau_{\mathrm{H,O}}
+=\frac{13.18\times10^{17}\times10^3}{3.6\times10^{16}}
+=3.66\times10^4\ \text{years}.
+\]
+
+The annual calcium input is
+\[
+(3.6\times10^{16})(15\times10^{-6})(10^3)
+=5.4\times10^{14}\ \text{g/year}.
+\]
+Thus,
+\[
+\tau_{\mathrm{Ca^{2+}}}
+=\frac{5.61\times10^{20}}{5.4\times10^{14}}
+=1.039\times10^6\ \text{years}.
+\]
+
+**None of the options exactly matches the supplied data.** The intended answer appears to be **E**, but its calcium residence time is approximately 100 times too small.
+
+Answer: E",completed,635,305,reasoning_tokens=62,E,False,0.00432,,2026-11-12T02:33:31+00:00
+142,0a2a0e0994f54b7d938a4a38ace3e5cf,middle,Engineering,F,gpt-6.1-sol,2.549313999945298,"Pink spoilage in dry salted fish is caused by **Halobacterium sp.**, salt-loving archaea that produce pink-red carotenoid pigments.
+
+Answer: F",completed,127,36,reasoning_tokens=0,F,True,0.000614,,2026-11-12T02:33:38+00:00
+143,74eb2268c78d4f799095cb59d0652e43,easy,Economics,A,gpt-6.1-sol,3.1754852088633925,"Marginal cost is \(C'(x)\), and average cost is \(C(x)/x\). Thus
+\[
+C'(x)-\frac{C(x)}x=\frac xa-\frac ax.
+\]
+Dividing by \(x\),
+\[
+\left(\frac{C(x)}x\right)'=\frac1a-\frac{a}{x^2}.
+\]
+Integrating gives
+\[
+C(x)=\frac{x^2}{a}+a+Kx.
+\]
+Using the stated condition \(C(a)=2a\), we obtain \(K=0\). Hence
+\[
+\boxed{C(x)=\frac{x^2}{a}+a}.
+\]
+
+Answer: A",completed,516,180,reasoning_tokens=24,A,True,0.002832,,2026-11-12T02:33:41+00:00
+144,85da846cb79840b487b5466e79c8189d,easy,Engineering,F,gpt-6.1-sol,2.4544212920591235,"The substance used to carry energy through a thermodynamic cycle and enable heat-to-work conversion is called the **working medium**.
+
+Answer: F",completed,101,32,reasoning_tokens=0,F,True,0.000522,,2026-11-12T02:33:44+00:00
+145,f7edcf18dbc94537abb15638b703559a,middle,Agronomy,B,gpt-6.1-sol,4.508613957790658,"Corn has a basic chromosome number of **10**, so it has **10 linkage groups**. An autotriploid has **three homologous chromosome sets**, corresponding to the question’s second blank.
+
+Answer: B",completed,142,119,reasoning_tokens=70,B,True,0.001474,,2026-11-12T02:33:46+00:00
+146,6358bf1de49f4a1f930c0ce94a4de7e6,middle,Law,J,gpt-6.1-sol,6.245719250058755,"The warehouse-to-warehouse clause extends coverage beyond the sea voyage to the inland railway journey to Zhengzhou. Damage caused by overheating of the railway carriages falls within all-risks coverage, assuming the insured has an insurable interest and no exclusion applies.
+
+Answer: D",completed,276,159,reasoning_tokens=99,D,False,0.002142,,2026-11-12T02:33:51+00:00
+147,fa6ef9a2043e4608a0c65c8350c73187,middle,Science,H,gpt-6.1-sol,2.552690624957904,"Taking east as positive, let the constant acceleration be \(-a\), where \(a>0\). The displacement magnitudes are
+\[
+x_A=|10u-50a|,\qquad
+x_B=|10u-150a|.
+\]
+Their relation depends on \(u/a\). For example, \(u=20a\) gives \(x_A>x_B\), whereas \(u=5a\) gives \(x_A<x_B\). Thus, the information is insufficient.
+
+Answer: H",completed,289,113,reasoning_tokens=0,H,True,0.001708,,2026-11-12T02:33:57+00:00
+148,ec76e9ea59454cb3a9a75738311bd119,easy,Agronomy,G,gpt-6.1-sol,2.0512930841650814,"F) Early-picked fruit is harvested before it is fully ripe and allowed to finish ripening off the plant.
+
+Answer: F",completed,137,61,reasoning_tokens=30,F,False,0.000884,,2026-11-12T02:33:59+00:00
+149,5fa6d7de524b4a73a7c177e513cdf404,middle,Law,F,gpt-6.1-sol,2.108300582971424,"F is correct. When someone is coerced into giving money or property to state employees and receives no improper benefit, the conduct does not constitute bribery. Bribery generally requires giving money or property to obtain improper benefits.
+
+Answer: F",completed,277,52,reasoning_tokens=0,F,True,0.001074,,2026-11-12T02:34:02+00:00
+150,afb90e71b5cd49e7a51c921825479f96,middle,Engineering,B,gpt-6.1-sol,4.031855416018516,"High-speed steel retains its hardness and cutting ability at temperatures up to approximately 600°C, making it suitable for drill bits and turning tools.
+
+Answer: B",completed,120,59,reasoning_tokens=22,B,True,0.00083,,2026-11-12T02:34:04+00:00
