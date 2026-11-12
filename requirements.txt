@@ -1,4 +1,4 @@
-# Python 3.9 or newer.
+# Python 3.10 or newer (anthropic and openai need it).
 numpy>=1.23
 pandas>=2.0
 huggingface_hub>=0.20  # src/data/download_routerbench.py
