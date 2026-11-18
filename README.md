@@ -51,7 +51,8 @@ flowchart LR
 | **Stage 3** | 5 live models, 250 SuperGPQA questions, online, 5 seeds | **95%** of Opus's quality for **42%** less cost; **90%** for **88%** less cost and **35%** less latency |
 
 Stage 3 figures are the best weight setting at each quality level, chosen after
-the runs; the full trade-off curve is in `results/stage3/live_30_70.csv`.
+the runs; the full trade-off curve is in `results/stage3/live_30_70.csv`, and all
+tables and findings are in [`results/stage3/README.md`](results/stage3/README.md).
 Details are in each stage's section below and in `results/`.
 
 ## Project layout
