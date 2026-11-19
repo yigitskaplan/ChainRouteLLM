@@ -14,8 +14,8 @@ performance evidence is meant to live on a shared, tamper-evident ledger.
 | 1 | Router: BERT + accuracy and cost guessers | **Done** · merged |
 | 2 | Comparison with MixLLM, online learning | **Done** · merged |
 | 3 | Latency, provider reputation, live models | **Done** · merged |
-| 4 | Comparison with recent routers from other researchers | Ongoing |
-| 5 | Hyperledger Besu network | Planned |
+| 4 | Comparison with recent routers on their own benchmark (LLMRouterBench) | **Done** |
+| 5 | Hyperledger Besu network | Ongoing |
 | 6 | Attack tests | Planned |
 | 7 | Router on the chain | Planned |
 | 8 | Scale | Planned |
@@ -49,11 +49,13 @@ flowchart LR
 | --- | --- | --- |
 | **Stage 2** | RouterBench, 11 models, 80/20, 5 seeds | **98.1%** of GPT-4's quality at **30.3%** of its cost |
 | **Stage 3** | 5 live models, 250 SuperGPQA questions, online, 5 seeds | **95%** of Opus's quality for **42%** less cost; **90%** for **88%** less cost and **35%** less latency |
+| **Stage 4** | LLMRouterBench (benchmark of the Avengers-Pro authors), 13 models, 12,446 questions, the paper's own splits, online, 5 seeds | GPT-5's accuracy for **35.7%** less cost (Avengers-Pro: 30.5%); top accuracy **+4.2%** over GPT-5, tying the best published router |
 
-Stage 3 figures are the best weight setting at each quality level, chosen after
-the runs; the full trade-off curve is in `results/stage3/live_30_70.csv`, and all
-tables and findings are in [`results/stage3/README.md`](results/stage3/README.md).
-Details are in each stage's section below and in `results/`.
+Stage 3 and 4 figures are the best weight setting at each level, chosen after
+the runs; the full trade-off curves are in `results/`, and all tables and
+findings are in [`results/stage3/README.md`](results/stage3/README.md) and
+[`results/stage4/README.md`](results/stage4/README.md). Details are in each
+stage's section below.
 
 ## Project layout
 
@@ -284,3 +286,50 @@ after the runs. Most of the saving comes from the cheaper GPT models: against
 the best mix of single models at equal cost, the router is about level.
 
 `run_live.py` keeps a stage-neutral name because the later stages reuse it.
+
+---
+
+## Stage 4: comparison with recent routers
+
+Our router is scored **on another team's own benchmark, with their split and
+their metrics**, against their published numbers. The benchmark is
+**LLMRouterBench** (Li et al., arXiv 2601.07206), built by the authors of
+Avengers-Pro, in its performance-cost setting: 13 flagship models (GPT-5,
+Gemini 2.5 Pro and Flash, Claude Sonnet 4, DeepSeek, Qwen3 and others) and 10
+datasets (AIME, LiveMathBench, LiveCodeBench, SWE-bench, GPQA, HLE, MMLU-Pro,
+SimpleQA, ArenaHard, τ²-bench), 12,446 questions with every model's score and cost.
+
+```bash
+python -m src.data.llmrouterbench   # download (1.28 GB), one table, the paper's splits
+python -m src.routing.embeddings --data data/processed/llmrouterbench_perf_cost.csv.gz \
+    --config configs/experiment_stage4_llmrouterbench.json      # BERT, about 7 min on an M3
+python -m src.routing.run_stage4 --config configs/experiment_stage4_llmrouterbench.json   # about 10 h
+```
+
+| Script | What it does |
+| --- | --- |
+| `llmrouterbench` | Downloads the OpenRouterBench release to `data/llmrouterbench/` (out of Git), keeps the 13 models and 10 datasets, writes `data/processed/llmrouterbench_perf_cost.csv.gz` and the paper's own 70/30 split for its five seeds to `data/splits/llmrouterbench/`, redone step by step from its code. A model without an answer (GPT-5-Chat on τ²-bench) scores 0 at cost 0, as in the paper |
+| `run_stage4` | The 70% is the warm start, the 30% test part is the stream with online learning (10 blocks). Scores AvgAcc (mean over the datasets) and total cost as the paper does, for every w_C, next to every single model, a random pick and the oracle, and prints the published numbers |
+
+On these splits the single models reproduce the paper's numbers exactly (GPT-5:
+65.96 AvgAcc at $125.60), so both sides are scored on the same test questions.
+
+| Test part, mean of 5 seeds | AvgAcc | Cost |
+| --- | --- | --- |
+| GPT-5 alone (best single model) | 65.96 | $125.60 |
+| **Ours, w_C 0** | **68.73** | $134.28 |
+| Avengers-Pro, best | 68.58 | $132.98 |
+| **Ours, w_C 0.015** | **66.76** | **$80.71** |
+| Avengers-Pro, cheapest at GPT-5's accuracy | 66.21 | $87.34 |
+| RouteLLM | 67.67 | $111.26 |
+| GraphRouter | 67.79 | $150.32 |
+
+- Top accuracy ties the best published router; at GPT-5's accuracy we save
+  35.7% of its cost against Avengers-Pro's 30.5%.
+- From $28 to $134 we are level with or above Avengers-Pro at the same cost;
+  below $12 Avengers-Pro is better.
+- The data has no latency, so latency and reputation, our extra dimensions, are
+  off here. Online learning gives no gain on this benchmark.
+
+All settings, per-dataset scores and model shares are in
+[`results/stage4/README.md`](results/stage4/README.md).
