@@ -271,8 +271,7 @@ Stages 1 and 2 are unchanged: no latency, no reputation and a fixed c̄.
 For 5 seeds and a w_C × w_L × w_R grid, it reports quality, cost and latency on
 the whole stream as a share of always using Opus. The router is compared with
 the same router without learning, every single model, a random pick and the
-oracle. Every seed's numbers go to `results/stage3/live_30_70.csv`; the earlier
-run with the three Claude models only is kept as `results/stage3/live_30_70_claude.csv`.
+oracle. Every seed's numbers go to `results/stage3/live_30_70.csv`.
 
 | Quality kept vs always Opus | Cost saved | Latency saved |
 | --- | --- | --- |
