@@ -5,11 +5,11 @@ Our router on LLMRouterBench (Li et al., arXiv 2601.07206), the benchmark of the
 ## Findings
 
 1. Highest accuracy ties the best published router: 68.73 +- 0.87 at $134.28 (+4.2% over GPT-5), against Avengers-Pro's best 68.58 at $132.98 (+4.0%).
-2. From $28 to $134 we are level with or above Avengers-Pro at the same cost (+0.03 to +1.11 pts); the largest edge is w_C 0.02: 65.69 at $70.88, 99.6% of GPT-5's accuracy for 44% less cost.
-3. Paper's CostSave (cheapest setting at least as accurate as GPT-5): ours w_C 0.01, 67.07 at $95.58 = 23.9% saved; Avengers-Pro 66.21 at $87.34 = 30.5% (31.7% in the paper's text). Our w_C 0.02 misses GPT-5 by 0.27 pts; no setting between 0.01 and 0.02 was run.
+2. From $28 to $134 we are level with or above Avengers-Pro at the same cost (+0.03 to +1.23 pts); the largest edge is w_C 0.015: 66.76 at $80.71 (+1.23 pts).
+3. Paper's CostSave (cheapest setting at least as accurate as GPT-5): ours w_C 0.015, 66.76 at $80.71 = 35.7% saved; Avengers-Pro 66.21 at $87.34 = 30.5% (31.7% in the paper's text). So we save more at GPT-5's accuracy. w_C 0.015 was run after the first eight settings, to fill the gap between 0.01 and 0.02; Avengers-Pro likewise reports a sweep of 21 settings on the same test parts.
 4. Below $12 Avengers-Pro is better by 0.54 to 1.27 pts.
 5. Against the other published routers: RouteLLM 67.67 at $111.26 vs ours 68.48 at $113.82; GraphRouter 67.79 at $150.32 vs ours 68.73 at $134.28 (more accurate and cheaper); FrugalGPT, HybridLLM, OpenRouter and the random router are below our curve at every cost.
-6. Online learning gives no gain here: -0.27 pts against the frozen router on average (better in 1 of 8 settings); the warm start is already large (8709 questions).
+6. Online learning gives no gain here: -0.24 pts against the frozen router on average (better in 2 of 9 settings); the warm start is already large (8709 questions).
 7. Room to improve: perfect picks reach 85.58 at $23.23. As cost falls, the hard sets lose most (HLE, tau2-bench), where only the expensive models succeed.
 
 ## 1. Our router (online learning)
@@ -19,6 +19,7 @@ Our router on LLMRouterBench (Li et al., arXiv 2601.07206), the benchmark of the
 | 0 | 68.73 +- 0.87 | $134.28 | +4.2% | +7% | +0.15 |
 | 0.005 | 68.48 +- 1.36 | $113.82 | +3.8% | -9% | +0.03 |
 | 0.01 | 67.07 +- 1.28 | $95.58 | +1.7% | -24% | +0.25 |
+| 0.015 | 66.76 +- 1.12 | $80.71 | +1.2% | -36% | +1.23 |
 | 0.02 | 65.69 +- 1.20 | $70.88 | -0.4% | -44% | +1.11 |
 | 0.05 | 61.34 +- 0.94 | $27.54 | -7.0% | -78% | +0.17 |
 | 0.1 | 58.46 +- 1.67 | $10.92 | -11.4% | -91% | -1.17 |
@@ -34,6 +35,7 @@ Avengers-Pro at the same cost: straight line between its two published settings 
 | 0 | 68.89 +- 0.79 | $135.09 | -0.16 |
 | 0.005 | 68.35 +- 0.48 | $113.96 | +0.13 |
 | 0.01 | 67.63 +- 0.65 | $95.39 | -0.56 |
+| 0.015 | 66.73 +- 0.57 | $81.22 | +0.03 |
 | 0.02 | 65.78 +- 0.44 | $71.28 | -0.09 |
 | 0.05 | 61.61 +- 1.08 | $27.39 | -0.27 |
 | 0.1 | 58.81 +- 0.93 | $10.87 | -0.35 |
@@ -93,6 +95,7 @@ Check: GPT-5 65.96 at $125.60, Qwen3-235B 55.74 at $6.93, Gemini-2.5-Pro 60.80 a
 | 0 | 87.8 | 82.2 | 83.7 | 34.0 | 85.0 | 24.5 | 86.7 | 57.7 | 76.3 | 69.5 |
 | 0.005 | 88.9 | 82.2 | 84.7 | 32.5 | 82.3 | 23.8 | 86.1 | 58.0 | 76.2 | 70.0 |
 | 0.01 | 86.7 | 79.5 | 84.3 | 30.1 | 82.7 | 23.5 | 85.8 | 58.8 | 74.8 | 64.5 |
+| 0.015 | 86.7 | 81.1 | 83.2 | 29.2 | 81.7 | 22.6 | 86.0 | 58.3 | 73.1 | 65.7 |
 | 0.02 | 86.7 | 80.0 | 81.8 | 27.1 | 77.0 | 21.8 | 85.0 | 57.5 | 75.5 | 64.5 |
 | 0.05 | 78.9 | 78.4 | 75.1 | 24.0 | 74.3 | 12.9 | 84.4 | 57.6 | 73.5 | 54.3 |
 | 0.1 | 75.6 | 78.4 | 70.5 | 22.5 | 72.3 | 8.8 | 84.0 | 55.7 | 73.2 | 43.6 |
@@ -106,6 +109,7 @@ Check: GPT-5 65.96 at $125.60, Qwen3-235B 55.74 at $6.93, Gemini-2.5-Pro 60.80 a
 | 0 | gpt-5 35%, gemini-2.5-pro 31%, qwen3-235b-a22b-2507 17%, deepseek-r1-0528 5% |
 | 0.005 | gpt-5 35%, gemini-2.5-pro 24%, qwen3-235b-a22b-2507 19%, deepseek-r1-0528 6% |
 | 0.01 | gpt-5 33%, qwen3-235b-a22b-2507 21%, gemini-2.5-pro 18%, deepseek-r1-0528 8% |
+| 0.015 | gpt-5 30%, qwen3-235b-a22b-2507 23%, gemini-2.5-pro 15%, deepseek-r1-0528 8% |
 | 0.02 | gpt-5 27%, qwen3-235b-a22b-2507 25%, gemini-2.5-pro 13%, qwen3-235b-a22b-thinking-2507 8% |
 | 0.05 | qwen3-235b-a22b-2507 37%, deepseek-v3.1-terminus 14%, qwen3-235b-a22b-thinking-2507 10%, gpt-5 8% |
 | 0.1 | qwen3-235b-a22b-2507 47%, deepseek-v3.1-terminus 20%, qwen3-235b-a22b-thinking-2507 7%, kimi-k2-0905 7% |
