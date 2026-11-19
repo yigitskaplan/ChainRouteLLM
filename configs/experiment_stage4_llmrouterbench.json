@@ -1,0 +1,66 @@
+{
+  "experiment": "stage4_llmrouterbench",
+  "description": "Stage 4: our router on LLMRouterBench (Li et al., arXiv 2601.07206), the benchmark of the Avengers-Pro authors, in its performance-cost setting: 13 flagship models, 10 datasets, 12,446 questions, the paper's own 70/30 split with its five seeds. The 70% is the warm start; the 30% test part is the stream, routed and scored block by block before it is learned from. Scored as in the paper: AvgAcc = mean over the datasets of the mean score, Cost = total USD on the test part. The data has no latency, so the score is quality and cost only.",
+  "seeds": [42, 999, 2024, 2025, 3407],
+  "data": {
+    "path": "data/processed/llmrouterbench_perf_cost.csv.gz",
+    "splits_dir": "data/splits/llmrouterbench",
+    "model_keys_primary": [
+      "claude-sonnet-4",
+      "deepseek-r1-0528",
+      "deepseek-v3-0324",
+      "deepseek-v3.1-terminus",
+      "gemini-2.5-flash",
+      "gemini-2.5-pro",
+      "glm-4.6",
+      "gpt-5",
+      "gpt-5-chat",
+      "intern-s1",
+      "kimi-k2-0905",
+      "qwen3-235b-a22b-2507",
+      "qwen3-235b-a22b-thinking-2507"
+    ],
+    "reference_model": "gpt-5",
+    "train_fraction": 0.7
+  },
+  "router": {
+    "encoder_checkpoint": "bert-base-multilingual-cased",
+    "encoder_pooling": "mean_of_last_hidden_layer",
+    "encoder_max_tokens": 512,
+    "score": "A_hat - w_C*C_hat/c",
+    "scales": "c = mean over models of each model's mean cost; start from the warm start, take in every answer seen",
+    "online_block": 374,
+    "w_C_grid": [0.0, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5],
+    "predictors": {
+      "quality": "random_forest",
+      "cost": "random_forest",
+      "random_forest": {
+        "n_estimators": 100,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt"
+      }
+    }
+  },
+  "published": {
+    "source": "LLMRouterBench, arXiv 2601.07206, Tables 12 and 13: 30% test part, mean of the five seeds",
+    "best_single": {"name": "GPT-5", "avg_acc": 65.96, "cost": 125.60},
+    "routers": [
+      {"name": "Avengers-Pro (alpha 1.00)", "avg_acc": 68.58, "cost": 132.98},
+      {"name": "Avengers-Pro (alpha 0.80)", "avg_acc": 67.88, "cost": 104.41},
+      {"name": "Avengers-Pro (alpha 0.65)", "avg_acc": 66.21, "cost": 87.34},
+      {"name": "Avengers-Pro (alpha 0.60)", "avg_acc": 65.27, "cost": 78.17},
+      {"name": "Avengers-Pro (alpha 0.50)", "avg_acc": 63.71, "cost": 62.75},
+      {"name": "Avengers-Pro (alpha 0.40)", "avg_acc": 62.22, "cost": 45.05},
+      {"name": "Avengers-Pro (alpha 0.35)", "avg_acc": 60.38, "cost": 14.44},
+      {"name": "Avengers-Pro (alpha 0.25)", "avg_acc": 58.46, "cost": 7.21},
+      {"name": "Avengers-Pro (alpha 0.10)", "avg_acc": 57.29, "cost": 4.40},
+      {"name": "GraphRouter (performance first)", "avg_acc": 67.79, "cost": 150.32},
+      {"name": "RouteLLM", "avg_acc": 67.67, "cost": 111.26},
+      {"name": "FrugalGPT", "avg_acc": 59.71, "cost": 59.15},
+      {"name": "HybridLLM", "avg_acc": 57.56, "cost": 18.65},
+      {"name": "Random router", "avg_acc": 53.45, "cost": 52.17},
+      {"name": "OpenRouter (commercial)", "avg_acc": 49.67, "cost": 82.31},
+      {"name": "Oracle", "avg_acc": 85.66, "cost": 23.04}
+    ]
+  }
+}
