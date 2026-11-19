@@ -48,7 +48,8 @@ def learn_online(
         picks[rows] = router.route(learned.predict(X_online[rows]))
         if isinstance(router.cost_scale, Scales):
             for i in rows:
-                router.cost_scale.add(picks[i], online["cost"][i, picks[i]], online["latency"][i, picks[i]])
+                latency = online["latency"][i, picks[i]] if "latency" in online else 0.0
+                router.cost_scale.add(picks[i], online["cost"][i, picks[i]], latency)
         for j in np.unique(picks[rows]):
             seen[j].extend(rows[picks[rows] == j])
             new = np.asarray(seen[j])

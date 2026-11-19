@@ -31,11 +31,14 @@ class Scales:
     """
 
     def __init__(self, offline: Mapping[str, np.ndarray]):
-        """Start from the offline answers, where every model answered every question."""
+        """Start from the offline answers, where every model answered every question.
+
+        Without latency in the data (LLMRouterBench), l stays 0 and only w_L = 0 makes sense.
+        """
         rows, models = offline["cost"].shape
         self.answers = np.full(models, float(rows))
         self.cost = offline["cost"].sum(axis=0).astype(float)
-        self.latency = offline["latency"].sum(axis=0).astype(float)
+        self.latency = offline["latency"].sum(axis=0).astype(float) if "latency" in offline else np.zeros(models)
 
     def add(self, model: int, cost: float, latency: float) -> None:
         """Take in one answer seen online (only the picked model answers)."""
@@ -79,7 +82,9 @@ class Router:
         """Scores [rows, models]."""
         scale = self.cost_scale
         if isinstance(scale, Scales):
-            score = predicted["quality"] - self.w_C * predicted["cost"] / scale.c - self.w_L * predicted["latency"] / scale.l
+            score = predicted["quality"] - self.w_C * predicted["cost"] / scale.c
+            if self.w_L:
+                score = score - self.w_L * predicted["latency"] / scale.l
         else:
             score = predicted["quality"] - self.w_C * predicted["cost"] / scale
         if self.w_R:

@@ -25,3 +25,6 @@ data/embeddings/*.npz
 # SuperGPQA download, rebuilt by src/data/supergpqa.py; the question batches stay in Git.
 data/supergpqa/*
 !data/supergpqa/batches/
+
+# LLMRouterBench download (Stage 4), rebuilt by src/data/llmrouterbench.py.
+data/llmrouterbench/
