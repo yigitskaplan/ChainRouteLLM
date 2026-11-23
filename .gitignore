@@ -32,3 +32,4 @@ data/llmrouterbench/
 # Besu network of infrastructure/besu/start_besu.sh: keys, chain data and the dev account stay local.
 infrastructure/besu/data/
 infrastructure/besu/dev_wallet.json
+infrastructure/besu/deployment.json
