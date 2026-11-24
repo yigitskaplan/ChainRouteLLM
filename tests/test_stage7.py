@@ -44,3 +44,12 @@ def test_scales_add_the_stream_to_the_warm_start():
     assert s.answers.tolist() == [3, 2]
     assert s.c == pytest.approx(((1 + 1 + 4) / 3 + 3) / 2)   # mean over models of each model's mean cost
     assert s.l == pytest.approx(((2 + 2 + 8) / 3 + 4) / 2)
+
+
+def test_a_removed_router_is_ignored_with_all_its_past_receipts():
+    ev = Evidence(groups=1, models=2)
+    ev.add([receipt(0, 0, 0, 10_000), receipt(1, 0, 0, 0), receipt(1, 0, 1, 0)])
+    ev.exclude(1)
+    assert [r.router for r in ev.visible(None)] == [0]
+    assert ev.visible(1) == []
+    assert ev.totals(None).n_group[0].tolist() == [1, 0]
