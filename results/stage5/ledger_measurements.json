@@ -1,0 +1,55 @@
+{
+  "client": "besu/v26.11.0/linux-aarch_64/openjdk-java-25",
+  "validators": 4,
+  "block_period_s": 2,
+  "contract": "0xB38cfFe5F215674d5915A895CF98216e6DAD4111",
+  "gas": {
+    "deploy": 715437,
+    "add_router": 45398,
+    "register_model": 71034
+  },
+  "healthy": {
+    "confirmation": {
+      "receipts": 30,
+      "seconds_mean": 1.998,
+      "seconds_median": 2.039,
+      "seconds_p95": 2.057,
+      "seconds_max": 2.066,
+      "gas_per_receipt": 53354
+    },
+    "throughput": {
+      "receipts": 2000,
+      "routers_sending": 10,
+      "all_ok": true,
+      "ok": 2000,
+      "seconds_to_send": 0.7,
+      "seconds_until_all_in_blocks": 2.87,
+      "receipts_per_second": 696.2,
+      "blocks_used": 2,
+      "blocks_waited_from_start": 2,
+      "max_receipts_in_one_block": 1547
+    }
+  },
+  "one_validator_down": {
+    "confirmation": {
+      "receipts": 30,
+      "seconds_mean": 3.33,
+      "seconds_median": 2.042,
+      "seconds_p95": 5.933,
+      "seconds_max": 6.041,
+      "gas_per_receipt": 53354
+    },
+    "throughput": {
+      "receipts": 1000,
+      "routers_sending": 5,
+      "all_ok": true,
+      "ok": 1000,
+      "seconds_to_send": 0.17,
+      "seconds_until_all_in_blocks": 5.68,
+      "receipts_per_second": 176.1,
+      "blocks_used": 1,
+      "blocks_waited_from_start": 1,
+      "max_receipts_in_one_block": 1000
+    }
+  }
+}

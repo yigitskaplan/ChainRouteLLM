@@ -79,13 +79,17 @@ class Ledger:
         self.address, self.account, self.rpc = address, account, rpc
 
     @classmethod
-    def deploy(cls, account: Account, rpc: str = RPC) -> "Ledger":
+    def deploy(cls, account: Account, rpc: str = RPC, record: Optional[Path] = DEPLOYMENT) -> "Ledger":
+        """Deploy a new contract; its address is saved to ``record`` (None: not saved, e.g. for measurements)."""
         out = run("forge", "create", "src/EvidenceLedger.sol:EvidenceLedger", "--rpc-url", rpc,
                   "--private-key", account.key, "--broadcast", cwd=CONTRACTS)
-        address = next(line.split(":", 1)[1].strip() for line in out.splitlines() if line.startswith("Deployed to:"))
-        block = int(run("cast", "block-number", "--rpc-url", rpc))
-        DEPLOYMENT.write_text(json.dumps({"address": address, "block": block}, indent=2) + "\n")
-        return cls(address, account, rpc)
+        field = lambda name: next(line.split(":", 1)[1].strip() for line in out.splitlines() if line.startswith(name))
+        ledger = cls(field("Deployed to:"), account, rpc)
+        ledger.deploy_tx = field("Transaction hash:")
+        if record is not None:
+            block = int(run("cast", "block-number", "--rpc-url", rpc))
+            record.write_text(json.dumps({"address": ledger.address, "block": block}, indent=2) + "\n")
+        return ledger
 
     @classmethod
     def load(cls, account: Account, rpc: str = RPC) -> "Ledger":
@@ -95,8 +99,9 @@ class Ledger:
         return run("cast", "call", self.address, signature, *args, "--rpc-url", self.rpc)
 
     def send(self, signature: str, *args: str, nonce: Optional[int] = None, wait: bool = True,
-             gas_limit: int = 200_000, tries: int = 4) -> str:
-        """Send a transaction; with wait=False return its hash at once (the nonce must then be given).
+             gas_limit: int = 200_000, tries: int = 4):
+        """Send a transaction and return its receipt (a dict) once it is in a block; with wait=False
+        return its hash at once (the nonce must then be given).
 
         Gas is free on our chain (zero base fee, minimum gas price 0), so every transaction is sent at
         gas price 0 with a fixed gas limit: no fee or gas estimation calls, which are slower and which
@@ -117,7 +122,12 @@ class Ledger:
                 time.sleep(1 + attempt)
         if receipt["status"] != "0x1":
             raise RuntimeError(f"{signature} failed in block {int(receipt['blockNumber'], 16)}")
-        return receipt["transactionHash"]
+        return receipt
+
+    def sign(self, signature: str, *args: str, nonce: int, gas_limit: int = 200_000, chain_id: int = 1337) -> str:
+        """A signed raw transaction, made offline, to be sent later (used to measure the chain's throughput)."""
+        return run("cast", "mktx", self.address, signature, *args, "--private-key", self.account.key, "--nonce", str(nonce),
+                   "--legacy", "--gas-price", "0", "--gas-limit", str(gas_limit), "--chain", str(chain_id), "--rpc-url", self.rpc)
 
     def nonce(self) -> int:
         return int(run("cast", "nonce", self.account.address, "--rpc-url", self.rpc))
