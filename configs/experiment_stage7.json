@@ -1,0 +1,162 @@
+{
+  "experiment": "stage7_router_on_chain",
+  "description": "Stage 7: the router learns from the receipts on the chain (choice C): c and l and an accuracy correction per (group, model) come from the visible receipts, the forests still retrain on the router's own answers. Experiment 1: one router on the live data, learning from the chain. Experiment 2: 5 routers on LLMRouterBench, each alone (own receipts) or sharing (everyone's receipts). Experiment 3: a lying router (audits remove it) and a secret model swap, on the live data. Learning is simulated in memory; one run per experiment is repeated on the real chain.",
+  "tau": 20,
+  "groups": 8,
+  "live": {
+    "config": "configs/experiment_stage3.json",
+    "data": "data/processed/supergpqa_live.csv.gz",
+    "splits_dir": "data/splits/live_30_70",
+    "block": 25,
+    "chain_seed": 11,
+    "chain_router": "balanced",
+    "routers": [
+      {
+        "name": "quality first",
+        "w_C": 0.0,
+        "w_L": 0.02,
+        "w_R": 0.0
+      },
+      {
+        "name": "balanced",
+        "w_C": 0.1,
+        "w_L": 0.01,
+        "w_R": 0.0
+      },
+      {
+        "name": "cheap",
+        "w_C": 0.5,
+        "w_L": 0.0,
+        "w_R": 0.0
+      },
+      {
+        "name": "fast",
+        "w_C": 0.1,
+        "w_L": 0.5,
+        "w_R": 0.0
+      },
+      {
+        "name": "Claude-leaning",
+        "w_C": 0.1,
+        "w_L": 0.01,
+        "w_R": 0.1
+      }
+    ]
+  },
+  "llmrouterbench": {
+    "config": "configs/experiment_stage4_llmrouterbench.json",
+    "seeds": [
+      42,
+      999,
+      2024
+    ],
+    "block": 374,
+    "chain_seed": 42,
+    "routers": [
+      {
+        "name": "quality first",
+        "w_C": 0.0
+      },
+      {
+        "name": "balanced",
+        "w_C": 0.01
+      },
+      {
+        "name": "cheap",
+        "w_C": 0.05
+      },
+      {
+        "name": "middle",
+        "w_C": 0.02
+      },
+      {
+        "name": "near quality",
+        "w_C": 0.005
+      }
+    ],
+    "prices_note": "Official prices in USD per million input / output tokens, from LLMRouterBench Table 8; Claude Sonnet 4 from Anthropic's price list. Only stored with the model registration.",
+    "prices": {
+      "claude-sonnet-4": [
+        3.0,
+        15.0
+      ],
+      "deepseek-r1-0528": [
+        0.5,
+        2.15
+      ],
+      "deepseek-v3-0324": [
+        0.25,
+        0.88
+      ],
+      "deepseek-v3.1-terminus": [
+        0.27,
+        1.0
+      ],
+      "gemini-2.5-flash": [
+        0.3,
+        2.5
+      ],
+      "gemini-2.5-pro": [
+        1.25,
+        10.0
+      ],
+      "glm-4.6": [
+        0.6,
+        2.2
+      ],
+      "gpt-5": [
+        1.25,
+        10.0
+      ],
+      "gpt-5-chat": [
+        1.25,
+        10.0
+      ],
+      "intern-s1": [
+        0.18,
+        0.54
+      ],
+      "kimi-k2-0905": [
+        0.5,
+        2.0
+      ],
+      "qwen3-235b-a22b-2507": [
+        0.09,
+        0.6
+      ],
+      "qwen3-235b-a22b-thinking-2507": [
+        0.3,
+        2.9
+      ]
+    }
+  },
+  "attacks": {
+    "note": "Experiment 3 on the live data, the 5 routers sharing. Attack 6 (Fevzi's E4): the liar reports Haiku right and Opus wrong in its receipts and also makes up such receipts for every question it handles; audits re-check 10% and remove a router after 3 failures. Attack 7 (Fevzi's E3): from 25% of the stream on, Sol returns Terra's answers (heavily used model) and, separately, Opus returns Haiku's.",
+    "liar": "Claude-leaning",
+    "lie_up": "claude-haiku-5-5",
+    "lie_down": "claude-opus-5-5",
+    "audit_rate": 0.1,
+    "max_failures": 3,
+    "swap_from": 0.25,
+    "fabricate": [
+      [
+        "claude-haiku-5-5",
+        1.0
+      ],
+      [
+        "claude-opus-5-5",
+        0.0
+      ]
+    ],
+    "swaps": [
+      {
+        "strong": "gpt-6.1-sol",
+        "weak": "gpt-6.1-terra"
+      },
+      {
+        "strong": "claude-opus-5-5",
+        "weak": "claude-haiku-5-5"
+      }
+    ]
+  }
+}
