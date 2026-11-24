@@ -16,7 +16,7 @@ performance evidence is meant to live on a shared, tamper-evident ledger.
 | 3 | Latency, provider reputation, live models | **Done** · merged |
 | 4 | Comparison with recent routers on their own benchmark (LLMRouterBench) | **Done** · merged |
 | 5 | Evidence ledger on a Hyperledger Besu network | **Done** · merged |
-| 6 | Attack tests | Planned |
+| 6 | Attack tests on the ledger (the lying router and the model swap come with Stage 7) | **Done** · merged |
 | 7 | Router on the chain | Planned |
 | 8 | Scale | Planned |
 
@@ -52,6 +52,7 @@ flowchart LR
 | **Stage 3** | 5 live models, 250 SuperGPQA questions, online, 5 seeds | **95%** of Opus's quality for **42%** less cost; **90%** for **88%** less cost and **35%** less latency |
 | **Stage 4** | LLMRouterBench (benchmark of the Avengers-Pro authors), 13 models, 12,446 questions, the paper's own splits, online, 5 seeds | GPT-5's accuracy for **35.7%** less cost (Avengers-Pro: 30.5%); top accuracy **+4.2%** over GPT-5, tying the best published router |
 | **Stage 5** | Evidence ledger on 4 Besu QBFT validators, 1,250 receipts of the live answers | Every model's accuracy, cost and latency **recomputed from the chain alone**, equal to the data, with no question or answer on the chain; a receipt is final in **2.0 s** (up to 6 s with a validator down); **2,000 receipts in 2.9 s** |
+| **Stage 6** | Attacks on the live evidence contract and the 4 validators | Every attack **stopped or caught**: outsider, fake-model and repeated receipts refused, **97 of 97** edited receipts found, the 4 validators' copies identical; the receipts never changed |
 
 Stage 3 and 4 figures are the best weight setting at each level, chosen after
 the runs; the full trade-off curves are in `results/`, and all tables and
@@ -69,7 +70,7 @@ stage's section below.
 | `src/routing/` | Embeddings, predictors, routing policies, and online learning |
 | `src/feedback/` | Feedback simulation and validation *(empty, later stages)* |
 | `src/evidence/` | Evidence ledger client: receipts, question groups, upload, checks and measurements |
-| `src/attacks/` | Controlled attack scenarios *(empty, Stage 6)* |
+| `src/attacks/` | Attacks on the evidence ledger |
 | `src/evaluation/` | Replay experiments, baselines, and metrics *(empty, later stages)* |
 | `contracts/` | The `EvidenceLedger` Solidity contract and its tests (Foundry) |
 | `infrastructure/` | The Besu network in Docker |
@@ -417,3 +418,45 @@ Later: the group centroids on the chain when a second router joins, more groups
 as the data grows, approval by several members, Merkle batches at large
 volume, 7 and 16 validators (Stage 8), and routers reading their totals from
 the chain (Stage 7).
+
+---
+
+## Stage 6: attack tests
+
+Stage 6 plays the cheater against the ledger. The attacks run against the real
+evidence contract with the 1,250 live receipts, and every one is checked by
+counting the receipts before and after.
+
+```bash
+python -m src.attacks.ledger_attacks    # needs the chain (infrastructure/besu/start_besu.sh)
+```
+
+| # | Attacker | Attack | Result |
+| --- | --- | --- | --- |
+| 1 | Outsider | Adds a receipt | Refused (`NotRouter`) |
+| 2 | Approved router | Reports a model that was never registered | Refused (`UnknownModel`) |
+| 3 | Approved router | Sends the same receipt again, also with a better score | Refused (`AlreadyReported`) |
+| 4a | Anyone | Changes or deletes a past receipt | Impossible: no function of the contract does it (receipts are event logs) |
+| 4b | Insider | Turns 97 of Opus's correct answers into wrong ones in a local copy | **All 97 found** against the chain, nothing else flagged (Opus looks 38.8% in the copy; the chain keeps 77.6%) |
+| 4c | One validator | Keeps an altered copy | Outvoted: all 4 validators hold the same receipts and block hashes, and a block needs 3 of the 4 signatures |
+| 5 | Validators | Go down | 1 down: keeps working (receipts in 2–6 s); 2 down: safe pause (Stage 5 measurements) |
+| 8 | Owner | Approves fake routers or models | **Not prevented**: the limit of the one-owner prototype; approval by several members is future work |
+
+For attacks 1–3 the call is simulated first, to read the contract's refusal,
+and then really sent: the transaction is mined as failed and the chain keeps
+its 1,250 receipts. Results: `results/stage6/ledger_attacks.json`.
+
+**Findings.**
+- Refused attempts stay on the chain as failed transactions, a permanent record
+  of who tried what and when.
+- With gas price 0, anyone who can reach a node can send failing transactions
+  for free. The nodes listen only on the local machine; the fix is Besu's
+  account permissioning.
+
+**Later, with Stage 7.** A lying router (its receipts are accepted, since the
+contract cannot know the truth; the defence is spot-check audits and removing
+the router with all its past receipts) and a provider that secretly swaps its
+model (seen as that model's accuracy drops). Their effect on the router's
+choices can only be measured once the router learns from the chain. Attack 4b
+and these two follow Fevzi Ege Yurtsevenler's E5, E4 and E3 on the phase5
+branch.

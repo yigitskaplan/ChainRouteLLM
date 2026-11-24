@@ -141,10 +141,16 @@ class Ledger:
     def is_registered(self, name: str) -> bool:
         return self.call("models(bytes32)(bool,uint64,uint64,uint64,string)", self.model_id(name)).splitlines()[0] == "true"
 
-    def receipts(self, from_block: int = 0) -> List[Receipt]:
-        logs = json.loads(run("cast", "logs", "--address", self.address, "--from-block", str(from_block), RECEIPT,
-                              "--rpc-url", self.rpc, "--json"))
-        return [decode_receipt(log) for log in logs]
+    def receipts(self, from_block: int = 0, window: int = 4_000) -> List[Receipt]:
+        """Every receipt from ``from_block`` on, searched in windows of blocks (Besu answers a log
+        search over at most 5,000 blocks, and the chain keeps making empty blocks)."""
+        last = int(run("cast", "block-number", "--rpc-url", self.rpc))
+        found = []
+        for start in range(max(from_block, 0), last + 1, window):
+            end = min(start + window - 1, last)
+            found += json.loads(run("cast", "logs", "--address", self.address, "--from-block", str(start),
+                                    "--to-block", str(end), RECEIPT, "--rpc-url", self.rpc, "--json"))
+        return [decode_receipt(log) for log in found]
 
 
 def totals(receipts: Sequence[Receipt], names: Dict[str, str], by_group: bool = False) -> pd.DataFrame:

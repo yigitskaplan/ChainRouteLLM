@@ -1,0 +1,93 @@
+{
+  "contract": "0xc50129338F7880f52b574f857368355e1088b9d2",
+  "receipts": 1250,
+  "refused_receipts": [
+    {
+      "attack": "1. outsider adds a receipt",
+      "contract_says": "NotRouter",
+      "transaction": "failed (reverted)",
+      "receipts_before": 1250,
+      "receipts_after": 1250,
+      "chain_unchanged": true
+    },
+    {
+      "attack": "2. receipt for an unregistered model",
+      "contract_says": "UnknownModel",
+      "transaction": "failed (reverted)",
+      "receipts_before": 1250,
+      "receipts_after": 1250,
+      "chain_unchanged": true
+    },
+    {
+      "attack": "3. the same receipt again",
+      "contract_says": "AlreadyReported",
+      "transaction": "failed (reverted)",
+      "receipts_before": 1250,
+      "receipts_after": 1250,
+      "chain_unchanged": true
+    },
+    {
+      "attack": "3. the same receipt again, with a better score",
+      "contract_says": "AlreadyReported",
+      "transaction": "failed (reverted)",
+      "receipts_before": 1250,
+      "receipts_after": 1250,
+      "chain_unchanged": true
+    }
+  ],
+  "contract_functions": [
+    "GROUPS()",
+    "MAX_SCORE()",
+    "addReceipt(bytes32,uint8,bytes32,uint16,uint64,uint32)",
+    "addRouter(address)",
+    "isRouter(address)",
+    "modelIdOf(string)",
+    "models(bytes32)",
+    "owner()",
+    "registerModel(string,uint64,uint64)",
+    "removeRouter(address)",
+    "reported(bytes32)"
+  ],
+  "edited_local_copy": {
+    "receipts_edited": 97,
+    "edits_found": 97,
+    "all_found_and_only_those": true,
+    "opus_accuracy_true": 0.776,
+    "opus_accuracy_in_edited_copy": 0.388
+  },
+  "validator_copies": {
+    "validator 1": {
+      "receipts": 1250,
+      "fingerprint": "0x59e29ec68152e51a3f8852564ce5e19867aecbbaad1e640fde0c4948f26a1522",
+      "first_and_last_block_hash": [
+        "0x0ed7a8bdf116ae21a3ba4a755032cd0ee3a056e731d37ccf4313ad251cece21a",
+        "0x665d90a50ef018e7677a354dfd8350f82498e4b8c8d751d40563d1baf24b2883"
+      ]
+    },
+    "validator 2": {
+      "receipts": 1250,
+      "fingerprint": "0x59e29ec68152e51a3f8852564ce5e19867aecbbaad1e640fde0c4948f26a1522",
+      "first_and_last_block_hash": [
+        "0x0ed7a8bdf116ae21a3ba4a755032cd0ee3a056e731d37ccf4313ad251cece21a",
+        "0x665d90a50ef018e7677a354dfd8350f82498e4b8c8d751d40563d1baf24b2883"
+      ]
+    },
+    "validator 3": {
+      "receipts": 1250,
+      "fingerprint": "0x59e29ec68152e51a3f8852564ce5e19867aecbbaad1e640fde0c4948f26a1522",
+      "first_and_last_block_hash": [
+        "0x0ed7a8bdf116ae21a3ba4a755032cd0ee3a056e731d37ccf4313ad251cece21a",
+        "0x665d90a50ef018e7677a354dfd8350f82498e4b8c8d751d40563d1baf24b2883"
+      ]
+    },
+    "validator 4": {
+      "receipts": 1250,
+      "fingerprint": "0x59e29ec68152e51a3f8852564ce5e19867aecbbaad1e640fde0c4948f26a1522",
+      "first_and_last_block_hash": [
+        "0x0ed7a8bdf116ae21a3ba4a755032cd0ee3a056e731d37ccf4313ad251cece21a",
+        "0x665d90a50ef018e7677a354dfd8350f82498e4b8c8d751d40563d1baf24b2883"
+      ]
+    }
+  },
+  "validator_copies_identical": true
+}
