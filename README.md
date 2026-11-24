@@ -14,8 +14,8 @@ performance evidence is meant to live on a shared, tamper-evident ledger.
 | 1 | Router: BERT + accuracy and cost guessers | **Done** · merged |
 | 2 | Comparison with MixLLM, online learning | **Done** · merged |
 | 3 | Latency, provider reputation, live models | **Done** · merged |
-| 4 | Comparison with recent routers on their own benchmark (LLMRouterBench) | **Done** |
-| 5 | Hyperledger Besu network | Ongoing |
+| 4 | Comparison with recent routers on their own benchmark (LLMRouterBench) | **Done** · merged |
+| 5 | Evidence ledger on a Hyperledger Besu network | **Done** · merged |
 | 6 | Attack tests | Planned |
 | 7 | Router on the chain | Planned |
 | 8 | Scale | Planned |
@@ -35,6 +35,7 @@ flowchart LR
     M --> E["Real answer:<br/>right? cost? wait?"]
     E -. online learning .-> G
     E -. updates c̄ and ℓ̄ .-> S
+    E -. "receipt (no text)" .-> LG["Evidence ledger<br/>Besu, 4 validators"]
 ```
 
 - **w_C, w_L, w_R** are dials: how much the user cares about cost, waiting and the
@@ -50,6 +51,7 @@ flowchart LR
 | **Stage 2** | RouterBench, 11 models, 80/20, 5 seeds | **98.1%** of GPT-4's quality at **30.3%** of its cost |
 | **Stage 3** | 5 live models, 250 SuperGPQA questions, online, 5 seeds | **95%** of Opus's quality for **42%** less cost; **90%** for **88%** less cost and **35%** less latency |
 | **Stage 4** | LLMRouterBench (benchmark of the Avengers-Pro authors), 13 models, 12,446 questions, the paper's own splits, online, 5 seeds | GPT-5's accuracy for **35.7%** less cost (Avengers-Pro: 30.5%); top accuracy **+4.2%** over GPT-5, tying the best published router |
+| **Stage 5** | Evidence ledger on 4 Besu QBFT validators, 1,250 receipts of the live answers | Every model's accuracy, cost and latency **recomputed from the chain alone**, equal to the data, with no question or answer on the chain; a receipt is final in **2.0 s** (up to 6 s with a validator down); **2,000 receipts in 2.9 s** |
 
 Stage 3 and 4 figures are the best weight setting at each level, chosen after
 the runs; the full trade-off curves are in `results/`, and all tables and
@@ -66,11 +68,11 @@ stage's section below.
 | `src/data/` | Dataset loading, validation, and preprocessing |
 | `src/routing/` | Embeddings, predictors, routing policies, and online learning |
 | `src/feedback/` | Feedback simulation and validation *(empty, later stages)* |
-| `src/evidence/` | Evidence schema and storage adapters *(empty, later stages)* |
+| `src/evidence/` | Evidence ledger client: receipts, question groups, upload, checks and measurements |
 | `src/attacks/` | Controlled attack scenarios *(empty, Stage 6)* |
 | `src/evaluation/` | Replay experiments, baselines, and metrics *(empty, later stages)* |
-| `contracts/` | Solidity contracts and contract tooling *(empty, Stage 5)* |
-| `infrastructure/` | Docker, Besu, and benchmark infrastructure *(empty, Stage 5)* |
+| `contracts/` | The `EvidenceLedger` Solidity contract and its tests (Foundry) |
+| `infrastructure/` | The Besu network in Docker |
 | `tests/` | Automated tests |
 | `results/` | Experiment reports, tables, and plots |
 
@@ -93,6 +95,14 @@ python -m pytest
 > Calling the live models (Stage 3) needs API keys in a local `.env` file
 > (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY`). It is listed in `.gitignore` and must
 > never be committed.
+
+The ledger (Stage 5) also needs [Docker](https://www.docker.com/) and
+[Foundry](https://getfoundry.sh/) (`forge`, `cast`), and the contract's test
+library, a Git submodule:
+
+```bash
+git submodule update --init      # contracts/lib/forge-std
+```
 
 ## Data preparation
 
@@ -333,3 +343,77 @@ On these splits the single models reproduce the paper's numbers exactly (GPT-5:
 
 All settings, per-dataset scores and model shares are in
 [`results/stage4/README.md`](results/stage4/README.md).
+
+---
+
+## Stage 5: evidence ledger on Hyperledger Besu
+
+The router's evidence goes to a shared, tamper-evident ledger: a private
+Hyperledger Besu network of **4 validators with QBFT consensus**. Four is the
+smallest QBFT network that keeps working with one crashed or dishonest
+validator (n ≥ 3f + 1: a block needs ⌈2n/3⌉ = 3 of the 4 signatures). Every
+routed question becomes one **receipt**:
+
+| Field | Example | Stored as |
+| --- | --- | --- |
+| Question hash | `0x8509…1eef` | keccak256 of the question text |
+| Group | 3 | the nearest of 8 automatic BERT groups |
+| Model | Claude Opus 5.5 | the id of a registered model |
+| Score | right / wrong | 0–10,000 (0–100.00%) |
+| Cost | $0.0118 | nano-USD |
+| Latency | 5.99 s | ms |
+
+The router that sent it and the time come with the transaction. **No question
+text and no model answer is ever on the chain.**
+
+```bash
+infrastructure/besu/start_besu.sh        # 4 validators in Docker (project "chainroutellm"); stop_besu.sh stops them
+(cd contracts && forge test)             # 16 contract tests
+python -m src.evidence.upload_live       # the 1,250 live receipts, then a check from the chain
+python -m src.evidence.measure_ledger    # gas, confirmation time and throughput, also with a validator down
+```
+
+| Part | Where | What it does |
+| --- | --- | --- |
+| Network | `infrastructure/besu/` | The official `hyperledger/besu:26.11.0` image; 2 s blocks, gas price 0, every validator linked to the other three. Keys and chain data stay out of Git |
+| Contract | `contracts/src/EvidenceLedger.sol` | One owner approves routers and registers models with their official prices. Receipts only from approved routers, for registered models, groups 0–7, scores up to 10,000, and once per (router, question, model). Receipts are events every router can read |
+| Groups | `src/evidence/groups.py` | k-means with K = 8 on the BERT vectors of the 250 live questions; centroids in `data/evidence/groups_k8.npz` |
+| Client | `src/evidence/ledger.py` | Talks to the contract with Foundry's `cast`; adds receipts up per model and per (group, model) |
+
+**Design choices.**
+- No human topics: the router works from BERT, so the groups are automatic,
+  and a group number cannot be turned back into a question.
+- K = 8: in Fevzi's ablation K = 8 helped most (+0.48 pts, against +0.25 for
+  K = 32 and −0.06 for K = 128), and 250 questions give about 30 per group.
+- A plain question hash, so routers can match the same question and repeats
+  are caught (members could guess short or public questions).
+- Every receipt as an event: each router adds up its own totals, and single
+  receipts keep reporter checks possible.
+- One owner and a minimal contract: a research prototype; the paper comes first.
+
+**Results.** The 1,250 receipts (250 questions × 5 models) read back from the
+chain equal the data, and so do the numbers recomputed **from the chain alone**:
+
+| Model | Accuracy | Avg cost | Avg latency |
+| --- | --- | --- | --- |
+| Claude Haiku 5.5 | 62.0% | $0.000369 | 3.77 s |
+| Claude Sonnet 5.5 | 70.0% | $0.004806 | 3.99 s |
+| Claude Opus 5.5 | 77.6% | $0.011773 | 5.99 s |
+| GPT-6.1 Terra | 69.6% | $0.001024 | 3.40 s |
+| GPT-6.1 Sol | 73.6% | $0.002407 | 5.26 s |
+
+| Measured on the 4 validators | All up | 1 stopped |
+| --- | --- | --- |
+| Gas per receipt | 53,354 | 53,354 |
+| Time until a receipt is in a block | 2.0 s | 3.3 s on average (median 2.0 s, max 6.0 s) |
+| Burst sent at once | 2,000 from 10 routers, all in 2.9 s | 1,000 from 5 routers, all in 5.7 s |
+| Failed or lost receipts | 0 | 0 |
+
+Measurements: `results/stage5/ledger_measurements.json`. Stage 5 builds on Fevzi
+Ege Yurtsevenler's phase5 work: the Besu script and chain settings, the
+`EvidenceLedger` contract and its measurement plan.
+
+Later: the group centroids on the chain when a second router joins, more groups
+as the data grows, approval by several members, Merkle batches at large
+volume, 7 and 16 validators (Stage 8), and routers reading their totals from
+the chain (Stage 7).

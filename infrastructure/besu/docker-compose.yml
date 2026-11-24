@@ -1,0 +1,54 @@
+# Stage 5: the 4 Besu QBFT validators, listed together as the "chainroutellm" project in Docker.
+# Start and stop them with start_besu.sh and stop_besu.sh: start_besu.sh first creates data/
+# (genesis, validator keys, and each validator's static-nodes.json linking it to the other three).
+name: chainroutellm
+
+x-validator: &validator
+  image: hyperledger/besu:26.11.0
+  volumes:
+    - ./data:/data
+  environment: &settings
+    BESU_OPTS: -Xmx768m
+    BESU_GENESIS_FILE: /data/networkFiles/genesis.json
+    BESU_P2P_PORT: "30303"
+    BESU_NAT_METHOD: NONE
+    BESU_RPC_HTTP_ENABLED: "true"
+    BESU_RPC_HTTP_HOST: 0.0.0.0
+    BESU_RPC_HTTP_PORT: "8545"
+    BESU_RPC_HTTP_API: ETH,NET,QBFT,WEB3,TXPOOL
+    BESU_HOST_ALLOWLIST: "*"
+    BESU_MIN_GAS_PRICE: "0"
+    BESU_PROFILE: ENTERPRISE
+
+services:
+  besu-node1:
+    <<: *validator
+    container_name: besu-node1
+    environment: {<<: *settings, BESU_DATA_PATH: /data/node1, BESU_P2P_HOST: 172.28.0.11}
+    networks: {besu: {ipv4_address: 172.28.0.11}}
+    ports: ["127.0.0.1:8545:8545"]
+  besu-node2:
+    <<: *validator
+    container_name: besu-node2
+    environment: {<<: *settings, BESU_DATA_PATH: /data/node2, BESU_P2P_HOST: 172.28.0.12}
+    networks: {besu: {ipv4_address: 172.28.0.12}}
+    ports: ["127.0.0.1:8546:8545"]
+  besu-node3:
+    <<: *validator
+    container_name: besu-node3
+    environment: {<<: *settings, BESU_DATA_PATH: /data/node3, BESU_P2P_HOST: 172.28.0.13}
+    networks: {besu: {ipv4_address: 172.28.0.13}}
+    ports: ["127.0.0.1:8547:8545"]
+  besu-node4:
+    <<: *validator
+    container_name: besu-node4
+    environment: {<<: *settings, BESU_DATA_PATH: /data/node4, BESU_P2P_HOST: 172.28.0.14}
+    networks: {besu: {ipv4_address: 172.28.0.14}}
+    ports: ["127.0.0.1:8548:8545"]
+
+networks:
+  besu:
+    name: chainroute-besu
+    ipam:
+      config:
+        - subnet: 172.28.0.0/24
