@@ -1,0 +1,23 @@
+[
+  {
+    "seed": 11,
+    "router": "balanced",
+    "contract": "0x5F5cd5C2f9999861E43941eeF11b873B76d40624",
+    "receipts_on_chain": 175,
+    "picks_identical": true,
+    "memory": {
+      "quality": 0.7371428571428571,
+      "cost_per_1k": 2.0022542857142853,
+      "latency": 4.652004475187776,
+      "quality_router0": 0.7371428571428571,
+      "cost_per_1k_router0": 2.0022542857142853
+    },
+    "chain": {
+      "quality": 0.7371428571428571,
+      "cost_per_1k": 2.0022542857142853,
+      "latency": 4.652004475187776,
+      "quality_router0": 0.7371428571428571,
+      "cost_per_1k_router0": 2.0022542857142853
+    }
+  }
+]

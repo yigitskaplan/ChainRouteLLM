@@ -1,0 +1,41 @@
+[
+  {
+    "seed": 42,
+    "sharing": true,
+    "contract": "0xeb73A0aa5DB8B33A40F4742a9257417b9E198A07",
+    "receipts_on_chain": 3737,
+    "picks_identical": true,
+    "memory": {
+      "quality": 0.6082419052716083,
+      "cost_per_1k": 22.39132605833556,
+      "avg_acc": 64.33153400019982,
+      "total_cost": 83.67638548,
+      "quality_router0": 0.6075197889182058,
+      "cost_per_1k_router0": 31.11277951187335,
+      "quality_router1": 0.5904033379694019,
+      "cost_per_1k_router1": 23.573371585535458,
+      "quality_router2": 0.6175324675324675,
+      "cost_per_1k_router2": 11.444015909090904,
+      "quality_router3": 0.6305518169582772,
+      "cost_per_1k_router3": 18.597256756392998,
+      "quality_router4": 0.5943775100401606,
+      "cost_per_1k_router4": 27.46183456492637
+    },
+    "chain": {
+      "quality": 0.6082419052716083,
+      "cost_per_1k": 22.39132605833556,
+      "avg_acc": 64.33153400019982,
+      "total_cost": 83.67638548,
+      "quality_router0": 0.6075197889182058,
+      "cost_per_1k_router0": 31.11277951187335,
+      "quality_router1": 0.5904033379694019,
+      "cost_per_1k_router1": 23.573371585535458,
+      "quality_router2": 0.6175324675324675,
+      "cost_per_1k_router2": 11.444015909090904,
+      "quality_router3": 0.6305518169582772,
+      "cost_per_1k_router3": 18.597256756392998,
+      "quality_router4": 0.5943775100401606,
+      "cost_per_1k_router4": 27.46183456492637
+    }
+  }
+]

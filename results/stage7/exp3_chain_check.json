@@ -1,0 +1,26 @@
+[
+  {
+    "seed": 11,
+    "attack": "6. lying router",
+    "scenario": "attack, audits remove the liar",
+    "contract": "0x002B3605e3BCb813e09651e941EF0bde0Fb4372a",
+    "receipts_on_chain": 252,
+    "picks_identical": true,
+    "removed_in_block": [
+      7,
+      7
+    ]
+  },
+  {
+    "seed": 11,
+    "attack": "7. secret model swap",
+    "scenario": "swap gpt-6.1-sol -> gpt-6.1-terra, sharing",
+    "contract": "0x8667195905F94b05dCe6C888e8EBC3e25f40534C",
+    "receipts_on_chain": 175,
+    "picks_identical": true,
+    "removed_in_block": [
+      null,
+      null
+    ]
+  }
+]
