@@ -17,7 +17,7 @@ performance evidence is meant to live on a shared, tamper-evident ledger.
 | 4 | Comparison with recent routers on their own benchmark (LLMRouterBench) | **Done** · merged |
 | 5 | Evidence ledger on a Hyperledger Besu network | **Done** · merged |
 | 6 | Attack tests on the ledger (the lying router and the model swap come with Stage 7) | **Done** · merged |
-| 7 | Router on the chain | Planned |
+| 7 | Router on the chain: learning from shared receipts, sharing, and the lying router and model swap | **Done** · merged |
 | 8 | Scale | Planned |
 
 ## How the router decides
@@ -36,6 +36,7 @@ flowchart LR
     E -. online learning .-> G
     E -. updates c̄ and ℓ̄ .-> S
     E -. "receipt (no text)" .-> LG["Evidence ledger<br/>Besu, 4 validators"]
+    LG -. "shared c̄, ℓ̄ and accuracy per group" .-> S
 ```
 
 - **w_C, w_L, w_R** are dials: how much the user cares about cost, waiting and the
@@ -53,6 +54,7 @@ flowchart LR
 | **Stage 4** | LLMRouterBench (benchmark of the Avengers-Pro authors), 13 models, 12,446 questions, the paper's own splits, online, 5 seeds | GPT-5's accuracy for **35.7%** less cost (Avengers-Pro: 30.5%); top accuracy **+4.2%** over GPT-5, tying the best published router |
 | **Stage 5** | Evidence ledger on 4 Besu QBFT validators, 1,250 receipts of the live answers | Every model's accuracy, cost and latency **recomputed from the chain alone**, equal to the data, with no question or answer on the chain; a receipt is final in **2.0 s** (up to 6 s with a validator down); **2,000 receipts in 2.9 s** |
 | **Stage 6** | Attacks on the live evidence contract and the 4 validators | Every attack **stopped or caught**: outsider, fake-model and repeated receipts refused, **97 of 97** edited receipts found, the 4 validators' copies identical; the receipts never changed |
+| **Stage 7** | Routers learning from the receipts on the chain: one router (live), 5 routers alone vs sharing (LLMRouterBench), attacks (live) | Learning through the real chain gives **identical picks** (up to 3,737 receipts); sharing **+0.44 points** and **−0.9% cost**; a liar shifts the choices and audits catch it in **4 of 5** seeds |
 
 Stage 3 and 4 figures are the best weight setting at each level, chosen after
 the runs; the full trade-off curves are in `results/`, and all tables and
@@ -69,7 +71,7 @@ stage's section below.
 | `src/data/` | Dataset loading, validation, and preprocessing |
 | `src/routing/` | Embeddings, predictors, routing policies, and online learning |
 | `src/feedback/` | Feedback simulation and validation *(empty, later stages)* |
-| `src/evidence/` | Evidence ledger client: receipts, question groups, upload, checks and measurements |
+| `src/evidence/` | Evidence ledger client: receipts, question groups, upload, checks, measurements, and what routers learn from shared receipts |
 | `src/attacks/` | Attacks on the evidence ledger |
 | `src/evaluation/` | Replay experiments, baselines, and metrics *(empty, later stages)* |
 | `contracts/` | The `EvidenceLedger` Solidity contract and its tests (Foundry) |
@@ -453,10 +455,62 @@ its 1,250 receipts. Results: `results/stage6/ledger_attacks.json`.
   for free. The nodes listen only on the local machine; the fix is Besu's
   account permissioning.
 
-**Later, with Stage 7.** A lying router (its receipts are accepted, since the
+**With Stage 7.** A lying router (its receipts are accepted, since the
 contract cannot know the truth; the defence is spot-check audits and removing
 the router with all its past receipts) and a provider that secretly swaps its
-model (seen as that model's accuracy drops). Their effect on the router's
-choices can only be measured once the router learns from the chain. Attack 4b
-and these two follow Fevzi Ege Yurtsevenler's E5, E4 and E3 on the phase5
-branch.
+model need the router to learn from the chain, so they are Stage 7's experiment
+3 (below). Attack 4b and these two follow Fevzi Ege Yurtsevenler's E5, E4 and
+E3 on the phase5 branch.
+
+---
+
+## Stage 7: router on the chain
+
+Routers now **learn from the receipts on the chain**. From the receipts a router
+can see it takes c̄ and ℓ̄ (a typical model's cost and latency) and an accuracy
+correction per (group, model): the receipts' mean score for model m in group k
+against its own forests' mean guess for that group, damped by n / (n + τ) with
+τ = 20 (after Fevzi Ege Yurtsevenler's evidence-corrected router). Its forests
+keep retraining on its own answers, since only it has its questions. **Alone**,
+a router sees only its own receipts; **sharing**, every router's.
+
+```bash
+python -m src.routing.run_stage7 --experiment 1           # live data: one router
+python -m src.routing.run_stage7 --experiment 2           # LLMRouterBench: 5 routers, alone vs sharing (~2.5 h)
+python -m src.routing.run_stage7 --experiment 3           # live data: a lying router, a secret model swap
+python -m src.routing.run_stage7 --experiment 1 --chain   # each experiment: one run repeated on the real chain
+```
+
+Learning is simulated in memory (`src/evidence/shared.py`), with the receipts in
+the contract's own units; one run of every experiment is repeated with the
+receipts sent to and read from a fresh contract on the 4-validator chain, and
+**every pick was identical** (175, 3,737, and 252 + 175 receipts).
+
+**Experiment 1: one router learning from the chain** (250 live questions, 5 seeds,
+5 settings). With the correction switched off it reproduces the Stage 3 router
+exactly. With it, a single router learning only from its own ~175 receipts is
+about level (from −2.4 to +0.9 points depending on the setting).
+
+**Experiment 2: routers sharing** (LLMRouterBench, 5 routers, 3 seeds, no latency).
+
+| | Alone | Sharing |
+| --- | --- | --- |
+| Quality | 59.92% | **60.36%** (+0.44 points) |
+| AvgAcc (LLMRouterBench) | 64.68 | **65.46** |
+| Total cost (3,737 questions) | $81.05 | **$80.35** (−0.9%) |
+
+Sharing was better in 2 of 3 seeds and for 3 of 5 routers: a modest result.
+
+**Experiment 3: attacks** (250 live questions, 5 routers sharing, 5 seeds).
+
+| Attack | Result |
+| --- | --- |
+| A lying router (Haiku always right, Opus always wrong, plus made-up receipts for every question it handles) | The honest routers move to Haiku (20.9% → 28.5% of picks) and away from Opus (10.4% → 6.4%). Audits of 10% of receipts catch it in **4 of 5 seeds** (after 3 failed checks it is removed and its past receipts ignored), late, so the shift is only partly undone. Quality changes stay within the noise |
+| A secret model swap from a quarter of the stream | Sol → Terra costs 0.3 points (sharing) and 0.5 (alone); Opus → Haiku 1.0 and 0.7. The routers move away from the downgraded Opus (14% → 2–6% of picks) |
+
+Results: `results/stage7/`. With 175 live stream questions over 5 routers, the
+distortion and its detection show, while quality damage and a sharing advantage
+against swaps do not; firmer numbers need more data.
+
+Later: the attacks on LLMRouterBench, more seeds for sharing, and the group
+centroids on the chain when routers of different owners share.
